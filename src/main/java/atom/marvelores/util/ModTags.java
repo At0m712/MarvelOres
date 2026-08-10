@@ -16,4 +16,11 @@ public class ModTags {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(MarvelOres.MOD_ID, name));
         }
     }
+    public static class Items {
+        public static final TagKey<Item> VIBRANIUM = createTag("vibranium");
+
+        private static TagKey<Item> createTag(String name) {
+            return TagKey.of(RegistryKeys.ITEM, Identifier.of(MarvelOres.MOD_ID, name));
+}
+    }
 }

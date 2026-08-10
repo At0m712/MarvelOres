@@ -22,7 +22,6 @@ public class MarvelOresDataGenerator implements DataGeneratorEntrypoint {
 	@Override
 	public void buildRegistry(RegistryBuilder registryBuilder) {
 
-
 		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
 	}

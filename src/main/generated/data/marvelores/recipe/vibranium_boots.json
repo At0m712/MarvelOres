@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "V": {
-      "item": "marvelores:vibranium"
-    }
+    "V": "marvelores:vibranium"
   },
   "pattern": [
     "   ",

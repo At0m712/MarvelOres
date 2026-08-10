@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "building",
   "ingredients": [
-    {
-      "item": "marvelores:vibranium_block"
-    }
+    "marvelores:vibranium_block"
   ],
   "result": {
     "count": 9,

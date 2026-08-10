@@ -4,9 +4,7 @@
   "cookingtime": 200,
   "experience": 0.25,
   "group": "vibranium",
-  "ingredient": {
-    "item": "marvelores:vibranium_ore"
-  },
+  "ingredient": "marvelores:vibranium_ore",
   "result": {
     "id": "marvelores:vibranium"
   }
