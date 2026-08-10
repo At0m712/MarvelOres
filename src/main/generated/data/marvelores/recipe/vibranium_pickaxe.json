@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "V": {
+      "item": "marvelores:vibranium"
+    }
+  },
+  "pattern": [
+    "VVV",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "marvelores:vibranium_pickaxe"
+  }
+}

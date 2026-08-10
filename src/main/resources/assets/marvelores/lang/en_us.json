@@ -1,0 +1,25 @@
+{
+  "item.marvelores.vibranium": "Vibranium",
+  "item.marvelores.raw_vibranium": "Raw Vibranium",
+
+  "item.marvelores.vibranium_sword": "KillMonger Sword",
+  "item.marvelores.vibranium_pickaxe": "Vibranium Pickaxe",
+  "item.marvelores.vibranium_shovel": "Vibranium Shovel",
+  "item.marvelores.vibranium_axe": "Vibranium Axe",
+  "item.marvelores.vibranium_hoe": "Vibranium Hoe",
+
+  "item.marvelores.vibranium_helmet": "Vibranium Helmet",
+  "item.marvelores.vibranium_chestplate": "Vibranium Chestplate",
+  "item.marvelores.vibranium_leggings": "Vibranium Leggings",
+  "item.marvelores.vibranium_boots": "Vibranium Boots",
+
+
+  "block.marvelores.vibranium_block": "Block of Vibranium",
+  "block.marvelores.raw_vibranium_block": "Block of Raw Vibranium",
+
+  "block.marvelores.vibranium_ore": "Vibranium Ore",
+  "block.marvelores.vibranium_deepslate_ore": "Deepslate Vibranium Ore",
+
+  "itemgroup.marvelores.vibranium_items": "Vibranium Items",
+  "itemgroup.marvelores.vibranium_block": "Vibranium Blocks"
+}
