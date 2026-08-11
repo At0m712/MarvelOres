@@ -95,8 +95,8 @@ publishMods {
 		changelogType = "markdown"
 
 		minecraftVersionRange {
-			start = "1.21.3"
-			end = "1.21.5"
+			start = "1.21.6"
+			end = "1.21.11"
 		}
 
 		client = true
@@ -110,8 +110,8 @@ publishMods {
 		accessToken = providers.environmentVariable("MODRINTH_TOKEN")
 
 		minecraftVersionRange {
-			start = "1.21.3"
-			end = "1.21.5"
+			start = "1.21.6"
+			end = "1.21.11"
 		}
 
 		requires("fabric-api")
