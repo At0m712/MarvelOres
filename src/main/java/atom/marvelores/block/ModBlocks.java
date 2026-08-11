@@ -28,8 +28,8 @@ public class ModBlocks {
                     AbstractBlock.Settings.create().strength(3f).requiresTool()));
 
     public static final Block VIBRANIUM_DEEPSLATE_ORE = registerBlock("vibranium_deepslate_ore",
-            new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
-                    AbstractBlock.Settings.create().strength(3f).requiresTool()));
+            new ExperienceDroppingBlock(UniformIntProvider.create(3, 6),
+                    AbstractBlock.Settings.create().strength(4f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
 
 
     private static Block registerBlock(String name, Block block) {
