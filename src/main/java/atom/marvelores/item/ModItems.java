@@ -17,10 +17,10 @@ public class ModItems {
     public static final Item RAW_VIBRANIUM = registerItem("raw_vibranium", Item::new);
 
     public static final Item VIBRANIUM_SWORD = registerItem("vibranium_sword",
-            setting -> new SwordItem(ModToolMaterials.VIBRANIUM,3,-2.4f, setting));
+            setting -> new Item(setting.sword(ModToolMaterials.VIBRANIUM, 3, -2.4f)));
 
     public static final Item VIBRANIUM_PICKAXE = registerItem("vibranium_pickaxe",
-            setting -> new PickaxeItem(ModToolMaterials.VIBRANIUM, 1, -2.8f, setting));
+            setting -> new Item(setting.pickaxe(ModToolMaterials.VIBRANIUM, 1, -2.8f)));
     public static final Item VIBRANIUM_SHOVEL = registerItem("vibranium_shovel",
             setting -> new ShovelItem(ModToolMaterials.VIBRANIUM, 1.5f, -3.0f, setting));
     public static final Item VIBRANIUM_AXE = registerItem("vibranium_axe",
@@ -30,17 +30,13 @@ public class ModItems {
 
 
     public static final Item VIBRANIUM_HELMET = registerItem("vibranium_helmet",
-            setting -> new ArmorItem(ModArmorMaterials.VIBRANIUM_ARMOR_MATERIAL, EquipmentType.HELMET, setting
-                    .maxDamage(EquipmentType.HELMET.getMaxDamage(40))));
+            setting -> new Item(setting.armor(ModArmorMaterials.VIBRANIUM_ARMOR_MATERIAL, EquipmentType.HELMET)));
     public static final Item VIBRANIUM_CHESTPLATE = registerItem("vibranium_chestplate",
-            setting -> new ArmorItem(ModArmorMaterials.VIBRANIUM_ARMOR_MATERIAL, EquipmentType.CHESTPLATE, setting
-                    .maxDamage(EquipmentType.CHESTPLATE.getMaxDamage(40))));
+            setting -> new Item(setting.armor(ModArmorMaterials.VIBRANIUM_ARMOR_MATERIAL, EquipmentType.CHESTPLATE)));
     public static final Item VIBRANIUM_LEGGINGS = registerItem("vibranium_leggings",
-            setting -> new ArmorItem(ModArmorMaterials.VIBRANIUM_ARMOR_MATERIAL, EquipmentType.LEGGINGS, setting
-                    .maxDamage(EquipmentType.LEGGINGS.getMaxDamage(40))));
+            setting -> new Item(setting.armor(ModArmorMaterials.VIBRANIUM_ARMOR_MATERIAL, EquipmentType.LEGGINGS)));
     public static final Item VIBRANIUM_BOOTS = registerItem("vibranium_boots",
-            setting -> new ArmorItem(ModArmorMaterials.VIBRANIUM_ARMOR_MATERIAL, EquipmentType.BOOTS, setting
-                    .maxDamage(EquipmentType.BOOTS.getMaxDamage(40))));
+            setting -> new Item(setting.armor(ModArmorMaterials.VIBRANIUM_ARMOR_MATERIAL, EquipmentType.BOOTS)));
 
 
 
