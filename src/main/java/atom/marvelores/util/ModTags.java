@@ -17,7 +17,7 @@ public class ModTags {
         }
     }
     public static class Items {
-        public static final TagKey<Item> VIBRANIUM = createTag("vibranium");
+        public static final TagKey<Item> VIBRANIUM_REPAIR = createTag("vibranium_repair");
 
         private static TagKey<Item> createTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(MarvelOres.MOD_ID, name));

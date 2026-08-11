@@ -33,6 +33,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.VIBRANIUM_CHESTPLATE)
                 .add(ModItems.VIBRANIUM_LEGGINGS)
                 .add(ModItems.VIBRANIUM_BOOTS);
+
     }
 }
 
