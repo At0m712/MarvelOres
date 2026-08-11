@@ -17,18 +17,18 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
 
-        getOrCreateTagBuilder(ItemTags.SWORDS)
+        valueLookupBuilder(ItemTags.SWORDS)
                 .add(ModItems.VIBRANIUM_SWORD);
-        getOrCreateTagBuilder(ItemTags.PICKAXES)
+        valueLookupBuilder(ItemTags.PICKAXES)
                 .add(ModItems.VIBRANIUM_PICKAXE);
-        getOrCreateTagBuilder(ItemTags.SHOVELS)
+        valueLookupBuilder(ItemTags.SHOVELS)
                 .add(ModItems.VIBRANIUM_SHOVEL);
-        getOrCreateTagBuilder(ItemTags.AXES)
+        valueLookupBuilder(ItemTags.AXES)
                 .add(ModItems.VIBRANIUM_AXE);
-        getOrCreateTagBuilder(ItemTags.HOES)
+        valueLookupBuilder(ItemTags.HOES)
                 .add(ModItems.VIBRANIUM_HOE);
 
-        getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
+        valueLookupBuilder(ItemTags.TRIMMABLE_ARMOR)
                 .add(ModItems.VIBRANIUM_HELMET)
                 .add(ModItems.VIBRANIUM_CHESTPLATE)
                 .add(ModItems.VIBRANIUM_LEGGINGS)

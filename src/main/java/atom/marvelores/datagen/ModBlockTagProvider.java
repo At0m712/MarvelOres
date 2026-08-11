@@ -16,12 +16,12 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
                                @Override
     protected void configure(RegistryWrapper.WrapperLookup lookup) {
-        getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+        valueLookupBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.VIBRANIUM_BLOCK)
                 .add(ModBlocks.RAW_VIBRANIUM_BLOCK)
                 .add(ModBlocks.VIBRANIUM_ORE)
                 .add(ModBlocks.VIBRANIUM_DEEPSLATE_ORE);
-        getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
+        valueLookupBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.VIBRANIUM_BLOCK)
                 .add(ModBlocks.RAW_VIBRANIUM_BLOCK)
                 .add(ModBlocks.VIBRANIUM_ORE)
