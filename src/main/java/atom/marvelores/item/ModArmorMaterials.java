@@ -25,7 +25,7 @@ public class ModArmorMaterials {
                 map.put(ArmorItem.Type.BODY, 12);
             }),
                     20, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, () -> Ingredient.ofItems(ModItems.VIBRANIUM),
-                    List.of(new ArmorMaterial.Layer(Identifier.of(MarvelOres.MOD_ID, "vibranium"))), 0,0));
+                    List.of(new ArmorMaterial.Layer(Identifier.of(MarvelOres.MOD_ID, "vibranium"))), 2F,0.2F));
 
 
     public static RegistryEntry<ArmorMaterial> registerArmorMaterial(String name, Supplier<ArmorMaterial> material) {
