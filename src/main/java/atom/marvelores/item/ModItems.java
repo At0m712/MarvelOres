@@ -2,6 +2,8 @@ package atom.marvelores.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import atom.marvelores.MarvelOres;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.BannerPatternsComponent;
 import net.minecraft.item.*;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
@@ -27,6 +29,9 @@ public class ModItems {
             setting -> new AxeItem(ModToolMaterials.VIBRANIUM, 6, -3.2f, setting));
     public static final Item VIBRANIUM_HOE = registerItem("vibranium_hoe",
             setting -> new HoeItem(ModToolMaterials.VIBRANIUM, 0, -3f, setting));
+
+    public static final Item VIBRANIUM_SHIELD = registerItem("vibranium_shield",
+            settings -> new ShieldItem(settings.maxDamage(336)));
 
 
     public static final Item VIBRANIUM_HELMET = registerItem("vibranium_helmet",

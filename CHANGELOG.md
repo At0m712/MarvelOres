@@ -1,1 +1,5 @@
-Adjust Vibranium Armor toughness and knockback resistance.
+Added Vibranium Items:
+
++ Captain America Shield
+
+Add a lot more coming soon !
