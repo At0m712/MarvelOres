@@ -122,5 +122,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('V', ModItems.VIBRANIUM)
                 .criterion(hasItem(ModItems.VIBRANIUM), conditionsFromItem(ModItems.VIBRANIUM))
                 .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.VIBRANIUM_SHIELD)
+                .pattern("VVV")
+                .pattern("VNV")
+                .pattern("VVV")
+                .input('V', ModItems.VIBRANIUM)
+                .input('N', Items.NETHERITE_INGOT)
+                .criterion(hasItem(ModItems.VIBRANIUM), conditionsFromItem(ModItems.VIBRANIUM))
+                .offerTo(exporter);
     }
 }

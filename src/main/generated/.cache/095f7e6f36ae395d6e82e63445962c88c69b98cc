@@ -1,4 +1,4 @@
-// 1.21	2026-08-11T18:02:31.8851549	MarvelOres/Recipes
+// 1.21	2026-08-12T02:28:20.0570791	MarvelOres/Recipes
 df3e243e05ab0d62b59f1a1592fb2dcf7ce9a52e data\marvelores\advancement\recipes\misc\raw_vibranium_block.json
 b1001da907001ee63bd0318af7fdc282d19e3053 data\marvelores\recipe\raw_vibranium_block.json
 0487265d7b4f26e8d7ffbd035f6d1de4eade7e9e data\marvelores\recipe\vibranium_boots.json
@@ -16,6 +16,7 @@ e6a295d0a39c3970f4d960ba1668a3464a981b24 data\marvelores\recipe\vibranium_helmet
 1626626327e146e4fa678f6536bba2419c692ecb data\marvelores\recipe\vibranium_leggings.json
 f536eb320b1177deab384cd4b4799e50c9246608 data\marvelores\recipe\vibranium_shovel.json
 e2784a5618f93415abcfdf98d69b42aac42ba781 data\marvelores\advancement\recipes\misc\raw_vibranium.json
+18d1ae54a1b7d6ba8c4d97c8f24f4294c6132152 data\marvelores\recipe\vibranium_shield.json
 238c88ea6b61b7a43527b58e2ce89cde675bca3c data\marvelores\advancement\recipes\misc\vibranium_from_blasting_raw_vibranium.json
 5daf8a8f552c2ddb6fab6740fbb1dee47466578e data\marvelores\advancement\recipes\misc\vibranium_boots.json
 439cd2d7d859de75156c3fdff7e05b86df7ea02a data\marvelores\recipe\vibranium_block.json
@@ -30,6 +31,7 @@ bd7e7f2bdffa646a7e1b23295cbf2933617bd041 data\marvelores\recipe\vibranium_chestp
 2a9f627952e0da25a7f1fff8f00d17df451033d1 data\marvelores\recipe\vibranium_from_smelting_raw_vibranium.json
 769023afde003ae4debdab74cb2a1d68c0c9d372 data\marvelores\advancement\recipes\misc\vibranium_sword.json
 452d3d2e7139ae19ade9b51ac783ed7b6fd70fa7 data\marvelores\advancement\recipes\misc\vibranium_chestplate.json
+0d3514eac8844bdadcc2eb9a7b75cbc1742347c8 data\marvelores\advancement\recipes\misc\vibranium_shield.json
 cb37d761573d693fe8e6fab5e854c5a1a7d83aba data\marvelores\advancement\recipes\building_blocks\vibranium.json
 a70867233393cdcbfcbeb78e3233a1d248f99169 data\marvelores\advancement\recipes\misc\vibranium_from_smelting_vibranium_ore.json
 c4a17e9451ee2b25c39a32b0fc2c39d02eae6c79 data\marvelores\advancement\recipes\decorations\vibranium_block.json
