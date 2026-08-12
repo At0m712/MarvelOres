@@ -33,8 +33,8 @@ public class ModItems {
             new HoeItem(ModToolMaterials.VIBRANIUM, new Item.Settings()
                     .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.VIBRANIUM, 0, -3f))));
 
-    public static final Item VIBRANIUM_SHIELD = registerItem("vibranium_shield",
-            new ShieldItem(new Item.Settings().maxDamage(336).component(DataComponentTypes.BANNER_PATTERNS, BannerPatternsComponent.DEFAULT)));
+    public static final Item VIBRANIUM_SHIELD = registerItem(
+            "vibranium_shield", new ShieldItem(new Item.Settings().maxDamage(336).component(DataComponentTypes.BANNER_PATTERNS, BannerPatternsComponent.DEFAULT)));
 
 
     public static final Item VIBRANIUM_HELMET = registerItem("vibranium_helmet",

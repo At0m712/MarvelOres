@@ -1,1 +1,5 @@
-Fix bug, now Vibranium Blocks drops with Vibranium Pickaxe.
+Added Vibranium Items:
+
++ Captain America Shield
+
+Add a lot more coming soon !
