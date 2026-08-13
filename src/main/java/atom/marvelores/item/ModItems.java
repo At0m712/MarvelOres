@@ -1,8 +1,13 @@
 package atom.marvelores.item;
 
+import atom.marvelores.item.custom.ModArmorItem;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import atom.marvelores.MarvelOres;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.BlocksAttacksComponent;
+import net.minecraft.component.type.ConsumableComponent;
 import net.minecraft.item.*;
+import net.minecraft.item.consume.UseAction;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -10,6 +15,8 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 
+import java.util.List;
+import java.util.Optional;
 import java.util.function.Function;
 
 public class ModItems {
@@ -30,7 +37,7 @@ public class ModItems {
 
 
     public static final Item VIBRANIUM_HELMET = registerItem("vibranium_helmet",
-            setting -> new Item(setting.armor(ModArmorMaterials.VIBRANIUM_ARMOR_MATERIAL, EquipmentType.HELMET)));
+            setting -> new ModArmorItem(setting.armor(ModArmorMaterials.VIBRANIUM_ARMOR_MATERIAL, EquipmentType.HELMET)));
     public static final Item VIBRANIUM_CHESTPLATE = registerItem("vibranium_chestplate",
             setting -> new Item(setting.armor(ModArmorMaterials.VIBRANIUM_ARMOR_MATERIAL, EquipmentType.CHESTPLATE)));
     public static final Item VIBRANIUM_LEGGINGS = registerItem("vibranium_leggings",

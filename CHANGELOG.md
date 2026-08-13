@@ -1,1 +1,5 @@
-Update to (1.21.6, 1.21.11) 
+Added Vibranium Items:
+
++ Full armor effects !
+
+Add a lot more coming soon !
