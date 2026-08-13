@@ -1,5 +1,6 @@
 package atom.marvelores.item;
 
+import atom.marvelores.item.custom.ModArmorItem;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import atom.marvelores.MarvelOres;
 import net.minecraft.item.*;
@@ -28,9 +29,12 @@ public class ModItems {
     public static final Item VIBRANIUM_HOE = registerItem("vibranium_hoe",
             setting -> new HoeItem(ModToolMaterials.VIBRANIUM, 0, -3f, setting));
 
+    public static final Item VIBRANIUM_SHIELD = registerItem("vibranium_shield",
+            settings -> new ShieldItem(settings.maxDamage(336)));
+
 
     public static final Item VIBRANIUM_HELMET = registerItem("vibranium_helmet",
-            setting -> new ArmorItem(ModArmorMaterials.VIBRANIUM_ARMOR_MATERIAL, EquipmentType.HELMET, setting
+            setting -> new ModArmorItem(ModArmorMaterials.VIBRANIUM_ARMOR_MATERIAL, EquipmentType.HELMET, setting
                     .maxDamage(EquipmentType.HELMET.getMaxDamage(40))));
     public static final Item VIBRANIUM_CHESTPLATE = registerItem("vibranium_chestplate",
             setting -> new ArmorItem(ModArmorMaterials.VIBRANIUM_ARMOR_MATERIAL, EquipmentType.CHESTPLATE, setting
