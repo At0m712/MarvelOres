@@ -1,5 +1,5 @@
 Added Vibranium Items:
 
-+ Captain America Shield
++ A better Captain America Shield 3d model !
 
 Add a lot more coming soon !
