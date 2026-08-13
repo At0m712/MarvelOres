@@ -37,6 +37,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.VIBRANIUM_AXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.VIBRANIUM_HOE, Models.HANDHELD);
 
+        itemModelGenerator.register(ModItems.VIBRANIUM_SHIELD, Models.HANDHELD);
+
 
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.VIBRANIUM_HELMET), ModArmorMaterials.VIBRANIUM_KEY, "helmet", false);
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.VIBRANIUM_CHESTPLATE), ModArmorMaterials.VIBRANIUM_KEY, "chestplate", false);
