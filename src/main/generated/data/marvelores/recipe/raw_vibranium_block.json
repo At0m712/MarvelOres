@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "vibranium",
+  "key": {
+    "R": "marvelores:raw_vibranium"
+  },
+  "pattern": [
+    "RRR",
+    "RRR",
+    "RRR"
+  ],
+  "result": {
+    "id": "marvelores:raw_vibranium_block"
+  }
+}

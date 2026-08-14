@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "vibranium",
+  "key": {
+    "V": "marvelores:vibranium"
+  },
+  "pattern": [
+    "   ",
+    "V V",
+    "V V"
+  ],
+  "result": {
+    "id": "marvelores:vibranium_boots"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "vibranium",
+  "key": {
+    "N": "minecraft:netherite_ingot",
+    "V": "marvelores:vibranium"
+  },
+  "pattern": [
+    "VNV",
+    "V V",
+    "V V"
+  ],
+  "result": {
+    "id": "marvelores:vibranium_leggings"
+  }
+}

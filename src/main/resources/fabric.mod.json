@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "marvelores",
+	"version": "${version}",
+	"name": "MarvelOres",
+	"description": "Add new ores from Marvel Universe !",
+	"authors": [
+		"atom"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/marvelores/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"atom.marvelores.MarvelOres"
+		],
+		"fabric-datagen": [
+			"atom.marvelores.MarvelOresDataGenerator"
+		],
+		"client": [
+			"atom.marvelores.MarvelOresClient"
+		]
+	},
+	"mixins": [
+		"marvelores.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.1",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
