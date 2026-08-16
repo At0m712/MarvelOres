@@ -18,22 +18,16 @@ public class ModItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider registries) {
 
-        valueLookupBuilder(ItemTags.SWORDS)
-                .add(ModItems.VIBRANIUM_SWORD);
-        valueLookupBuilder(ItemTags.PICKAXES)
-                .add(ModItems.VIBRANIUM_PICKAXE);
-        valueLookupBuilder(ItemTags.SHOVELS)
-                .add(ModItems.VIBRANIUM_SHOVEL);
-        valueLookupBuilder(ItemTags.AXES)
-                .add(ModItems.VIBRANIUM_AXE);
-        valueLookupBuilder(ItemTags.HOES)
-                .add(ModItems.VIBRANIUM_HOE);
+        tag(ItemTags.SWORDS).add(ModItems.getRK(ModItems.VIBRANIUM_SWORD));
+        tag(ItemTags.PICKAXES).add(ModItems.getRK(ModItems.VIBRANIUM_PICKAXE));
+        tag(ItemTags.SHOVELS).add(ModItems.getRK(ModItems.VIBRANIUM_SHOVEL));
+        tag(ItemTags.AXES).add(ModItems.getRK(ModItems.VIBRANIUM_AXE));
+        tag(ItemTags.HOES).add(ModItems.getRK(ModItems.VIBRANIUM_HOE));
 
-        valueLookupBuilder(ItemTags.TRIMMABLE_ARMOR)
-                .add(ModItems.VIBRANIUM_HELMET)
-                .add(ModItems.VIBRANIUM_CHESTPLATE)
-                .add(ModItems.VIBRANIUM_LEGGINGS)
-                .add(ModItems.VIBRANIUM_BOOTS);
+        tag(ItemTags.HEAD_ARMOR).add(ModItems.getRK(ModItems.VIBRANIUM_HELMET));
+        tag(ItemTags.CHEST_ARMOR).add(ModItems.getRK(ModItems.VIBRANIUM_CHESTPLATE));
+        tag(ItemTags.LEG_ARMOR).add(ModItems.getRK(ModItems.VIBRANIUM_LEGGINGS));
+        tag(ItemTags.FOOT_ARMOR).add(ModItems.getRK(ModItems.VIBRANIUM_BOOTS));
 
     }
 }
