@@ -30,8 +30,17 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
                 .add(ModItems.VIBRANIUM_HELMET)
-                .add(ModItems.VIBRANIUM_CHESTPLATE)
+                .add(ModItems.VIBRANIUM_HELMET)
                 .add(ModItems.VIBRANIUM_LEGGINGS)
+                .add(ModItems.VIBRANIUM_BOOTS);
+
+        getOrCreateTagBuilder(ItemTags.HEAD_ARMOR)
+                .add(ModItems.VIBRANIUM_HELMET);
+        getOrCreateTagBuilder(ItemTags.CHEST_ARMOR)
+                .add(ModItems.VIBRANIUM_CHESTPLATE);
+        getOrCreateTagBuilder(ItemTags.LEG_ARMOR)
+                .add(ModItems.VIBRANIUM_LEGGINGS);
+        getOrCreateTagBuilder(ItemTags.FOOT_ARMOR)
                 .add(ModItems.VIBRANIUM_BOOTS);
     }
 }

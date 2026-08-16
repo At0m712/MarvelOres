@@ -1,4 +1,4 @@
-// 1.21	2026-08-13T22:11:55.4076704	MarvelOres/Model Definitions
+// 1.21	2026-08-16T20:00:15.0984139	MarvelOres/Model Definitions
 d5f886e3b7c3dcf75336ca70fcec312f7853b6fb assets\marvelores\models\item\vibranium_boots_netherite_trim.json
 a10ce36f2c061c5f989afd129c831d00fa99404a assets\marvelores\blockstates\raw_vibranium_block.json
 78433e3b0d92b65eeeea6c35c251284ef54890a1 assets\marvelores\models\item\vibranium_leggings_diamond_trim.json
@@ -48,8 +48,8 @@ b267c082d1e2002e463e538e507700fc7d02a652 assets\marvelores\models\item\vibranium
 0d180c27bd668764ba4071f3ee2916e9733e2b1e assets\marvelores\models\item\vibranium_helmet_redstone_trim.json
 63aea427dcec5779ce1eef986a14e1fb8731124d assets\marvelores\models\item\vibranium_leggings_redstone_trim.json
 1790966aea46ac0d59ef80992bde234b493e9bdd assets\marvelores\models\item\raw_vibranium_block.json
-c59e3236b59228760f35b0871af9fc77236f0fba assets\marvelores\models\item\vibranium_leggings_emerald_trim.json
 a70de1c59ae9a906a421ff191e791e620796ebc8 assets\marvelores\models\item\vibranium_chestplate_iron_trim.json
+c59e3236b59228760f35b0871af9fc77236f0fba assets\marvelores\models\item\vibranium_leggings_emerald_trim.json
 0edc68bd4bc67c9a4dfef1b77a3939dbc823a153 assets\marvelores\models\block\raw_vibranium_block.json
 6ac4b2661243ccb1c262c85c65a635651ea59e2b assets\marvelores\blockstates\vibranium_block.json
 a4284823a5a48946fa44453f7288a19a04a46d44 assets\marvelores\models\item\vibranium_leggings_netherite_trim.json

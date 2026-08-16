@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "N": "minecraft:netherite_ingot",
+    "V": "marvelores:vibranium"
+  },
+  "pattern": [
+    "VVV",
+    "VNV",
+    "VVV"
+  ],
+  "result": {
+    "count": 1,
+    "id": "marvelores:vibranium_shield"
+  }
+}
