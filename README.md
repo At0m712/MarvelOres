@@ -2,5 +2,4 @@
 
 TODO :
 
-Make the Captain Shield work
-Enchantable tools and armor.
+Make the Captain Shield work !
