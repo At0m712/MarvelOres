@@ -1,5 +1,5 @@
-Added Vibranium Items:
+## VIBRANIUM UPDATE !!
 
-+ Full armor effects !
++ Armor and Items are now enchantable.(Armor are trimmable)
 
-Add a lot more coming soon !
+_Add a lot more coming soon !_

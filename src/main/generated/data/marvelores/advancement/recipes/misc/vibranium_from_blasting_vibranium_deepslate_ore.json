@@ -3,15 +3,15 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "marvelores:vibranium"
+        "recipe": "marvelores:vibranium_from_blasting_vibranium_deepslate_ore"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "has_vibranium_block": {
+    "has_vibranium_deepslate_ore": {
       "conditions": {
         "items": [
           {
-            "items": "marvelores:vibranium_block"
+            "items": "marvelores:vibranium_deepslate_ore"
           }
         ]
       },
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_vibranium_block"
+      "has_vibranium_deepslate_ore"
     ]
   ],
   "rewards": {
     "recipes": [
-      "marvelores:vibranium"
+      "marvelores:vibranium_from_blasting_vibranium_deepslate_ore"
     ]
   }
 }
