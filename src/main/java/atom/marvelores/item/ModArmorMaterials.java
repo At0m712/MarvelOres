@@ -19,6 +19,6 @@ public class ModArmorMaterials {
                 map.put(EquipmentType.CHESTPLATE, 9);
                 map.put(EquipmentType.HELMET, 3);
                 map.put(EquipmentType.BODY, 12);
-    }), 20, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE,2F,0.2F, ModTags.Items.VIBRANIUM,
+    }), 20, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE,2F,0.2F, ModTags.Items.VIBRANIUM_REPAIR,
             Identifier.of(MarvelOres.MOD_ID, "vibranium"));
 }
