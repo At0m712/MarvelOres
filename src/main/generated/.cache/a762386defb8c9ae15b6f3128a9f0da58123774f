@@ -1,0 +1,5 @@
+// 26.2	-999999999-01-01T00:00:00	MarvelOres/Block Loot Tables
+4aa9cfb7b750763b846549023e993ad83bd3de61 data/marvelores/loot_table/blocks/raw_vibranium_block.json
+bd653aa23eb7dc1ebc314243307e416a1b14dca5 data/marvelores/loot_table/blocks/vibranium_block.json
+55a07f8ffc3fe1d6c89c2ff710d3c4fa6051bd8a data/marvelores/loot_table/blocks/vibranium_deepslate_ore.json
+55a07f8ffc3fe1d6c89c2ff710d3c4fa6051bd8a data/marvelores/loot_table/blocks/vibranium_ore.json
