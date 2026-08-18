@@ -13,7 +13,7 @@ import net.minecraft.world.item.ItemStack;
 
 public class ModCreativeModeTabs {
     public static final CreativeModeTab VIBRANIUM_ITEM_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
-            Identifier.fromNamespaceAndPath(MarvelOres.MOD_ID, "_items"),
+            Identifier.fromNamespaceAndPath(MarvelOres.MOD_ID, "vibranium_items"),
             FabricCreativeModeTab.builder().icon(() -> new ItemStack(ModItems.VIBRANIUM))
                     .title(Component.translatable("creativemodetab.marvelores.vibranium_items"))
                     .displayItems((parameters, output) -> {

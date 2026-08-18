@@ -1,6 +1,7 @@
 package atom.marvelores.datagen;
 
 import atom.marvelores.item.ModItems;
+import atom.marvelores.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
 import net.minecraft.core.HolderLookup;
@@ -33,6 +34,19 @@ public class ModItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
                 .add(ModItems.VIBRANIUM_HELMET)
                 .add(ModItems.VIBRANIUM_CHESTPLATE)
                 .add(ModItems.VIBRANIUM_LEGGINGS)
+                .add(ModItems.VIBRANIUM_BOOTS);
+
+        valueLookupBuilder((ModTags.Items.VIBRANIUM_REPAIR))
+                .add(ModItems.VIBRANIUM);
+
+
+        valueLookupBuilder(ItemTags.HEAD_ARMOR)
+                .add(ModItems.VIBRANIUM_HELMET);
+        valueLookupBuilder(ItemTags.CHEST_ARMOR)
+                .add(ModItems.VIBRANIUM_CHESTPLATE);
+        valueLookupBuilder(ItemTags.LEG_ARMOR)
+                .add(ModItems.VIBRANIUM_LEGGINGS);
+        valueLookupBuilder(ItemTags.FOOT_ARMOR)
                 .add(ModItems.VIBRANIUM_BOOTS);
 
     }

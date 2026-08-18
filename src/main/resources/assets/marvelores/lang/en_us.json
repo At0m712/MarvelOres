@@ -21,6 +21,6 @@
   "block.marvelores.vibranium_ore": "Vibranium Ore",
   "block.marvelores.vibranium_deepslate_ore": "Deepslate Vibranium Ore",
 
-  "itemgroup.marvelores.vibranium_items": "Vibranium Items",
-  "itemgroup.marvelores.vibranium_block": "Vibranium Blocks"
+  "creativemodetab.marvelores.vibranium_items": "Vibranium Items",
+  "creativemodetab.marvelores.vibranium_blocks": "Vibranium Blocks"
 }
