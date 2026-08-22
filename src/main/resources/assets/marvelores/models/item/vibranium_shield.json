@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "marvelores:item/vibranium_shield"
+    "layer0": "marvelores:item/vibranium_shield_2d"
   }
 }
