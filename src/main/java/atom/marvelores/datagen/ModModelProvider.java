@@ -20,12 +20,15 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_VIBRANIUM_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.VIBRANIUM_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.VIBRANIUM_DEEPSLATE_ORE);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRUSHER);
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.VIBRANIUM, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_VIBRANIUM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.VIBRANIUM_POWDER, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.VIBRANIUM_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.VIBRANIUM_PICKAXE, Models.HANDHELD);

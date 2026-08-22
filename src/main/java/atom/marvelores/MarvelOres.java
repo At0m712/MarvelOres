@@ -1,8 +1,11 @@
 package atom.marvelores;
 
 import atom.marvelores.block.ModBlocks;
+import atom.marvelores.block.entity.ModBlockEntities;
 import atom.marvelores.item.ModItemGroups;
 import atom.marvelores.item.ModItems;
+import atom.marvelores.recipe.ModRecipes;
+import atom.marvelores.screen.ModScreenHandlers;
 import atom.marvelores.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
@@ -22,6 +25,11 @@ public class MarvelOres implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModWorldGeneration.generateModWorldGen();
+
+		ModBlockEntities.registerBlockEntities();
+		ModScreenHandlers.registerScreenHandlers();
+
+		ModRecipes.registerRecipes();
 	}
 
 	public static Identifier id(String path) {

@@ -13,6 +13,7 @@ import net.minecraft.util.Identifier;
 public class ModItems {
     public static final Item VIBRANIUM = registerItem("vibranium", new Item(new Item.Settings()));
     public static final Item RAW_VIBRANIUM = registerItem("raw_vibranium", new Item(new Item.Settings()));
+    public static final Item VIBRANIUM_POWDER = registerItem("vibranium_powder", new Item(new Item.Settings()));
 
     public static final Item VIBRANIUM_SWORD = registerItem("vibranium_sword",
             new SwordItem(ModToolMaterials.VIBRANIUM,new Item.Settings()

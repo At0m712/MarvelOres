@@ -3,6 +3,8 @@
 	"package": "atom.marvelores.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
+		"ItemRendererMixin",
+		"ModelLoaderMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

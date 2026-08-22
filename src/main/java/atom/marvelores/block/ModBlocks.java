@@ -1,5 +1,6 @@
 package atom.marvelores.block;
 
+import atom.marvelores.block.custom.CrusherBlock;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import atom.marvelores.MarvelOres;
 import net.minecraft.block.AbstractBlock;
@@ -30,6 +31,10 @@ public class ModBlocks {
     public static final Block VIBRANIUM_DEEPSLATE_ORE = registerBlock("vibranium_deepslate_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(3, 6),
                     AbstractBlock.Settings.create().strength(4f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
+
+
+    public static final Block CRUSHER = registerBlock("crusher",
+            new CrusherBlock(AbstractBlock.Settings.create()));
 
 
     private static Block registerBlock(String name, Block block) {

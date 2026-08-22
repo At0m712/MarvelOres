@@ -1,4 +1,4 @@
-// 1.21	2026-08-22T12:39:43.4206998	MarvelOres/Recipes
+// 1.21	2026-08-22T22:05:33.0856774	MarvelOres/Recipes
 df3e243e05ab0d62b59f1a1592fb2dcf7ce9a52e data\marvelores\advancement\recipes\misc\raw_vibranium_block.json
 b1001da907001ee63bd0318af7fdc282d19e3053 data\marvelores\recipe\raw_vibranium_block.json
 0487265d7b4f26e8d7ffbd035f6d1de4eade7e9e data\marvelores\recipe\vibranium_boots.json
@@ -23,6 +23,7 @@ e2784a5618f93415abcfdf98d69b42aac42ba781 data\marvelores\advancement\recipes\mis
 414d48a594e7d215ee3f3c4e938f2912646c3978 data\marvelores\advancement\recipes\misc\vibranium_from_smelting_raw_vibranium.json
 645dc2a7eecbb8bc9d8b0c84a25ce72121f76dae data\marvelores\recipe\vibranium_from_smelting_vibranium_ore.json
 7b9bc2dd3b767b3d0bd1d588ca467eeaa9f5c1a7 data\marvelores\recipe\vibranium_sword.json
+2a817da616423efa3a29d3fbe716be0cfef03eaf data\marvelores\recipe\crusher.json
 0ad7c28bb58e81735062b34e404e85be3b3e1134 data\marvelores\advancement\recipes\misc\vibranium_pickaxe.json
 47462f037193a5701c4bdcd3938eb82453201861 data\marvelores\advancement\recipes\misc\vibranium_shovel.json
 0264dbcda655422e362effd4a36d036c46f45541 data\marvelores\advancement\recipes\misc\vibranium_from_blasting_vibranium_ore.json
@@ -30,6 +31,7 @@ e2784a5618f93415abcfdf98d69b42aac42ba781 data\marvelores\advancement\recipes\mis
 bd7e7f2bdffa646a7e1b23295cbf2933617bd041 data\marvelores\recipe\vibranium_chestplate.json
 2a9f627952e0da25a7f1fff8f00d17df451033d1 data\marvelores\recipe\vibranium_from_smelting_raw_vibranium.json
 769023afde003ae4debdab74cb2a1d68c0c9d372 data\marvelores\advancement\recipes\misc\vibranium_sword.json
+4ac66fe3c390e641804c689e2e593cdb140e13ca data\marvelores\advancement\recipes\misc\crusher.json
 452d3d2e7139ae19ade9b51ac783ed7b6fd70fa7 data\marvelores\advancement\recipes\misc\vibranium_chestplate.json
 0d3514eac8844bdadcc2eb9a7b75cbc1742347c8 data\marvelores\advancement\recipes\misc\vibranium_shield.json
 cb37d761573d693fe8e6fab5e854c5a1a7d83aba data\marvelores\advancement\recipes\building_blocks\vibranium.json

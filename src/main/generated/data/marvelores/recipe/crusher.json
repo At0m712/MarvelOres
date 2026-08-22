@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "marvelores:vibranium_block"
+    },
+    "V": {
+      "item": "marvelores:vibranium"
+    }
+  },
+  "pattern": [
+    "VVV",
+    "# #",
+    "VVV"
+  ],
+  "result": {
+    "count": 1,
+    "id": "marvelores:crusher"
+  }
+}

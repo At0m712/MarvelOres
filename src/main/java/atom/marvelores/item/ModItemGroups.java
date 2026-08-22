@@ -18,6 +18,7 @@ public class ModItemGroups {
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.VIBRANIUM);
                         entries.add(ModItems.RAW_VIBRANIUM);
+                        entries.add(ModItems.VIBRANIUM_POWDER);
 
                         entries.add(ModItems.VIBRANIUM_SWORD);
                         entries.add(ModItems.VIBRANIUM_PICKAXE);
@@ -43,6 +44,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.RAW_VIBRANIUM_BLOCK);
                         entries.add(ModBlocks.VIBRANIUM_ORE);
                         entries.add(ModBlocks.VIBRANIUM_DEEPSLATE_ORE);
+                        entries.add(ModBlocks.CRUSHER);
                     }).build());
 
 

@@ -1,6 +1,7 @@
 {
   "item.marvelores.vibranium": "Vibranium",
   "item.marvelores.raw_vibranium": "Raw Vibranium",
+  "item.marvelores.vibranium_powder": "Vibranium Powder",
 
   "item.marvelores.vibranium_sword": "KillMonger Sword",
   "item.marvelores.vibranium_pickaxe": "Vibranium Pickaxe",
@@ -21,6 +22,8 @@
 
   "block.marvelores.vibranium_ore": "Vibranium Ore",
   "block.marvelores.vibranium_deepslate_ore": "Deepslate Vibranium Ore",
+
+  "block.marvelores.crusher": "Crusher",
 
   "itemgroup.marvelores.vibranium_items": "Vibranium Items",
   "itemgroup.marvelores.vibranium_block": "Vibranium Blocks"
