@@ -1,5 +1,5 @@
 ## VIBRANIUM UPDATE !!
 
-+ Armor and Items are now enchantable.(Armor are trimmable)
++ 3d models Captain America Shield.
 
 _Add a lot more coming soon !_
