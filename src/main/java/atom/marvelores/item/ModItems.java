@@ -2,6 +2,7 @@ package atom.marvelores.item;
 
 import atom.marvelores.MarvelOres;
 
+import atom.marvelores.item.custom.ModArmorItem;
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -38,7 +39,7 @@ public class ModItems {
 
 
     public static final Item VIBRANIUM_HELMET = registerItem("vibranium_helmet",
-            properties -> new Item(properties.humanoidArmor(ModArmorMaterials.VIBRANIUM_ARMOR_MATERIAL, ArmorType.HELMET)));
+            properties -> new ModArmorItem(properties.humanoidArmor(ModArmorMaterials.VIBRANIUM_ARMOR_MATERIAL, ArmorType.HELMET)));
     public static final Item VIBRANIUM_CHESTPLATE = registerItem("vibranium_chestplate",
             properties -> new Item(properties.humanoidArmor(ModArmorMaterials.VIBRANIUM_ARMOR_MATERIAL, ArmorType.CHESTPLATE)));
     public static final Item VIBRANIUM_LEGGINGS = registerItem("vibranium_leggings",
