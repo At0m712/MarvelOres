@@ -3,28 +3,29 @@ package atom.marvelores.block.custom;
 import com.mojang.serialization.MapCodec;
 import atom.marvelores.block.entity.ModBlockEntities;
 import atom.marvelores.block.entity.custom.CrusherBlockEntity;
-import net.minecraft.block.BlockEntityProvider;
-import net.minecraft.block.BlockRenderType;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.BlockWithEntity;
+import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.screen.NamedScreenHandlerFactory;
-import net.minecraft.util.Hand;
-import net.minecraft.util.ItemActionResult;
-import net.minecraft.util.ItemScatterer;
+import net.minecraft.state.StateManager;
+import net.minecraft.state.property.DirectionProperty;
+import net.minecraft.util.*;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-public class CrusherBlock extends BlockWithEntity implements BlockEntityProvider {
+public class CrusherBlock  extends BlockWithEntity implements BlockEntityProvider {
+    public static final DirectionProperty FACING = HorizontalFacingBlock.FACING;
     public static final MapCodec<CrusherBlock> CODEC = CrusherBlock.createCodec(CrusherBlock::new);
 
-    public CrusherBlock(Settings settings) {
+
+    public CrusherBlock(CrusherBlock.Settings settings) {
         super(settings);
     }
 
@@ -32,6 +33,7 @@ public class CrusherBlock extends BlockWithEntity implements BlockEntityProvider
     protected MapCodec<? extends BlockWithEntity> getCodec() {
         return CODEC;
     }
+
 
     @Nullable
     @Override

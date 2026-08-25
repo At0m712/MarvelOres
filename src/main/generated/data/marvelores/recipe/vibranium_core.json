@@ -2,7 +2,10 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "S": {
+    "#": {
+      "item": "marvelores:vibranium_block"
+    },
+    "/": {
       "item": "marvelores:vibranium_stick"
     },
     "V": {
@@ -10,12 +13,12 @@
     }
   },
   "pattern": [
-    " V ",
-    " V ",
-    " S "
+    "/ /",
+    "V#V",
+    "/ /"
   ],
   "result": {
     "count": 1,
-    "id": "marvelores:vibranium_sword"
+    "id": "marvelores:vibranium_core"
   }
 }

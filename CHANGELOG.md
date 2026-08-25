@@ -1,5 +1,9 @@
 Added Vibranium Items:
 
-+ Armor and Items are now enchantable.(Armor are trimmable).
++ Add Vibranium Stick
++ Add Vibranium Core
++ Add Vibranium Powder
++ Add Crusher
++ Change some craft
 
 Add a lot more coming soon !

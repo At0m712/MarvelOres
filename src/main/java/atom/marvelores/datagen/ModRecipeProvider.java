@@ -48,7 +48,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern(" V ")
                 .pattern(" S ")
                 .input('V', ModItems.VIBRANIUM)
-                .input('S', Items.STICK)
+                .input('S', ModItems.VIBRANIUM_STICK)
                 .criterion(hasItem(ModItems.VIBRANIUM), conditionsFromItem(ModItems.VIBRANIUM))
                 .offerTo(exporter);
 
@@ -57,7 +57,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern(" S ")
                 .pattern(" S ")
                 .input('V', ModItems.VIBRANIUM)
-                .input('S', Items.STICK)
+                .input('S', ModItems.VIBRANIUM_STICK)
                 .criterion(hasItem(ModItems.VIBRANIUM), conditionsFromItem(ModItems.VIBRANIUM))
                 .offerTo(exporter);
 
@@ -66,7 +66,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern(" S ")
                 .pattern(" S ")
                 .input('V', ModItems.VIBRANIUM)
-                .input('S', Items.STICK)
+                .input('S', ModItems.VIBRANIUM_STICK)
                 .criterion(hasItem(ModItems.VIBRANIUM), conditionsFromItem(ModItems.VIBRANIUM))
                 .offerTo(exporter);
 
@@ -75,7 +75,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern(" SV")
                 .pattern(" S ")
                 .input('V', ModItems.VIBRANIUM)
-                .input('S', Items.STICK)
+                .input('S', ModItems.VIBRANIUM_STICK)
                 .criterion(hasItem(ModItems.VIBRANIUM), conditionsFromItem(ModItems.VIBRANIUM))
                 .offerTo(exporter);
 
@@ -84,16 +84,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern(" S ")
                 .pattern(" S ")
                 .input('V', ModItems.VIBRANIUM)
-                .input('S', Items.STICK)
+                .input('S', ModItems.VIBRANIUM_STICK)
                 .criterion(hasItem(ModItems.VIBRANIUM), conditionsFromItem(ModItems.VIBRANIUM))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.VIBRANIUM_HELMET)
-                .pattern("VNV")
+                .pattern("V#V")
                 .pattern("V V")
                 .pattern("   ")
                 .input('V', ModItems.VIBRANIUM)
-                .input('N', Items.NETHERITE_INGOT)
+                .input('#', ModItems.VIBRANIUM_POWDER)
                 .criterion(hasItem(ModItems.VIBRANIUM), conditionsFromItem(ModItems.VIBRANIUM))
                 .offerTo(exporter);
 
@@ -107,11 +107,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.VIBRANIUM_LEGGINGS)
-                .pattern("VNV")
+                .pattern("V#V")
                 .pattern("V V")
                 .pattern("V V")
                 .input('V', ModItems.VIBRANIUM)
-                .input('N', Items.NETHERITE_INGOT)
+                .input('#', ModItems.VIBRANIUM_POWDER)
                 .criterion(hasItem(ModItems.VIBRANIUM), conditionsFromItem(ModItems.VIBRANIUM))
                 .offerTo(exporter);
 
@@ -125,19 +125,39 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.VIBRANIUM_SHIELD)
                 .pattern("VVV")
-                .pattern("VNV")
+                .pattern("P#P")
                 .pattern("VVV")
                 .input('V', ModItems.VIBRANIUM)
-                .input('N', Items.NETHERITE_INGOT)
+                .input('#', ModItems.VIBRANIUM_CORE)
+                .input('P', ModItems.VIBRANIUM_POWDER)
                 .criterion(hasItem(ModItems.VIBRANIUM), conditionsFromItem(ModItems.VIBRANIUM))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.CRUSHER)
                 .pattern("VVV")
-                .pattern("# #")
+                .pattern("#X#")
                 .pattern("VVV")
                 .input('V', ModItems.VIBRANIUM)
                 .input('#', ModBlocks.VIBRANIUM_BLOCK)
+                .input('X', ModItems.VIBRANIUM_CORE)
+                .criterion(hasItem(ModItems.VIBRANIUM), conditionsFromItem(ModItems.VIBRANIUM))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.VIBRANIUM_STICK, 2)
+                .pattern("   ")
+                .pattern(" V ")
+                .pattern(" V ")
+                .input('V', ModItems.VIBRANIUM)
+                .criterion(hasItem(ModItems.VIBRANIUM), conditionsFromItem(ModItems.VIBRANIUM))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.VIBRANIUM_CORE)
+                .pattern("/ /")
+                .pattern("V#V")
+                .pattern("/ /")
+                .input('V', ModItems.VIBRANIUM)
+                .input('#', ModBlocks.VIBRANIUM_BLOCK)
+                .input('/', ModItems.VIBRANIUM_STICK)
                 .criterion(hasItem(ModItems.VIBRANIUM), conditionsFromItem(ModItems.VIBRANIUM))
                 .offerTo(exporter);
     }

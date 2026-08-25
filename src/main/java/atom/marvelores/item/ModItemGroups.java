@@ -19,6 +19,8 @@ public class ModItemGroups {
                         entries.add(ModItems.VIBRANIUM);
                         entries.add(ModItems.RAW_VIBRANIUM);
                         entries.add(ModItems.VIBRANIUM_POWDER);
+                        entries.add(ModItems.VIBRANIUM_STICK);
+                        entries.add(ModItems.VIBRANIUM_CORE);
 
                         entries.add(ModItems.VIBRANIUM_SWORD);
                         entries.add(ModItems.VIBRANIUM_PICKAXE);

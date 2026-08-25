@@ -2,20 +2,17 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "S": {
-      "item": "marvelores:vibranium_stick"
-    },
     "V": {
       "item": "marvelores:vibranium"
     }
   },
   "pattern": [
+    "   ",
     " V ",
-    " V ",
-    " S "
+    " V "
   ],
   "result": {
-    "count": 1,
-    "id": "marvelores:vibranium_sword"
+    "count": 2,
+    "id": "marvelores:vibranium_stick"
   }
 }

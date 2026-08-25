@@ -9,6 +9,7 @@ import atom.marvelores.screen.ModScreenHandlers;
 import atom.marvelores.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.util.Identifier;
 
 import org.slf4j.Logger;
@@ -30,6 +31,8 @@ public class MarvelOres implements ModInitializer {
 		ModScreenHandlers.registerScreenHandlers();
 
 		ModRecipes.registerRecipes();
+
+		FuelRegistry.INSTANCE.add(ModItems.VIBRANIUM_POWDER, 2000);
 	}
 
 	public static Identifier id(String path) {

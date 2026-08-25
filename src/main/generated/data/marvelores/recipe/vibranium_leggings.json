@@ -2,15 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "N": {
-      "item": "minecraft:netherite_ingot"
+    "#": {
+      "item": "marvelores:vibranium_powder"
     },
     "V": {
       "item": "marvelores:vibranium"
     }
   },
   "pattern": [
-    "VNV",
+    "V#V",
     "V V",
     "V V"
   ],

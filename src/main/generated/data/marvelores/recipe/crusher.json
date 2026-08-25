@@ -7,11 +7,14 @@
     },
     "V": {
       "item": "marvelores:vibranium"
+    },
+    "X": {
+      "item": "marvelores:vibranium_core"
     }
   },
   "pattern": [
     "VVV",
-    "# #",
+    "#X#",
     "VVV"
   ],
   "result": {

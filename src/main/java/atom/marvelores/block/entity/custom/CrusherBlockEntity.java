@@ -38,7 +38,7 @@ public class CrusherBlockEntity extends BlockEntity implements ExtendedScreenHan
     protected final PropertyDelegate propertyDelegate;
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(2, ItemStack.EMPTY);
     private int progress = 0;
-    private int maxProgress = 72;
+    private int maxProgress = 200;
 
     public CrusherBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.CRUSHER_BE, pos, state);
@@ -122,7 +122,7 @@ public class CrusherBlockEntity extends BlockEntity implements ExtendedScreenHan
 
     private void resetProgress() {
         this.progress = 0;
-        this.maxProgress = 72;
+        this.maxProgress = 200;
     }
 
     private void craftItem() {
