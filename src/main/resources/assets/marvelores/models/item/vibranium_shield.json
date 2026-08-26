@@ -1,6 +1,7 @@
 {
 	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
+	"gui_light" : "front",
 	"textures": {
 		"0": "marvelores:item/vibranium_shield",
 		"particle": "marvelores:item/vibranium_shield"
