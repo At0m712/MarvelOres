@@ -1,6 +1,7 @@
 package atom.marvelores.block;
 
 import atom.marvelores.MarvelOres;
+import atom.marvelores.block.custom.CrusherBlock;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -38,6 +39,9 @@ public class ModBlocks {
 public static final Block VIBRANIUM_DEEPSLATE_ORE = registerBlock("vibranium_deepslate_ore",
             properties -> new DropExperienceBlock(UniformInt.of(3, 6),
                     properties.strength(4f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+
+    public static final Block CRUSHER = registerBlock("crusher",
+            properties -> new CrusherBlock(properties.strength(3f).requiresCorrectToolForDrops()));
 
 
     public static ResourceKey<Block> getRK(Block block) {

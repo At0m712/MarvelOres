@@ -22,13 +22,15 @@ public class ModBlockTagProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ModBlocks.getRK(ModBlocks.VIBRANIUM_BLOCK))
                 .add(ModBlocks.getRK(ModBlocks.RAW_VIBRANIUM_BLOCK))
                 .add(ModBlocks.getRK(ModBlocks.VIBRANIUM_ORE))
-                .add(ModBlocks.getRK(ModBlocks.VIBRANIUM_DEEPSLATE_ORE));
+                .add(ModBlocks.getRK(ModBlocks.VIBRANIUM_DEEPSLATE_ORE))
+                .add(ModBlocks.getRK(ModBlocks.CRUSHER));
 
 
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.getRK(ModBlocks.VIBRANIUM_BLOCK))
                 .add(ModBlocks.getRK(ModBlocks.RAW_VIBRANIUM_BLOCK))
                 .add(ModBlocks.getRK(ModBlocks.VIBRANIUM_ORE))
-                .add(ModBlocks.getRK(ModBlocks.VIBRANIUM_DEEPSLATE_ORE));
+                .add(ModBlocks.getRK(ModBlocks.VIBRANIUM_DEEPSLATE_ORE))
+                .add(ModBlocks.getRK(ModBlocks.CRUSHER));
     }
 }

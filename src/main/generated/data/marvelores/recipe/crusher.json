@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "vibranium",
+  "key": {
+    "#": "marvelores:vibranium_block",
+    "V": "marvelores:vibranium",
+    "X": "marvelores:vibranium_core"
+  },
+  "pattern": [
+    "VVV",
+    "#X#",
+    "VVV"
+  ],
+  "result": {
+    "id": "marvelores:crusher"
+  }
+}

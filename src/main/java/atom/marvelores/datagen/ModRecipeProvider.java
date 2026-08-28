@@ -1,12 +1,11 @@
 package atom.marvelores.datagen;
 
 
+import atom.marvelores.block.ModBlocks;
+import atom.marvelores.datagen.recipe.CrusherRecipeBuilder;
+import atom.marvelores.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-
-import atom.marvelores.block.ModBlocks;
-import atom.marvelores.item.ModItems;
-
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
@@ -56,7 +55,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern(" V ")
                         .pattern(" S ")
                         .define('V', ModItems.VIBRANIUM)
-                        .define('S', Items.STICK)
+                        .define('S', ModItems.VIBRANIUM_STICK)
                         .unlockedBy(getHasName(ModItems.VIBRANIUM), has(ModItems.VIBRANIUM))
                         .group("vibranium")
                         .save(output);
@@ -66,7 +65,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern(" S ")
                         .pattern(" S ")
                         .define('V', ModItems.VIBRANIUM)
-                        .define('S', Items.STICK)
+                        .define('S', ModItems.VIBRANIUM_STICK)
                         .unlockedBy(getHasName(ModItems.VIBRANIUM), has(ModItems.VIBRANIUM))
                         .group("vibranium")
                         .save(output);
@@ -76,7 +75,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern(" S ")
                         .pattern(" S ")
                         .define('V', ModItems.VIBRANIUM)
-                        .define('S', Items.STICK)
+                        .define('S', ModItems.VIBRANIUM_STICK)
                         .unlockedBy(getHasName(ModItems.VIBRANIUM), has(ModItems.VIBRANIUM))
                         .group("vibranium")
                         .save(output);
@@ -86,7 +85,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern(" SV")
                         .pattern(" S ")
                         .define('V', ModItems.VIBRANIUM)
-                        .define('S', Items.STICK)
+                        .define('S', ModItems.VIBRANIUM_STICK)
                         .unlockedBy(getHasName(ModItems.VIBRANIUM), has(ModItems.VIBRANIUM))
                         .group("vibranium")
                         .save(output);
@@ -96,17 +95,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern(" S ")
                         .pattern(" S ")
                         .define('V', ModItems.VIBRANIUM)
-                        .define('S', Items.STICK)
+                        .define('S', ModItems.VIBRANIUM_STICK)
                         .unlockedBy(getHasName(ModItems.VIBRANIUM), has(ModItems.VIBRANIUM))
                         .group("vibranium")
                         .save(output);
 
                 shaped(RecipeCategory.MISC, ModItems.VIBRANIUM_HELMET)
-                        .pattern("VNV")
+                        .pattern("VPV")
                         .pattern("V V")
                         .pattern("   ")
                         .define('V', ModItems.VIBRANIUM)
-                        .define('N', Items.NETHERITE_INGOT)
+                        .define('P', ModItems.VIBRANIUM_POWDER)
                         .unlockedBy(getHasName(ModItems.VIBRANIUM), has(ModItems.VIBRANIUM))
                         .group("vibranium")
                         .save(output);
@@ -122,11 +121,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .save(output);
 
                 shaped(RecipeCategory.MISC, ModItems.VIBRANIUM_LEGGINGS)
-                        .pattern("VNV")
+                        .pattern("VPV")
                         .pattern("V V")
                         .pattern("V V")
                         .define('V', ModItems.VIBRANIUM)
-                        .define('N', Items.NETHERITE_INGOT)
+                        .define('P', ModItems.VIBRANIUM_POWDER)
                         .unlockedBy(getHasName(ModItems.VIBRANIUM), has(ModItems.VIBRANIUM))
                         .group("vibranium")
                         .save(output);
@@ -140,6 +139,39 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .group("vibranium")
                         .save(output);
 
+                shaped(RecipeCategory.MISC, ModBlocks.CRUSHER)
+                        .pattern("VVV")
+                        .pattern("#X#")
+                        .pattern("VVV")
+                        .define('V', ModItems.VIBRANIUM)
+                        .define('X', ModItems.VIBRANIUM_CORE)
+                        .define('#', ModBlocks.VIBRANIUM_BLOCK)
+                        .unlockedBy(getHasName(ModItems.VIBRANIUM), has(ModItems.VIBRANIUM))
+                        .group("vibranium")
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.VIBRANIUM_STICK, 2)
+                        .pattern("   ")
+                        .pattern(" V ")
+                        .pattern(" V ")
+                        .define('V', ModItems.VIBRANIUM)
+                        .unlockedBy(getHasName(ModItems.VIBRANIUM), has(ModItems.VIBRANIUM))
+                        .group("vibranium")
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.VIBRANIUM_CORE)
+                        .pattern("/ /")
+                        .pattern("V#V")
+                        .pattern("/ /")
+                        .define('V', ModItems.VIBRANIUM)
+                        .define('/', ModItems.VIBRANIUM_STICK)
+                        .define('#', ModBlocks.VIBRANIUM_BLOCK)
+                        .unlockedBy(getHasName(ModItems.VIBRANIUM), has(ModItems.VIBRANIUM))
+                        .group("vibranium")
+                        .save(output);
+
+
+
                 /*shaped(RecipeCategory.MISC, ModItems.VIBRANIUM_SHIELD)
                         .pattern("VVV")
                         .pattern("VNV")
@@ -149,6 +181,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(ModItems.VIBRANIUM), has(ModItems.VIBRANIUM))
                         .group("vibranium")
                         .save(output);*/
+
+                CrusherRecipeBuilder.crusherRecipe(RecipeCategory.MISC, Ingredient.of(ModItems.VIBRANIUM), ModItems.VIBRANIUM_POWDER, 3)
+                        .unlockedBy(getHasName(ModItems.VIBRANIUM), has(ModItems.VIBRANIUM))
+                        .save(output, "marvelores:vibranium_powder_from_crushing");
             }
         };
     }
