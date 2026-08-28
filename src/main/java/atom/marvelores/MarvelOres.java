@@ -6,6 +6,7 @@ import atom.marvelores.creativemodetab.ModCreativeModeTabs;
 import atom.marvelores.custom.ModMenuTypes;
 import atom.marvelores.item.ModItems;
 import atom.marvelores.recipe.ModRecipes;
+import atom.marvelores.registries.ModFuels;
 import atom.marvelores.worldgen.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
@@ -29,5 +30,7 @@ public class MarvelOres implements ModInitializer {
 
 		ModMenuTypes.registerModMenuTypes();
 		ModRecipes.registerModRecipes();
+
+		ModFuels.registerFuels();
 	}
 }
