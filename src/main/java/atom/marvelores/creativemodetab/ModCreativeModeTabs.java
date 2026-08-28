@@ -19,6 +19,9 @@ public class ModCreativeModeTabs {
                     .displayItems((parameters, output) -> {
                         output.accept(ModItems.VIBRANIUM);
                         output.accept(ModItems.RAW_VIBRANIUM);
+                        output.accept(ModItems.VIBRANIUM_STICK);
+                        output.accept(ModItems.VIBRANIUM_POWDER);
+                        output.accept(ModItems.VIBRANIUM_CORE);
 
 
                         output.accept(ModItems.VIBRANIUM_SWORD);
@@ -43,6 +46,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.RAW_VIBRANIUM_BLOCK);
                         output.accept(ModBlocks.VIBRANIUM_ORE);
                         output.accept(ModBlocks.VIBRANIUM_DEEPSLATE_ORE);
+                        output.accept(ModBlocks.CRUSHER);
 
 
                     }).build());

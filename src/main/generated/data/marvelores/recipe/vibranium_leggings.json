@@ -3,11 +3,11 @@
   "category": "misc",
   "group": "vibranium",
   "key": {
-    "N": "minecraft:netherite_ingot",
+    "P": "marvelores:vibranium_powder",
     "V": "marvelores:vibranium"
   },
   "pattern": [
-    "VNV",
+    "VPV",
     "V V",
     "V V"
   ],

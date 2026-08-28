@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "vibranium",
+  "key": {
+    "#": "marvelores:vibranium_block",
+    "/": "marvelores:vibranium_stick",
+    "V": "marvelores:vibranium"
+  },
+  "pattern": [
+    "/ /",
+    "V#V",
+    "/ /"
+  ],
+  "result": {
+    "id": "marvelores:vibranium_core"
+  }
+}
