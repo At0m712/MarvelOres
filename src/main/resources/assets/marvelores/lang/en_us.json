@@ -1,6 +1,9 @@
 {
   "item.marvelores.vibranium": "Vibranium",
   "item.marvelores.raw_vibranium": "Raw Vibranium",
+  "item.marvelores.vibranium_powder": "Vibranium Powder",
+  "item.marvelores.vibranium_stick": "Vibranium Stick",
+  "item.marvelores.vibranium_core": "Vibranium Core",
 
   "item.marvelores.vibranium_sword": "KillMonger Sword",
   "item.marvelores.vibranium_pickaxe": "Vibranium Pickaxe",
@@ -8,7 +11,6 @@
   "item.marvelores.vibranium_axe": "Vibranium Axe",
   "item.marvelores.vibranium_hoe": "Vibranium Hoe",
 
-  /*"item.marvelores.vibranium_shield": "Captain America Shield",*/
 
   "item.marvelores.vibranium_helmet": "Vibranium Helmet",
   "item.marvelores.vibranium_chestplate": "Vibranium Chestplate",
@@ -21,6 +23,8 @@
 
   "block.marvelores.vibranium_ore": "Vibranium Ore",
   "block.marvelores.vibranium_deepslate_ore": "Deepslate Vibranium Ore",
+
+  "block.marvelores.crusher": "Crusher",
 
   "itemgroup.marvelores.vibranium_items": "Vibranium Items",
   "itemgroup.marvelores.vibranium_block": "Vibranium Blocks"

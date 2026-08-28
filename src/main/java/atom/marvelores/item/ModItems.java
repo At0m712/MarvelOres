@@ -16,6 +16,9 @@ import java.util.function.Function;
 public class ModItems {
     public static final Item VIBRANIUM = registerItem("vibranium", Item::new);
     public static final Item RAW_VIBRANIUM = registerItem("raw_vibranium", Item::new);
+    public static final Item VIBRANIUM_POWDER = registerItem("vibranium_powder", Item::new);
+    public static final Item VIBRANIUM_STICK = registerItem("vibranium_stick", Item::new);
+    public static final Item VIBRANIUM_CORE = registerItem("vibranium_core", Item::new);
 
     public static final Item VIBRANIUM_SWORD = registerItem("vibranium_sword",
             setting -> new Item(setting.sword(ModToolMaterials.VIBRANIUM, 3, -2.4f)));
