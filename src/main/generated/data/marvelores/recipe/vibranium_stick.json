@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "V": "marvelores:vibranium"
+  },
+  "pattern": [
+    "   ",
+    " V ",
+    " V "
+  ],
+  "result": {
+    "count": 2,
+    "id": "marvelores:vibranium_stick"
+  }
+}

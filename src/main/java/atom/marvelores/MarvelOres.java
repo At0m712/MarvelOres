@@ -1,11 +1,15 @@
 package atom.marvelores;
 
 import atom.marvelores.block.ModBlocks;
+import atom.marvelores.block.entity.ModBlockEntities;
 import atom.marvelores.item.ModItemGroups;
 import atom.marvelores.item.ModItems;
+import atom.marvelores.recipe.ModRecipes;
+import atom.marvelores.screen.ModScreenHandlers;
 import atom.marvelores.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,5 +25,14 @@ public class MarvelOres implements ModInitializer {
 		ModBlocks.registerModBlocks();
 
 		ModWorldGeneration.generateModWorldGen();
+
+		ModBlockEntities.registerBlockEntities();
+		ModScreenHandlers.registerScreenHandlers();
+
+		ModRecipes.registerRecipes();
+
+		FuelRegistryEvents.BUILD.register((builder, context) -> {
+			builder.add(ModItems.VIBRANIUM_POWDER, 2000);
+		});
 	}
 }

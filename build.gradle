@@ -96,7 +96,7 @@ publishMods {
 
 		minecraftVersionRange {
 			start = "1.21.6"
-			end = "1.21.11"
+			end = "1.21.8"
 		}
 
 		client = true
@@ -111,7 +111,7 @@ publishMods {
 
 		minecraftVersionRange {
 			start = "1.21.6"
-			end = "1.21.11"
+			end = "1.21.8"
 		}
 
 		requires("fabric-api")

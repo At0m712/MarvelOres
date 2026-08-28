@@ -20,11 +20,13 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.VIBRANIUM_BLOCK)
                 .add(ModBlocks.RAW_VIBRANIUM_BLOCK)
                 .add(ModBlocks.VIBRANIUM_ORE)
-                .add(ModBlocks.VIBRANIUM_DEEPSLATE_ORE);
+                .add(ModBlocks.VIBRANIUM_DEEPSLATE_ORE)
+                .add(ModBlocks.CRUSHER);
         valueLookupBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.VIBRANIUM_BLOCK)
                 .add(ModBlocks.RAW_VIBRANIUM_BLOCK)
                 .add(ModBlocks.VIBRANIUM_ORE)
-                .add(ModBlocks.VIBRANIUM_DEEPSLATE_ORE);
+                .add(ModBlocks.VIBRANIUM_DEEPSLATE_ORE)
+                .add(ModBlocks.CRUSHER);
     }
 }

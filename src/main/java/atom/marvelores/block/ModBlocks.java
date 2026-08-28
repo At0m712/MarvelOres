@@ -1,5 +1,6 @@
 package atom.marvelores.block;
 
+import atom.marvelores.block.custom.CrusherBlock;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import atom.marvelores.MarvelOres;
 import net.minecraft.block.AbstractBlock;
@@ -35,6 +36,7 @@ public static final Block VIBRANIUM_DEEPSLATE_ORE = registerBlock("vibranium_dee
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(3, 6),
                     properties.strength(4f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
 
+    public static final Block CRUSHER = registerBlock("crusher", properties -> new CrusherBlock(properties.strength(3.0f).requiresTool()));
 
     private static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> function) {
         Block toRegister = function.apply(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(MarvelOres.MOD_ID, name))));
