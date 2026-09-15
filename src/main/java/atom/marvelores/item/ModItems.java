@@ -35,11 +35,11 @@ public class ModItems {
     public static final Item VIBRANIUM_PICKAXE = registerItem("vibranium_pickaxe",
             properties -> new Item(properties.pickaxe(ModToolMaterials.VIBRANIUM, 1, -2.8f)));
     public static final Item VIBRANIUM_SHOVEL = registerItem("vibranium_shovel",
-            properties -> new ShovelItem(ModToolMaterials.VIBRANIUM, 1.5f, -3.0f, properties));
+            properties -> new Item(ModToolMaterials.VIBRANIUM, 1.5f, -3.0f, properties));
     public static final Item VIBRANIUM_AXE = registerItem("vibranium_axe",
-            properties -> new AxeItem(ModToolMaterials.VIBRANIUM, 6, -3.2f, properties));
+            properties -> new Item(ModToolMaterials.VIBRANIUM, 6, -3.2f, properties));
     public static final Item VIBRANIUM_HOE = registerItem("vibranium_hoe",
-            properties -> new HoeItem(ModToolMaterials.VIBRANIUM, 0, -3f, properties));
+            properties -> new Item(ModToolMaterials.VIBRANIUM, 0, -3f, properties));
 
 
     public static final Item VIBRANIUM_HELMET = registerItem("vibranium_helmet",

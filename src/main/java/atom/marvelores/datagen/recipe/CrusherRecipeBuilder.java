@@ -2,7 +2,7 @@ package atom.marvelores.datagen.recipe;
 
 
 import atom.marvelores.recipe.custom.CrusherRecipe;
-import net.minecraft.advancements.Criterion;
+import net.minecraft.advancements.triggers.Criterion;
 import net.minecraft.data.recipes.RecipeBuilder;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
