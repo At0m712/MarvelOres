@@ -34,7 +34,7 @@ public class ModBlocks {
 
 
     public static final Block CRUSHER = registerBlock("crusher",
-            new CrusherBlock(AbstractBlock.Settings.create()));
+            new CrusherBlock(AbstractBlock.Settings.create().strength(3f).requiresTool()));
 
 
     private static Block registerBlock(String name, Block block) {
