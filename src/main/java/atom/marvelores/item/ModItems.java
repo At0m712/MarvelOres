@@ -26,6 +26,10 @@ public class ModItems {
     public static final Item VIBRANIUM_STICK = registerItem("vibranium_stick", Item::new);
     public static final Item VIBRANIUM_CORE = registerItem("vibranium_core", Item::new);
 
+
+    public static final Item ADAMANTIUM = registerItem("adamantium", Item::new);
+    public static final Item RAW_ADAMANTIUM = registerItem("raw_adamantium", Item::new);
+
     public static final Item VIBRANIUM_SWORD = registerItem("vibranium_sword",
             setting -> new Item(setting.sword(ModToolMaterials.VIBRANIUM, 3, -2.4f)));
 
@@ -39,6 +43,19 @@ public class ModItems {
             setting -> new HoeItem(ModToolMaterials.VIBRANIUM, 0, -3f, setting));
 
 
+    public static final Item ADAMANTIUM_SWORD = registerItem("adamantium_sword",
+            setting -> new Item(setting.sword(ModToolMaterials.VIBRANIUM, 3, -2.4f)));
+
+    public static final Item ADAMANTIUM_PICKAXE = registerItem("adamantium_pickaxe",
+            setting -> new Item(setting.pickaxe(ModToolMaterials.ADAMANTIUM, 1, -2.8f)));
+    public static final Item ADAMANTIUM_SHOVEL = registerItem("adamantium_shovel",
+            setting -> new ShovelItem(ModToolMaterials.ADAMANTIUM, 1.5f, -3.0f, setting));
+    public static final Item ADAMANTIUM_AXE = registerItem("adamantium_axe",
+            setting -> new AxeItem(ModToolMaterials.ADAMANTIUM, 6, -3.2f, setting));
+    public static final Item ADAMANTIUM_HOE = registerItem("adamantium_hoe",
+            setting -> new HoeItem(ModToolMaterials.ADAMANTIUM, 0, -3f, setting));
+
+
     public static final Item VIBRANIUM_HELMET = registerItem("vibranium_helmet",
             setting -> new ModArmorItem(setting.armor(ModArmorMaterials.VIBRANIUM_ARMOR_MATERIAL, EquipmentType.HELMET)));
     public static final Item VIBRANIUM_CHESTPLATE = registerItem("vibranium_chestplate",
@@ -47,6 +64,16 @@ public class ModItems {
             setting -> new Item(setting.armor(ModArmorMaterials.VIBRANIUM_ARMOR_MATERIAL, EquipmentType.LEGGINGS)));
     public static final Item VIBRANIUM_BOOTS = registerItem("vibranium_boots",
             setting -> new Item(setting.armor(ModArmorMaterials.VIBRANIUM_ARMOR_MATERIAL, EquipmentType.BOOTS)));
+
+
+    public static final Item ADAMANTIUM_HELMET = registerItem("adamantium_helmet",
+            setting -> new ModArmorItem(setting.armor(ModArmorMaterials.ADAMANTIUM_ARMOR_MATERIAL, EquipmentType.HELMET)));
+    public static final Item ADAMANTIUM_CHESTPLATE = registerItem("adamantium_chestplate",
+            setting -> new Item(setting.armor(ModArmorMaterials.ADAMANTIUM_ARMOR_MATERIAL, EquipmentType.CHESTPLATE)));
+    public static final Item ADAMANTIUM_LEGGINGS = registerItem("adamantium_leggings",
+            setting -> new Item(setting.armor(ModArmorMaterials.ADAMANTIUM_ARMOR_MATERIAL, EquipmentType.LEGGINGS)));
+    public static final Item ADAMANTIUM_BOOTS = registerItem("adamantium_boots",
+            setting -> new Item(setting.armor(ModArmorMaterials.ADAMANTIUM_ARMOR_MATERIAL, EquipmentType.BOOTS)));
 
 
 
@@ -61,6 +88,9 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(VIBRANIUM);
             entries.add(RAW_VIBRANIUM);
+
+            entries.add(ADAMANTIUM);
+            entries.add(RAW_ADAMANTIUM);
         });
     }
 }

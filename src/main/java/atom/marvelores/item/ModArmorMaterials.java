@@ -16,6 +16,7 @@ import java.util.EnumMap;
 public class ModArmorMaterials {
     static RegistryKey<? extends Registry<EquipmentAsset>> REGISTRY_KEY = RegistryKey.ofRegistry(Identifier.ofVanilla("equipment_asset"));
     public static final RegistryKey<EquipmentAsset> VIBRANIUM_KEY = RegistryKey.of(REGISTRY_KEY, Identifier.of(MarvelOres.MOD_ID, "vibranium"));
+    public static final RegistryKey<EquipmentAsset> ADAMANTIUM_KEY = RegistryKey.of(REGISTRY_KEY, Identifier.of(MarvelOres.MOD_ID, "adamantium"));
 
     public static final ArmorMaterial VIBRANIUM_ARMOR_MATERIAL = new ArmorMaterial(500, Util.make(new EnumMap<>(EquipmentType.class), map -> {
         map.put(EquipmentType.BOOTS, 4);
@@ -24,4 +25,12 @@ public class ModArmorMaterials {
         map.put(EquipmentType.HELMET, 3);
         map.put(EquipmentType.BODY, 12);
     }), 20, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE,2.0F,0.2F, ModTags.Items.VIBRANIUM_REPAIR, VIBRANIUM_KEY);
+
+    public static final ArmorMaterial ADAMANTIUM_ARMOR_MATERIAL = new ArmorMaterial(700, Util.make(new EnumMap<>(EquipmentType.class), map -> {
+        map.put(EquipmentType.BOOTS, 4);
+        map.put(EquipmentType.LEGGINGS, 7);
+        map.put(EquipmentType.CHESTPLATE, 9);
+        map.put(EquipmentType.HELMET, 3);
+        map.put(EquipmentType.BODY, 12);
+    }), 23, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE,3.0F,0.4F, ModTags.Items.ADAMANTIUM_REPAIR, ADAMANTIUM_KEY);
 }

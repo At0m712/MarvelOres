@@ -1,3 +1,5 @@
 // 1.21.11	-999999999-01-01T00:00:00	MarvelOres/
+4e15dd260ddc6aa26cea9f6158262b0288ccc0af data/marvelores/worldgen/configured_feature/adamantium_ore.json
 04cdb07e0e4819e4b864d342eee5393dd939bf14 data/marvelores/worldgen/configured_feature/vibranium_ore.json
+38bce557c97a499d6d535f531b50c7f6d98ac74e data/marvelores/worldgen/placed_feature/adamantium_ore_placed.json
 e82ba62ac480c02957f1c7dd38d6962d78ff5873 data/marvelores/worldgen/placed_feature/vibranium_ore_placed.json

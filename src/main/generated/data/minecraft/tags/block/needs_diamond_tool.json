@@ -4,6 +4,9 @@
     "marvelores:raw_vibranium_block",
     "marvelores:vibranium_ore",
     "marvelores:vibranium_deepslate_ore",
-    "marvelores:crusher"
+    "marvelores:crusher",
+    "marvelores:adamantium_block",
+    "marvelores:adamantium_ore",
+    "marvelores:adamantium_deepslate_ore"
   ]
 }

@@ -31,8 +31,13 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.RAW_VIBRANIUM_BLOCK);
         addDrop(ModBlocks.CRUSHER);
 
+        addDrop(ModBlocks.ADAMANTIUM_BLOCK);
+
         addDrop(ModBlocks.VIBRANIUM_ORE, oreDrops(ModBlocks.VIBRANIUM_ORE, ModItems.RAW_VIBRANIUM));
         addDrop(ModBlocks.VIBRANIUM_DEEPSLATE_ORE, oreDrops(ModBlocks.VIBRANIUM_ORE, ModItems.RAW_VIBRANIUM));
+
+        addDrop(ModBlocks.ADAMANTIUM_ORE, oreDrops(ModBlocks.ADAMANTIUM_ORE, ModItems.RAW_ADAMANTIUM));
+        addDrop(ModBlocks.ADAMANTIUM_DEEPSLATE_ORE, oreDrops(ModBlocks.ADAMANTIUM_ORE, ModItems.RAW_ADAMANTIUM));
     }
 
     public LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops) {

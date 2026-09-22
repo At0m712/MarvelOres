@@ -1,9 +1,7 @@
-## VIBRANIUM UPDATE !!
+## MARVELORES UPDATE !!
 
-+ Add Vibranium Stick
-+ Add Vibranium Core
-+ Add Vibranium Powder
-+ Add Crusher
-+ Change some craft
++ Add Adamantium Ore 
++ Add Adamantium Tools
++ Add Adamantium Equipment
 
 _Add a lot more coming soon !_

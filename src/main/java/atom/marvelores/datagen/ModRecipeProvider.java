@@ -32,6 +32,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerSmelting(VIBRANIUM_SMELTABLES, RecipeCategory.MISC, ModItems.VIBRANIUM, 0.25f, 200, "vibranium");
                 offerBlasting(VIBRANIUM_SMELTABLES, RecipeCategory.MISC, ModItems.VIBRANIUM, 0.25f, 100, "vibranium");
 
+                List<ItemConvertible> ADAMANTIUM_SMELTABLES = List.of(ModItems.RAW_ADAMANTIUM, ModBlocks.ADAMANTIUM_ORE, ModBlocks.ADAMANTIUM_DEEPSLATE_ORE);
+
+                offerSmelting(ADAMANTIUM_SMELTABLES, RecipeCategory.MISC, ModItems.ADAMANTIUM, 0.25f, 200, "adamantium");
+                offerBlasting(ADAMANTIUM_SMELTABLES, RecipeCategory.MISC, ModItems.ADAMANTIUM, 0.25f, 100, "adamantium");
+
                 offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS, ModItems.VIBRANIUM, RecipeCategory.DECORATIONS, ModBlocks.VIBRANIUM_BLOCK);
 
                 createShaped(RecipeCategory.MISC, ModBlocks.RAW_VIBRANIUM_BLOCK)
@@ -164,6 +169,84 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .input('V', ModItems.VIBRANIUM)
                         .input('#', ModBlocks.VIBRANIUM_BLOCK)
                         .input('/', ModItems.VIBRANIUM_STICK)
+                        .criterion(hasItem(ModItems.VIBRANIUM), conditionsFromItem(ModItems.VIBRANIUM))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.ADAMANTIUM_SWORD)
+                        .pattern(" V ")
+                        .pattern(" V ")
+                        .pattern(" S ")
+                        .input('V', ModItems.ADAMANTIUM)
+                        .input('S', ModItems.VIBRANIUM_STICK)
+                        .criterion(hasItem(ModItems.VIBRANIUM), conditionsFromItem(ModItems.VIBRANIUM))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.ADAMANTIUM_PICKAXE)
+                        .pattern("VVV")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .input('V', ModItems.ADAMANTIUM)
+                        .input('S', ModItems.VIBRANIUM_STICK)
+                        .criterion(hasItem(ModItems.VIBRANIUM), conditionsFromItem(ModItems.VIBRANIUM))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.ADAMANTIUM_SHOVEL)
+                        .pattern(" V ")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .input('V', ModItems.ADAMANTIUM)
+                        .input('S', ModItems.VIBRANIUM_STICK)
+                        .criterion(hasItem(ModItems.VIBRANIUM), conditionsFromItem(ModItems.VIBRANIUM))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.ADAMANTIUM_AXE)
+                        .pattern(" VV")
+                        .pattern(" SV")
+                        .pattern(" S ")
+                        .input('V', ModItems.ADAMANTIUM)
+                        .input('S', ModItems.VIBRANIUM_STICK)
+                        .criterion(hasItem(ModItems.VIBRANIUM), conditionsFromItem(ModItems.VIBRANIUM))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.ADAMANTIUM_HOE)
+                        .pattern("VV ")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .input('V', ModItems.ADAMANTIUM)
+                        .input('S', ModItems.VIBRANIUM_STICK)
+                        .criterion(hasItem(ModItems.VIBRANIUM), conditionsFromItem(ModItems.VIBRANIUM))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.ADAMANTIUM_HELMET)
+                        .pattern("VVV")
+                        .pattern("V V")
+                        .pattern("   ")
+                        .input('V', ModItems.ADAMANTIUM)
+                        .criterion(hasItem(ModItems.VIBRANIUM), conditionsFromItem(ModItems.VIBRANIUM))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.ADAMANTIUM_CHESTPLATE)
+                        .pattern("V V")
+                        .pattern("VNV")
+                        .pattern("VVV")
+                        .input('V', ModItems.ADAMANTIUM)
+                        .input('N', Items.NETHERITE_INGOT)
+                        .criterion(hasItem(ModItems.VIBRANIUM), conditionsFromItem(ModItems.VIBRANIUM))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.ADAMANTIUM_LEGGINGS)
+                        .pattern("VVV")
+                        .pattern("V V")
+                        .pattern("V V")
+                        .input('V', ModItems.ADAMANTIUM)
+                        .criterion(hasItem(ModItems.VIBRANIUM), conditionsFromItem(ModItems.VIBRANIUM))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.ADAMANTIUM_BOOTS)
+                        .pattern("   ")
+                        .pattern("V V")
+                        .pattern("V V")
+                        .input('V', ModItems.ADAMANTIUM)
                         .criterion(hasItem(ModItems.VIBRANIUM), conditionsFromItem(ModItems.VIBRANIUM))
                         .offerTo(exporter);
             }

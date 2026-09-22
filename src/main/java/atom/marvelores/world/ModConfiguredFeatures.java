@@ -20,6 +20,7 @@ import java.util.List;
 
 public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> VIBRANIUM_ORE_KEY = registerKey("vibranium_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> ADAMANTIUM_ORE_KEY = registerKey("adamantium_ore");
 
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
@@ -30,8 +31,12 @@ public class ModConfiguredFeatures {
         List<OreFeatureConfig.Target> overworldVibraniumOres =
                 List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.VIBRANIUM_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.VIBRANIUM_DEEPSLATE_ORE.getDefaultState()));
+        List<OreFeatureConfig.Target> overworldAdamantiumOres =
+                List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.ADAMANTIUM_ORE.getDefaultState()),
+                        OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.ADAMANTIUM_DEEPSLATE_ORE.getDefaultState()));
 
         register(context, VIBRANIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldVibraniumOres, 5));
+        register(context, ADAMANTIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldAdamantiumOres, 5));
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {

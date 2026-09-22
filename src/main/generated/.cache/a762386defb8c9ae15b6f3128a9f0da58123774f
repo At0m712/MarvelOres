@@ -1,4 +1,7 @@
 // 1.21.11	-999999999-01-01T00:00:00	MarvelOres/Block Loot Tables
+c793dc3a373e6d253a14b70c222552495e6e96e4 data/marvelores/loot_table/blocks/adamantium_block.json
+87903bcf8a4f64150a296851511858b053d65627 data/marvelores/loot_table/blocks/adamantium_deepslate_ore.json
+87903bcf8a4f64150a296851511858b053d65627 data/marvelores/loot_table/blocks/adamantium_ore.json
 8ae51149326a0ab0bc701d39be6799ab24de2a9c data/marvelores/loot_table/blocks/crusher.json
 b014877eac240e63678b93c8a53f4b18267e620a data/marvelores/loot_table/blocks/raw_vibranium_block.json
 db5e4a992ae580f4c98dea1bfb4ebbb75e5bb59b data/marvelores/loot_table/blocks/vibranium_block.json

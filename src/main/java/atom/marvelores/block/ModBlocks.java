@@ -36,6 +36,21 @@ public static final Block VIBRANIUM_DEEPSLATE_ORE = registerBlock("vibranium_dee
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(3, 6),
                     properties.strength(4f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
 
+    public static final Block ADAMANTIUM_BLOCK = registerBlock("adamantium_block",
+            properties -> new Block(properties.strength(4.5f)
+                    .requiresTool()));
+
+    public static final Block ADAMANTIUM_ORE = registerBlock("adamantium_ore",
+            properties -> new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
+                    properties.strength(4f).requiresTool()));
+
+    public static final Block ADAMANTIUM_DEEPSLATE_ORE = registerBlock("adamantium_deepslate_ore",
+            properties -> new ExperienceDroppingBlock(UniformIntProvider.create(4, 6),
+                    properties.strength(4.5f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
+
+
+
+
     public static final Block CRUSHER = registerBlock("crusher", properties -> new CrusherBlock(properties.strength(3.0f).requiresTool()));
 
     private static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> function) {
@@ -60,6 +75,10 @@ public static final Block VIBRANIUM_DEEPSLATE_ORE = registerBlock("vibranium_dee
             entries.add(ModBlocks.RAW_VIBRANIUM_BLOCK);
             entries.add(ModBlocks.VIBRANIUM_ORE);
             entries.add(ModBlocks.VIBRANIUM_DEEPSLATE_ORE);
+
+            entries.add(ModBlocks.ADAMANTIUM_BLOCK);
+            entries.add(ModBlocks.ADAMANTIUM_ORE);
+            entries.add(ModBlocks.ADAMANTIUM_DEEPSLATE_ORE);
         });
     }
 }

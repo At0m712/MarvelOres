@@ -25,7 +25,15 @@ public class ModArmorItem extends Item {
                             List.of(new StatusEffectInstance(StatusEffects.HASTE,
                                             400, 0, false, false),
                                     new StatusEffectInstance(StatusEffects.SPEED,
-                                            400, 0, false, false))).build();
+                                            400, 0, false, false)))
+                    .put(ModArmorMaterials.ADAMANTIUM_ARMOR_MATERIAL,
+                            List.of(new StatusEffectInstance(StatusEffects.HASTE,
+                                            400, 1, false, false),
+                                    new StatusEffectInstance(StatusEffects.SPEED,
+                                            400, 1, false, false))).build();
+
+
+
 
     public ModArmorItem(Settings settings) {
         super(settings);

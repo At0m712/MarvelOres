@@ -1,12 +1,13 @@
 // 1.21.11	-999999999-01-01T00:00:00	MarvelOres/Tags for minecraft:item
+eb8309a2a5ee31dc35dc7f6364260edb518e0719 data/marvelores/tags/item/adamantium_repair.json
 1ebb368d7faf319e55dffd99e6b6f476facd3ab3 data/marvelores/tags/item/vibranium_repair.json
-7daf8c7e6d7eeb3259e4f60dcd7192292f98d6fd data/minecraft/tags/item/axes.json
-38ba1229badc1258e60ecb6a64af0aa189028ddc data/minecraft/tags/item/chest_armor.json
-8248f0553f39db1ea76221404190522735e44af1 data/minecraft/tags/item/foot_armor.json
-9734776805b9b18f34ee278b8268b4132e94e4ff data/minecraft/tags/item/head_armor.json
-2f78791a11eed22d6f4f87c21322fd553edef128 data/minecraft/tags/item/hoes.json
-8ee2496b4d2216c99c1c95507fdc3d862c03cf62 data/minecraft/tags/item/leg_armor.json
-7c752027b4e86a4755785fe27c1bf6556d976139 data/minecraft/tags/item/pickaxes.json
-c55a792d0df807fa82d78db7ef0d7454301e678a data/minecraft/tags/item/shovels.json
-11f1161f56fa69d7e67a02bf4648e78cde9189d2 data/minecraft/tags/item/swords.json
-708d6eae789d9c36eec0ea7025005bb6bd84addf data/minecraft/tags/item/trimmable_armor.json
+36fc69451c649dd01cd707f7f2c211633c8ea766 data/minecraft/tags/item/axes.json
+b0ba6b055defddfb99dd4c9ca853a9190c120fa6 data/minecraft/tags/item/chest_armor.json
+de6b36cd7c3b9c3e599deaef2f49a517974ba3f4 data/minecraft/tags/item/foot_armor.json
+f55a11d29c9313af705d91232f83124817a6fcdc data/minecraft/tags/item/head_armor.json
+192c41ac5a239664734c6d60adc9aa3806f6b663 data/minecraft/tags/item/hoes.json
+780edcf262dc5cc5a9afe79939ea109ab2edac7d data/minecraft/tags/item/leg_armor.json
+04c06763ce8cd08519da895c57c48c80ba9e8b4f data/minecraft/tags/item/pickaxes.json
+348131484d3be7599e02367eabe75d4cb8219948 data/minecraft/tags/item/shovels.json
+5dd03ce70967ff861d763fa355898ec9456f3cf5 data/minecraft/tags/item/swords.json
+064f08844864cd6cfe38e35132ac18b52f970027 data/minecraft/tags/item/trimmable_armor.json
