@@ -14,7 +14,7 @@
 
   "item.marvelores.vibranium_helmet": "Casque en Vibranium",
   "item.marvelores.vibranium_chestplate": "Plastron en Vibranium",
-  "item.marvelores.vibranium_leggings": "jambière en Vibranium",
+  "item.marvelores.vibranium_leggings": "Jambière en Vibranium",
   "item.marvelores.vibranium_boots": "Botte en Vibranium",
 
 
@@ -26,6 +26,27 @@
 
   "block.marvelores.crusher": "Broyeur",
 
-  "creativemodetab.marvelores.vibranium_items": "Item en Vibranium",
-  "creativemodetab.marvelores.vibranium_blocks": "Bloc en Vibranium"
+  "creativemodetab.marvelores.vibranium_items": "Marvelores Item",
+  "creativemodetab.marvelores.vibranium_blocks": "Marvelores Bloc",
+
+  "item.marvelores.adamantium": "Adamantium",
+  "item.marvelores.raw_adamantium": "Adamantium Brut",
+
+  "item.marvelores.adamantium_sword": "Katana de DeadPool",
+  "item.marvelores.adamantium_pickaxe": "Pioche en Adamantium",
+  "item.marvelores.adamantium_shovel": "Pelle en Adamantium",
+  "item.marvelores.adamantium_axe": "Hache en Adamantium",
+  "item.marvelores.adamantium_hoe": "Houe en Adamantium",
+
+
+  "item.marvelores.adamantium_helmet": "Casque en Adamantium",
+  "item.marvelores.adamantium_chestplate": "Plastron en Adamantium",
+  "item.marvelores.adamantium_leggings": "Jambière en Adamantium",
+  "item.marvelores.adamantium_boots": "Botte en Adamantium",
+
+
+  "block.marvelores.adamantium_block": "Bloc de Adamantium",
+
+  "block.marvelores.adamantium_ore": "Minerai d'Adamantium",
+  "block.marvelores.adamantium_deepslate_ore": "Minerai d'Adamantium des Abîmes"
 }

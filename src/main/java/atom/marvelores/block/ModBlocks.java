@@ -36,6 +36,18 @@ public static final Block VIBRANIUM_DEEPSLATE_ORE = registerBlock("vibranium_dee
             properties -> new DropExperienceBlock(UniformInt.of(3, 6),
                     properties.strength(4f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 
+    public static final Block ADAMANTIUM_BLOCK = registerBlock("adamantium_block",
+            properties -> new Block(properties.strength(4.5f)
+                    .requiresCorrectToolForDrops()));
+
+
+    public static final Block ADAMANTIUM_ORE = registerBlock("adamantium_ore",
+            properties -> new DropExperienceBlock(UniformInt.of(2, 5),
+                    properties.strength(4f).requiresCorrectToolForDrops()));
+    public static final Block ADAMANTIUM_DEEPSLATE_ORE = registerBlock("adamantium_deepslate_ore",
+            properties -> new DropExperienceBlock(UniformInt.of(4, 6),
+                    properties.strength(4.5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+
     public static final Block CRUSHER = registerBlock("crusher",
             properties -> new CrusherBlock(properties.strength(3f).requiresCorrectToolForDrops()));
 

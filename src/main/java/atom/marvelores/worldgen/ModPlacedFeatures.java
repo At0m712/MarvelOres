@@ -17,13 +17,19 @@ import java.util.List;
 
 public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> OVERWORLD_VIBRANIUM_ORE_PLACED_KEY = registerKey("overworld_vibranium_ore_placed");
+    public static final ResourceKey<PlacedFeature> OVERWORLD_ADAMANTIUM_ORE_PLACED_KEY = registerKey("overworld_adamantium_ore_placed");
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, OVERWORLD_VIBRANIUM_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_VIBRANIUM_ORE_KEY),
-                OrePlacements.commonOrePlacement(12,
-                        HeightRangePlacement.triangle(VerticalAnchor.absolute(-32), VerticalAnchor.absolute(100))));
+                OrePlacements.commonOrePlacement(2,
+                        HeightRangePlacement.triangle(VerticalAnchor.absolute(-40), VerticalAnchor.absolute(80))));
+
+        register(context, OVERWORLD_ADAMANTIUM_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_ADAMANTIUM_ORE_KEY),
+                OrePlacements.commonOrePlacement(2,
+                        HeightRangePlacement.triangle(VerticalAnchor.absolute(-40), VerticalAnchor.absolute(20))));
+
 
     }
 

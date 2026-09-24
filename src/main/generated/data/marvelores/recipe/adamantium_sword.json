@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "adamantium",
+  "key": {
+    "S": "minecraft:stick",
+    "V": "marvelores:adamantium"
+  },
+  "pattern": [
+    " V ",
+    " V ",
+    " S "
+  ],
+  "result": {
+    "id": "marvelores:adamantium_sword"
+  }
+}

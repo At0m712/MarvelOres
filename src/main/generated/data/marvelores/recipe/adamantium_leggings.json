@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "adamantium",
+  "key": {
+    "V": "marvelores:adamantium"
+  },
+  "pattern": [
+    "VVV",
+    "V V",
+    "V V"
+  ],
+  "result": {
+    "id": "marvelores:adamantium_leggings"
+  }
+}

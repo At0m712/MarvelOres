@@ -11,6 +11,7 @@ public class ModTags {
     public static class Blocks {
         public static final TagKey<Block> NEEDS_VIBRANIUM_TOOL = createTag("needs_vibranium_tool");
         public static final TagKey<Block> INCORRECT_FOR_VIBRANIUM_TOOL = createTag("incorrect_for_vibranium_tool");
+        public static final TagKey<Block> INCORRECT_FOR_ADAMANTIUM_TOOL = createTag("incorrect_for_adamantium_tool");
 
         private static TagKey<Block> createTag(String name) {
             return TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(MarvelOres.MOD_ID, name));
@@ -18,6 +19,7 @@ public class ModTags {
     }
     public static class Items {
         public static final TagKey<Item> VIBRANIUM_REPAIR = createTag("vibranium_repair");
+        public static final TagKey<Item> ADAMANTIUM_REPAIR = createTag("adamantium_repair");
 
         private static TagKey<Item> createTag(String name) {
             return TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MarvelOres.MOD_ID, name));

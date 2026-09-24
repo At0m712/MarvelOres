@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "adamantium",
+  "key": {
+    "N": "minecraft:netherite_ingot",
+    "V": "marvelores:adamantium"
+  },
+  "pattern": [
+    "V V",
+    "VNV",
+    "VVV"
+  ],
+  "result": {
+    "id": "marvelores:adamantium_chestplate"
+  }
+}

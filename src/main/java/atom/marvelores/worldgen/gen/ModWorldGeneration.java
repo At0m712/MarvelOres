@@ -11,6 +11,9 @@ public class ModWorldGeneration {
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Decoration.UNDERGROUND_ORES,
                 ModPlacedFeatures.OVERWORLD_VIBRANIUM_ORE_PLACED_KEY);
 
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Decoration.UNDERGROUND_ORES,
+                ModPlacedFeatures.OVERWORLD_ADAMANTIUM_ORE_PLACED_KEY);
+
         // Example for individual Biomes
         // BiomeModifications.addFeature(BiomeSelectors.includeByKey(Biomes.DEEP_OCEAN, Biomes.BADLANDS),
         //         GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.OVERWORLD_FLUORITE_ORE_PLACED_KEY);
