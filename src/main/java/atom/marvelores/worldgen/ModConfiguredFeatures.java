@@ -18,6 +18,7 @@ import java.util.List;
 
 public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_VIBRANIUM_ORE_KEY = registerKey("overworld_vibranium_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_ADAMANTIUM_ORE_KEY = registerKey("overworld_adamantium_ore");
 
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
@@ -28,6 +29,10 @@ public class ModConfiguredFeatures {
         register(context, OVERWORLD_VIBRANIUM_ORE_KEY, Feature.ORE, new OreConfiguration(
                 List.of(OreConfiguration.target(stoneReplaceables, ModBlocks.VIBRANIUM_ORE.defaultBlockState()),
                         OreConfiguration.target(deepslateReplaceables, ModBlocks.VIBRANIUM_DEEPSLATE_ORE.defaultBlockState())),
+                5));
+        register(context, OVERWORLD_ADAMANTIUM_ORE_KEY, Feature.ORE, new OreConfiguration(
+                List.of(OreConfiguration.target(stoneReplaceables, ModBlocks.ADAMANTIUM_ORE.defaultBlockState()),
+                        OreConfiguration.target(deepslateReplaceables, ModBlocks.ADAMANTIUM_DEEPSLATE_ORE.defaultBlockState())),
                 5));
     }
 

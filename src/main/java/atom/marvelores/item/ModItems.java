@@ -28,6 +28,9 @@ public class ModItems {
     public static final Item VIBRANIUM_STICK = registerItem("vibranium_stick", Item::new);
     public static final Item VIBRANIUM_CORE = registerItem("vibranium_core", Item::new);
 
+    public static final Item ADAMANTIUM = registerItem("adamantium", Item::new);
+    public static final Item RAW_ADAMANTIUM = registerItem("raw_adamantium", Item::new);
+
     public static final Item VIBRANIUM_SWORD = registerItem("vibranium_sword",
             properties -> new Item(properties.sword(ModToolMaterials.VIBRANIUM, 3, -2.4f)));
 
@@ -40,6 +43,17 @@ public class ModItems {
     public static final Item VIBRANIUM_HOE = registerItem("vibranium_hoe",
             properties -> new HoeItem(ModToolMaterials.VIBRANIUM, 0, -3f, properties));
 
+    public static final Item ADAMANTIUM_SWORD = registerItem("adamantium_sword",
+            properties -> new Item(properties.sword(ModToolMaterials.ADAMANTIUM, 3, -2.4f)));
+
+    public static final Item ADAMANTIUM_PICKAXE = registerItem("adamantium_pickaxe",
+            properties -> new Item(properties.pickaxe(ModToolMaterials.ADAMANTIUM, 1, -2.8f)));
+    public static final Item ADAMANTIUM_SHOVEL = registerItem("adamantium_shovel",
+            properties -> new ShovelItem(ModToolMaterials.ADAMANTIUM, 1.5f, -3.0f, properties));
+    public static final Item ADAMANTIUM_AXE = registerItem("adamantium_axe",
+            properties -> new AxeItem(ModToolMaterials.ADAMANTIUM, 6, -3.2f, properties));
+    public static final Item ADAMANTIUM_HOE = registerItem("adamantium_hoe",
+            properties -> new HoeItem(ModToolMaterials.ADAMANTIUM, 0, -3f, properties));
 
     public static final Item VIBRANIUM_HELMET = registerItem("vibranium_helmet",
             properties -> new ModArmorItem(properties.humanoidArmor(ModArmorMaterials.VIBRANIUM_ARMOR_MATERIAL, ArmorType.HELMET)));
@@ -49,6 +63,15 @@ public class ModItems {
             properties -> new Item(properties.humanoidArmor(ModArmorMaterials.VIBRANIUM_ARMOR_MATERIAL, ArmorType.LEGGINGS)));
     public static final Item VIBRANIUM_BOOTS = registerItem("vibranium_boots",
             properties -> new Item(properties.humanoidArmor(ModArmorMaterials.VIBRANIUM_ARMOR_MATERIAL, ArmorType.BOOTS)));
+
+    public static final Item ADAMANTIUM_HELMET = registerItem("adamantium_helmet",
+            properties -> new ModArmorItem(properties.humanoidArmor(ModArmorMaterials.ADAMANTIUM_ARMOR_MATERIAL, ArmorType.HELMET)));
+    public static final Item ADAMANTIUM_CHESTPLATE = registerItem("adamantium_chestplate",
+            properties -> new Item(properties.humanoidArmor(ModArmorMaterials.ADAMANTIUM_ARMOR_MATERIAL, ArmorType.CHESTPLATE)));
+    public static final Item ADAMANTIUM_LEGGINGS = registerItem("adamantium_leggings",
+            properties -> new Item(properties.humanoidArmor(ModArmorMaterials.ADAMANTIUM_ARMOR_MATERIAL, ArmorType.LEGGINGS)));
+    public static final Item ADAMANTIUM_BOOTS = registerItem("adamantium_boots",
+            properties -> new Item(properties.humanoidArmor(ModArmorMaterials.ADAMANTIUM_ARMOR_MATERIAL, ArmorType.BOOTS)));
 
 
 
@@ -68,6 +91,9 @@ public class ModItems {
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register(output -> {
             output.accept(VIBRANIUM);
             output.accept(RAW_VIBRANIUM);
+
+            output.accept(ADAMANTIUM);
+            output.accept(RAW_ADAMANTIUM);
         });
     }
 }

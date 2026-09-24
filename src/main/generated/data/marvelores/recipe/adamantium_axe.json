@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "adamantium",
+  "key": {
+    "S": "minecraft:stick",
+    "V": "marvelores:adamantium"
+  },
+  "pattern": [
+    " VV",
+    " SV",
+    " S "
+  ],
+  "result": {
+    "id": "marvelores:adamantium_axe"
+  }
+}

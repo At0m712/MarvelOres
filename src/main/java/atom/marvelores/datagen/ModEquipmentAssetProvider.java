@@ -28,6 +28,11 @@ public class ModEquipmentAssetProvider implements DataProvider {
                 EquipmentClientInfo.builder()
                         .addHumanoidLayers(Identifier.fromNamespaceAndPath(MarvelOres.MOD_ID, "vibranium"))
                         .build());
+
+        consumer.accept(ModArmorMaterials.ADAMANTIUM_KEY,
+                EquipmentClientInfo.builder()
+                        .addHumanoidLayers(Identifier.fromNamespaceAndPath(MarvelOres.MOD_ID, "adamantium"))
+                        .build());
     }
 
     @Override

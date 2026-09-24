@@ -1,3 +1,5 @@
 // 26.2	-999999999-01-01T00:00:00	MarvelOres/MarvelOres Data Provider
+4e15dd260ddc6aa26cea9f6158262b0288ccc0af data/marvelores/worldgen/configured_feature/overworld_adamantium_ore.json
 04cdb07e0e4819e4b864d342eee5393dd939bf14 data/marvelores/worldgen/configured_feature/overworld_vibranium_ore.json
-716a3a26a8ae1f080515bb27bf6998dc6a692220 data/marvelores/worldgen/placed_feature/overworld_vibranium_ore_placed.json
+954d86ce40443e09228e477845103c12ffbc45c6 data/marvelores/worldgen/placed_feature/overworld_adamantium_ore_placed.json
+9506a7b4194f10945e33a2995e6aa123f82ad96c data/marvelores/worldgen/placed_feature/overworld_vibranium_ore_placed.json

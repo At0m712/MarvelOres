@@ -14,9 +14,14 @@ public class ModArmorMaterials {
     public static final ResourceKey<? extends Registry<EquipmentAsset>> REGISTRY_KEY =
             ResourceKey.createRegistryKey(Identifier.withDefaultNamespace("equipment_asset"));
 
-    public static final ResourceKey<EquipmentAsset> VIBRANIUM_KEY = ResourceKey.create(REGISTRY_KEY, Identifier.fromNamespaceAndPath(MarvelOres.MOD_ID, "fluorite"));
+    public static final ResourceKey<EquipmentAsset> VIBRANIUM_KEY = ResourceKey.create(REGISTRY_KEY, Identifier.fromNamespaceAndPath(MarvelOres.MOD_ID, "vibranium"));
+    public static final ResourceKey<EquipmentAsset> ADAMANTIUM_KEY = ResourceKey.create(REGISTRY_KEY, Identifier.fromNamespaceAndPath(MarvelOres.MOD_ID, "adamantium"));
 
     public static final ArmorMaterial VIBRANIUM_ARMOR_MATERIAL = new ArmorMaterial(750,
             ArmorMaterials.makeDefense(4, 7, 9, 3, 12),
         20, SoundEvents.ARMOR_EQUIP_NETHERITE, 2.0F, 0.2F, ModTags.Items.VIBRANIUM_REPAIR, VIBRANIUM_KEY);
+    public static final ArmorMaterial ADAMANTIUM_ARMOR_MATERIAL = new ArmorMaterial(750,
+            ArmorMaterials.makeDefense(4, 7, 9, 3, 12),
+            23, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.4F, ModTags.Items.ADAMANTIUM_REPAIR, ADAMANTIUM_KEY);
+
 }
