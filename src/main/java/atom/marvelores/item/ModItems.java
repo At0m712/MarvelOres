@@ -80,7 +80,7 @@ public class ModItems {
 
     public static final Item VIBRANIUM_SHIELD = registerItem("vibranium_shield",
             setting -> new Item(setting
-                    .maxDamage(1000)
+                    .maxDamage(5000)
                     .component(DataComponentTypes.CONSUMABLE, ConsumableComponent.builder()
                             .consumeSeconds(72000.0f)
                             .useAction(UseAction.NONE   )

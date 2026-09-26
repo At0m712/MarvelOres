@@ -134,7 +134,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.VIBRANIUM), conditionsFromItem(ModItems.VIBRANIUM))
                         .offerTo(exporter);
 
-                /* createShaped(RecipeCategory.MISC, ModItems.VIBRANIUM_SHIELD)
+                createShaped(RecipeCategory.MISC, ModItems.VIBRANIUM_SHIELD)
                         .pattern("VVV")
                         .pattern("P#P")
                         .pattern("VVV")
@@ -142,7 +142,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .input('#', ModItems.VIBRANIUM_CORE)
                         .input('P', ModItems.VIBRANIUM_POWDER)
                         .criterion(hasItem(ModItems.VIBRANIUM), conditionsFromItem(ModItems.VIBRANIUM))
-                        .offerTo(exporter); */
+                        .offerTo(exporter);
 
                 createShaped(RecipeCategory.MISC, ModBlocks.CRUSHER)
                         .pattern("VVV")

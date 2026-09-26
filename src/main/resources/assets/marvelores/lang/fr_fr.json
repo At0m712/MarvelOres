@@ -1,0 +1,54 @@
+{
+  "item.marvelores.vibranium": "Vibranium",
+  "item.marvelores.raw_vibranium": "Vibranium Brut",
+  "item.marvelores.vibranium_powder": "Poudre de Vibranium",
+  "item.marvelores.vibranium_stick": "Bâton en Vibranium",
+  "item.marvelores.vibranium_core": "Noyau en Vibranium",
+
+  "item.marvelores.vibranium_sword": "Epée de KillMonger",
+  "item.marvelores.vibranium_pickaxe": "Pioche en Vibranium",
+  "item.marvelores.vibranium_shovel": "Pelle en Vibranium",
+  "item.marvelores.vibranium_axe": "Hache en Vibranium",
+  "item.marvelores.vibranium_hoe": "Houe en Vibranium",
+
+  "item.marvelores.vibranium_shield": "Bouclier de Captain America",
+
+
+  "item.marvelores.vibranium_helmet": "Casque en Vibranium",
+  "item.marvelores.vibranium_chestplate": "Plastron en Vibranium",
+  "item.marvelores.vibranium_leggings": "jambière en Vibranium",
+  "item.marvelores.vibranium_boots": "Botte en Vibranium",
+
+
+  "block.marvelores.vibranium_block": "Bloc de Vibranium",
+  "block.marvelores.raw_vibranium_block": "Bloc de Vibranium Brut",
+
+  "block.marvelores.vibranium_ore": "Minerai Vibranium",
+  "block.marvelores.vibranium_deepslate_ore": "Minerai de Vibranium des Abîmes",
+
+  "block.marvelores.crusher": "Broyeur",
+
+  "itemgroup.marvelores.marvelores_items": "Marvelores Item",
+  "itemgroup.marvelores.marvelores_block": "Marvelores Bloc",
+
+  "item.marvelores.adamantium": "Adamantium",
+  "item.marvelores.raw_adamantium": "Adamantium Brut",
+
+  "item.marvelores.adamantium_sword": "Katana de DeadPool",
+  "item.marvelores.adamantium_pickaxe": "Pioche en Adamantium",
+  "item.marvelores.adamantium_shovel": "Pelle en Adamantium",
+  "item.marvelores.adamantium_axe": "Hache en Adamantium",
+  "item.marvelores.adamantium_hoe": "Houe en Adamantium",
+
+
+  "item.marvelores.adamantium_helmet": "Casque en Adamantium",
+  "item.marvelores.adamantium_chestplate": "Plastron en Adamantium",
+  "item.marvelores.adamantium_leggings": "Jambière en Adamantium",
+  "item.marvelores.adamantium_boots": "Botte en Adamantium",
+
+
+  "block.marvelores.adamantium_block": "Bloc de Adamantium",
+
+  "block.marvelores.adamantium_ore": "Minerai d'Adamantium",
+  "block.marvelores.adamantium_deepslate_ore": "Minerai d'Adamantium des Abîmes"
+}

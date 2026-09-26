@@ -1,7 +1,7 @@
 {
-
-  "credit": "Made with Blockbench",
+  "format_version": "1.21.11",
   "texture_size": [64, 64],
+  "credit": "Made with Blockbench",
   "textures": {
     "1": "marvelores:item/vibranium_shield_model",
     "particle": "marvelores:item/vibranium_shield_model"
@@ -1738,6 +1738,9 @@
     }
   ],
   "display": {
+    "thirdperson_lefthand": {
+      "translation": [0, -1.25, -0.75]
+    },
     "firstperson_righthand": {
       "translation": [0, 0, -0.25]
     },
@@ -1751,7 +1754,7 @@
       "translation": [0, 14.5, 0]
     },
     "fixed": {
-      "translation": [0, 0, -0.5]
+      "translation": [0, 0, -1.5]
     },
     "on_shelf": {
       "rotation": [0, 180, 0],
