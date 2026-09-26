@@ -13,6 +13,8 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.DamageTypeTags;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 
 import java.util.List;
@@ -75,6 +77,29 @@ public class ModItems {
     public static final Item ADAMANTIUM_BOOTS = registerItem("adamantium_boots",
             setting -> new Item(setting.armor(ModArmorMaterials.ADAMANTIUM_ARMOR_MATERIAL, EquipmentType.BOOTS)));
 
+
+    public static final Item VIBRANIUM_SHIELD = registerItem("vibranium_shield",
+            setting -> new Item(setting
+                    .maxDamage(1000)
+                    .component(DataComponentTypes.CONSUMABLE, ConsumableComponent.builder()
+                            .consumeSeconds(72000.0f)
+                            .useAction(UseAction.NONE   )
+                            .sound(SoundEvents.ITEM_SHIELD_BLOCK)
+                            .build())
+                    .component(DataComponentTypes.BLOCKS_ATTACKS, new BlocksAttacksComponent(
+                            0.25f,
+                            1.0f,
+                            List.of(new BlocksAttacksComponent.DamageReduction(
+                                    90.0f,
+                                    Optional.empty(),
+                                    0.0f,
+                                    1.0f
+                            )),
+                            new BlocksAttacksComponent.ItemDamage(3.0f, 1.0f, 1.0f),
+                            Optional.of(DamageTypeTags.BYPASSES_SHIELD),
+                            Optional.of(SoundEvents.ITEM_SHIELD_BLOCK),
+                            Optional.of(SoundEvents.ITEM_SHIELD_BREAK)
+                    ))));
 
 
 

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "adamantium",
+  "ingredient": "marvelores:raw_adamantium",
+  "result": {
+    "id": "marvelores:adamantium"
+  }
+}

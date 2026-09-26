@@ -1,7 +1,5 @@
 ## MARVELORES UPDATE !!
 
-+ Add Adamantium Ore 
-+ Add Adamantium Tools
-+ Add Adamantium Equipment
++ Add Captain America Shield
 
 _Add a lot more coming soon !_

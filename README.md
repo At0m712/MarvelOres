@@ -2,5 +2,5 @@
 
 TODO :
 
-Make the Captain Shield work !
+Some few things to add to captain shield
 Add Heart-shaped plant
