@@ -269,16 +269,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .save(output);
 
 
-
-                /*shaped(RecipeCategory.MISC, ModItems.VIBRANIUM_SHIELD)
+                shaped(RecipeCategory.MISC, ModItems.VIBRANIUM_SHIELD)
                         .pattern("VVV")
-                        .pattern("VNV")
+                        .pattern("P#P")
                         .pattern("VVV")
                         .define('V', ModItems.VIBRANIUM)
-                        .define('N', Items.NETHERITE_INGOT)
+                        .define('P', ModItems.VIBRANIUM_POWDER)
+                        .define('#', ModItems.VIBRANIUM_CORE)
                         .unlockedBy(getHasName(ModItems.VIBRANIUM), has(ModItems.VIBRANIUM))
                         .group("vibranium")
-                        .save(output);*/
+                        .save(output);
 
                 CrusherRecipeBuilder.crusherRecipe(RecipeCategory.MISC, Ingredient.of(ModItems.VIBRANIUM), ModItems.VIBRANIUM_POWDER, 3)
                         .unlockedBy(getHasName(ModItems.VIBRANIUM), has(ModItems.VIBRANIUM))

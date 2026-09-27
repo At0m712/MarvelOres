@@ -3,16 +3,25 @@ package atom.marvelores.item;
 import atom.marvelores.MarvelOres;
 
 import atom.marvelores.item.custom.ModArmorItem;
+import atom.marvelores.item.custom.ModShieldItem;
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.core.Registry;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.tags.DamageTypeTags;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
+import net.minecraft.world.item.component.BlocksAttacks;
 import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.equipment.ArmorType;
+import net.minecraft.world.item.equipment.Equippable;
+import net.minecraft.world.level.block.entity.BannerPatternLayers;
 
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -77,7 +86,31 @@ public class ModItems {
     public static final Item ADAMANTIUM_BOOTS = registerItem("adamantium_boots",
             properties -> new Item(properties.humanoidArmor(ModArmorMaterials.ADAMANTIUM_ARMOR_MATERIAL, ArmorType.BOOTS)));
 
-
+    public static final Item VIBRANIUM_SHIELD = registerItem("vibranium_shield",
+            properties -> new ModShieldItem(properties
+                    .durability(5000)
+                    .component(DataComponents.EQUIPPABLE, Equippable.builder(EquipmentSlot.OFFHAND).build())
+                    .component(DataComponents.BLOCKS_ATTACKS, new BlocksAttacks(
+                            0.25f,
+                            1.0f,
+                            List.of(
+                                    new BlocksAttacks.DamageReduction(
+                                            90.0f,
+                                            Optional.empty(),
+                                            1.0f,
+                                            1.0f
+                                    )
+                            ),
+                            new BlocksAttacks.ItemDamageFunction(
+                                    3.0f,
+                                    1.0f,
+                                    1.0f
+                            ),
+                            Optional.empty(),
+                            Optional.of(SoundEvents.SHIELD_BLOCK),
+                            Optional.of(SoundEvents.SHIELD_BREAK)
+                    ))
+            ));
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {
         return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(MarvelOres.MOD_ID, name),
