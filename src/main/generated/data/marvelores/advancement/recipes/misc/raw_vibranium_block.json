@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "marvelores:raw_vibranium_block"
+        "recipes": "marvelores:raw_vibranium_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

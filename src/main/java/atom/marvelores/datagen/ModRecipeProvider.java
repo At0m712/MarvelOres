@@ -6,13 +6,16 @@ import atom.marvelores.datagen.recipe.CrusherRecipeBuilder;
 import atom.marvelores.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.advancements.Advancement;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.ItemLike;
 
 import java.util.List;
@@ -24,8 +27,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     }
 
     @Override
-    protected RecipeProvider createRecipeProvider(HolderLookup.Provider registries, RecipeOutput output) {
-        return new RecipeProvider(registries, output) {
+    protected RecipeProvider createRecipeProvider(HolderLookup.Provider registries, BootstrapContext<Recipe<?>> recipes, BootstrapContext<Advancement> advancements) {
+        return new RecipeProvider(recipes, advancements) {
             @Override
             public void buildRecipes() {
                 List<ItemLike> VIBRANIUM_SMELTABLES = List.of(ModItems.RAW_VIBRANIUM, ModBlocks.VIBRANIUM_ORE, ModBlocks.VIBRANIUM_DEEPSLATE_ORE);
@@ -33,7 +36,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 oreSmelting(VIBRANIUM_SMELTABLES, RecipeCategory.MISC,CookingBookCategory.BLOCKS, ModItems.VIBRANIUM, 0.25f, 200, "vibranium");
                 oreBlasting(VIBRANIUM_SMELTABLES, RecipeCategory.MISC,CookingBookCategory.BLOCKS, ModItems.VIBRANIUM, 0.25f, 100, "vibranium");
 
+                List<ItemLike> ADAMANTIUM_SMELTABLES = List.of(ModItems.RAW_ADAMANTIUM, ModBlocks.ADAMANTIUM_ORE, ModBlocks.ADAMANTIUM_DEEPSLATE_ORE);
+
+                oreSmelting(ADAMANTIUM_SMELTABLES, RecipeCategory.MISC,CookingBookCategory.BLOCKS, ModItems.ADAMANTIUM, 0.25f, 200, "vibranium");
+                oreBlasting(ADAMANTIUM_SMELTABLES, RecipeCategory.MISC,CookingBookCategory.BLOCKS, ModItems.ADAMANTIUM, 0.25f, 100, "vibranium");
+
                 nineBlockStorageRecipes(RecipeCategory.BUILDING_BLOCKS, ModItems.VIBRANIUM, RecipeCategory.DECORATIONS, ModBlocks.VIBRANIUM_BLOCK);
+                nineBlockStorageRecipes(RecipeCategory.BUILDING_BLOCKS, ModItems.ADAMANTIUM, RecipeCategory.DECORATIONS, ModBlocks.ADAMANTIUM_BLOCK);
 
                 shaped(RecipeCategory.MISC, ModBlocks.RAW_VIBRANIUM_BLOCK)
                         .pattern("RRR")
@@ -168,6 +177,93 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .define('#', ModBlocks.VIBRANIUM_BLOCK)
                         .unlockedBy(getHasName(ModItems.VIBRANIUM), has(ModItems.VIBRANIUM))
                         .group("vibranium")
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.ADAMANTIUM_SWORD)
+                        .pattern(" V ")
+                        .pattern(" V ")
+                        .pattern(" S ")
+                        .define('V', ModItems.ADAMANTIUM)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.ADAMANTIUM), has(ModItems.ADAMANTIUM))
+                        .group("adamantium")
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.ADAMANTIUM_PICKAXE)
+                        .pattern("VVV")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .define('V', ModItems.ADAMANTIUM)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.ADAMANTIUM), has(ModItems.ADAMANTIUM))
+                        .group("adamantium")
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.ADAMANTIUM_SHOVEL)
+                        .pattern(" V ")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .define('V', ModItems.ADAMANTIUM)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.ADAMANTIUM), has(ModItems.ADAMANTIUM))
+                        .group("adamantium")
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.ADAMANTIUM_AXE)
+                        .pattern(" VV")
+                        .pattern(" SV")
+                        .pattern(" S ")
+                        .define('V', ModItems.ADAMANTIUM)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.ADAMANTIUM), has(ModItems.ADAMANTIUM))
+                        .group("adamantium")
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.ADAMANTIUM_HOE)
+                        .pattern("VV ")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .define('V', ModItems.ADAMANTIUM)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.ADAMANTIUM), has(ModItems.ADAMANTIUM))
+                        .group("adamantium")
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.ADAMANTIUM_HELMET)
+                        .pattern("VVV")
+                        .pattern("V V")
+                        .pattern("   ")
+                        .define('V', ModItems.ADAMANTIUM)
+                        .unlockedBy(getHasName(ModItems.ADAMANTIUM), has(ModItems.ADAMANTIUM))
+                        .group("adamantium")
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.ADAMANTIUM_CHESTPLATE)
+                        .pattern("V V")
+                        .pattern("VNV")
+                        .pattern("VVV")
+                        .define('V', ModItems.ADAMANTIUM)
+                        .define('N', Items.NETHERITE_INGOT)
+                        .unlockedBy(getHasName(ModItems.ADAMANTIUM), has(ModItems.ADAMANTIUM))
+                        .group("adamantium")
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.ADAMANTIUM_LEGGINGS)
+                        .pattern("VVV")
+                        .pattern("V V")
+                        .pattern("V V")
+                        .define('V', ModItems.ADAMANTIUM)
+                        .unlockedBy(getHasName(ModItems.ADAMANTIUM), has(ModItems.ADAMANTIUM))
+                        .group("adamantium")
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.ADAMANTIUM_BOOTS)
+                        .pattern("   ")
+                        .pattern("V V")
+                        .pattern("V V")
+                        .define('V', ModItems.ADAMANTIUM)
+                        .unlockedBy(getHasName(ModItems.ADAMANTIUM), has(ModItems.ADAMANTIUM))
+                        .group("adamantium")
                         .save(output);
 
 

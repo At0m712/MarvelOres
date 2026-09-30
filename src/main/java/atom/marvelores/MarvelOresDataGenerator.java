@@ -1,7 +1,7 @@
 package atom.marvelores;
 
 import atom.marvelores.datagen.*;
-import atom.marvelores.worldgen.ModConfiguredFeatures;
+import atom.marvelores.worldgen.ModFeatures;
 import atom.marvelores.worldgen.ModPlacedFeatures;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
@@ -25,7 +25,7 @@ public class MarvelOresDataGenerator implements DataGeneratorEntrypoint {
 	@Override
 	public void buildRegistry(RegistrySetBuilder registryBuilder) {
 
-		registryBuilder.add(Registries.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
+		registryBuilder.add(Registries.FEATURE, ModFeatures::bootstrap);
 		registryBuilder.add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
 	}
 }

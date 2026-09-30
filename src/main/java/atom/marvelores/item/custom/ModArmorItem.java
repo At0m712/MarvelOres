@@ -24,7 +24,11 @@ public class ModArmorItem extends Item {
                     .put(ModArmorMaterials.VIBRANIUM_ARMOR_MATERIAL,
                             List.of(new MobEffectInstance(MobEffects.HASTE, 400, 0, false, false),
                                     new MobEffectInstance(MobEffects.SPEED, 400, 0, false, false)))
-                    .build();
+                    .put(ModArmorMaterials.ADAMANTIUM_ARMOR_MATERIAL,
+                            List.of(new MobEffectInstance(MobEffects.HASTE,
+                                            400, 1, false, false),
+                                    new MobEffectInstance(MobEffects.SPEED,
+                                            400, 1, false, false))).build();
 
     public ModArmorItem(Properties properties) {
         super(properties);

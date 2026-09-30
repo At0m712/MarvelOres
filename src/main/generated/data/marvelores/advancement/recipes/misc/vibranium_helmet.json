@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "marvelores:vibranium_helmet"
+        "recipes": "marvelores:vibranium_helmet"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

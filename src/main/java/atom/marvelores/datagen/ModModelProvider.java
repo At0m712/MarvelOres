@@ -22,6 +22,8 @@ import net.minecraft.client.renderer.item.properties.conditional.HasComponent;
 import net.minecraft.resources.Identifier;
 import net.minecraft.util.random.WeightedList;
 
+import java.util.Map;
+
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricPackOutput output) {
         super(output);
@@ -33,6 +35,10 @@ public class ModModelProvider extends FabricModelProvider {
         blockModelGenerators.createTrivialCube(ModBlocks.RAW_VIBRANIUM_BLOCK);
         blockModelGenerators.createTrivialCube(ModBlocks.VIBRANIUM_ORE);
         blockModelGenerators.createTrivialCube(ModBlocks.VIBRANIUM_DEEPSLATE_ORE);
+
+        blockModelGenerators.createTrivialCube(ModBlocks.ADAMANTIUM_BLOCK);
+        blockModelGenerators.createTrivialCube(ModBlocks.ADAMANTIUM_ORE);
+        blockModelGenerators.createTrivialCube(ModBlocks.ADAMANTIUM_DEEPSLATE_ORE);
     }
 
     @Override
@@ -43,20 +49,28 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ModItems.VIBRANIUM_CORE, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.VIBRANIUM_STICK, ModelTemplates.FLAT_ITEM);
 
+        itemModelGenerators.generateFlatItem(ModItems.ADAMANTIUM, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.RAW_ADAMANTIUM, ModelTemplates.FLAT_ITEM);
+
+
         itemModelGenerators.generateFlatItem(ModItems.VIBRANIUM_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.VIBRANIUM_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.VIBRANIUM_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.VIBRANIUM_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.VIBRANIUM_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
 
+        itemModelGenerators.generateFlatItem(ModItems.ADAMANTIUM_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.ADAMANTIUM_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.ADAMANTIUM_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.ADAMANTIUM_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.ADAMANTIUM_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
 
-        itemModelGenerators.generateTrimmableItem(ModItems.VIBRANIUM_HELMET, ModArmorMaterials.VIBRANIUM_KEY,
-                ItemModelGenerators.TRIM_PREFIX_HELMET, false);
-        itemModelGenerators.generateTrimmableItem(ModItems.VIBRANIUM_CHESTPLATE, ModArmorMaterials.VIBRANIUM_KEY,
-                ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
-        itemModelGenerators.generateTrimmableItem(ModItems.VIBRANIUM_LEGGINGS, ModArmorMaterials.VIBRANIUM_KEY,
-                ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
-        itemModelGenerators.generateTrimmableItem(ModItems.VIBRANIUM_BOOTS, ModArmorMaterials.VIBRANIUM_KEY,
-                ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
+
+
+        itemModelGenerators.generateTrimmableArmorSet(ModItems.VIBRANIUM_HELMET, ModItems.VIBRANIUM_CHESTPLATE, ModItems.VIBRANIUM_LEGGINGS,
+                ModItems.VIBRANIUM_BOOTS, false, Map.of());
+
+        itemModelGenerators.generateTrimmableArmorSet(ModItems.ADAMANTIUM_HELMET, ModItems.ADAMANTIUM_CHESTPLATE, ModItems.ADAMANTIUM_LEGGINGS,
+                ModItems.ADAMANTIUM_BOOTS, false, Map.of());
     }
 }

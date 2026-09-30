@@ -1,5 +1,5 @@
 ## VIBRANIUM UPDATE !!
 
-+ Add French translation
++ Port to 26.3
 
 _Add a lot more coming soon !_

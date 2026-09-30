@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "marvelores:vibranium_from_smelting_raw_vibranium"
+        "recipes": "marvelores:vibranium_from_smelting_raw_vibranium"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

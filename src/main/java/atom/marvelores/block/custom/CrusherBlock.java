@@ -6,6 +6,8 @@ import atom.marvelores.block.entity.custom.CrusherBlockEntity;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -24,10 +26,11 @@ import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.Nullable;
 
+import static net.minecraft.world.level.levelgen.structure.Structure.simpleCodec;
+
 public class CrusherBlock extends BaseEntityBlock {
     public static final EnumProperty<Direction> FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final BooleanProperty LIT = BlockStateProperties.LIT;
-    public static final MapCodec<CrusherBlock> CODEC = simpleCodec(CrusherBlock::new);
 
 
     public CrusherBlock(Properties properties) {
@@ -45,22 +48,16 @@ public class CrusherBlock extends BaseEntityBlock {
         builder.add(FACING, LIT);
     }
 
-    /* BLOCK ENTITY */
-    @Override
-    protected MapCodec<? extends BaseEntityBlock> codec() {
-        return CODEC;
-    }
-
     @Override
     public @Nullable BlockEntity newBlockEntity(BlockPos worldPosition, BlockState blockState) {
         return new CrusherBlockEntity(worldPosition, blockState);
     }
 
     @Override
-    public void playerDestroy(Level level, Player player, BlockPos pos, BlockState state,
+    public void playerDestroy(ServerLevel level, ServerPlayer player, BlockPos pos, BlockState state,
                               @Nullable BlockEntity blockEntity, ItemStack destroyedWith) {
-        if(level.getBlockEntity(pos) instanceof CrusherBlockEntity CrusherBlockEntity) {
-            CrusherBlockEntity.drops();
+        if(level.getBlockEntity(pos) instanceof CrusherBlockEntity crystallizerBlockEntity) {
+            crystallizerBlockEntity.drops();
         }
         super.playerDestroy(level, player, pos, state, blockEntity, destroyedWith);
     }

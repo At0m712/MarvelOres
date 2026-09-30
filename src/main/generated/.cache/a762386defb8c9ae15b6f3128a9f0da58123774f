@@ -1,6 +1,9 @@
-// 26.2	-999999999-01-01T00:00:00	MarvelOres/Block Loot Tables
-6d927fadebc10016173f74396f210acda4511a56 data/marvelores/loot_table/blocks/crusher.json
-4aa9cfb7b750763b846549023e993ad83bd3de61 data/marvelores/loot_table/blocks/raw_vibranium_block.json
-bd653aa23eb7dc1ebc314243307e416a1b14dca5 data/marvelores/loot_table/blocks/vibranium_block.json
-55a07f8ffc3fe1d6c89c2ff710d3c4fa6051bd8a data/marvelores/loot_table/blocks/vibranium_deepslate_ore.json
-55a07f8ffc3fe1d6c89c2ff710d3c4fa6051bd8a data/marvelores/loot_table/blocks/vibranium_ore.json
+// 26.3	-999999999-01-01T00:00:00	MarvelOres/Block Loot Tables
+417769dbeb6b0c7d3eb724acb56d6e421d20fdbb data/marvelores/loot_table/blocks/adamantium_block.json
+9294c99285675735af7dc16d719d82b556e0351e data/marvelores/loot_table/blocks/adamantium_deepslate_ore.json
+9294c99285675735af7dc16d719d82b556e0351e data/marvelores/loot_table/blocks/adamantium_ore.json
+56c46be88fc1eb6ff00cd42a043015bff093a161 data/marvelores/loot_table/blocks/crusher.json
+9d8a3abac1367bcb67ad3a7171b2bc2c69f2c86c data/marvelores/loot_table/blocks/raw_vibranium_block.json
+5698e736892c84786d7731aa3887322ce38d864f data/marvelores/loot_table/blocks/vibranium_block.json
+277651e305382f7d6930258ee276156f6005e373 data/marvelores/loot_table/blocks/vibranium_deepslate_ore.json
+277651e305382f7d6930258ee276156f6005e373 data/marvelores/loot_table/blocks/vibranium_ore.json

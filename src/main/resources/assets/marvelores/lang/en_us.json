@@ -26,6 +26,27 @@
 
   "block.marvelores.crusher": "Crusher",
 
-  "creativemodetab.marvelores.vibranium_items": "Vibranium Items",
-  "creativemodetab.marvelores.vibranium_blocks": "Vibranium Blocks"
+  "creativemodetab.marvelores.vibranium_items": "Marvelores Items",
+  "creativemodetab.marvelores.vibranium_blocks": "Marvelores Blocks",
+
+  "item.marvelores.adamantium": "Adamantium",
+  "item.marvelores.raw_adamantium": "Raw Adamantium",
+
+  "item.marvelores.adamantium_sword": "DeadPool Katana",
+  "item.marvelores.adamantium_pickaxe": "Adamantium Pickaxe",
+  "item.marvelores.adamantium_shovel": "Adamantium Shovel",
+  "item.marvelores.adamantium_axe": "Adamantium Axe",
+  "item.marvelores.adamantium_hoe": "Adamantium Hoe",
+
+
+  "item.marvelores.adamantium_helmet": "Adamantium Helmet",
+  "item.marvelores.adamantium_chestplate": "Adamantium Chestplate",
+  "item.marvelores.adamantium_leggings": "Adamantium Leggings",
+  "item.marvelores.adamantium_boots": "Adamantium Boots",
+
+
+  "block.marvelores.adamantium_block": "Block of Adamantium",
+
+  "block.marvelores.adamantium_ore": "Adamantium Ore",
+  "block.marvelores.adamantium_deepslate_ore": "Deepslate Adamantium Ore"
 }

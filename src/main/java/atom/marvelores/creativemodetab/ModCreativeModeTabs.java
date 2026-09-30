@@ -23,6 +23,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.VIBRANIUM_POWDER);
                         output.accept(ModItems.VIBRANIUM_CORE);
 
+                        output.accept(ModItems.ADAMANTIUM);
+                        output.accept(ModItems.RAW_ADAMANTIUM);
+
 
                         output.accept(ModItems.VIBRANIUM_SWORD);
                         output.accept(ModItems.VIBRANIUM_PICKAXE);
@@ -30,10 +33,21 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.VIBRANIUM_AXE);
                         output.accept(ModItems.VIBRANIUM_HOE);
 
+                        output.accept(ModItems.ADAMANTIUM_SWORD);
+                        output.accept(ModItems.ADAMANTIUM_PICKAXE);
+                        output.accept(ModItems.ADAMANTIUM_SHOVEL);
+                        output.accept(ModItems.ADAMANTIUM_AXE);
+                        output.accept(ModItems.ADAMANTIUM_HOE);
+
                         output.accept(ModItems.VIBRANIUM_HELMET);
                         output.accept(ModItems.VIBRANIUM_CHESTPLATE);
                         output.accept(ModItems.VIBRANIUM_LEGGINGS);
                         output.accept(ModItems.VIBRANIUM_BOOTS);
+
+                        output.accept(ModItems.ADAMANTIUM_HELMET);
+                        output.accept(ModItems.ADAMANTIUM_CHESTPLATE);
+                        output.accept(ModItems.ADAMANTIUM_LEGGINGS);
+                        output.accept(ModItems.ADAMANTIUM_BOOTS);
 
                     }).build());
 
@@ -47,6 +61,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.VIBRANIUM_ORE);
                         output.accept(ModBlocks.VIBRANIUM_DEEPSLATE_ORE);
                         output.accept(ModBlocks.CRUSHER);
+
+                        output.accept(ModBlocks.ADAMANTIUM_BLOCK);
+                        output.accept(ModBlocks.ADAMANTIUM_ORE);
+                        output.accept(ModBlocks.ADAMANTIUM_DEEPSLATE_ORE);
 
 
                     }).build());

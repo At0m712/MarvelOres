@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "marvelores:vibranium_powder_from_crushing"
+        "recipes": "marvelores:vibranium_powder_from_crushing"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "marvelores:vibranium_from_smelting_vibranium_deepslate_ore"
+        "recipes": "marvelores:vibranium_from_smelting_vibranium_deepslate_ore"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

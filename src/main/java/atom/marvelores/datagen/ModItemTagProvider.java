@@ -31,7 +31,9 @@ public class ModItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
         tag(ItemTags.FOOT_ARMOR).add(ModItems.getRK(ModItems.VIBRANIUM_BOOTS));
 
         tag((ModTags.Items.VIBRANIUM_REPAIR))
-                .add(ModItems.getRK(ModItems.VIBRANIUM));
+                .add(ModItems.getRK(ModItems.VIBRANIUM))
+                .add(ModItems.getRK(ModItems.ADAMANTIUM));
+
 
 
     }

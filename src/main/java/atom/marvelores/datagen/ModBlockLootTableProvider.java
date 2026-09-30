@@ -5,16 +5,14 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootSubProvider;
 import atom.marvelores.block.ModBlocks;
 import atom.marvelores.item.ModItems;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
-import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
+import net.minecraft.world.level.storage.loot.providers.number.ints.ContextIntProviders;
 
 
 import java.util.concurrent.CompletableFuture;
@@ -30,16 +28,19 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
         dropSelf(ModBlocks.RAW_VIBRANIUM_BLOCK);
         dropSelf(ModBlocks.CRUSHER);
 
+        dropSelf(ModBlocks.ADAMANTIUM_BLOCK);
+
         add(ModBlocks.VIBRANIUM_ORE, createOreDrop(ModBlocks.VIBRANIUM_ORE, ModItems.RAW_VIBRANIUM));
         add(ModBlocks.VIBRANIUM_DEEPSLATE_ORE, createOreDrop(ModBlocks.VIBRANIUM_ORE, ModItems.RAW_VIBRANIUM));
+
+        add(ModBlocks.ADAMANTIUM_ORE, createOreDrop(ModBlocks.ADAMANTIUM_ORE, ModItems.RAW_ADAMANTIUM));
+        add(ModBlocks.ADAMANTIUM_DEEPSLATE_ORE, createOreDrop(ModBlocks.ADAMANTIUM_ORE, ModItems.RAW_ADAMANTIUM));
     }
 
-    public LootTable.Builder createMultipleOreDrops(final Block block, Item item, float minDrops, float maxDrops) {
-        HolderLookup.RegistryLookup<Enchantment> enchantments = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
-
+    public LootTable.Builder createMultipleOreDrops(final Block block, Item item, int minDrops, int maxDrops) {
         return this.createSilkTouchDispatchTable(block, this.applyExplosionDecay(
                 block, LootItem.lootTableItem(item)
-                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(minDrops, maxDrops)))
+                        .apply(SetItemCountFunction.setCount(ContextIntProviders.between(minDrops, maxDrops)))
                         .apply(ApplyBonusCount.addOreBonusCount(enchantments.getOrThrow(Enchantments.FORTUNE)))));
     }
 }
