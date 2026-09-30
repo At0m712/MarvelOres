@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "marvelores:vibranium_core",
+    "P": "marvelores:vibranium_powder",
+    "V": "marvelores:vibranium"
+  },
+  "pattern": [
+    "VVV",
+    "P#P",
+    "VVV"
+  ],
+  "result": {
+    "count": 1,
+    "id": "marvelores:vibranium_shield"
+  }
+}

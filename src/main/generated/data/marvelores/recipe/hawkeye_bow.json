@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "marvelores:maple_stick",
+    "S": "minecraft:string"
+  },
+  "pattern": [
+    " #S",
+    "# S",
+    " #S"
+  ],
+  "result": {
+    "count": 1,
+    "id": "marvelores:hawkeye_bow"
+  }
+}

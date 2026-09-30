@@ -2,5 +2,6 @@
 
 TODO :
 
-Some few things to add to captain shield
 Add Heart-shaped plant
+Fix Texture issue with enchanted Hawkeye Bow
+Add New Arrow

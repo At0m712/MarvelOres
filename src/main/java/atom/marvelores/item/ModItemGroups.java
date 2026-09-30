@@ -22,12 +22,15 @@ public class ModItemGroups {
                         entries.add(ModItems.VIBRANIUM_STICK);
                         entries.add(ModItems.VIBRANIUM_CORE);
 
+                        entries.add(ModItems.MAPLE_STICK);
+
                         entries.add(ModItems.VIBRANIUM_SWORD);
                         entries.add(ModItems.VIBRANIUM_PICKAXE);
                         entries.add(ModItems.VIBRANIUM_SHOVEL);
                         entries.add(ModItems.VIBRANIUM_AXE);
                         entries.add(ModItems.VIBRANIUM_HOE);
                         entries.add(ModItems.VIBRANIUM_SHIELD);
+                        entries.add(ModItems.HAWKEYE_BOW);
 
                         entries.add(ModItems.VIBRANIUM_HELMET);
                         entries.add(ModItems.VIBRANIUM_CHESTPLATE);
@@ -67,6 +70,25 @@ public class ModItemGroups {
                         entries.add(ModBlocks.ADAMANTIUM_BLOCK);
                         entries.add(ModBlocks.ADAMANTIUM_ORE);
                         entries.add(ModBlocks.ADAMANTIUM_DEEPSLATE_ORE);
+
+                        entries.add(ModBlocks.MAPLE_LOG);
+                        entries.add(ModBlocks.MAPLE_WOOD);
+
+                        entries.add(ModBlocks.MAPLE_PLANKS);
+                        entries.add(ModBlocks.MAPLE_LEAVES);
+
+                        entries.add(ModBlocks.MAPLE_SAPLING);
+                        entries.add(ModBlocks.MAPLE_STAIRS);
+                        entries.add(ModBlocks.MAPLE_SLAB);
+
+                        entries.add(ModBlocks.MAPLE_BUTTON);
+                        entries.add(ModBlocks.MAPLE_PRESSURE_PLATE);
+
+                        entries.add(ModBlocks.MAPLE_FENCE);
+                        entries.add(ModBlocks.MAPLE_FENCE_GATE);
+
+                        entries.add(ModBlocks.MAPLE_DOOR);
+                        entries.add(ModBlocks.MAPLE_TRAPDOOR);
                     }).build());
 
 

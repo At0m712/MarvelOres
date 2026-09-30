@@ -28,6 +28,7 @@ public class ModItems {
     public static final Item VIBRANIUM_STICK = registerItem("vibranium_stick", Item::new);
     public static final Item VIBRANIUM_CORE = registerItem("vibranium_core", Item::new);
 
+    public static final Item MAPLE_STICK = registerItem("maple_stick", Item::new);
 
     public static final Item ADAMANTIUM = registerItem("adamantium", Item::new);
     public static final Item RAW_ADAMANTIUM = registerItem("raw_adamantium", Item::new);
@@ -100,6 +101,10 @@ public class ModItems {
                             Optional.of(SoundEvents.ITEM_SHIELD_BLOCK),
                             Optional.of(SoundEvents.ITEM_SHIELD_BREAK)
                     ))));
+
+
+    public static final Item HAWKEYE_BOW = registerItem("hawkeye_bow",
+            setting -> new BowItem(setting.maxDamage(500)));
 
 
 

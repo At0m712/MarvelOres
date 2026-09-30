@@ -27,6 +27,17 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.ADAMANTIUM_ORE)
                 .add(ModBlocks.ADAMANTIUM_DEEPSLATE_ORE);
 
+        valueLookupBuilder(BlockTags.AXE_MINEABLE)
+                .add(ModBlocks.MAPLE_FENCE)
+                .add(ModBlocks.MAPLE_BUTTON)
+                .add(ModBlocks.MAPLE_PRESSURE_PLATE)
+                .add(ModBlocks.MAPLE_SLAB)
+                .add(ModBlocks.MAPLE_STAIRS)
+                .add(ModBlocks.MAPLE_PLANKS)
+                .add(ModBlocks.MAPLE_DOOR)
+                .add(ModBlocks.MAPLE_TRAPDOOR);
+
+
         valueLookupBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.VIBRANIUM_BLOCK)
                 .add(ModBlocks.RAW_VIBRANIUM_BLOCK)
@@ -37,5 +48,12 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.ADAMANTIUM_BLOCK)
                 .add(ModBlocks.ADAMANTIUM_ORE)
                 .add(ModBlocks.ADAMANTIUM_DEEPSLATE_ORE);
+
+       valueLookupBuilder(BlockTags.LOGS_THAT_BURN)
+               .add(ModBlocks.MAPLE_LOG)
+               .add(ModBlocks.MAPLE_WOOD);
+
+       valueLookupBuilder(BlockTags.FENCES).add(ModBlocks.MAPLE_FENCE);
+       valueLookupBuilder(BlockTags.FENCE_GATES).add(ModBlocks.MAPLE_FENCE_GATE);
     }
 }

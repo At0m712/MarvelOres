@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "S": "marvelores:vibranium_stick",
+    "S": "marvelores:maple_stick",
     "V": "marvelores:adamantium"
   },
   "pattern": [

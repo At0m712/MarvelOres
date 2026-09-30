@@ -7,6 +7,8 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import atom.marvelores.block.ModBlocks;
 import atom.marvelores.item.ModItems;
 
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.recipe.RecipeExporter;
 import net.minecraft.data.recipe.RecipeGenerator;
 import net.minecraft.item.ItemConvertible;
@@ -28,16 +30,20 @@ public class ModRecipeProvider extends FabricRecipeProvider {
             @Override
             public void generate() {
                 List<ItemConvertible> VIBRANIUM_SMELTABLES = List.of(ModItems.RAW_VIBRANIUM, ModBlocks.VIBRANIUM_ORE, ModBlocks.VIBRANIUM_DEEPSLATE_ORE);
+                List<ItemConvertible> ADAMANTIUM_SMELTABLES = List.of(ModItems.RAW_ADAMANTIUM, ModBlocks.ADAMANTIUM_ORE, ModBlocks.ADAMANTIUM_DEEPSLATE_ORE);
+                List<ItemConvertible> MAPLE_SMELTABLES = List.of(ModBlocks.MAPLE_LOG, ModBlocks.MAPLE_WOOD);
 
                 offerSmelting(VIBRANIUM_SMELTABLES, RecipeCategory.MISC, ModItems.VIBRANIUM, 0.25f, 200, "vibranium");
                 offerBlasting(VIBRANIUM_SMELTABLES, RecipeCategory.MISC, ModItems.VIBRANIUM, 0.25f, 100, "vibranium");
 
-                List<ItemConvertible> ADAMANTIUM_SMELTABLES = List.of(ModItems.RAW_ADAMANTIUM, ModBlocks.ADAMANTIUM_ORE, ModBlocks.ADAMANTIUM_DEEPSLATE_ORE);
 
                 offerSmelting(ADAMANTIUM_SMELTABLES, RecipeCategory.MISC, ModItems.ADAMANTIUM, 0.25f, 200, "adamantium");
                 offerBlasting(ADAMANTIUM_SMELTABLES, RecipeCategory.MISC, ModItems.ADAMANTIUM, 0.25f, 100, "adamantium");
 
+                offerSmelting(MAPLE_SMELTABLES, RecipeCategory.MISC, Items.CHARCOAL, 0.25f, 200, "charcoal");
+
                 offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS, ModItems.VIBRANIUM, RecipeCategory.DECORATIONS, ModBlocks.VIBRANIUM_BLOCK);
+
 
                 createShaped(RecipeCategory.MISC, ModBlocks.RAW_VIBRANIUM_BLOCK)
                         .pattern("RRR")
@@ -177,8 +183,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern(" V ")
                         .pattern(" S ")
                         .input('V', ModItems.ADAMANTIUM)
-                        .input('S', ModItems.VIBRANIUM_STICK)
-                        .criterion(hasItem(ModItems.VIBRANIUM), conditionsFromItem(ModItems.VIBRANIUM))
+                        .input('S', ModItems.MAPLE_STICK)
+                        .criterion(hasItem(ModItems.ADAMANTIUM), conditionsFromItem(ModItems.ADAMANTIUM))
                         .offerTo(exporter);
 
                 createShaped(RecipeCategory.MISC, ModItems.ADAMANTIUM_PICKAXE)
@@ -186,8 +192,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern(" S ")
                         .pattern(" S ")
                         .input('V', ModItems.ADAMANTIUM)
-                        .input('S', ModItems.VIBRANIUM_STICK)
-                        .criterion(hasItem(ModItems.VIBRANIUM), conditionsFromItem(ModItems.VIBRANIUM))
+                        .input('S', ModItems.MAPLE_STICK)
+                        .criterion(hasItem(ModItems.ADAMANTIUM), conditionsFromItem(ModItems.ADAMANTIUM))
                         .offerTo(exporter);
 
                 createShaped(RecipeCategory.MISC, ModItems.ADAMANTIUM_SHOVEL)
@@ -195,8 +201,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern(" S ")
                         .pattern(" S ")
                         .input('V', ModItems.ADAMANTIUM)
-                        .input('S', ModItems.VIBRANIUM_STICK)
-                        .criterion(hasItem(ModItems.VIBRANIUM), conditionsFromItem(ModItems.VIBRANIUM))
+                        .input('S', ModItems.MAPLE_STICK)
+                        .criterion(hasItem(ModItems.ADAMANTIUM), conditionsFromItem(ModItems.ADAMANTIUM))
                         .offerTo(exporter);
 
                 createShaped(RecipeCategory.MISC, ModItems.ADAMANTIUM_AXE)
@@ -204,8 +210,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern(" SV")
                         .pattern(" S ")
                         .input('V', ModItems.ADAMANTIUM)
-                        .input('S', ModItems.VIBRANIUM_STICK)
-                        .criterion(hasItem(ModItems.VIBRANIUM), conditionsFromItem(ModItems.VIBRANIUM))
+                        .input('S', ModItems.MAPLE_STICK)
+                        .criterion(hasItem(ModItems.ADAMANTIUM), conditionsFromItem(ModItems.ADAMANTIUM))
                         .offerTo(exporter);
 
                 createShaped(RecipeCategory.MISC, ModItems.ADAMANTIUM_HOE)
@@ -213,8 +219,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern(" S ")
                         .pattern(" S ")
                         .input('V', ModItems.ADAMANTIUM)
-                        .input('S', ModItems.VIBRANIUM_STICK)
-                        .criterion(hasItem(ModItems.VIBRANIUM), conditionsFromItem(ModItems.VIBRANIUM))
+                        .input('S', ModItems.MAPLE_STICK)
+                        .criterion(hasItem(ModItems.ADAMANTIUM), conditionsFromItem(ModItems.ADAMANTIUM))
                         .offerTo(exporter);
 
                 createShaped(RecipeCategory.MISC, ModItems.ADAMANTIUM_HELMET)
@@ -222,7 +228,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern("V V")
                         .pattern("   ")
                         .input('V', ModItems.ADAMANTIUM)
-                        .criterion(hasItem(ModItems.VIBRANIUM), conditionsFromItem(ModItems.VIBRANIUM))
+                        .criterion(hasItem(ModItems.ADAMANTIUM), conditionsFromItem(ModItems.ADAMANTIUM))
                         .offerTo(exporter);
 
                 createShaped(RecipeCategory.MISC, ModItems.ADAMANTIUM_CHESTPLATE)
@@ -231,7 +237,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern("VVV")
                         .input('V', ModItems.ADAMANTIUM)
                         .input('N', Items.NETHERITE_INGOT)
-                        .criterion(hasItem(ModItems.VIBRANIUM), conditionsFromItem(ModItems.VIBRANIUM))
+                        .criterion(hasItem(ModItems.ADAMANTIUM), conditionsFromItem(ModItems.ADAMANTIUM))
                         .offerTo(exporter);
 
                 createShaped(RecipeCategory.MISC, ModItems.ADAMANTIUM_LEGGINGS)
@@ -239,7 +245,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern("V V")
                         .pattern("V V")
                         .input('V', ModItems.ADAMANTIUM)
-                        .criterion(hasItem(ModItems.VIBRANIUM), conditionsFromItem(ModItems.VIBRANIUM))
+                        .criterion(hasItem(ModItems.ADAMANTIUM), conditionsFromItem(ModItems.ADAMANTIUM))
                         .offerTo(exporter);
 
                 createShaped(RecipeCategory.MISC, ModItems.ADAMANTIUM_BOOTS)
@@ -247,8 +253,110 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern("V V")
                         .pattern("V V")
                         .input('V', ModItems.ADAMANTIUM)
-                        .criterion(hasItem(ModItems.VIBRANIUM), conditionsFromItem(ModItems.VIBRANIUM))
+                        .criterion(hasItem(ModItems.ADAMANTIUM), conditionsFromItem(ModItems.ADAMANTIUM))
                         .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.HAWKEYE_BOW)
+                        .pattern(" #S")
+                        .pattern("# S")
+                        .pattern(" #S")
+                        .input('#', ModItems.MAPLE_STICK)
+                        .input('S', Items.STRING)
+                        .criterion(hasItem(ModBlocks.MAPLE_LOG), conditionsFromItem(ModBlocks.MAPLE_LOG))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModBlocks.MAPLE_PLANKS, 4)
+                        .pattern("   ")
+                        .pattern(" # ")
+                        .pattern("   ")
+                        .input('#', ModBlocks.MAPLE_LOG)
+                        .criterion(hasItem(ModBlocks.MAPLE_LOG), conditionsFromItem(ModBlocks.MAPLE_LOG))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, Blocks.CRAFTING_TABLE)
+                        .pattern("   ")
+                        .pattern(" ##")
+                        .pattern(" ##")
+                        .input('#', ModBlocks.MAPLE_PLANKS)
+                        .criterion(hasItem(ModBlocks.MAPLE_LOG), conditionsFromItem(ModBlocks.MAPLE_LOG))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.MAPLE_STICK, 2)
+                        .pattern("   ")
+                        .pattern(" P ")
+                        .pattern(" P ")
+                        .input('P', ModBlocks.MAPLE_PLANKS)
+                        .criterion(hasItem(ModBlocks.MAPLE_LOG), conditionsFromItem(ModBlocks.MAPLE_LOG))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModBlocks.MAPLE_STAIRS, 4)
+                        .pattern("P  ")
+                        .pattern("PP ")
+                        .pattern("PPP")
+                        .input('P', ModBlocks.MAPLE_PLANKS)
+                        .criterion(hasItem(ModBlocks.MAPLE_LOG), conditionsFromItem(ModBlocks.MAPLE_LOG))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModBlocks.MAPLE_SLAB, 6)
+                        .pattern("   ")
+                        .pattern("PPP")
+                        .pattern("   ")
+                        .input('P', ModBlocks.MAPLE_PLANKS)
+                        .criterion(hasItem(ModBlocks.MAPLE_LOG), conditionsFromItem(ModBlocks.MAPLE_LOG))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModBlocks.MAPLE_BUTTON)
+                        .pattern("   ")
+                        .pattern(" P ")
+                        .pattern("   ")
+                        .input('P', ModBlocks.MAPLE_PLANKS)
+                        .criterion(hasItem(ModBlocks.MAPLE_LOG), conditionsFromItem(ModBlocks.MAPLE_LOG))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModBlocks.MAPLE_PRESSURE_PLATE)
+                        .pattern("   ")
+                        .pattern(" PP")
+                        .pattern("   ")
+                        .input('P', ModBlocks.MAPLE_PLANKS)
+                        .criterion(hasItem(ModBlocks.MAPLE_LOG), conditionsFromItem(ModBlocks.MAPLE_LOG))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModBlocks.MAPLE_DOOR, 3)
+                        .pattern(" PP")
+                        .pattern(" PP")
+                        .pattern(" PP")
+                        .input('P', ModBlocks.MAPLE_PLANKS)
+                        .criterion(hasItem(ModBlocks.MAPLE_LOG), conditionsFromItem(ModBlocks.MAPLE_LOG))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModBlocks.MAPLE_FENCE, 3)
+                        .pattern("P#P")
+                        .pattern("P#P")
+                        .pattern("   ")
+                        .input('P', ModBlocks.MAPLE_PLANKS)
+                        .input('#', ModItems.MAPLE_STICK)
+                        .criterion(hasItem(ModBlocks.MAPLE_LOG), conditionsFromItem(ModBlocks.MAPLE_LOG))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModBlocks.MAPLE_FENCE_GATE)
+                        .pattern("#P#")
+                        .pattern("#P#")
+                        .pattern("   ")
+                        .input('P', ModBlocks.MAPLE_PLANKS)
+                        .input('#', ModItems.MAPLE_STICK)
+                        .criterion(hasItem(ModBlocks.MAPLE_LOG), conditionsFromItem(ModBlocks.MAPLE_LOG))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModBlocks.MAPLE_TRAPDOOR, 2)
+                        .pattern("PPP")
+                        .pattern("PPP")
+                        .pattern("   ")
+                        .input('P', ModBlocks.MAPLE_PLANKS)
+                        .criterion(hasItem(ModBlocks.MAPLE_LOG), conditionsFromItem(ModBlocks.MAPLE_LOG))
+                        .offerTo(exporter);
+
+
+
             }
         };
     }

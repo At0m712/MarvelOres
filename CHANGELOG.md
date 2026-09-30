@@ -1,5 +1,7 @@
 ## MARVELORES UPDATE !!
 
-+ Add Captain America Shield
++ Add Hawkeye Bow
++ Add Maple Tree
++ Add Maple Wood (slab, door, ...)
 
-_Add a lot more coming soon !_
+_And a lot more coming soon !_
