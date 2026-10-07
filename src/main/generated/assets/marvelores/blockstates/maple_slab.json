@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "marvelores:block/maple_slab"
+    },
+    "type=double": {
+      "model": "marvelores:block/maple_planks"
+    },
+    "type=top": {
+      "model": "marvelores:block/maple_slab_top"
+    }
+  }
+}

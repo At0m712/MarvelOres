@@ -1,7 +1,7 @@
 ## MARVELORES UPDATE !!
 
-+ Add Adamantium Ore
-+ Add Adamantium Tools
-+ Add Adamantium Equipment
++ Add Hawkeye Bow
++ Add Maple Tree
++ Add Maple Wood (slab, door, ...)
 
 _Add a lot more coming soon !_

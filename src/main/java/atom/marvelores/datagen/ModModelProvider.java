@@ -37,6 +37,24 @@ public class ModModelProvider extends FabricModelProvider {
         blockModelGenerators.createTrivialCube(ModBlocks.ADAMANTIUM_BLOCK);
         blockModelGenerators.createTrivialCube(ModBlocks.ADAMANTIUM_ORE);
         blockModelGenerators.createTrivialCube(ModBlocks.ADAMANTIUM_DEEPSLATE_ORE);
+
+        blockModelGenerators.family(ModBlocks.MAPLE_PLANKS)
+                .stairs(ModBlocks.MAPLE_STAIRS)
+                .slab(ModBlocks.MAPLE_SLAB)
+                .button(ModBlocks.MAPLE_BUTTON)
+                .pressurePlate(ModBlocks.MAPLE_PRESSURE_PLATE)
+                .fence(ModBlocks.MAPLE_FENCE)
+                .fenceGate(ModBlocks.MAPLE_FENCE_GATE)
+                .wall(ModBlocks.MAPLE_WALL);
+
+        blockModelGenerators.createDoor(ModBlocks.MAPLE_DOOR);
+        blockModelGenerators.createTrapdoor(ModBlocks.MAPLE_TRAPDOOR);
+
+        blockModelGenerators.woodProvider(ModBlocks.MAPLE_LOG).log(ModBlocks.MAPLE_LOG).wood(ModBlocks.MAPLE_WOOD);
+
+        blockModelGenerators.createTrivialBlock(ModBlocks.MAPLE_LEAVES, TexturedModel.LEAVES);
+        blockModelGenerators.createPlantWithDefaultItem(ModBlocks.MAPLE_SAPLING, ModBlocks.POTTED_MAPLE_SAPLING, BlockModelGenerators.PlantType.NOT_TINTED);
+
     }
 
     @Override
@@ -47,6 +65,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ModItems.VIBRANIUM_CORE, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.VIBRANIUM_STICK, ModelTemplates.FLAT_ITEM);
 
+        itemModelGenerators.generateFlatItem(ModItems.MAPLE_STICK, ModelTemplates.FLAT_ITEM);
+
         itemModelGenerators.generateFlatItem(ModItems.ADAMANTIUM, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.RAW_ADAMANTIUM, ModelTemplates.FLAT_ITEM);
 
@@ -55,6 +75,9 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ModItems.VIBRANIUM_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.VIBRANIUM_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.VIBRANIUM_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
+
+        itemModelGenerators.createFlatItemModel(ModItems.HAWKEYE_BOW, ModelTemplates.BOW);
+        itemModelGenerators.generateBow(ModItems.HAWKEYE_BOW);
 
         itemModelGenerators.generateFlatItem(ModItems.ADAMANTIUM_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.ADAMANTIUM_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);

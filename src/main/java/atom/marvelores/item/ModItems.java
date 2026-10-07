@@ -13,12 +13,15 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.tags.DamageTypeTags;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.BlocksAttacks;
 import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.equipment.ArmorType;
 import net.minecraft.world.item.equipment.Equippable;
+import net.minecraft.world.level.block.entity.BannerPatternLayers;
 
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -34,8 +37,11 @@ public class ModItems {
     public static final Item VIBRANIUM_STICK = registerItem("vibranium_stick", Item::new);
     public static final Item VIBRANIUM_CORE = registerItem("vibranium_core", Item::new);
 
+    public static final Item MAPLE_STICK = registerItem("maple_stick", Item::new);
+
     public static final Item ADAMANTIUM = registerItem("adamantium", Item::new);
     public static final Item RAW_ADAMANTIUM = registerItem("raw_adamantium", Item::new);
+
 
     public static final Item VIBRANIUM_SWORD = registerItem("vibranium_sword",
             properties -> new Item(properties.sword(ModToolMaterials.VIBRANIUM, 3, -2.4f)));
@@ -61,6 +67,7 @@ public class ModItems {
     public static final Item ADAMANTIUM_HOE = registerItem("adamantium_hoe",
             properties -> new HoeItem(ModToolMaterials.ADAMANTIUM, 0, -3f, properties));
 
+
     public static final Item VIBRANIUM_HELMET = registerItem("vibranium_helmet",
             properties -> new ModArmorItem(properties.humanoidArmor(ModArmorMaterials.VIBRANIUM_ARMOR_MATERIAL, ArmorType.HELMET)));
     public static final Item VIBRANIUM_CHESTPLATE = registerItem("vibranium_chestplate",
@@ -70,6 +77,8 @@ public class ModItems {
     public static final Item VIBRANIUM_BOOTS = registerItem("vibranium_boots",
             properties -> new Item(properties.humanoidArmor(ModArmorMaterials.VIBRANIUM_ARMOR_MATERIAL, ArmorType.BOOTS)));
 
+
+
     public static final Item ADAMANTIUM_HELMET = registerItem("adamantium_helmet",
             properties -> new ModArmorItem(properties.humanoidArmor(ModArmorMaterials.ADAMANTIUM_ARMOR_MATERIAL, ArmorType.HELMET)));
     public static final Item ADAMANTIUM_CHESTPLATE = registerItem("adamantium_chestplate",
@@ -78,7 +87,6 @@ public class ModItems {
             properties -> new Item(properties.humanoidArmor(ModArmorMaterials.ADAMANTIUM_ARMOR_MATERIAL, ArmorType.LEGGINGS)));
     public static final Item ADAMANTIUM_BOOTS = registerItem("adamantium_boots",
             properties -> new Item(properties.humanoidArmor(ModArmorMaterials.ADAMANTIUM_ARMOR_MATERIAL, ArmorType.BOOTS)));
-
 
     public static final Item VIBRANIUM_SHIELD = registerItem("vibranium_shield",
             properties -> new ModShieldItem(properties
@@ -106,10 +114,8 @@ public class ModItems {
                     ))
             ));
 
-
-    public static ResourceKey<Item> getRK(Item item) {
-        return BuiltInRegistries.ITEM.getResourceKey(item).get();
-    }
+    public static final Item HAWKEYE_BOW = registerItem("hawkeye_bow",
+            setting -> new BowItem(setting.durability(500)));
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {
         return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(MarvelOres.MOD_ID, name),
