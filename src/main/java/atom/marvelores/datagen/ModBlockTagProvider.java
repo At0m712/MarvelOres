@@ -1,12 +1,15 @@
 package atom.marvelores.datagen;
 
 import atom.marvelores.block.ModBlocks;
-import net.minecraft.core.HolderLookup;
-import net.minecraft.tags.BlockTags;
+import atom.marvelores.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.tags.BlockTags;
 
 import java.util.concurrent.CompletableFuture;
+
+import static net.minecraft.tags.TagEntry.tag;
 
 public class ModBlockTagProvider extends FabricTagsProvider.BlockTagsProvider {
     public ModBlockTagProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registryLookupFuture) {

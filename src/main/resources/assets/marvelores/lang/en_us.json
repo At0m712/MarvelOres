@@ -12,6 +12,8 @@
   "item.marvelores.vibranium_hoe": "Vibranium Hoe",
 
 
+  "item.marvelores.hawkeye_bow": "Hawkeye Bow",
+
   "item.marvelores.vibranium_helmet": "Vibranium Helmet",
   "item.marvelores.vibranium_chestplate": "Vibranium Chestplate",
   "item.marvelores.vibranium_leggings": "Vibranium Leggings",
@@ -48,5 +50,25 @@
   "block.marvelores.adamantium_block": "Block of Adamantium",
 
   "block.marvelores.adamantium_ore": "Adamantium Ore",
-  "block.marvelores.adamantium_deepslate_ore": "Deepslate Adamantium Ore"
+  "block.marvelores.adamantium_deepslate_ore": "Deepslate Adamantium Ore",
+
+  "block.marvelores.maple_stairs": "Maple Stairs",
+  "block.marvelores.maple_slab": "Maple Slab",
+
+  "block.marvelores.maple_button": "Maple Button",
+  "block.marvelores.maple_pressure_plate": "Maple Pressure Plate",
+
+  "block.marvelores.maple_fence": "Maple Fence",
+  "block.marvelores.maple_fence_gate": "Maple Fence Gate",
+  "block.marvelores.maple_wall": "Maple Wall",
+
+  "block.marvelores.maple_door": "Maple Door",
+  "block.marvelores.maple_trapdoor": "Maple Trapdoor",
+
+  "block.marvelores.maple_log": "Maple Log",
+  "block.marvelores.maple_wood": "Maple Wood",
+  "block.marvelores.maple_planks": "Maple Planks",
+  "block.marvelores.maple_leaves": "Maple Leaves",
+  "block.marvelores.maple_sapling": "Maple Sapling",
+  "item.marvelores.maple_stick": "Maple Stick"
 }

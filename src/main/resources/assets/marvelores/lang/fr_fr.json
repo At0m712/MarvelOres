@@ -11,6 +11,10 @@
   "item.marvelores.vibranium_axe": "Hache en Vibranium",
   "item.marvelores.vibranium_hoe": "Houe en Vibranium",
 
+  "item.marvelores.vibranium_shield": "Bouclier de Captain America",
+
+  "item.marvelores.hawkeye_bow": "Arc d'Hawkeye",
+
 
   "item.marvelores.vibranium_helmet": "Casque en Vibranium",
   "item.marvelores.vibranium_chestplate": "Plastron en Vibranium",
@@ -48,5 +52,25 @@
   "block.marvelores.adamantium_block": "Bloc de Adamantium",
 
   "block.marvelores.adamantium_ore": "Minerai d'Adamantium",
-  "block.marvelores.adamantium_deepslate_ore": "Minerai d'Adamantium des Abîmes"
+  "block.marvelores.adamantium_deepslate_ore": "Minerai d'Adamantium des Abîmes",
+
+  "block.marvelores.maple_stairs": "Escalier en érable",
+  "block.marvelores.maple_slab": "Dalle en érable",
+
+  "block.marvelores.maple_button": "Bouton en érable",
+  "block.marvelores.maple_pressure_plate": "Plaque de pression en érable",
+
+  "block.marvelores.maple_fence": "Barrière en érable",
+  "block.marvelores.maple_fence_gate": "Portillon en érable",
+  "block.marvelores.maple_wall": "Muret en érable",
+
+  "block.marvelores.maple_door": "Porte en érable",
+  "block.marvelores.maple_trapdoor": "Trappe en érable",
+
+  "block.marvelores.maple_log": "Bûche d'érable",
+  "block.marvelores.maple_wood": "Bois d'érable",
+  "block.marvelores.maple_planks": "Planche d'érable",
+  "block.marvelores.maple_leaves": "Feuillage d'érable",
+  "block.marvelores.maple_sapling": "Pousse d'érable",
+  "item.marvelores.maple_stick": "Bâton d'érable"
 }
