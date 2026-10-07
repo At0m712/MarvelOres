@@ -23,6 +23,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.VIBRANIUM_POWDER);
                         output.accept(ModItems.VIBRANIUM_CORE);
 
+                        output.accept(ModItems.MAPLE_STICK);
+
                         output.accept(ModItems.ADAMANTIUM);
                         output.accept(ModItems.RAW_ADAMANTIUM);
 
@@ -33,6 +35,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.VIBRANIUM_AXE);
                         output.accept(ModItems.VIBRANIUM_HOE);
                         output.accept(ModItems.VIBRANIUM_SHIELD);
+                        output.accept(ModItems.HAWKEYE_BOW);
 
                         output.accept(ModItems.ADAMANTIUM_SWORD);
                         output.accept(ModItems.ADAMANTIUM_PICKAXE);
@@ -66,6 +69,24 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.ADAMANTIUM_BLOCK);
                         output.accept(ModBlocks.ADAMANTIUM_ORE);
                         output.accept(ModBlocks.ADAMANTIUM_DEEPSLATE_ORE);
+
+                        output.accept(ModBlocks.MAPLE_STAIRS);
+                        output.accept(ModBlocks.MAPLE_SLAB);
+                        output.accept(ModBlocks.MAPLE_BUTTON);
+                        output.accept(ModBlocks.MAPLE_PRESSURE_PLATE);
+                        output.accept(ModBlocks.MAPLE_FENCE);
+                        output.accept(ModBlocks.MAPLE_FENCE_GATE);
+                        output.accept(ModBlocks.MAPLE_WALL);
+                        output.accept(ModBlocks.MAPLE_DOOR);
+                        output.accept(ModBlocks.MAPLE_TRAPDOOR);
+
+                        output.accept(ModBlocks.MAPLE_LOG);
+                        output.accept(ModBlocks.MAPLE_WOOD);
+
+                        output.accept(ModBlocks.MAPLE_PLANKS);
+                        output.accept(ModBlocks.MAPLE_LEAVES);
+
+                        output.accept(ModBlocks.MAPLE_SAPLING);
 
 
                     }).build());

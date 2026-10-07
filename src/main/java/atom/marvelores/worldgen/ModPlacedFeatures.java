@@ -1,10 +1,13 @@
 package atom.marvelores.worldgen;
 
 import atom.marvelores.MarvelOres;
+import atom.marvelores.block.ModBlocks;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.OrePlacements;
+import net.minecraft.data.worldgen.placement.PlacementUtils;
+import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
@@ -18,7 +21,8 @@ import java.util.List;
 public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> OVERWORLD_VIBRANIUM_ORE_PLACED_KEY = registerKey("overworld_vibranium_ore_placed");
     public static final ResourceKey<PlacedFeature> OVERWORLD_ADAMANTIUM_ORE_PLACED_KEY = registerKey("overworld_adamantium_ore_placed");
-
+    public static final ResourceKey<PlacedFeature> MAPLE_PLACED_KEY = registerKey("maple_placed");
+    
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
@@ -30,6 +34,9 @@ public class ModPlacedFeatures {
                 OrePlacements.commonOrePlacement(2,
                         HeightRangePlacement.triangle(VerticalAnchor.absolute(-40), VerticalAnchor.absolute(20))));
 
+        register(context, MAPLE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.MAPLE_KEY),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(0, 0.05f, 1),
+                        ModBlocks.MAPLE_SAPLING));
 
     }
 

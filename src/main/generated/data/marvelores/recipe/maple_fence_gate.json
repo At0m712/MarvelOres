@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "marvelores:maple_stick",
+    "P": "marvelores:maple_planks"
+  },
+  "pattern": [
+    "#P#",
+    "#P#",
+    "   "
+  ],
+  "result": {
+    "id": "marvelores:maple_fence_gate"
+  }
+}

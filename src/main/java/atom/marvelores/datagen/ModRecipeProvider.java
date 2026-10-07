@@ -16,6 +16,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Blocks;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -283,6 +284,106 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 CrusherRecipeBuilder.crusherRecipe(RecipeCategory.MISC, Ingredient.of(ModItems.VIBRANIUM), ModItems.VIBRANIUM_POWDER, 3)
                         .unlockedBy(getHasName(ModItems.VIBRANIUM), has(ModItems.VIBRANIUM))
                         .save(output, "marvelores:vibranium_powder_from_crushing");
+
+
+                shaped(RecipeCategory.MISC, ModItems.HAWKEYE_BOW)
+                        .pattern(" #S")
+                        .pattern("# S")
+                        .pattern(" #S")
+                        .define('#', ModItems.MAPLE_STICK)
+                        .define('S', Items.STRING)
+                        .unlockedBy(getHasName(ModBlocks.MAPLE_LOG), has(ModBlocks.MAPLE_LOG))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModBlocks.MAPLE_PLANKS, 4)
+                        .pattern("   ")
+                        .pattern(" # ")
+                        .pattern("   ")
+                        .define('#', ModBlocks.MAPLE_LOG)
+                        .unlockedBy(getHasName(ModBlocks.MAPLE_LOG), has(ModBlocks.MAPLE_LOG))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, Blocks.CRAFTING_TABLE)
+                        .pattern("   ")
+                        .pattern(" ##")
+                        .pattern(" ##")
+                        .define('#', ModBlocks.MAPLE_PLANKS)
+                        .unlockedBy(getHasName(ModBlocks.MAPLE_LOG), has(ModBlocks.MAPLE_LOG))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.MAPLE_STICK, 2)
+                        .pattern("   ")
+                        .pattern(" P ")
+                        .pattern(" P ")
+                        .define('P', ModBlocks.MAPLE_PLANKS)
+                        .unlockedBy(getHasName(ModBlocks.MAPLE_LOG), has(ModBlocks.MAPLE_LOG))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModBlocks.MAPLE_STAIRS, 4)
+                        .pattern("P  ")
+                        .pattern("PP ")
+                        .pattern("PPP")
+                        .define('P', ModBlocks.MAPLE_PLANKS)
+                        .unlockedBy(getHasName(ModBlocks.MAPLE_LOG), has(ModBlocks.MAPLE_LOG))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModBlocks.MAPLE_SLAB, 6)
+                        .pattern("   ")
+                        .pattern("PPP")
+                        .pattern("   ")
+                        .define('P', ModBlocks.MAPLE_PLANKS)
+                        .unlockedBy(getHasName(ModBlocks.MAPLE_LOG), has(ModBlocks.MAPLE_LOG))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModBlocks.MAPLE_BUTTON)
+                        .pattern("   ")
+                        .pattern(" P ")
+                        .pattern("   ")
+                        .define('P', ModBlocks.MAPLE_PLANKS)
+                        .unlockedBy(getHasName(ModBlocks.MAPLE_LOG), has(ModBlocks.MAPLE_LOG))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModBlocks.MAPLE_PRESSURE_PLATE)
+                        .pattern("   ")
+                        .pattern(" PP")
+                        .pattern("   ")
+                        .define('P', ModBlocks.MAPLE_PLANKS)
+                        .unlockedBy(getHasName(ModBlocks.MAPLE_LOG), has(ModBlocks.MAPLE_LOG))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModBlocks.MAPLE_DOOR, 3)
+                        .pattern(" PP")
+                        .pattern(" PP")
+                        .pattern(" PP")
+                        .define('P', ModBlocks.MAPLE_PLANKS)
+                        .unlockedBy(getHasName(ModBlocks.MAPLE_LOG), has(ModBlocks.MAPLE_LOG))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModBlocks.MAPLE_FENCE, 3)
+                        .pattern("P#P")
+                        .pattern("P#P")
+                        .pattern("   ")
+                        .define('P', ModBlocks.MAPLE_PLANKS)
+                        .define('#', ModItems.MAPLE_STICK)
+                        .unlockedBy(getHasName(ModBlocks.MAPLE_LOG), has(ModBlocks.MAPLE_LOG))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModBlocks.MAPLE_FENCE_GATE)
+                        .pattern("#P#")
+                        .pattern("#P#")
+                        .pattern("   ")
+                        .define('P', ModBlocks.MAPLE_PLANKS)
+                        .define('#', ModItems.MAPLE_STICK)
+                        .unlockedBy(getHasName(ModBlocks.MAPLE_LOG), has(ModBlocks.MAPLE_LOG))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModBlocks.MAPLE_TRAPDOOR, 2)
+                        .pattern("PPP")
+                        .pattern("PPP")
+                        .pattern("   ")
+                        .define('P', ModBlocks.MAPLE_PLANKS)
+                        .unlockedBy(getHasName(ModBlocks.MAPLE_LOG), has(ModBlocks.MAPLE_LOG))
+                        .save(output);
             }
         };
     }

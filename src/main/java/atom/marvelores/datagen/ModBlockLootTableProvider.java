@@ -37,6 +37,26 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
 
         add(ModBlocks.ADAMANTIUM_ORE, createOreDrop(ModBlocks.ADAMANTIUM_ORE, ModItems.RAW_ADAMANTIUM));
         add(ModBlocks.ADAMANTIUM_DEEPSLATE_ORE, createOreDrop(ModBlocks.ADAMANTIUM_ORE, ModItems.RAW_ADAMANTIUM));
+
+        dropSelf(ModBlocks.MAPLE_LOG);
+        dropSelf(ModBlocks.MAPLE_WOOD);
+        dropSelf(ModBlocks.MAPLE_PLANKS);
+        dropSelf(ModBlocks.MAPLE_SAPLING);
+
+        dropSelf(ModBlocks.MAPLE_STAIRS);
+        add(ModBlocks.MAPLE_SLAB, this::createSlabItemTable);
+
+        dropSelf(ModBlocks.MAPLE_BUTTON);
+        dropSelf(ModBlocks.MAPLE_PRESSURE_PLATE);
+
+        dropSelf(ModBlocks.MAPLE_FENCE);
+        dropSelf(ModBlocks.MAPLE_FENCE_GATE);
+
+        add(ModBlocks.MAPLE_DOOR, this::createDoorTable);
+        dropSelf(ModBlocks.MAPLE_TRAPDOOR);
+
+        add(ModBlocks.MAPLE_LEAVES, block -> createLeavesDrops(block, ModBlocks.MAPLE_SAPLING, NORMAL_LEAVES_SAPLING_CHANCES));
+        dropSelf(ModBlocks.MAPLE_SAPLING);
     }
 
     public LootTable.Builder createMultipleOreDrops(final Block block, Item item, float minDrops, float maxDrops) {

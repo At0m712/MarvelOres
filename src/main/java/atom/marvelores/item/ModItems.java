@@ -37,6 +37,8 @@ public class ModItems {
     public static final Item VIBRANIUM_STICK = registerItem("vibranium_stick", Item::new);
     public static final Item VIBRANIUM_CORE = registerItem("vibranium_core", Item::new);
 
+    public static final Item MAPLE_STICK = registerItem("maple_stick", Item::new);
+
     public static final Item ADAMANTIUM = registerItem("adamantium", Item::new);
     public static final Item RAW_ADAMANTIUM = registerItem("raw_adamantium", Item::new);
 
@@ -111,6 +113,9 @@ public class ModItems {
                             Optional.of(SoundEvents.SHIELD_BREAK)
                     ))
             ));
+
+    public static final Item HAWKEYE_BOW = registerItem("hawkeye_bow",
+            setting -> new BowItem(setting.durability(500)));
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {
         return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(MarvelOres.MOD_ID, name),

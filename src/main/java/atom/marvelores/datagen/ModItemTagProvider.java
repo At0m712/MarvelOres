@@ -1,5 +1,6 @@
 package atom.marvelores.datagen;
 
+import atom.marvelores.block.ModBlocks;
 import atom.marvelores.item.ModItems;
 import atom.marvelores.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
@@ -53,6 +54,13 @@ public class ModItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
                 .add(ModItems.VIBRANIUM_LEGGINGS).add(ModItems.ADAMANTIUM_LEGGINGS);
         valueLookupBuilder(ItemTags.FOOT_ARMOR)
                 .add(ModItems.VIBRANIUM_BOOTS).add(ModItems.ADAMANTIUM_BOOTS);
+
+        valueLookupBuilder(ItemTags.LOGS_THAT_BURN)
+                .add(ModBlocks.MAPLE_LOG.asItem())
+                .add(ModBlocks.MAPLE_WOOD.asItem());
+
+        valueLookupBuilder(ItemTags.PLANKS)
+                .add(ModBlocks.MAPLE_PLANKS.asItem());
 
     }
 }
