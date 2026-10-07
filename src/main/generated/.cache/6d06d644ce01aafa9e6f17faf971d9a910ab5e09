@@ -1,3 +1,6 @@
 // 26.2	-999999999-01-01T00:00:00	MarvelOres/Tags for minecraft:block
+2fe1037117d645ce85388fa022ff85db50d391a5 data/minecraft/tags/block/fence_gates.json
+eef1517fb8fd870838c3b93671876dc4d3b05d33 data/minecraft/tags/block/fences.json
+db8cd6314b90697ddad8c4d53d93d0f8ddb60e96 data/minecraft/tags/block/mineable/axe.json
 9899cd4c95a64c9d26243c598254ddd3b35cb250 data/minecraft/tags/block/mineable/pickaxe.json
 9899cd4c95a64c9d26243c598254ddd3b35cb250 data/minecraft/tags/block/needs_diamond_tool.json

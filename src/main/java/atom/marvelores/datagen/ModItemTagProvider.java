@@ -7,7 +7,6 @@ import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.world.item.Items;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -36,12 +35,8 @@ public class ModItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
                 .add(ModItems.getRK(ModItems.ADAMANTIUM));
 
 
-        valueLookupBuilder(ItemTags.LOGS_THAT_BURN)
-                .add(ModBlocks.MAPLE_LOG.asItem())
-                .add(ModBlocks.MAPLE_WOOD.asItem());
-
-        valueLookupBuilder(ItemTags.PLANKS)
-                .add(ModBlocks.MAPLE_PLANKS.asItem());
+        tag(ItemTags.PLANKS)
+                .add(ModItems.getRK(ModBlocks.MAPLE_PLANKS.asItem()));
 
     }
 }

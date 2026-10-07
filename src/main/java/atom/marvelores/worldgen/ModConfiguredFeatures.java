@@ -49,11 +49,10 @@ public class ModConfiguredFeatures {
                 new StraightTrunkPlacer(7, 2, 0),
 
                 BlockStateProvider.simple(ModBlocks.MAPLE_LEAVES),
+                new BlobFoliagePlacer(UniformInt.of(3,4), ConstantInt.of(0), 6),
 
-                new BlobFoliagePlacer(UniformInt.of(3, 4), ConstantInt.of(0), 6),
-
-                new TwoLayersFeatureSize(1, 0, 2)
-        ).build());
+                new TwoLayersFeatureSize(1, 0, 2),
+                BlockStateProvider.simple(Blocks.DIRT)).build());;
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
