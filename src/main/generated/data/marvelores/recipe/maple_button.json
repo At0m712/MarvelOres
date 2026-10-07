@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "P": "marvelores:maple_planks"
+  },
+  "pattern": [
+    "   ",
+    " P ",
+    "   "
+  ],
+  "result": {
+    "id": "marvelores:maple_button"
+  }
+}

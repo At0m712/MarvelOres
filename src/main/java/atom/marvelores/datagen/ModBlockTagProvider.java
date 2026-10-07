@@ -1,15 +1,12 @@
 package atom.marvelores.datagen;
 
 import atom.marvelores.block.ModBlocks;
-import atom.marvelores.util.ModTags;
-import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.BlockTags;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
 
 import java.util.concurrent.CompletableFuture;
-
-import static net.minecraft.tags.TagEntry.tag;
 
 public class ModBlockTagProvider extends FabricTagsProvider.BlockTagsProvider {
     public ModBlockTagProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registryLookupFuture) {
@@ -29,7 +26,16 @@ public class ModBlockTagProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ModBlocks.getRK(ModBlocks.ADAMANTIUM_ORE))
                 .add(ModBlocks.getRK(ModBlocks.ADAMANTIUM_DEEPSLATE_ORE));
 
-
+        tag(BlockTags.MINEABLE_WITH_AXE)
+                .add(ModBlocks.getRK(ModBlocks.MAPLE_FENCE))
+                .add(ModBlocks.getRK(ModBlocks.MAPLE_BUTTON))
+                .add(ModBlocks.getRK(ModBlocks.MAPLE_PRESSURE_PLATE))
+                .add(ModBlocks.getRK(ModBlocks.MAPLE_SLAB))
+                .add(ModBlocks.getRK(ModBlocks.MAPLE_STAIRS))
+                .add(ModBlocks.getRK(ModBlocks.MAPLE_PLANKS))
+                .add(ModBlocks.getRK(ModBlocks.MAPLE_DOOR))
+                .add(ModBlocks.getRK(ModBlocks.MAPLE_WALL))
+                .add(ModBlocks.getRK(ModBlocks.MAPLE_TRAPDOOR));
 
 
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
@@ -43,5 +49,8 @@ public class ModBlockTagProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ModBlocks.getRK(ModBlocks.ADAMANTIUM_ORE))
                 .add(ModBlocks.getRK(ModBlocks.ADAMANTIUM_DEEPSLATE_ORE));
 
+
+        tag(BlockTags.FENCES).add(ModBlocks.getRK(ModBlocks.MAPLE_FENCE));
+        tag(BlockTags.FENCE_GATES).add(ModBlocks.getRK(ModBlocks.MAPLE_FENCE_GATE));
     }
 }
