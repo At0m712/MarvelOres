@@ -78,10 +78,6 @@ public class ModItems {
         return BuiltInRegistries.ITEM.getResourceKey(item).get();
     }
 
-    public static ResourceKey<Item> getRK(Item item) {
-        return BuiltInRegistries.ITEM.getResourceKey(item).get();
-    }
-
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {
         return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(MarvelOres.MOD_ID, name),
                 function.apply(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MarvelOres.MOD_ID, name)))));

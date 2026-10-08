@@ -8,13 +8,18 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.sounds.AmbientLeavesBlockSoundPlayer;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
@@ -71,18 +76,18 @@ public static final Block VIBRANIUM_DEEPSLATE_ORE = registerBlock("vibranium_dee
                     .mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASS)
                     .strength(2.0F, 3.0F).sound(SoundType.WOOD).ignitedByLava()));
     public static final Block MAPLE_LEAVES = registerBlock("maple_leaves",
-            properties -> new UntintedParticleLeavesBlock(0.01f, ParticleTypes.CHERRY_LEAVES, properties
-                    .mapColor(MapColor.PLANT).strength(0.2F).randomTicks().sound(SoundType.AZALEA_LEAVES)
-                    .noOcclusion().isValidSpawn(Blocks::ocelotOrParrot).isSuffocating(Blocks::never)
-                    .isViewBlocking(Blocks::never).ignitedByLava().pushReaction(PushReaction.DESTROY).isRedstoneConductor(Blocks::never)));
+            properties -> new UntintedParticleLeavesBlock(0.01f, ParticleTypes.CHERRY_LEAVES, AmbientLeavesBlockSoundPlayer.noAmbientSound(),
+                    properties.mapColor(MapColor.PLANT).strength(0.2F).randomTicks().sound(SoundType.AZALEA_LEAVES)
+                            .noOcclusion().isValidSpawn(Blocks::ocelotOrParrot).isSuffocating(Blocks::never)
+                            .ignitedByLava().pushReaction(PushReaction.POPPED).isRedstoneConductor(Blocks::never)));
 
     public static final Block MAPLE_SAPLING = registerBlock("maple_sapling",
             properties -> new SaplingBlock(ModTreeGrowers.MAPLE, properties
                     .mapColor(MapColor.PLANT).noCollision().randomTicks().instabreak()
-                    .sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
+                    .sound(SoundType.GRASS).pushReaction(PushReaction.POPPED)));
     public static final Block POTTED_MAPLE_SAPLING = registerBlockWithoutBlockItem("potted_maple_sapling",
             properties -> new FlowerPotBlock(MAPLE_SAPLING, properties
-                    .instabreak().noOcclusion().pushReaction(PushReaction.DESTROY)));
+                    .instabreak().noOcclusion().pushReaction(PushReaction.POPPED)));
 
     public static final Block MAPLE_STAIRS = registerBlock("maple_stairs",
             properties -> new StairBlock(ModBlocks.MAPLE_PLANKS.defaultBlockState(),
@@ -98,7 +103,7 @@ public static final Block VIBRANIUM_DEEPSLATE_ORE = registerBlock("vibranium_dee
     public static final Block MAPLE_PRESSURE_PLATE = registerBlock("maple_pressure_plate",
             properties -> new PressurePlateBlock(BlockSetType.OAK,
                     properties.mapColor(MapColor.COLOR_BLUE).forceSolidOn().instrument(NoteBlockInstrument.BASS)
-                            .noCollision().strength(0.5F).pushReaction(PushReaction.DESTROY)));
+                            .noCollision().strength(0.5F).pushReaction(PushReaction.POPPED)));
 
     public static final Block MAPLE_FENCE = registerBlock("maple_fence",
             properties -> new FenceBlock(properties.strength(3f).instrument(NoteBlockInstrument.BASS)
@@ -133,6 +138,7 @@ public static final Block VIBRANIUM_DEEPSLATE_ORE = registerBlock("vibranium_dee
         Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(MarvelOres.MOD_ID, name),
                 new BlockItem(block, new Item.Properties().useBlockDescriptionPrefix()
                         .setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MarvelOres.MOD_ID, name)))) {
+                    @Override
                     public void appendHoverText(ItemStack itemStack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
                         for(var component : tooltips) {
                             builder.accept(component);
