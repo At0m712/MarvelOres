@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "marvelores:maple_fence"
+        "recipes": "marvelores:maple_fence"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

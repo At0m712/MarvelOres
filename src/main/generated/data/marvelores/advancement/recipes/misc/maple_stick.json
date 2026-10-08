@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "marvelores:maple_stick"
+        "recipes": "marvelores:maple_stick"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

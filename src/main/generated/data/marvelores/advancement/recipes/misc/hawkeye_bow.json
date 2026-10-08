@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "marvelores:hawkeye_bow"
+        "recipes": "marvelores:hawkeye_bow"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

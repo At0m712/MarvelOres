@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "marvelores:maple_stairs"
+        "recipes": "marvelores:maple_stairs"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
