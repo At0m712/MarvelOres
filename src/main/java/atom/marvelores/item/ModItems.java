@@ -1,5 +1,6 @@
 package atom.marvelores.item;
 
+import atom.marvelores.item.custom.HammerItem;
 import atom.marvelores.item.custom.ModArmorItem;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import atom.marvelores.MarvelOres;
@@ -33,6 +34,12 @@ public class ModItems {
     public static final Item ADAMANTIUM = registerItem("adamantium", Item::new);
     public static final Item RAW_ADAMANTIUM = registerItem("raw_adamantium", Item::new);
 
+    public static final Item TITANE = registerItem("titane", Item::new);
+    public static final Item RAW_TITANE = registerItem("raw_titane", Item::new);
+
+    public static final Item URU = registerItem("uru", Item::new);
+    public static final Item RAW_URU = registerItem("raw_uru", Item::new);
+
     public static final Item VIBRANIUM_SWORD = registerItem("vibranium_sword",
             setting -> new Item(setting.sword(ModToolMaterials.VIBRANIUM, 3, -2.4f)));
 
@@ -58,6 +65,32 @@ public class ModItems {
     public static final Item ADAMANTIUM_HOE = registerItem("adamantium_hoe",
             setting -> new HoeItem(ModToolMaterials.ADAMANTIUM, 0, -3f, setting));
 
+    public static final Item TITANE_SWORD = registerItem("titane_sword",
+            setting -> new Item(setting.sword(ModToolMaterials.TITANE, 3, -2.4f)));
+    public static final Item TITANE_PICKAXE = registerItem("titane_pickaxe",
+            setting -> new Item(setting.pickaxe(ModToolMaterials.TITANE, 1, -2.8f)));
+    public static final Item TITANE_SHOVEL = registerItem("titane_shovel",
+            setting -> new ShovelItem(ModToolMaterials.TITANE, 1.5f, -3.0f, setting));
+    public static final Item TITANE_AXE = registerItem("titane_axe",
+            setting -> new AxeItem(ModToolMaterials.TITANE, 6, -3.2f, setting));
+    public static final Item TITANE_HOE = registerItem("titane_hoe",
+            setting -> new HoeItem(ModToolMaterials.TITANE, 0, -3f, setting));
+
+
+    public static final Item URU_SWORD = registerItem("uru_sword",
+            setting -> new Item(setting.sword(ModToolMaterials.URU, 3, -2.4f)));
+    public static final Item URU_PICKAXE = registerItem("uru_pickaxe",
+            setting -> new Item(setting.pickaxe(ModToolMaterials.URU, 1, -2.8f)));
+    public static final Item URU_SHOVEL = registerItem("uru_shovel",
+            setting -> new ShovelItem(ModToolMaterials.URU, 1.5f, -3.0f, setting));
+    public static final Item URU_AXE = registerItem("uru_axe",
+            setting -> new AxeItem(ModToolMaterials.URU, 6, -3.2f, setting));
+    public static final Item URU_HOE = registerItem("uru_hoe",
+            setting -> new HoeItem(ModToolMaterials.URU, 0, -3f, setting));
+
+    public static final Item URU_HAMMER = registerItem("uru_hammer",
+            setting -> new HammerItem(ModToolMaterials.URU, 7, -3.4f, setting));
+
 
     public static final Item VIBRANIUM_HELMET = registerItem("vibranium_helmet",
             setting -> new ModArmorItem(setting.armor(ModArmorMaterials.VIBRANIUM_ARMOR_MATERIAL, EquipmentType.HELMET)));
@@ -77,6 +110,24 @@ public class ModItems {
             setting -> new Item(setting.armor(ModArmorMaterials.ADAMANTIUM_ARMOR_MATERIAL, EquipmentType.LEGGINGS)));
     public static final Item ADAMANTIUM_BOOTS = registerItem("adamantium_boots",
             setting -> new Item(setting.armor(ModArmorMaterials.ADAMANTIUM_ARMOR_MATERIAL, EquipmentType.BOOTS)));
+
+    public static final Item TITANE_HELMET = registerItem("titane_helmet",
+            setting -> new ModArmorItem(setting.armor(ModArmorMaterials.TITANE_ARMOR_MATERIAL, EquipmentType.HELMET)));
+    public static final Item TITANE_CHESTPLATE = registerItem("titane_chestplate",
+            setting -> new Item(setting.armor(ModArmorMaterials.TITANE_ARMOR_MATERIAL, EquipmentType.CHESTPLATE)));
+    public static final Item TITANE_LEGGINGS = registerItem("titane_leggings",
+            setting -> new Item(setting.armor(ModArmorMaterials.TITANE_ARMOR_MATERIAL, EquipmentType.LEGGINGS)));
+    public static final Item TITANE_BOOTS = registerItem("titane_boots",
+            setting -> new Item(setting.armor(ModArmorMaterials.TITANE_ARMOR_MATERIAL, EquipmentType.BOOTS)));
+
+    public static final Item URU_HELMET = registerItem("uru_helmet",
+            setting -> new ModArmorItem(setting.armor(ModArmorMaterials.URU_ARMOR_MATERIAL, EquipmentType.HELMET)));
+    public static final Item URU_CHESTPLATE = registerItem("uru_chestplate",
+            setting -> new Item(setting.armor(ModArmorMaterials.URU_ARMOR_MATERIAL, EquipmentType.CHESTPLATE)));
+    public static final Item URU_LEGGINGS = registerItem("uru_leggings",
+            setting -> new Item(setting.armor(ModArmorMaterials.URU_ARMOR_MATERIAL, EquipmentType.LEGGINGS)));
+    public static final Item URU_BOOTS = registerItem("uru_boots",
+            setting -> new Item(setting.armor(ModArmorMaterials.URU_ARMOR_MATERIAL, EquipmentType.BOOTS)));
 
 
     public static final Item VIBRANIUM_SHIELD = registerItem("vibranium_shield",
@@ -121,6 +172,12 @@ public class ModItems {
 
             entries.add(ADAMANTIUM);
             entries.add(RAW_ADAMANTIUM);
+
+            entries.add(TITANE);
+            entries.add(RAW_TITANE);
+
+            entries.add(URU);
+            entries.add(RAW_URU);
         });
     }
 }

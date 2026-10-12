@@ -1,11 +1,11 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
+  "category": "building",
   "ingredients": [
-    "marvelores:raw_vibranium_block"
+    "marvelores:uru_block"
   ],
   "result": {
     "count": 9,
-    "id": "marvelores:raw_vibranium"
+    "id": "marvelores:uru"
   }
 }

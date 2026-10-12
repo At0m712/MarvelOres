@@ -1,32 +1,32 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_raw_vibranium": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "marvelores:uru_chestplate"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_uru": {
       "conditions": {
         "items": [
           {
-            "items": "marvelores:raw_vibranium"
+            "items": "marvelores:uru"
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
-    },
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "marvelores:raw_vibranium_block"
-      },
-      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
       "has_the_recipe",
-      "has_raw_vibranium"
+      "has_uru"
     ]
   ],
   "rewards": {
     "recipes": [
-      "marvelores:raw_vibranium_block"
+      "marvelores:uru_chestplate"
     ]
   }
 }

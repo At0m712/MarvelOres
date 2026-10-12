@@ -2,15 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "R": "marvelores:raw_vibranium"
+    "S": "minecraft:stick",
+    "T": "marvelores:titane"
   },
   "pattern": [
-    "RRR",
-    "RRR",
-    "RRR"
+    " T ",
+    " T ",
+    " S "
   ],
   "result": {
     "count": 1,
-    "id": "marvelores:raw_vibranium_block"
+    "id": "marvelores:titane_sword"
   }
 }

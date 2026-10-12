@@ -7,6 +7,11 @@
     "marvelores:crusher",
     "marvelores:adamantium_block",
     "marvelores:adamantium_ore",
-    "marvelores:adamantium_deepslate_ore"
+    "marvelores:adamantium_deepslate_ore",
+    "marvelores:titane_block",
+    "marvelores:titane_ore",
+    "marvelores:titane_deepslate_ore",
+    "marvelores:uru_block",
+    "marvelores:uru_ore"
   ]
 }

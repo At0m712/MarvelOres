@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 300,
+  "experience": 0.75,
+  "group": "uru",
+  "ingredient": "marvelores:uru_ore",
+  "result": {
+    "id": "marvelores:uru"
+  }
+}

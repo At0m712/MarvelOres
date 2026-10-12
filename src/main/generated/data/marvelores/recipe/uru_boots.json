@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "U": "marvelores:uru"
+  },
+  "pattern": [
+    "   ",
+    "U U",
+    "U U"
+  ],
+  "result": {
+    "count": 1,
+    "id": "marvelores:uru_boots"
+  }
+}

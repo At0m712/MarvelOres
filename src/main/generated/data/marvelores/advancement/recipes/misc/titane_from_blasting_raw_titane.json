@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_raw_vibranium_block": {
+    "has_raw_titane": {
       "conditions": {
         "items": [
           {
-            "items": "marvelores:raw_vibranium_block"
+            "items": "marvelores:raw_titane"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "marvelores:raw_vibranium"
+        "recipe": "marvelores:titane_from_blasting_raw_titane"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_raw_vibranium_block"
+      "has_raw_titane"
     ]
   ],
   "rewards": {
     "recipes": [
-      "marvelores:raw_vibranium"
+      "marvelores:titane_from_blasting_raw_titane"
     ]
   }
 }

@@ -52,6 +52,26 @@ public static final Block VIBRANIUM_DEEPSLATE_ORE = registerBlock("vibranium_dee
                     properties.strength(4.5f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
 
 
+    public static final Block TITANE_BLOCK = registerBlock("titane_block",
+            properties -> new Block(properties.strength(4.5f)
+                    .requiresTool()));
+
+    public static final Block TITANE_ORE = registerBlock("titane_ore",
+            properties -> new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
+                    properties.strength(4f).requiresTool()));
+
+    public static final Block TITANE_DEEPSLATE_ORE = registerBlock("titane_deepslate_ore",
+            properties -> new ExperienceDroppingBlock(UniformIntProvider.create(4, 6),
+                    properties.strength(4.5f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
+
+
+    public static final Block URU_BLOCK = registerBlock("uru_block",
+            properties -> new Block(properties.strength(4.5f)
+                    .requiresTool()));
+
+    public static final Block URU_ORE = registerBlock("uru_ore",
+            properties -> new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
+                    properties.strength(4f).requiresTool()));
 
 
     public static final Block CRUSHER = registerBlock("crusher", properties -> new CrusherBlock(properties.strength(3.0f).requiresTool()));

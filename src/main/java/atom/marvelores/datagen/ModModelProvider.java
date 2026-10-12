@@ -32,6 +32,13 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ADAMANTIUM_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ADAMANTIUM_DEEPSLATE_ORE);
 
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TITANE_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TITANE_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TITANE_DEEPSLATE_ORE);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.URU_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.URU_ORE);
+
         blockStateModelGenerator.createLogTexturePool(ModBlocks.MAPLE_LOG).log(ModBlocks.MAPLE_LOG).wood(ModBlocks.MAPLE_WOOD);
 
         maplePool.stairs(ModBlocks.MAPLE_STAIRS);
@@ -63,6 +70,12 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ADAMANTIUM, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_ADAMANTIUM, Models.GENERATED);
 
+        itemModelGenerator.register(ModItems.TITANE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RAW_TITANE, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.URU, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RAW_URU, Models.GENERATED);
+
         itemModelGenerator.register(ModItems.VIBRANIUM_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.VIBRANIUM_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.VIBRANIUM_SHOVEL, Models.HANDHELD);
@@ -78,6 +91,17 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ADAMANTIUM_AXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.ADAMANTIUM_HOE, Models.HANDHELD);
 
+        itemModelGenerator.register(ModItems.TITANE_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.TITANE_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.TITANE_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.TITANE_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.TITANE_HOE, Models.HANDHELD);
+
+        itemModelGenerator.register(ModItems.URU_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.URU_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.URU_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.URU_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.URU_HOE, Models.HANDHELD);
 
 
         itemModelGenerator.registerArmor(ModItems.VIBRANIUM_HELMET, ModArmorMaterials.VIBRANIUM_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
@@ -89,5 +113,16 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.registerArmor(ModItems.ADAMANTIUM_CHESTPLATE, ModArmorMaterials.ADAMANTIUM_KEY, ItemModelGenerator.CHESTPLATE_TRIM_ID_PREFIX, false);
         itemModelGenerator.registerArmor(ModItems.ADAMANTIUM_LEGGINGS, ModArmorMaterials.ADAMANTIUM_KEY, ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
         itemModelGenerator.registerArmor(ModItems.ADAMANTIUM_BOOTS, ModArmorMaterials.ADAMANTIUM_KEY, ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
+
+        itemModelGenerator.registerArmor(ModItems.TITANE_HELMET, ModArmorMaterials.TITANE_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(ModItems.TITANE_CHESTPLATE, ModArmorMaterials.TITANE_KEY, ItemModelGenerator.CHESTPLATE_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(ModItems.TITANE_LEGGINGS, ModArmorMaterials.TITANE_KEY, ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(ModItems.TITANE_BOOTS, ModArmorMaterials.TITANE_KEY, ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
+
+        itemModelGenerator.registerArmor(ModItems.URU_HELMET, ModArmorMaterials.URU_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(ModItems.URU_CHESTPLATE, ModArmorMaterials.URU_KEY, ItemModelGenerator.CHESTPLATE_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(ModItems.URU_LEGGINGS, ModArmorMaterials.URU_KEY, ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(ModItems.URU_BOOTS, ModArmorMaterials.URU_KEY, ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
+
     }
 }

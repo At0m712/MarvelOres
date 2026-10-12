@@ -53,6 +53,39 @@ public class ModItemGroups {
                         entries.add(ModItems.ADAMANTIUM_LEGGINGS);
                         entries.add(ModItems.ADAMANTIUM_BOOTS);
 
+
+                        entries.add(ModItems.TITANE);
+                        entries.add(ModItems.RAW_TITANE);
+
+                        entries.add(ModItems.TITANE_SWORD);
+                        entries.add(ModItems.TITANE_PICKAXE);
+                        entries.add(ModItems.TITANE_SHOVEL);
+                        entries.add(ModItems.TITANE_AXE);
+                        entries.add(ModItems.TITANE_HOE);
+
+
+                        entries.add(ModItems.TITANE_HELMET);
+                        entries.add(ModItems.TITANE_CHESTPLATE);
+                        entries.add(ModItems.TITANE_LEGGINGS);
+                        entries.add(ModItems.TITANE_BOOTS);
+
+
+                        entries.add(ModItems.URU);
+                        entries.add(ModItems.RAW_URU);
+
+                        entries.add(ModItems.URU_SWORD);
+                        entries.add(ModItems.URU_PICKAXE);
+                        entries.add(ModItems.URU_SHOVEL);
+                        entries.add(ModItems.URU_AXE);
+                        entries.add(ModItems.URU_HOE);
+                        entries.add(ModItems.URU_HAMMER);
+
+
+                        entries.add(ModItems.URU_HELMET);
+                        entries.add(ModItems.URU_CHESTPLATE);
+                        entries.add(ModItems.URU_LEGGINGS);
+                        entries.add(ModItems.URU_BOOTS);
+
                     }).build());
 
     public static final ItemGroup MARVELORES_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,
@@ -89,6 +122,15 @@ public class ModItemGroups {
 
                         entries.add(ModBlocks.MAPLE_DOOR);
                         entries.add(ModBlocks.MAPLE_TRAPDOOR);
+
+
+                        entries.add(ModBlocks.TITANE_BLOCK);
+                        entries.add(ModBlocks.TITANE_ORE);
+                        entries.add(ModBlocks.TITANE_DEEPSLATE_ORE);
+
+
+                        entries.add(ModBlocks.URU_BLOCK);
+                        entries.add(ModBlocks.URU_ORE);
                     }).build());
 
 

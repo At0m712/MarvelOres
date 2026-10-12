@@ -19,6 +19,8 @@ import java.util.List;
 public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> VIBRANIUM_ORE_PLACED_KEY = registerKey("vibranium_ore_placed");
     public static final RegistryKey<PlacedFeature> ADAMANTIUM_ORE_PLACED_KEY = registerKey("adamantium_ore_placed");
+    public static final RegistryKey<PlacedFeature> TITANE_ORE_PLACED_KEY = registerKey("titane_ore_placed");
+    public static final RegistryKey<PlacedFeature> URU_ORE_PLACED_KEY = registerKey("uru_ore_placed");
 
     public static final RegistryKey<PlacedFeature> MAPLE_PLACED_KEY = registerKey("maple_placed");
 
@@ -30,6 +32,14 @@ public class ModPlacedFeatures {
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(40))));
 
         register(context, ADAMANTIUM_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ADAMANTIUM_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(2,
+                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-30), YOffset.fixed(20))));
+
+        register(context, TITANE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.TITANE_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(2,
+                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-30), YOffset.fixed(20))));
+
+        register(context, URU_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.URU_ORE_KEY),
                 ModOrePlacement.modifiersWithCount(2,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(-30), YOffset.fixed(20))));
 

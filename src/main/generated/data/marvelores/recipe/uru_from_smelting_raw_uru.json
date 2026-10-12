@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 400,
+  "experience": 0.75,
+  "group": "uru",
+  "ingredient": "marvelores:raw_uru",
+  "result": {
+    "id": "marvelores:uru"
+  }
+}

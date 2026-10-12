@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "marvelores:uru_from_blasting_uru_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_uru_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "marvelores:uru_ore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_uru_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "marvelores:uru_from_blasting_uru_ore"
+    ]
+  }
+}

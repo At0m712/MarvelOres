@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "N": "minecraft:netherite_ingot",
+    "T": "marvelores:titane"
+  },
+  "pattern": [
+    "T T",
+    "TNT",
+    "TTT"
+  ],
+  "result": {
+    "count": 1,
+    "id": "marvelores:titane_chestplate"
+  }
+}

@@ -6,9 +6,11 @@ import atom.marvelores.item.ModItemGroups;
 import atom.marvelores.item.ModItems;
 import atom.marvelores.recipe.ModRecipes;
 import atom.marvelores.screen.ModScreenHandlers;
+import atom.marvelores.util.HammerUsageEvent;
 import atom.marvelores.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
 import org.slf4j.Logger;
@@ -31,6 +33,8 @@ public class MarvelOres implements ModInitializer {
 		ModScreenHandlers.registerScreenHandlers();
 
 		ModRecipes.registerRecipes();
+
+		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 
 		FuelRegistryEvents.BUILD.register((builder, context) -> {
 			builder.add(ModItems.VIBRANIUM_POWDER, 2000);
