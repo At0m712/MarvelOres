@@ -1,7 +1,5 @@
 ## MARVELORES UPDATE !!
 
-+ Add Hawkeye Bow
-+ Add Maple Tree
-+ Add Maple Wood (slab, door, ...)
++ Add Vibranium Shield
 
 _Add a lot more coming soon !_

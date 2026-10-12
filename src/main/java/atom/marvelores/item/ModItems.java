@@ -4,15 +4,23 @@ import atom.marvelores.MarvelOres;
 
 import atom.marvelores.item.custom.ModArmorItem;
 /* import atom.marvelores.item.custom.ModShieldItem; */
+import atom.marvelores.item.custom.ModShieldItem;
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.core.Registry;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
+import net.minecraft.world.item.component.BlocksAttacks;
 import net.minecraft.world.item.equipment.ArmorType;
+import net.minecraft.world.item.equipment.Equippable;
 
+import java.util.List;
+import java.util.Optional;
 import java.util.function.Function;
 
 
@@ -71,7 +79,7 @@ public class ModItems {
             properties -> new Item(properties.humanoidArmor(ModArmorMaterials.ADAMANTIUM_ARMOR_MATERIAL, ArmorType.BOOTS)));
 
 
-    /* public static final Item VIBRANIUM_SHIELD = registerItem("vibranium_shield",
+     public static final Item VIBRANIUM_SHIELD = registerItem("vibranium_shield",
             properties -> new ModShieldItem(properties
                     .durability(5000)
                     .component(DataComponents.EQUIPPABLE, Equippable.builder(EquipmentSlot.OFFHAND).build())
@@ -95,7 +103,7 @@ public class ModItems {
                             Optional.of(SoundEvents.SHIELD_BLOCK),
                             Optional.of(SoundEvents.SHIELD_BREAK)
                     ))
-            )); */
+            ));
 
     public static final Item HAWKEYE_BOW = registerItem("hawkeye_bow",
             setting -> new BowItem(setting.durability(500)));
