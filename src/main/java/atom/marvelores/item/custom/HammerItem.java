@@ -1,12 +1,20 @@
 package atom.marvelores.item.custom;
 
+import net.minecraft.enchantment.EnchantmentEffectContext;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.SpawnReason;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.Vec3d;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,5 +56,16 @@ public class HammerItem extends Item {
         }
 
         return positions;
+    }
+    @Override
+    public void postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+        if (attacker.getEntityWorld() instanceof ServerWorld serverWorld) {
+            EntityType.LIGHTNING_BOLT.spawn(
+                    serverWorld,
+                    target.getBlockPos(),
+                    SpawnReason.TRIGGERED
+            );
+        }
+        super.postHit(stack, target, attacker);
     }
 }
