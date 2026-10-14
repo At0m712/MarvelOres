@@ -90,7 +90,7 @@ public class ModItems {
 
 
     public static final Item URU_SWORD = registerItem("uru_sword",
-            setting -> new Item(setting.sword(ModToolMaterials.URU, 3, -2.4f)));
+            setting -> new StormBreakerItem(ModToolMaterials.URU, 3, -2.4f, setting));
     public static final Item URU_PICKAXE = registerItem("uru_pickaxe",
             setting -> new Item(setting.pickaxe(ModToolMaterials.URU, 1, -2.8f)));
     public static final Item URU_SHOVEL = registerItem("uru_shovel",
