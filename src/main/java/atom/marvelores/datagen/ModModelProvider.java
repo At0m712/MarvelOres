@@ -97,7 +97,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.TITANE_AXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.TITANE_HOE, Models.HANDHELD);
 
-        itemModelGenerator.register(ModItems.URU_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.URU_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.URU_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.URU_AXE, Models.HANDHELD);

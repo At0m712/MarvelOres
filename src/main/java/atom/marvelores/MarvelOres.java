@@ -2,6 +2,7 @@ package atom.marvelores;
 
 import atom.marvelores.block.ModBlocks;
 import atom.marvelores.block.entity.ModBlockEntities;
+import atom.marvelores.entity.ModEntities;
 import atom.marvelores.item.ModItemGroups;
 import atom.marvelores.item.ModItems;
 import atom.marvelores.recipe.ModRecipes;
@@ -33,6 +34,8 @@ public class MarvelOres implements ModInitializer {
 		ModScreenHandlers.registerScreenHandlers();
 
 		ModRecipes.registerRecipes();
+
+		ModEntities.registerModEntities();
 
 		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 
