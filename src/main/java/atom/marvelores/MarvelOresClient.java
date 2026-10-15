@@ -9,6 +9,7 @@ public class MarvelOresClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
 
-        MenuScreens.register(ModMenuTypes.CRUSHER_MENU, CrusherScreen::new);
+        EntityRendererRegistry.register(ModEntities.STORMBREAKER, StormBreakerProjectileRenderer::new);
+        EntityModelLayerRegistry.registerModelLayer(StormBreakerProjectileModel.STORMBREAKER, StormBreakerProjectileModel::getTexturedModelData);
     }
 }

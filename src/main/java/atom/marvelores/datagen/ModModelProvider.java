@@ -85,7 +85,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ModItems.ADAMANTIUM_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.ADAMANTIUM_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
 
-        itemModelGenerator.register(ModItems.URU_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.URU_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.URU_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.URU_HOE, Models.HANDHELD);
