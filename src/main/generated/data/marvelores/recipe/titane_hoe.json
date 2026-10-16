@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": "minecraft:stick",
+    "T": "marvelores:titane"
+  },
+  "pattern": [
+    "TT ",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "id": "marvelores:titane_hoe"
+  }
+}

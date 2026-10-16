@@ -2,82 +2,101 @@ package atom.marvelores.entity.custom;
 
 import atom.marvelores.entity.ModEntities;
 import atom.marvelores.item.ModItems;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.projectile.PersistentProjectileEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.server.world.ServerWorld;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvent;
-import net.minecraft.sound.SoundEvents;
-import net.minecraft.util.hit.BlockHitResult;
-import net.minecraft.util.hit.EntityHitResult;
-import net.minecraft.util.math.Vec3d;
-import net.minecraft.world.World;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.projectile.arrow.AbstractArrow;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.EntityHitResult;
+import net.minecraft.world.phys.Vec3;
 
-public class StormBreakerProjectileEntity extends PersistentProjectileEntity {
+public class StormBreakerProjectileEntity extends AbstractArrow {
     private boolean isReturning = false;
-    public StormBreakerProjectileEntity(EntityType<? extends PersistentProjectileEntity> entityType, World world) {
-        super(entityType, world);
+
+    public StormBreakerProjectileEntity(EntityType<? extends AbstractArrow> entityType, Level level) {
+        super(entityType, level);
     }
-    public StormBreakerProjectileEntity(World world, PlayerEntity player) {
-        super(ModEntities.STORMBREAKER, player, world, new ItemStack(ModItems.URU_AXE), null);
+
+    public StormBreakerProjectileEntity(Level level, LivingEntity player) {
+        super(ModEntities.STORMBREAKER, player, level, new ItemStack(ModItems.URU_AXE), null);
     }
+
+    public ItemStack getItemStack() {
+        return this.getPickupItemStackOrigin();
+    }
+
     @Override
-    protected ItemStack getDefaultItemStack() {
+    protected ItemStack getDefaultPickupItem() {
         return new ItemStack(ModItems.URU_AXE);
     }
+
     @Override
-    protected SoundEvent getHitSound() {
-        return SoundEvents.ITEM_MACE_SMASH_GROUND;
+    protected SoundEvent getDefaultHitGroundSoundEvent() {
+        return SoundEvents.MACE_SMASH_GROUND;
     }
+
     @Override
     public void tick() {
         Entity owner = this.getOwner();
         if (this.isReturning && owner != null && owner.isAlive()) {
-            this.setNoClip(true);
-            Vec3d target = owner.getEyePos().subtract(this.getEntityPos());
+            this.setNoPhysics(true);
+            Vec3 target = owner.getEyePosition().subtract(this.position());
             double distance = target.length();
             if (distance < 1.5) {
-                if (owner instanceof PlayerEntity player && !this.getEntityWorld().isClient()) {
-                    if (!player.getInventory().insertStack(this.asItemStack())) {
-                        this.dropStack((ServerWorld) this.getEntityWorld(), this.asItemStack());
+                Level level = this.level();
+                if (owner instanceof Player player && !level.isClientSide()) {
+                    if (!player.getInventory().add(this.getPickupItem())) {
+                        if (level instanceof ServerLevel serverLevel) {
+                            this.spawnAtLocation(serverLevel, this.getPickupItem());
+                        }
                     }
-                    this.getEntityWorld().playSound(null, player.getX(), player.getY(), player.getZ(),
-                            SoundEvents.ITEM_ARMOR_EQUIP_IRON.value(), SoundCategory.PLAYERS, 1.0f, 1.0f);
+                    level.playSound(null, player.getX(), player.getY(), player.getZ(),
+                            SoundEvents.ARMOR_EQUIP_IRON, SoundSource.PLAYERS, 1.0f, 1.0f);
                     this.discard();
                     return;
                 }
             } else {
-                Vec3d desiredVelocity = target.normalize().multiply(1.8);
-                this.setVelocity(this.getVelocity().multiply(0.8).add(desiredVelocity.multiply(0.2)));
+                Vec3 desiredVelocity = target.normalize().scale(1.8);
+                this.setDeltaMovement(this.getDeltaMovement().scale(0.8).add(desiredVelocity.scale(0.2)));
             }
         }
         super.tick();
     }
+
     @Override
-    protected void onEntityHit(EntityHitResult entityHitResult) {
-        super.onEntityHit(entityHitResult);
+    protected void onHitEntity(EntityHitResult entityHitResult) {
+        super.onHitEntity(entityHitResult);
         Entity entity = entityHitResult.getEntity();
-        if (!this.getEntityWorld().isClient()) {
-            entity.damage(((ServerWorld) this.getEntityWorld()), this.getDamageSources().thrown(this, this.getOwner()), 40.0f);
-            this.getEntityWorld().playSound(null, this.getX(), this.getY(), this.getZ(),
-                    SoundEvents.ITEM_MACE_SMASH_GROUND_HEAVY, SoundCategory.PLAYERS, 1.0f, 1.0f);
+        Level level = this.level();
+        if (!level.isClientSide()) {
+            if (level instanceof ServerLevel serverLevel) {
+                entity.hurtServer(serverLevel, this.damageSources().thrown(this, this.getOwner()), 40.0f);
+            }
+            level.playSound(null, this.getX(), this.getY(), this.getZ(),
+                    SoundEvents.MACE_SMASH_GROUND_HEAVY, SoundSource.PLAYERS, 1.0f, 1.0f);
             if (this.getOwner() != null) {
                 this.isReturning = true;
-                this.getEntityWorld().playSound(null, this.getX(), this.getY(), this.getZ(),
-                        SoundEvents.ITEM_TRIDENT_RETURN, SoundCategory.PLAYERS, 1.0f, 1.0f);
+                level.playSound(null, this.getX(), this.getY(), this.getZ(),
+                        SoundEvents.TRIDENT_RETURN, SoundSource.PLAYERS, 1.0f, 1.0f);
             }
         }
     }
+
     @Override
-    protected void onBlockHit(BlockHitResult result) {
-        super.onBlockHit(result);
-        if (!this.getEntityWorld().isClient() && this.getOwner() != null) {
+    protected void onHitBlock(BlockHitResult result) {
+        super.onHitBlock(result);
+        Level level = this.level();
+        if (!level.isClientSide() && this.getOwner() != null) {
             this.isReturning = true;
-            this.getEntityWorld().playSound(null, this.getX(), this.getY(), this.getZ(),
-                    SoundEvents.ITEM_TRIDENT_RETURN, SoundCategory.PLAYERS, 1.0f, 1.0f);
+            level.playSound(null, this.getX(), this.getY(), this.getZ(),
+                    SoundEvents.TRIDENT_RETURN, SoundSource.PLAYERS, 1.0f, 1.0f);
         }
     }
 }

@@ -4,15 +4,16 @@ import atom.marvelores.block.ModBlocks;
 import atom.marvelores.block.entity.ModBlockEntities;
 import atom.marvelores.creativemodetab.ModCreativeModeTabs;
 import atom.marvelores.custom.ModMenuTypes;
+import atom.marvelores.entity.ModEntities;
 import atom.marvelores.item.ModItems;
 import atom.marvelores.recipe.ModRecipes;
 import atom.marvelores.registries.ModFuels;
+import atom.marvelores.util.HammerUsageEvent;
 import atom.marvelores.worldgen.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
-import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -33,6 +34,7 @@ public class MarvelOres implements ModInitializer {
 
 		ModMenuTypes.registerModMenuTypes();
 		ModRecipes.registerModRecipes();
+
 		ModEntities.registerModEntities();
 
 		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());

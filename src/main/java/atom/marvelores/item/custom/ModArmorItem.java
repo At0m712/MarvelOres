@@ -26,9 +26,8 @@ public class ModArmorItem extends Item {
                                     new MobEffectInstance(MobEffects.SPEED, 400, 0, false, false)))
                     .put(ModArmorMaterials.ADAMANTIUM_ARMOR_MATERIAL,
                             List.of(new MobEffectInstance(MobEffects.HASTE,
-                            List.of(new StatusEffectInstance(StatusEffects.HASTE,
                                             400, 1, false, false),
-                                    new StatusEffectInstance(StatusEffects.SPEED,
+                                    new MobEffectInstance(MobEffects.SPEED,
                                             400, 1, false, false)))
                     /*.put(ModArmorMaterials.TITANE_ARMOR_MATERIAL,
                             List.of(new StatusEffectInstance(StatusEffects.HASTE,
@@ -39,7 +38,7 @@ public class ModArmorItem extends Item {
                             List.of(new StatusEffectInstance(StatusEffects.HASTE,
                                             400, 1, false, false),
                                     new MobEffectInstance(MobEffects.SPEED,
-                                            400, 1, false, false))).build();
+                                            400, 1, false, false)))*/.build();
 
     public ModArmorItem(Properties properties) {
         super(properties);
@@ -103,15 +102,5 @@ public class ModArmorItem extends Item {
 
         return equippableComponentBoots.assetId().get().equals(material.assetId()) && equippableComponentLeggings.assetId().get().equals(material.assetId()) &&
                 equippableComponentBreastplate.assetId().get().equals(material.assetId()) && equippableComponentHelmet.assetId().get().equals(material.assetId());
-    }
-
-    private boolean hasFullSuitOfArmorOn(PlayerEntity player) {
-        ItemStack boots = player.getEquippedStack(EquipmentSlot.FEET);
-        ItemStack leggings = player.getEquippedStack(EquipmentSlot.LEGS);
-        ItemStack breastplate = player.getEquippedStack(EquipmentSlot.CHEST);
-        ItemStack helmet = player.getEquippedStack(EquipmentSlot.HEAD);
-
-        return !helmet.isEmpty() && !breastplate.isEmpty()
-                && !leggings.isEmpty() && !boots.isEmpty();
     }
 }

@@ -6,7 +6,7 @@
     "targets": [
       {
         "state": {
-          "Name": "marvelores:titane_ore"
+          "Name": "marvelores:vibranium_ore"
         },
         "target": {
           "predicate_type": "minecraft:tag_match",
@@ -15,7 +15,7 @@
       },
       {
         "state": {
-          "Name": "marvelores:titane_deepslate_ore"
+          "Name": "marvelores:vibranium_deepslate_ore"
         },
         "target": {
           "predicate_type": "minecraft:tag_match",
