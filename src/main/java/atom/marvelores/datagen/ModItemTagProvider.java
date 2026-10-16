@@ -41,6 +41,16 @@ public class ModItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
                 .add(ModItems.ADAMANTIUM_CHESTPLATE)
                 .add(ModItems.ADAMANTIUM_LEGGINGS)
                 .add(ModItems.ADAMANTIUM_BOOTS);
+                .add(ModItems.ADAMANTIUM_BOOTS)
+                /* .add(ModItems.TITANE_HELMET)
+                .add(ModItems.TITANE_CHESTPLATE)
+                .add(ModItems.TITANE_LEGGINGS)
+                .add(ModItems.TITANE_BOOTS)
+                .add(ModItems.URU_HELMET)
+                .add(ModItems.URU_CHESTPLATE)
+                .add(ModItems.URU_LEGGINGS)
+                .add(ModItems.URU_BOOTS)*/;
+
 
         valueLookupBuilder((ModTags.Items.VIBRANIUM_REPAIR))
                 .add(ModItems.VIBRANIUM).add(ModItems.ADAMANTIUM);
@@ -48,12 +58,28 @@ public class ModItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
 
         valueLookupBuilder(ItemTags.HEAD_ARMOR)
                 .add(ModItems.VIBRANIUM_HELMET).add(ModItems.ADAMANTIUM_HELMET);
+                .add(ModItems.VIBRANIUM_HELMET)
+                .add(ModItems.ADAMANTIUM_HELMET)
+                /*.add(ModItems.TITANE_HELMET)
+                .add(ModItems.URU_HELMET)*/;
         valueLookupBuilder(ItemTags.CHEST_ARMOR)
                 .add(ModItems.VIBRANIUM_CHESTPLATE).add(ModItems.ADAMANTIUM_CHESTPLATE);
+                .add(ModItems.VIBRANIUM_CHESTPLATE)
+                .add(ModItems.ADAMANTIUM_CHESTPLATE)
+                /*.add(ModItems.TITANE_CHESTPLATE)
+                .add(ModItems.URU_CHESTPLATE)*/;
         valueLookupBuilder(ItemTags.LEG_ARMOR)
                 .add(ModItems.VIBRANIUM_LEGGINGS).add(ModItems.ADAMANTIUM_LEGGINGS);
+                .add(ModItems.VIBRANIUM_LEGGINGS)
+                .add(ModItems.ADAMANTIUM_LEGGINGS)
+                /*.add(ModItems.TITANE_LEGGINGS)
+                .add(ModItems.URU_LEGGINGS)*/;
         valueLookupBuilder(ItemTags.FOOT_ARMOR)
                 .add(ModItems.VIBRANIUM_BOOTS).add(ModItems.ADAMANTIUM_BOOTS);
+                .add(ModItems.VIBRANIUM_BOOTS)
+                .add(ModItems.ADAMANTIUM_BOOTS)
+                /*.add(ModItems.TITANE_BOOTS)
+                .add(ModItems.TITANE_BOOTS)*/;
 
         valueLookupBuilder(ItemTags.LOGS_THAT_BURN)
                 .add(ModBlocks.MAPLE_LOG.asItem())

@@ -384,6 +384,176 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .define('P', ModBlocks.MAPLE_PLANKS)
                         .unlockedBy(getHasName(ModBlocks.MAPLE_LOG), has(ModBlocks.MAPLE_LOG))
                         .save(output);
+                        .input('P', ModBlocks.MAPLE_PLANKS)
+                        .criterion(hasItem(ModBlocks.MAPLE_LOG), conditionsFromItem(ModBlocks.MAPLE_LOG))
+                        .offerTo(exporter);
+
+
+                createShaped(RecipeCategory.MISC, ModItems.TITANE_SWORD)
+                        .pattern(" T ")
+                        .pattern(" T ")
+                        .pattern(" S ")
+                        .input('T', ModItems.TITANE)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.TITANE), conditionsFromItem(ModItems.TITANE))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.TITANE_PICKAXE)
+                        .pattern("TTT")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .input('T', ModItems.TITANE)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.TITANE), conditionsFromItem(ModItems.TITANE))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.TITANE_SHOVEL)
+                        .pattern(" T ")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .input('T', ModItems.TITANE)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.TITANE), conditionsFromItem(ModItems.TITANE))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.TITANE_AXE)
+                        .pattern(" TT")
+                        .pattern(" ST")
+                        .pattern(" S ")
+                        .input('T', ModItems.TITANE)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.TITANE), conditionsFromItem(ModItems.TITANE))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.TITANE_HOE)
+                        .pattern("TT ")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .input('T', ModItems.TITANE)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.TITANE), conditionsFromItem(ModItems.TITANE))
+                        .offerTo(exporter);
+
+                /* createShaped(RecipeCategory.MISC, ModItems.TITANE_HELMET)
+                        .pattern("TTT")
+                        .pattern("T T")
+                        .pattern("   ")
+                        .input('T', ModItems.TITANE)
+                        .criterion(hasItem(ModItems.TITANE), conditionsFromItem(ModItems.TITANE))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.TITANE_CHESTPLATE)
+                        .pattern("T T")
+                        .pattern("TNT")
+                        .pattern("TTT")
+                        .input('T', ModItems.TITANE)
+                        .input('N', Items.NETHERITE_INGOT)
+                        .criterion(hasItem(ModItems.TITANE), conditionsFromItem(ModItems.TITANE))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.TITANE_LEGGINGS)
+                        .pattern("TTT")
+                        .pattern("T T")
+                        .pattern("T T")
+                        .input('T', ModItems.TITANE)
+                        .criterion(hasItem(ModItems.TITANE), conditionsFromItem(ModItems.TITANE))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.TITANE_BOOTS)
+                        .pattern("   ")
+                        .pattern("T T")
+                        .pattern("T T")
+                        .input('T', ModItems.TITANE)
+                        .criterion(hasItem(ModItems.TITANE), conditionsFromItem(ModItems.TITANE))
+                        .offerTo(exporter); */
+
+
+                createShaped(RecipeCategory.MISC, ModItems.URU_SWORD)
+                        .pattern(" U ")
+                        .pattern(" U ")
+                        .pattern(" S ")
+                        .input('U', ModItems.URU)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.URU), conditionsFromItem(ModItems.URU))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.URU_PICKAXE)
+                        .pattern("UUU")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .input('U', ModItems.URU)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.URU), conditionsFromItem(ModItems.URU))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.URU_SHOVEL)
+                        .pattern(" U ")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .input('U', ModItems.URU)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.URU), conditionsFromItem(ModItems.URU))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.URU_AXE)
+                        .pattern(" UU")
+                        .pattern(" SU")
+                        .pattern(" S ")
+                        .input('U', ModItems.URU)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.URU), conditionsFromItem(ModItems.URU))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.URU_HOE)
+                        .pattern("UU ")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .input('U', ModItems.URU)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.URU), conditionsFromItem(ModItems.URU))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.URU_HAMMER)
+                        .pattern("UUU")
+                        .pattern("USU")
+                        .pattern(" S ")
+                        .input('U', ModItems.URU)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.URU), conditionsFromItem(ModItems.URU))
+                        .offerTo(exporter);
+
+               /* createShaped(RecipeCategory.MISC, ModItems.URU_HELMET)
+                        .pattern("UUU")
+                        .pattern("U U")
+                        .pattern("   ")
+                        .input('U', ModItems.URU)
+                        .criterion(hasItem(ModItems.URU), conditionsFromItem(ModItems.URU))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.URU_CHESTPLATE)
+                        .pattern("U U")
+                        .pattern("UNU")
+                        .pattern("UUU")
+                        .input('U', ModItems.URU)
+                        .input('N', Items.NETHERITE_INGOT)
+                        .criterion(hasItem(ModItems.URU), conditionsFromItem(ModItems.URU))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.URU_LEGGINGS)
+                        .pattern("UUU")
+                        .pattern("U U")
+                        .pattern("U U")
+                        .input('U', ModItems.URU)
+                        .criterion(hasItem(ModItems.URU), conditionsFromItem(ModItems.URU))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.URU_BOOTS)
+                        .pattern("   ")
+                        .pattern("U U")
+                        .pattern("U U")
+                        .input('U', ModItems.URU)
+                        .criterion(hasItem(ModItems.URU), conditionsFromItem(ModItems.URU))
+                        .offerTo(exporter); */
             }
         };
     }
