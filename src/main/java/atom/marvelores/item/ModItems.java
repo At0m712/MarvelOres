@@ -79,13 +79,13 @@ public class ModItems {
 
 
     public static final Item URU_SWORD = registerItem("uru_sword",
-            setting -> new StormBreakerItem(ModToolMaterials.URU, 3, -2.4f, setting));
+            setting -> new Item(setting.sword(ModToolMaterials.URU, 3, -2.4f)));
     public static final Item URU_PICKAXE = registerItem("uru_pickaxe",
             setting -> new Item(setting.pickaxe(ModToolMaterials.URU, 1, -2.8f)));
     public static final Item URU_SHOVEL = registerItem("uru_shovel",
             setting -> new ShovelItem(ModToolMaterials.URU, 1.5f, -3.0f, setting));
     public static final Item URU_AXE = registerItem("uru_axe",
-            setting -> new AxeItem(ModToolMaterials.URU, 6, -3.2f, setting));
+            setting -> new StormBreakerItem(ModToolMaterials.URU, 6, -3.2f, setting));
     public static final Item URU_HOE = registerItem("uru_hoe",
             setting -> new HoeItem(ModToolMaterials.URU, 0, -3f, setting));
 
@@ -112,7 +112,7 @@ public class ModItems {
     public static final Item ADAMANTIUM_BOOTS = registerItem("adamantium_boots",
             setting -> new Item(setting.armor(ModArmorMaterials.ADAMANTIUM_ARMOR_MATERIAL, EquipmentType.BOOTS)));
 
-    public static final Item TITANE_HELMET = registerItem("titane_helmet",
+   /* public static final Item TITANE_HELMET = registerItem("titane_helmet",
             setting -> new ModArmorItem(setting.armor(ModArmorMaterials.TITANE_ARMOR_MATERIAL, EquipmentType.HELMET)));
     public static final Item TITANE_CHESTPLATE = registerItem("titane_chestplate",
             setting -> new Item(setting.armor(ModArmorMaterials.TITANE_ARMOR_MATERIAL, EquipmentType.CHESTPLATE)));
@@ -128,7 +128,7 @@ public class ModItems {
     public static final Item URU_LEGGINGS = registerItem("uru_leggings",
             setting -> new Item(setting.armor(ModArmorMaterials.URU_ARMOR_MATERIAL, EquipmentType.LEGGINGS)));
     public static final Item URU_BOOTS = registerItem("uru_boots",
-            setting -> new Item(setting.armor(ModArmorMaterials.URU_ARMOR_MATERIAL, EquipmentType.BOOTS)));
+            setting -> new Item(setting.armor(ModArmorMaterials.URU_ARMOR_MATERIAL, EquipmentType.BOOTS))); */
 
 
     public static final Item VIBRANIUM_SHIELD = registerItem("vibranium_shield",

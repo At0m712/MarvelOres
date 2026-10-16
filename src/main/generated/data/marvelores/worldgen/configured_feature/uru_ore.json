@@ -6,20 +6,11 @@
     "targets": [
       {
         "state": {
-          "Name": "marvelores:adamantium_ore"
+          "Name": "marvelores:uru_ore"
         },
         "target": {
           "predicate_type": "minecraft:tag_match",
           "tag": "minecraft:stone_ore_replaceables"
-        }
-      },
-      {
-        "state": {
-          "Name": "marvelores:adamantium_deepslate_ore"
-        },
-        "target": {
-          "predicate_type": "minecraft:tag_match",
-          "tag": "minecraft:deepslate_ore_replaceables"
         }
       }
     ]

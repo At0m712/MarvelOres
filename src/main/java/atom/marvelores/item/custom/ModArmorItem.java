@@ -31,7 +31,7 @@ public class ModArmorItem extends Item {
                                             400, 1, false, false),
                                     new StatusEffectInstance(StatusEffects.SPEED,
                                             400, 1, false, false)))
-                    .put(ModArmorMaterials.TITANE_ARMOR_MATERIAL,
+                    /*.put(ModArmorMaterials.TITANE_ARMOR_MATERIAL,
                             List.of(new StatusEffectInstance(StatusEffects.HASTE,
                                             400, 1, false, false),
                                     new StatusEffectInstance(StatusEffects.SPEED,
@@ -40,7 +40,7 @@ public class ModArmorItem extends Item {
                             List.of(new StatusEffectInstance(StatusEffects.HASTE,
                                             400, 1, false, false),
                                     new StatusEffectInstance(StatusEffects.SPEED,
-                                            400, 1, false, false))).build();
+                                            400, 1, false, false))) */.build();
 
 
 

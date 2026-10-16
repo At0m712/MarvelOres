@@ -48,8 +48,8 @@ public class ModConfiguredFeatures {
 
         register(context, VIBRANIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldVibraniumOres, 5));
         register(context, ADAMANTIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldAdamantiumOres, 5));
-        register(context, TITANE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldVibraniumOres, 5));
-        register(context, URU_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldAdamantiumOres, 5));
+        register(context, TITANE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldTitaneOres, 5));
+        register(context, URU_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldUruOres, 5));
 
         register(context, MAPLE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(ModBlocks.MAPLE_LOG),

@@ -36,8 +36,8 @@ public class ModPlacedFeatures {
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(-30), YOffset.fixed(20))));
 
         register(context, TITANE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.TITANE_ORE_KEY),
-                ModOrePlacement.modifiersWithCount(2,
-                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-30), YOffset.fixed(20))));
+                ModOrePlacement.modifiersWithCount(8,
+                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(40))));
 
         register(context, URU_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.URU_ORE_KEY),
                 ModOrePlacement.modifiersWithCount(2,

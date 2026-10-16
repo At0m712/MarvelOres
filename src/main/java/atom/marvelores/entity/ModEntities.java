@@ -16,7 +16,7 @@ public class ModEntities {
             RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(MarvelOres.MOD_ID, "uru_hammer"));
 
     private static final RegistryKey<EntityType<?>> STORMBREAKER_KEY =
-            RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(MarvelOres.MOD_ID, "uru_sword"));
+            RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(MarvelOres.MOD_ID, "uru_axe"));
 
     public static final EntityType<MjolnirProjectileEntity> MJOLNIR = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(MarvelOres.MOD_ID, "uru_hammer"),
@@ -24,7 +24,7 @@ public class ModEntities {
                     .dimensions(0.5f, 1.15f).build(MJOLNIR_KEY));
 
     public static final EntityType<StormBreakerProjectileEntity> STORMBREAKER = Registry.register(Registries.ENTITY_TYPE,
-            Identifier.of(MarvelOres.MOD_ID, "uru_sword"),
+            Identifier.of(MarvelOres.MOD_ID, "uru_axe"),
             EntityType.Builder.<StormBreakerProjectileEntity>create(StormBreakerProjectileEntity::new, SpawnGroup.MISC)
                     .dimensions(0.5f, 1.15f).build(STORMBREAKER_KEY));
 

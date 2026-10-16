@@ -8,7 +8,7 @@ import net.minecraft.client.render.entity.state.ProjectileEntityRenderState;
 import net.minecraft.util.Identifier;
 
 public class StormBreakerProjectileModel extends EntityModel<ProjectileEntityRenderState> {
-    public static final EntityModelLayer STORMBREAKER = new EntityModelLayer(Identifier.of(MarvelOres.MOD_ID, "textures/entity/stormbreaker/uru_sword_entity.png"), "main");
+    public static final EntityModelLayer STORMBREAKER = new EntityModelLayer(Identifier.of(MarvelOres.MOD_ID, "textures/entity/stormbreaker/uru_axe_entity.png"), "main");
     private final ModelPart group;
 
     public StormBreakerProjectileModel(ModelPart root) {

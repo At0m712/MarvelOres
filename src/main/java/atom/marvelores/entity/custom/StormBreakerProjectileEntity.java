@@ -22,11 +22,11 @@ public class StormBreakerProjectileEntity extends PersistentProjectileEntity {
         super(entityType, world);
     }
     public StormBreakerProjectileEntity(World world, PlayerEntity player) {
-        super(ModEntities.STORMBREAKER, player, world, new ItemStack(ModItems.URU_SWORD), null);
+        super(ModEntities.STORMBREAKER, player, world, new ItemStack(ModItems.URU_AXE), null);
     }
     @Override
     protected ItemStack getDefaultItemStack() {
-        return new ItemStack(ModItems.URU_SWORD);
+        return new ItemStack(ModItems.URU_AXE);
     }
     @Override
     protected SoundEvent getHitSound() {

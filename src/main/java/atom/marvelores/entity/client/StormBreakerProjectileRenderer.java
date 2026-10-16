@@ -55,18 +55,14 @@ public class StormBreakerProjectileRenderer extends EntityRenderer<StormBreakerP
     public void render(State renderState, MatrixStack matrices, OrderedRenderCommandQueue queue, CameraRenderState cameraState) {
         matrices.push();
 
-        // 1. Orientation vers la direction du vol
         matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(renderState.yaw - 90.0F));
         matrices.multiply(RotationAxis.POSITIVE_Z.rotationDegrees(renderState.pitch));
 
-        // 2. Moulinet / Salto avant (roue dans le sens du vol)
         float spin = renderState.age * 25.0F;
         matrices.multiply(RotationAxis.POSITIVE_Z.rotationDegrees(-spin));
 
-        // 3. Aligner le tranchant de la hache vers l'avant dans le sens du vol
         matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(-90.0F));
 
-        // 4. Centrer la rotation sur la tête de la hache (centre de gravité)
         matrices.translate(0.0F, -0.6F, 0.0F);
 
         renderState.itemRenderState.render(

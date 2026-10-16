@@ -64,10 +64,10 @@ public class ModItemGroups {
                         entries.add(ModItems.TITANE_HOE);
 
 
-                        entries.add(ModItems.TITANE_HELMET);
+                        /* entries.add(ModItems.TITANE_HELMET);
                         entries.add(ModItems.TITANE_CHESTPLATE);
                         entries.add(ModItems.TITANE_LEGGINGS);
-                        entries.add(ModItems.TITANE_BOOTS);
+                        entries.add(ModItems.TITANE_BOOTS); */
 
 
                         entries.add(ModItems.URU);
@@ -81,10 +81,10 @@ public class ModItemGroups {
                         entries.add(ModItems.URU_HAMMER);
 
 
-                        entries.add(ModItems.URU_HELMET);
+                        /* entries.add(ModItems.URU_HELMET);
                         entries.add(ModItems.URU_CHESTPLATE);
                         entries.add(ModItems.URU_LEGGINGS);
-                        entries.add(ModItems.URU_BOOTS);
+                        entries.add(ModItems.URU_BOOTS); */
 
                     }).build());
 

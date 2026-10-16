@@ -396,7 +396,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.TITANE), conditionsFromItem(ModItems.TITANE))
                         .offerTo(exporter);
 
-                createShaped(RecipeCategory.MISC, ModItems.TITANE_HELMET)
+                /* createShaped(RecipeCategory.MISC, ModItems.TITANE_HELMET)
                         .pattern("TTT")
                         .pattern("T T")
                         .pattern("   ")
@@ -427,7 +427,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern("T T")
                         .input('T', ModItems.TITANE)
                         .criterion(hasItem(ModItems.TITANE), conditionsFromItem(ModItems.TITANE))
-                        .offerTo(exporter);
+                        .offerTo(exporter); */
 
 
                 createShaped(RecipeCategory.MISC, ModItems.URU_SWORD)
@@ -475,7 +475,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.URU), conditionsFromItem(ModItems.URU))
                         .offerTo(exporter);
 
-                createShaped(RecipeCategory.MISC, ModItems.URU_HELMET)
+                createShaped(RecipeCategory.MISC, ModItems.URU_HAMMER)
+                        .pattern("UUU")
+                        .pattern("USU")
+                        .pattern(" S ")
+                        .input('U', ModItems.URU)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.URU), conditionsFromItem(ModItems.URU))
+                        .offerTo(exporter);
+
+               /* createShaped(RecipeCategory.MISC, ModItems.URU_HELMET)
                         .pattern("UUU")
                         .pattern("U U")
                         .pattern("   ")
@@ -506,7 +515,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern("U U")
                         .input('U', ModItems.URU)
                         .criterion(hasItem(ModItems.URU), conditionsFromItem(ModItems.URU))
-                        .offerTo(exporter);
+                        .offerTo(exporter); */
             }
         };
     }

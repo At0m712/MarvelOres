@@ -83,10 +83,10 @@
   "item.marvelores.titane_hoe": "Titane Hoe",
 
 
-  "item.marvelores.titane_helmet": "Titane Helmet",
+ /* "item.marvelores.titane_helmet": "Titane Helmet",
   "item.marvelores.titane_chestplate": "Titane Chestplate",
   "item.marvelores.titane_leggings": "Titane Leggings",
-  "item.marvelores.titane_boots": "Titane Boots",
+  "item.marvelores.titane_boots": "Titane Boots", */
 
   "block.marvelores.titane_block": "Block of Titane",
 
@@ -96,18 +96,18 @@
   "item.marvelores.uru": "Uru",
   "item.marvelores.raw_uru": "Raw Uru",
 
-  "item.marvelores.uru_sword": "StormBreaker",
+  "item.marvelores.uru_sword": "Epee Uru",
   "item.marvelores.uru_pickaxe": "Uru Pickaxe",
   "item.marvelores.uru_shovel": "Uru Shovel",
-  "item.marvelores.uru_axe": "Uru Axe",
+  "item.marvelores.uru_axe": "StormBreaker",
   "item.marvelores.uru_hoe": "Uru Hoe",
   "item.marvelores.uru_hammer": "Mjolnir",
 
 
-  "item.marvelores.uru_helmet": "Uru Helmet",
+  /* "item.marvelores.uru_helmet": "Uru Helmet",
   "item.marvelores.uru_chestplate": "Uru Chestplate",
   "item.marvelores.uru_leggings": "Uru Leggings",
-  "item.marvelores.uru_boots": "Uru Boots",
+  "item.marvelores.uru_boots": "Uru Boots", */
 
   "block.marvelores.uru_block": "Block of Uru",
 
