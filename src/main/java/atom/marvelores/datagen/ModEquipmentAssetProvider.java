@@ -33,6 +33,16 @@ public class ModEquipmentAssetProvider implements DataProvider {
                 EquipmentClientInfo.builder()
                         .addHumanoidLayers(Identifier.fromNamespaceAndPath(MarvelOres.MOD_ID, "adamantium"))
                         .build());
+
+        /*consumer.accept(ModArmorMaterials.TITANE_KEY,
+                EquipmentClientInfo.builder()
+                        .addHumanoidLayers(Identifier.fromNamespaceAndPath(MarvelOres.MOD_ID, "titane"))
+                        .build());
+
+        consumer.accept(ModArmorMaterials.URU_KEY,
+                EquipmentClientInfo.builder()
+                        .addHumanoidLayers(Identifier.fromNamespaceAndPath(MarvelOres.MOD_ID, "uru"))
+                        .build());*/
     }
 
     @Override

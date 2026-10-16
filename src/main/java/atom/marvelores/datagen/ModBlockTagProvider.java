@@ -26,6 +26,13 @@ public class ModBlockTagProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ModBlocks.getRK(ModBlocks.ADAMANTIUM_ORE))
                 .add(ModBlocks.getRK(ModBlocks.ADAMANTIUM_DEEPSLATE_ORE));
 
+                .add(ModBlocks.TITANE_BLOCK)
+                .add(ModBlocks.TITANE_ORE)
+                .add(ModBlocks.TITANE_DEEPSLATE_ORE)
+
+                .add(ModBlocks.URU_BLOCK)
+                .add(ModBlocks.URU_ORE);
+
         tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(ModBlocks.getRK(ModBlocks.MAPLE_FENCE))
                 .add(ModBlocks.getRK(ModBlocks.MAPLE_BUTTON))
@@ -48,6 +55,14 @@ public class ModBlockTagProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ModBlocks.getRK(ModBlocks.ADAMANTIUM_BLOCK))
                 .add(ModBlocks.getRK(ModBlocks.ADAMANTIUM_ORE))
                 .add(ModBlocks.getRK(ModBlocks.ADAMANTIUM_DEEPSLATE_ORE));
+
+
+                .add(ModBlocks.TITANE_BLOCK)
+                .add(ModBlocks.TITANE_ORE)
+                .add(ModBlocks.TITANE_DEEPSLATE_ORE)
+
+                .add(ModBlocks.URU_BLOCK)
+                .add(ModBlocks.URU_ORE);
 
 
         tag(BlockTags.FENCES).add(ModBlocks.getRK(ModBlocks.MAPLE_FENCE));

@@ -4,6 +4,7 @@ import atom.marvelores.block.ModBlocks;
 import atom.marvelores.block.entity.ModBlockEntities;
 import atom.marvelores.creativemodetab.ModCreativeModeTabs;
 import atom.marvelores.custom.ModMenuTypes;
+import atom.marvelores.entity.ModEntities;
 import atom.marvelores.item.ModItems;
 import atom.marvelores.recipe.ModRecipes;
 import atom.marvelores.registeries.ModFuels;
@@ -30,6 +31,10 @@ public class MarvelOres implements ModInitializer {
 
 		ModMenuTypes.registerModMenuTypes();
 		ModRecipes.registerModRecipes();
+
+		ModEntities.registerModEntities();
+
+		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 
 		ModFuels.registerFuels();
 	}

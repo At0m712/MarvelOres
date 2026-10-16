@@ -55,6 +55,38 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.ADAMANTIUM_LEGGINGS);
                         output.accept(ModItems.ADAMANTIUM_BOOTS);
 
+                        output.accept(ModItems.TITANE);
+                        output.accept(ModItems.RAW_TITANE);
+
+                        output.accept(ModItems.TITANE_SWORD);
+                        output.accept(ModItems.TITANE_PICKAXE);
+                        output.accept(ModItems.TITANE_SHOVEL);
+                        output.accept(ModItems.TITANE_AXE);
+                        output.accept(ModItems.TITANE_HOE);
+
+
+                        /* output.accept(ModItems.TITANE_HELMET);
+                        output.accept(ModItems.TITANE_CHESTPLATE);
+                        output.accept(ModItems.TITANE_LEGGINGS);
+                        output.accept(ModItems.TITANE_BOOTS); */
+
+
+                        output.accept(ModItems.URU);
+                        output.accept(ModItems.RAW_URU);
+
+                        output.accept(ModItems.URU_SWORD);
+                        output.accept(ModItems.URU_PICKAXE);
+                        output.accept(ModItems.URU_SHOVEL);
+                        output.accept(ModItems.URU_AXE);
+                        output.accept(ModItems.URU_HOE);
+                        output.accept(ModItems.URU_HAMMER);
+
+
+                        /* output.accept(ModItems.URU_HELMET);
+                        output.accept(ModItems.URU_CHESTPLATE);
+                        output.accept(ModItems.URU_LEGGINGS);
+                        output.accept(ModItems.URU_BOOTS); */
+
                     }).build());
 
     public static final CreativeModeTab VIBRANIUM_BLOCK_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
@@ -90,6 +122,13 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModBlocks.MAPLE_SAPLING);
 
+                        output.accept(ModBlocks.TITANE_BLOCK);
+                        output.accept(ModBlocks.TITANE_ORE);
+                        output.accept(ModBlocks.TITANE_DEEPSLATE_ORE);
+
+
+                        output.accept(ModBlocks.URU_BLOCK);
+                        output.accept(ModBlocks.URU_ORE);
 
 
                     }).build());

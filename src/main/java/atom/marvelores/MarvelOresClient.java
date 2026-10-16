@@ -11,5 +11,7 @@ public class MarvelOresClient implements ClientModInitializer {
 
         MenuScreens.register(ModMenuTypes.CRUSHER_MENU, CrusherScreen::new);
 
+        EntityRendererRegistry.register(ModEntities.STORMBREAKER, StormBreakerProjectileRenderer::new);
+        ModelLayerRegistry.registerModelLayer(StormBreakerProjectileModel.STORMBREAKER, StormBreakerProjectileModel::getTexturedModelData);
     }
 }

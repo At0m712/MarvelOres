@@ -6,6 +6,10 @@ import atom.marvelores.datagen.recipe.CrusherRecipeBuilder;
 import atom.marvelores.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+
+import atom.marvelores.block.ModBlocks;
+import atom.marvelores.item.ModItems;
+
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
@@ -266,7 +270,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .save(output);
 
 
-
                 shaped(RecipeCategory.MISC, ModItems.VIBRANIUM_SHIELD)
                         .pattern("VVV")
                         .pattern("P#P")
@@ -381,6 +384,173 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .define('P', ModBlocks.MAPLE_PLANKS)
                         .unlockedBy(getHasName(ModBlocks.MAPLE_LOG), has(ModBlocks.MAPLE_LOG))
                         .save(output);
+
+
+                shaped(RecipeCategory.MISC, ModItems.TITANE_SWORD)
+                        .pattern(" T ")
+                        .pattern(" T ")
+                        .pattern(" S ")
+                        .define('T', ModItems.TITANE)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.TITANE), has(ModItems.TITANE))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.TITANE_PICKAXE)
+                        .pattern("TTT")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .define('T', ModItems.TITANE)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.TITANE), has(ModItems.TITANE))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.TITANE_SHOVEL)
+                        .pattern(" T ")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .define('T', ModItems.TITANE)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.TITANE), has(ModItems.TITANE))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.TITANE_AXE)
+                        .pattern(" TT")
+                        .pattern(" ST")
+                        .pattern(" S ")
+                        .define('T', ModItems.TITANE)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.TITANE), has(ModItems.TITANE))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.TITANE_HOE)
+                        .pattern("TT ")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .define('T', ModItems.TITANE)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.TITANE), has(ModItems.TITANE))
+                        .save(output);
+
+                /* shaped(RecipeCategory.MISC, ModItems.TITANE_HELMET)
+                        .pattern("TTT")
+                        .pattern("T T")
+                        .pattern("   ")
+                        .define('T', ModItems.TITANE)
+                        .unlockedBy(getHasName(ModItems.TITANE), has(ModItems.TITANE))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.TITANE_CHESTPLATE)
+                        .pattern("T T")
+                        .pattern("TNT")
+                        .pattern("TTT")
+                        .define('T', ModItems.TITANE)
+                        .define('N', Items.NETHERITE_INGOT)
+                        .unlockedBy(getHasName(ModItems.TITANE), has(ModItems.TITANE))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.TITANE_LEGGINGS)
+                        .pattern("TTT")
+                        .pattern("T T")
+                        .pattern("T T")
+                        .define('T', ModItems.TITANE)
+                        .unlockedBy(getHasName(ModItems.TITANE), has(ModItems.TITANE))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.TITANE_BOOTS)
+                        .pattern("   ")
+                        .pattern("T T")
+                        .pattern("T T")
+                        .define('T', ModItems.TITANE)
+                        .unlockedBy(getHasName(ModItems.TITANE), has(ModItems.TITANE))
+                        .save(output); */
+
+
+                shaped(RecipeCategory.MISC, ModItems.URU_SWORD)
+                        .pattern(" U ")
+                        .pattern(" U ")
+                        .pattern(" S ")
+                        .define('U', ModItems.URU)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.URU), has(ModItems.URU))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.URU_PICKAXE)
+                        .pattern("UUU")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .define('U', ModItems.URU)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.URU), has(ModItems.URU))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.URU_SHOVEL)
+                        .pattern(" U ")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .define('U', ModItems.URU)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.URU), has(ModItems.URU))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.URU_AXE)
+                        .pattern(" UU")
+                        .pattern(" SU")
+                        .pattern(" S ")
+                        .define('U', ModItems.URU)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.URU), has(ModItems.URU))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.URU_HOE)
+                        .pattern("UU ")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .define('U', ModItems.URU)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.URU), has(ModItems.URU))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.URU_HAMMER)
+                        .pattern("UUU")
+                        .pattern("USU")
+                        .pattern(" S ")
+                        .define('U', ModItems.URU)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.URU), has(ModItems.URU))
+                        .save(output);
+
+               /* shaped(RecipeCategory.MISC, ModItems.URU_HELMET)
+                        .pattern("UUU")
+                        .pattern("U U")
+                        .pattern("   ")
+                        .define('U', ModItems.URU)
+                        .unlockedBy(getHasName(ModItems.URU), has(ModItems.URU))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.URU_CHESTPLATE)
+                        .pattern("U U")
+                        .pattern("UNU")
+                        .pattern("UUU")
+                        .define('U', ModItems.URU)
+                        .define('N', Items.NETHERITE_INGOT)
+                        .unlockedBy(getHasName(ModItems.URU), has(ModItems.URU))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.URU_LEGGINGS)
+                        .pattern("UUU")
+                        .pattern("U U")
+                        .pattern("U U")
+                        .define('U', ModItems.URU)
+                        .unlockedBy(getHasName(ModItems.URU), has(ModItems.URU))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.URU_BOOTS)
+                        .pattern("   ")
+                        .pattern("U U")
+                        .pattern("U U")
+                        .define('U', ModItems.URU)
+                        .unlockedBy(getHasName(ModItems.URU), has(ModItems.URU))
+                        .save(output); */
             }
         };
     }

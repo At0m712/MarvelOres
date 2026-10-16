@@ -85,6 +85,16 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ModItems.ADAMANTIUM_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.ADAMANTIUM_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
 
+        itemModelGenerators.generateFlatItem(ModItems.TITANE_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.TITANE_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.TITANE_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.TITANE_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.TITANE_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
+
+        itemModelGenerators.generateFlatItem(ModItems.URU_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.URU_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.URU_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.URU_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
 
         itemModelGenerators.generateTrimmableItem(ModItems.VIBRANIUM_HELMET, ModArmorMaterials.VIBRANIUM_KEY,
                 ItemModelGenerators.TRIM_PREFIX_HELMET, false);
@@ -103,5 +113,16 @@ public class ModModelProvider extends FabricModelProvider {
                 ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
         itemModelGenerators.generateTrimmableItem(ModItems.ADAMANTIUM_BOOTS, ModArmorMaterials.ADAMANTIUM_KEY,
                 ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
+
+        /* itemModelGenerators.generateFlatItemArmor(ModItems.TITANE_HELMET, ModArmorMaterials.TITANE_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
+        itemModelGenerators.generateFlatItemArmor(ModItems.TITANE_CHESTPLATE, ModArmorMaterials.TITANE_KEY, ItemModelGenerator.CHESTPLATE_TRIM_ID_PREFIX, false);
+        itemModelGenerators.generateFlatItemArmor(ModItems.TITANE_LEGGINGS, ModArmorMaterials.TITANE_KEY, ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
+        itemModelGenerators.generateFlatItemArmor(ModItems.TITANE_BOOTS, ModArmorMaterials.TITANE_KEY, ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
+
+        itemModelGenerators.generateFlatItemArmor(ModItems.URU_HELMET, ModArmorMaterials.URU_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
+        itemModelGenerators.generateFlatItemArmor(ModItems.URU_CHESTPLATE, ModArmorMaterials.URU_KEY, ItemModelGenerator.CHESTPLATE_TRIM_ID_PREFIX, false);
+        itemModelGenerators.generateFlatItemArmor(ModItems.URU_LEGGINGS, ModArmorMaterials.URU_KEY, ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
+        itemModelGenerators.generateFlatItemArmor(ModItems.URU_BOOTS, ModArmorMaterials.URU_KEY, ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);*/
+
     }
 }
