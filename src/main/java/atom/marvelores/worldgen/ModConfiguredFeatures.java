@@ -28,6 +28,8 @@ import java.util.List;
 public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_VIBRANIUM_ORE_KEY = registerKey("overworld_vibranium_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_ADAMANTIUM_ORE_KEY = registerKey("overworld_adamantium_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_TITANE_ORE_KEY = registerKey("overworld_titane_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_URU_ORE_KEY = registerKey("overworld_uru_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> MAPLE_KEY = registerKey("maple");
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
@@ -43,6 +45,15 @@ public class ModConfiguredFeatures {
         register(context, OVERWORLD_ADAMANTIUM_ORE_KEY, Feature.ORE, new OreConfiguration(
                 List.of(OreConfiguration.target(stoneReplaceables, ModBlocks.ADAMANTIUM_ORE.defaultBlockState()),
                         OreConfiguration.target(deepslateReplaceables, ModBlocks.ADAMANTIUM_DEEPSLATE_ORE.defaultBlockState())),
+                5));
+
+        register(context, OVERWORLD_TITANE_ORE_KEY, Feature.ORE, new OreConfiguration(
+                List.of(OreConfiguration.target(stoneReplaceables, ModBlocks.TITANE_ORE.defaultBlockState()),
+                        OreConfiguration.target(deepslateReplaceables, ModBlocks.TITANE_DEEPSLATE_ORE.defaultBlockState())),
+                5));
+
+        register(context, OVERWORLD_URU_ORE_KEY, Feature.ORE, new OreConfiguration(
+                List.of(OreConfiguration.target(stoneReplaceables, ModBlocks.URU_ORE.defaultBlockState())),
                 5));
 
         register(context, MAPLE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
