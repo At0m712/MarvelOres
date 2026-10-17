@@ -1,8 +1,6 @@
 package atom.marvelores.item.custom;
 
-import atom.marvelores.entity.custom.MjolnirProjectileEntity;
 import atom.marvelores.entity.custom.StormBreakerProjectileEntity;
-import net.minecraft.server.dedicated.Settings;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -46,9 +44,9 @@ public class StormBreakerItem extends Item {
                 0.5f, 0.4f / (level.getRandom().nextFloat() * 0.4f + 0.8f));
 
         if (!level.isClientSide()) {
-            MjolnirProjectileEntity mjolnir = new MjolnirProjectileEntity(level, user);
-            mjolnir.shootFromRotation(user, user.getXRot(), user.getYRot(), 0.0f, 2.0f, 0.0f);
-            level.addFreshEntity(mjolnir);
+            StormBreakerProjectileEntity stormBreaker = new StormBreakerProjectileEntity(level, user);
+            stormBreaker.shootFromRotation(user, user.getXRot(), user.getYRot(), 0.0f, 2.0f, 0.0f);
+            level.addFreshEntity(stormBreaker);
         }
 
         user.awardStat(Stats.ITEM_USED.get(this));

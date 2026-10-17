@@ -29,8 +29,8 @@
 
   "block.marvelores.crusher": "Broyeur",
 
-  "itemgroup.marvelores.marvelores_items": "Marvelores Item",
-  "itemgroup.marvelores.marvelores_block": "Marvelores Bloc",
+  "creativemodetab.marvelores.marvelores_items": "Marvelores Item",
+  "creativemodetab.marvelores.marvelores_blocks": "Marvelores Bloc",
 
   "item.marvelores.adamantium": "Adamantium",
   "item.marvelores.raw_adamantium": "Adamantium Brut",

@@ -29,8 +29,8 @@
 
   "block.marvelores.crusher": "Crusher",
 
-  "itemgroup.marvelores.marvelores_items": "Marvelores Items",
-  "itemgroup.marvelores.marvelores_block": "Marvelores Blocks",
+  "creativemodetab.marvelores.marvelores_items": "Marvelores Items",
+  "creativemodetab.marvelores.marvelores_blocks": "Marvelores Blocks",
 
   "item.marvelores.adamantium": "Adamantium",
   "item.marvelores.raw_adamantium": "Raw Adamantium",

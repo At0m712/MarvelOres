@@ -13,9 +13,9 @@ import net.minecraft.world.item.ItemStack;
 
 public class ModCreativeModeTabs {
     public static final CreativeModeTab VIBRANIUM_ITEM_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
-            Identifier.fromNamespaceAndPath(MarvelOres.MOD_ID, "vibranium_items"),
+            Identifier.fromNamespaceAndPath(MarvelOres.MOD_ID, "marvelores_items"),
             FabricCreativeModeTab.builder().icon(() -> new ItemStack(ModItems.VIBRANIUM))
-                    .title(Component.translatable("creativemodetab.marvelores.vibranium_items"))
+                    .title(Component.translatable("creativemodetab.marvelores.marvelores_items"))
                     .displayItems((parameters, output) -> {
                         output.accept(ModItems.VIBRANIUM);
                         output.accept(ModItems.RAW_VIBRANIUM);
@@ -88,9 +88,9 @@ public class ModCreativeModeTabs {
                     }).build());
 
     public static final CreativeModeTab VIBRANIUM_BLOCK_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
-            Identifier.fromNamespaceAndPath(MarvelOres.MOD_ID, "vibranium_blocks"),
+            Identifier.fromNamespaceAndPath(MarvelOres.MOD_ID, "marvelores_blocks"),
             FabricCreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.VIBRANIUM_BLOCK))
-                    .title(Component.translatable("creativemodetab.marvelores.vibranium_blocks"))
+                    .title(Component.translatable("creativemodetab.marvelores.marvelores_blocks"))
                     .displayItems((parameters, output) -> {
                         output.accept(ModBlocks.VIBRANIUM_BLOCK);
                         output.accept(ModBlocks.RAW_VIBRANIUM_BLOCK);

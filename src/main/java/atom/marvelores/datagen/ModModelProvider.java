@@ -27,6 +27,13 @@ public class ModModelProvider extends FabricModelProvider {
         blockModelGenerators.createTrivialCube(ModBlocks.ADAMANTIUM_ORE);
         blockModelGenerators.createTrivialCube(ModBlocks.ADAMANTIUM_DEEPSLATE_ORE);
 
+        blockModelGenerators.createTrivialCube(ModBlocks.TITANE_BLOCK);
+        blockModelGenerators.createTrivialCube(ModBlocks.TITANE_ORE);
+        blockModelGenerators.createTrivialCube(ModBlocks.TITANE_DEEPSLATE_ORE);
+
+        blockModelGenerators.createTrivialCube(ModBlocks.URU_BLOCK);
+        blockModelGenerators.createTrivialCube(ModBlocks.URU_ORE);
+
         blockModelGenerators.family(ModBlocks.MAPLE_PLANKS)
                 .stairs(ModBlocks.MAPLE_STAIRS)
                 .slab(ModBlocks.MAPLE_SLAB)
@@ -58,6 +65,12 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerators.generateFlatItem(ModItems.ADAMANTIUM, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.RAW_ADAMANTIUM, ModelTemplates.FLAT_ITEM);
+
+        itemModelGenerators.generateFlatItem(ModItems.TITANE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.RAW_TITANE, ModelTemplates.FLAT_ITEM);
+
+        itemModelGenerators.generateFlatItem(ModItems.URU, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.RAW_URU, ModelTemplates.FLAT_ITEM);
 
         itemModelGenerators.generateFlatItem(ModItems.VIBRANIUM_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.VIBRANIUM_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
