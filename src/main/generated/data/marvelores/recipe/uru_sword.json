@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "S": "minecraft:stick",
+    "U": "marvelores:uru"
+  },
+  "pattern": [
+    " U ",
+    " U ",
+    " S "
+  ],
+  "result": {
+    "id": "marvelores:uru_sword"
+  }
+}

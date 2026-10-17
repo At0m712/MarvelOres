@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "experience": 0.25,
+  "group": "titane",
+  "ingredient": "marvelores:titane_deepslate_ore",
+  "result": {
+    "id": "marvelores:titane"
+  }
+}
