@@ -2,7 +2,7 @@
   "type": "minecraft:blasting",
   "category": "blocks",
   "experience": 0.25,
-  "group": "vibranium",
+  "group": "adamantium",
   "ingredient": "marvelores:adamantium_ore",
   "result": {
     "id": "marvelores:adamantium"
