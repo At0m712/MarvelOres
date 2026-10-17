@@ -40,11 +40,23 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 List<ItemLike> ADAMANTIUM_SMELTABLES = List.of(ModItems.RAW_ADAMANTIUM, ModBlocks.ADAMANTIUM_ORE, ModBlocks.ADAMANTIUM_DEEPSLATE_ORE);
 
-                oreSmelting(ADAMANTIUM_SMELTABLES, RecipeCategory.MISC,CookingBookCategory.BLOCKS, ModItems.ADAMANTIUM, 0.25f, 200, "vibranium");
-                oreBlasting(ADAMANTIUM_SMELTABLES, RecipeCategory.MISC,CookingBookCategory.BLOCKS, ModItems.ADAMANTIUM, 0.25f, 100, "vibranium");
+                oreSmelting(ADAMANTIUM_SMELTABLES, RecipeCategory.MISC,CookingBookCategory.BLOCKS, ModItems.ADAMANTIUM, 0.25f, 200, "adamantium");
+                oreBlasting(ADAMANTIUM_SMELTABLES, RecipeCategory.MISC,CookingBookCategory.BLOCKS, ModItems.ADAMANTIUM, 0.25f, 100, "adamantium");
+
+                List<ItemLike> TITANE_SMELTABLES = List.of(ModItems.RAW_TITANE, ModBlocks.TITANE_ORE, ModBlocks.TITANE_DEEPSLATE_ORE);
+
+                oreSmelting(TITANE_SMELTABLES, RecipeCategory.MISC,CookingBookCategory.BLOCKS, ModItems.TITANE, 0.25f, 200, "titane");
+                oreBlasting(TITANE_SMELTABLES, RecipeCategory.MISC,CookingBookCategory.BLOCKS, ModItems.TITANE, 0.25f, 100, "titane");
+
+                List<ItemLike> URU_SMELTABLES = List.of(ModItems.RAW_URU, ModBlocks.URU_ORE);
+
+                oreSmelting(URU_SMELTABLES, RecipeCategory.MISC,CookingBookCategory.BLOCKS, ModItems.URU, 0.75f, 400, "uru");
+                oreBlasting(URU_SMELTABLES, RecipeCategory.MISC,CookingBookCategory.BLOCKS, ModItems.URU, 0.75f, 300, "uru");
 
                 nineBlockStorageRecipes(RecipeCategory.BUILDING_BLOCKS, ModItems.VIBRANIUM, RecipeCategory.DECORATIONS, ModBlocks.VIBRANIUM_BLOCK);
                 nineBlockStorageRecipes(RecipeCategory.BUILDING_BLOCKS, ModItems.ADAMANTIUM, RecipeCategory.DECORATIONS, ModBlocks.ADAMANTIUM_BLOCK);
+                nineBlockStorageRecipes(RecipeCategory.BUILDING_BLOCKS, ModItems.TITANE, RecipeCategory.DECORATIONS, ModBlocks.TITANE_BLOCK);
+                nineBlockStorageRecipes(RecipeCategory.BUILDING_BLOCKS, ModItems.URU, RecipeCategory.DECORATIONS, ModBlocks.URU_BLOCK);
 
 
                 shaped(RecipeCategory.MISC, ModBlocks.RAW_VIBRANIUM_BLOCK)
