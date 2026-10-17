@@ -8,9 +8,11 @@ import atom.marvelores.entity.ModEntities;
 import atom.marvelores.item.ModItems;
 import atom.marvelores.recipe.ModRecipes;
 import atom.marvelores.registeries.ModFuels;
+import atom.marvelores.util.HammerUsageEvent;
 import atom.marvelores.worldgen.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

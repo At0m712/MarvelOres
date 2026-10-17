@@ -9,6 +9,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntityTypes;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -26,7 +27,7 @@ public class StormBreakerItem extends Item {
     public void hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         if (attacker.level() instanceof ServerLevel serverLevel) {
             for (int i = 0; i < 3; i++) {
-                EntityType.LIGHTNING_BOLT.spawn(
+                EntityTypes.LIGHTNING_BOLT.spawn(
                         serverLevel,
                         target.blockPosition(),
                         EntitySpawnReason.TRIGGERED
