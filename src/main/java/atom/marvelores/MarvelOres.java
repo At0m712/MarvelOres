@@ -7,6 +7,7 @@ import atom.marvelores.custom.ModMenuTypes;
 import atom.marvelores.entity.ModEntities;
 import atom.marvelores.item.ModItems;
 import atom.marvelores.recipe.ModRecipes;
+import atom.marvelores.util.HammerUsageEvent;
 import atom.marvelores.worldgen.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
@@ -35,7 +36,5 @@ public class MarvelOres implements ModInitializer {
 		ModEntities.registerModEntities();
 
 		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
-
-		ModFuels.registerFuels();
 	}
 }

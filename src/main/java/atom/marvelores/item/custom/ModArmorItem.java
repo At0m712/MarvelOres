@@ -28,7 +28,17 @@ public class ModArmorItem extends Item {
                             List.of(new MobEffectInstance(MobEffects.HASTE,
                                             400, 1, false, false),
                                     new MobEffectInstance(MobEffects.SPEED,
-                                            400, 1, false, false))).build();
+                                            400, 1, false, false)))
+                    /*.put(ModArmorMaterials.TITANE_ARMOR_MATERIAL,
+                            List.of(new StatusEffectInstance(StatusEffects.HASTE,
+                                            400, 1, false, false),
+                                    new StatusEffectInstance(StatusEffects.SPEED,
+                                            400, 1, false, false)))
+                    .put(ModArmorMaterials.URU_ARMOR_MATERIAL,
+                            List.of(new StatusEffectInstance(StatusEffects.HASTE,
+                                            400, 1, false, false),
+                                    new MobEffectInstance(MobEffects.SPEED,
+                                            400, 1, false, false)))*/.build();
 
     public ModArmorItem(Properties properties) {
         super(properties);

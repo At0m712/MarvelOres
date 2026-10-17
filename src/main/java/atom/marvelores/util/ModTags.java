@@ -12,7 +12,8 @@ public class ModTags {
         public static final TagKey<Block> NEEDS_VIBRANIUM_TOOL = createTag("needs_vibranium_tool");
         public static final TagKey<Block> INCORRECT_FOR_VIBRANIUM_TOOL = createTag("incorrect_for_vibranium_tool");
         public static final TagKey<Block> INCORRECT_FOR_ADAMANTIUM_TOOL = createTag("incorrect_for_adamantium_tool");
-
+        public static final TagKey<Block> INCORRECT_FOR_TITANE_TOOL = createTag("incorrect_for_titane_tool");
+        public static final TagKey<Block> INCORRECT_FOR_URU_TOOL = createTag("incorrect_for_uru_tool");
 
         private static TagKey<Block> createTag(String name) {
             return TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(MarvelOres.MOD_ID, name));
@@ -22,6 +23,8 @@ public class ModTags {
     public static class Items {
         public static final TagKey<Item> VIBRANIUM_REPAIR = createTag("vibranium_repair");
         public static final TagKey<Item> ADAMANTIUM_REPAIR = createTag("adamantium_repair");
+        public static final TagKey<Item> TITANE_REPAIR = createTag("titane_repair");
+        public static final TagKey<Item> URU_REPAIR = createTag("uru_repair");
 
 
         private static TagKey<Item> createTag(String name) {

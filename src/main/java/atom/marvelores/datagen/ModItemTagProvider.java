@@ -44,8 +44,6 @@ public class ModItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
         tag(ItemTags.CHEST_ARMOR).add(ModItems.getRK(ModItems.VIBRANIUM_CHESTPLATE)).add(ModItems.getRK(ModItems.ADAMANTIUM_CHESTPLATE));
         tag(ItemTags.LEG_ARMOR).add(ModItems.getRK(ModItems.VIBRANIUM_LEGGINGS)).add(ModItems.getRK(ModItems.ADAMANTIUM_LEGGINGS));
         tag(ItemTags.FOOT_ARMOR).add(ModItems.getRK(ModItems.VIBRANIUM_BOOTS)).add(ModItems.getRK(ModItems.ADAMANTIUM_BOOTS));
-        valueLookupBuilder((ModTags.Items.VIBRANIUM_REPAIR))
-                .add(ModItems.VIBRANIUM).add(ModItems.ADAMANTIUM).add(ModItems.TITANE).add(ModItems.URU);
 
         tag((ModTags.Items.VIBRANIUM_REPAIR))
                 .add(ModItems.getRK(ModItems.VIBRANIUM))

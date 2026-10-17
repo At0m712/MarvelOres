@@ -3,7 +3,7 @@
   "category": "blocks",
   "cookingtime": 200,
   "experience": 0.25,
-  "group": "vibranium",
+  "group": "adamantium",
   "ingredient": "marvelores:raw_adamantium",
   "result": {
     "id": "marvelores:adamantium"

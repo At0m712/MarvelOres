@@ -39,11 +39,23 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 List<ItemLike> ADAMANTIUM_SMELTABLES = List.of(ModItems.RAW_ADAMANTIUM, ModBlocks.ADAMANTIUM_ORE, ModBlocks.ADAMANTIUM_DEEPSLATE_ORE);
 
-                oreSmelting(ADAMANTIUM_SMELTABLES, RecipeCategory.MISC,CookingBookCategory.BLOCKS, ModItems.ADAMANTIUM, 0.25f, 200, "vibranium");
-                oreBlasting(ADAMANTIUM_SMELTABLES, RecipeCategory.MISC,CookingBookCategory.BLOCKS, ModItems.ADAMANTIUM, 0.25f, 100, "vibranium");
+                oreSmelting(ADAMANTIUM_SMELTABLES, RecipeCategory.MISC,CookingBookCategory.BLOCKS, ModItems.ADAMANTIUM, 0.25f, 200, "adamantium");
+                oreBlasting(ADAMANTIUM_SMELTABLES, RecipeCategory.MISC,CookingBookCategory.BLOCKS, ModItems.ADAMANTIUM, 0.25f, 100, "adamantium");
+
+                List<ItemLike> TITANE_SMELTABLES = List.of(ModItems.RAW_TITANE, ModBlocks.TITANE_ORE, ModBlocks.TITANE_DEEPSLATE_ORE);
+
+                oreSmelting(TITANE_SMELTABLES, RecipeCategory.MISC,CookingBookCategory.BLOCKS, ModItems.TITANE, 0.25f, 200, "titane");
+                oreBlasting(TITANE_SMELTABLES, RecipeCategory.MISC,CookingBookCategory.BLOCKS, ModItems.TITANE, 0.25f, 100, "titane");
+
+                List<ItemLike> URU_SMELTABLES = List.of(ModItems.RAW_URU, ModBlocks.URU_ORE);
+
+                oreSmelting(URU_SMELTABLES, RecipeCategory.MISC,CookingBookCategory.BLOCKS, ModItems.URU, 0.75f, 400, "uru");
+                oreBlasting(URU_SMELTABLES, RecipeCategory.MISC,CookingBookCategory.BLOCKS, ModItems.URU, 0.75f, 300, "uru");
 
                 nineBlockStorageRecipes(RecipeCategory.BUILDING_BLOCKS, ModItems.VIBRANIUM, RecipeCategory.DECORATIONS, ModBlocks.VIBRANIUM_BLOCK);
                 nineBlockStorageRecipes(RecipeCategory.BUILDING_BLOCKS, ModItems.ADAMANTIUM, RecipeCategory.DECORATIONS, ModBlocks.ADAMANTIUM_BLOCK);
+                nineBlockStorageRecipes(RecipeCategory.BUILDING_BLOCKS, ModItems.TITANE, RecipeCategory.DECORATIONS, ModBlocks.TITANE_BLOCK);
+                nineBlockStorageRecipes(RecipeCategory.BUILDING_BLOCKS, ModItems.URU, RecipeCategory.DECORATIONS, ModBlocks.URU_BLOCK);
 
                 shaped(RecipeCategory.MISC, ModBlocks.RAW_VIBRANIUM_BLOCK)
                         .pattern("RRR")
@@ -382,6 +394,174 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .define('P', ModBlocks.MAPLE_PLANKS)
                         .unlockedBy(getHasName(ModBlocks.MAPLE_LOG), has(ModBlocks.MAPLE_LOG))
                         .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.TITANE_SWORD)
+                        .pattern(" T ")
+                        .pattern(" T ")
+                        .pattern(" S ")
+                        .define('T', ModItems.TITANE)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.TITANE), has(ModItems.TITANE))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.TITANE_PICKAXE)
+                        .pattern("TTT")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .define('T', ModItems.TITANE)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.TITANE), has(ModItems.TITANE))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.TITANE_SHOVEL)
+                        .pattern(" T ")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .define('T', ModItems.TITANE)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.TITANE), has(ModItems.TITANE))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.TITANE_AXE)
+                        .pattern(" TT")
+                        .pattern(" ST")
+                        .pattern(" S ")
+                        .define('T', ModItems.TITANE)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.TITANE), has(ModItems.TITANE))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.TITANE_HOE)
+                        .pattern("TT ")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .define('T', ModItems.TITANE)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.TITANE), has(ModItems.TITANE))
+                        .save(output);
+
+                /* shaped(RecipeCategory.MISC, ModItems.TITANE_HELMET)
+                        .pattern("TTT")
+                        .pattern("T T")
+                        .pattern("   ")
+                        .define('T', ModItems.TITANE)
+                        .unlockedBy(getHasName(ModItems.TITANE), has(ModItems.TITANE))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.TITANE_CHESTPLATE)
+                        .pattern("T T")
+                        .pattern("TNT")
+                        .pattern("TTT")
+                        .define('T', ModItems.TITANE)
+                        .define('N', Items.NETHERITE_INGOT)
+                        .unlockedBy(getHasName(ModItems.TITANE), has(ModItems.TITANE))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.TITANE_LEGGINGS)
+                        .pattern("TTT")
+                        .pattern("T T")
+                        .pattern("T T")
+                        .define('T', ModItems.TITANE)
+                        .unlockedBy(getHasName(ModItems.TITANE), has(ModItems.TITANE))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.TITANE_BOOTS)
+                        .pattern("   ")
+                        .pattern("T T")
+                        .pattern("T T")
+                        .define('T', ModItems.TITANE)
+                        .unlockedBy(getHasName(ModItems.TITANE), has(ModItems.TITANE))
+                        .save(output); */
+
+
+                shaped(RecipeCategory.MISC, ModItems.URU_SWORD)
+                        .pattern(" U ")
+                        .pattern(" U ")
+                        .pattern(" S ")
+                        .define('U', ModItems.URU)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.URU), has(ModItems.URU))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.URU_PICKAXE)
+                        .pattern("UUU")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .define('U', ModItems.URU)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.URU), has(ModItems.URU))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.URU_SHOVEL)
+                        .pattern(" U ")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .define('U', ModItems.URU)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.URU), has(ModItems.URU))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.URU_AXE)
+                        .pattern(" UU")
+                        .pattern(" SU")
+                        .pattern(" S ")
+                        .define('U', ModItems.URU)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.URU), has(ModItems.URU))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.URU_HOE)
+                        .pattern("UU ")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .define('U', ModItems.URU)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.URU), has(ModItems.URU))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.URU_HAMMER)
+                        .pattern("UUU")
+                        .pattern("USU")
+                        .pattern(" S ")
+                        .define('U', ModItems.URU)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.URU), has(ModItems.URU))
+                        .save(output);
+
+               /* shaped(RecipeCategory.MISC, ModItems.URU_HELMET)
+                        .pattern("UUU")
+                        .pattern("U U")
+                        .pattern("   ")
+                        .define('U', ModItems.URU)
+                        .unlockedBy(getHasName(ModItems.URU), has(ModItems.URU))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.URU_CHESTPLATE)
+                        .pattern("U U")
+                        .pattern("UNU")
+                        .pattern("UUU")
+                        .define('U', ModItems.URU)
+                        .define('N', Items.NETHERITE_INGOT)
+                        .unlockedBy(getHasName(ModItems.URU), has(ModItems.URU))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.URU_LEGGINGS)
+                        .pattern("UUU")
+                        .pattern("U U")
+                        .pattern("U U")
+                        .define('U', ModItems.URU)
+                        .unlockedBy(getHasName(ModItems.URU), has(ModItems.URU))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.URU_BOOTS)
+                        .pattern("   ")
+                        .pattern("U U")
+                        .pattern("U U")
+                        .define('U', ModItems.URU)
+                        .unlockedBy(getHasName(ModItems.URU), has(ModItems.URU))
+                        .save(output); */
+
+
             }
         };
     }

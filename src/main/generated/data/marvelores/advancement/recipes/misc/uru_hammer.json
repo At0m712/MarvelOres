@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "marvelores:uru_hammer"
+        "recipes": "marvelores:uru_hammer"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

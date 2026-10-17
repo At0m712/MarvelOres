@@ -30,11 +30,20 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
 
         dropSelf(ModBlocks.ADAMANTIUM_BLOCK);
 
+        dropSelf(ModBlocks.TITANE_BLOCK);
+
+        dropSelf(ModBlocks.URU_BLOCK);
+
         add(ModBlocks.VIBRANIUM_ORE, createOreDrop(ModBlocks.VIBRANIUM_ORE, ModItems.RAW_VIBRANIUM));
         add(ModBlocks.VIBRANIUM_DEEPSLATE_ORE, createOreDrop(ModBlocks.VIBRANIUM_ORE, ModItems.RAW_VIBRANIUM));
 
         add(ModBlocks.ADAMANTIUM_ORE, createOreDrop(ModBlocks.ADAMANTIUM_ORE, ModItems.RAW_ADAMANTIUM));
         add(ModBlocks.ADAMANTIUM_DEEPSLATE_ORE, createOreDrop(ModBlocks.ADAMANTIUM_ORE, ModItems.RAW_ADAMANTIUM));
+
+        add(ModBlocks.TITANE_ORE, createOreDrop(ModBlocks.TITANE_ORE, ModItems.RAW_TITANE));
+        add(ModBlocks.TITANE_DEEPSLATE_ORE, createOreDrop(ModBlocks.TITANE_ORE, ModItems.RAW_TITANE));
+
+        add(ModBlocks.URU_ORE, createOreDrop(ModBlocks.URU_ORE, ModItems.RAW_URU));
 
         dropSelf(ModBlocks.MAPLE_LOG);
         dropSelf(ModBlocks.MAPLE_WOOD);
