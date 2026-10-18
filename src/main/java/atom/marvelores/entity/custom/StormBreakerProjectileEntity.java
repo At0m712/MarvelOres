@@ -21,8 +21,8 @@ public class StormBreakerProjectileEntity extends PersistentProjectileEntity {
     public StormBreakerProjectileEntity(EntityType<? extends PersistentProjectileEntity> entityType, World world) {
         super(entityType, world);
     }
-    public StormBreakerProjectileEntity(World world, PlayerEntity player) {
-        super(ModEntities.STORMBREAKER, player, world, new ItemStack(ModItems.URU_AXE), null);
+    public StormBreakerProjectileEntity(World world, PlayerEntity player, ItemStack stack) {
+        super(ModEntities.STORMBREAKER, player, world, stack.copyWithCount(1), null);
     }
     @Override
     protected ItemStack getDefaultItemStack() {
@@ -58,8 +58,10 @@ public class StormBreakerProjectileEntity extends PersistentProjectileEntity {
     }
     @Override
     protected void onEntityHit(EntityHitResult entityHitResult) {
-        super.onEntityHit(entityHitResult);
         Entity entity = entityHitResult.getEntity();
+        if (entity == this.getOwner() || this.isReturning) {
+            return;
+        }
         if (!this.getEntityWorld().isClient()) {
             entity.damage(((ServerWorld) this.getEntityWorld()), this.getDamageSources().thrown(this, this.getOwner()), 40.0f);
             this.getEntityWorld().playSound(null, this.getX(), this.getY(), this.getZ(),

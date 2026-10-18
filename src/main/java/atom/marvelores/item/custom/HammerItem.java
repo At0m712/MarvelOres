@@ -84,7 +84,7 @@ public class HammerItem extends Item {
         ItemStack itemStack = user.getStackInHand(hand);
         world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ITEM_MACE_SMASH_AIR, SoundCategory.NEUTRAL, 0.5f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
         if (!world.isClient()) {
-            MjolnirProjectileEntity mjolnir = new MjolnirProjectileEntity(world, user);
+            MjolnirProjectileEntity mjolnir = new MjolnirProjectileEntity(world, user, itemStack);
             mjolnir.setVelocity(user, user.getPitch(), user.getYaw(), 0.0f, 2.0f, 0f);
             world.spawnEntity(mjolnir);
         }
