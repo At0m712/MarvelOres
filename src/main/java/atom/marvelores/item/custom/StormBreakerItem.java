@@ -18,7 +18,7 @@ import net.minecraft.world.World;
 
 public class StormBreakerItem extends Item {
     public StormBreakerItem(ToolMaterial material, float attackDamage, float attackSpeed, Settings settings) {
-        super(settings.sword(material, attackDamage, attackSpeed));
+        super(settings.axe(material, attackDamage, attackSpeed));
     }
 
     @Override

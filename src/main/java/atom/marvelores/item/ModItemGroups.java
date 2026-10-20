@@ -79,6 +79,8 @@ public class ModItemGroups {
                         entries.add(ModItems.URU_AXE);
                         entries.add(ModItems.URU_HOE);
                         entries.add(ModItems.URU_HAMMER);
+                        entries.add(ModItems.URU_DOUBLESWORD);
+                        entries.add(ModItems.URU_SPEAR);
 
 
                         /* entries.add(ModItems.URU_HELMET);
