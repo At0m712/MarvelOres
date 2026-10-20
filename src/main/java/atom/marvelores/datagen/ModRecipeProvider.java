@@ -532,6 +532,25 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .save(output);
 
                /* shaped(RecipeCategory.MISC, ModItems.URU_HELMET)
+                createShaped(RecipeCategory.MISC, ModItems.URU_DOUBLESWORD)
+                        .pattern("  S")
+                        .pattern(" # ")
+                        .pattern("S  ")
+                        .input('S', ModItems.URU_SWORD)
+                        .input('#', Items.STICK)
+                        .criterion(hasItem(ModItems.URU), conditionsFromItem(ModItems.URU))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.URU_SPEAR)
+                        .pattern("  U")
+                        .pattern(" S ")
+                        .pattern("S  ")
+                        .input('U', ModItems.URU)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.URU), conditionsFromItem(ModItems.URU))
+                        .offerTo(exporter);
+
+               /* createShaped(RecipeCategory.MISC, ModItems.URU_HELMET)
                         .pattern("UUU")
                         .pattern("U U")
                         .pattern("   ")
