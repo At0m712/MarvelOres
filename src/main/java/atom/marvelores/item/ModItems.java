@@ -91,6 +91,12 @@ public class ModItems {
             properties -> new Item(properties.hoe(ModToolMaterials.URU, 0, -3f)));
     public static final Item URU_HAMMER = registerItem("uru_hammer",
             properties -> new HammerItem(ModToolMaterials.URU, 7, -3.4f, properties));
+            setting -> new HammerItem(ModToolMaterials.URU, 7, -3.4f, setting));
+    public static final Item URU_DOUBLESWORD = registerItem("uru_doublesword",
+            setting -> new Item(setting.sword(ModToolMaterials.URU, 3, -2.4f)));
+    public static final Item URU_SPEAR = registerItem("uru_spear",
+            properties -> new Item(properties.spear(ModToolMaterials.URU, 0.95F, 0.95F, 0.6F,
+                    2.5F, 11.0F, 6.75F, 5.1F, 11.25F, 4.6F)));
 
     public static final Item VIBRANIUM_HELMET = registerItem("vibranium_helmet",
             properties -> new ModArmorItem(properties.humanoidArmor(ModArmorMaterials.VIBRANIUM_ARMOR_MATERIAL, ArmorType.HELMET)));
