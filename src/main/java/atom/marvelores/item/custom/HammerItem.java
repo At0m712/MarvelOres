@@ -85,7 +85,7 @@ public class HammerItem extends Item {
                 0.5f, 0.4f / (level.getRandom().nextFloat() * 0.4f + 0.8f));
 
         if (!level.isClientSide()) {
-            MjolnirProjectileEntity mjolnir = new MjolnirProjectileEntity(level, user);
+            MjolnirProjectileEntity mjolnir = new MjolnirProjectileEntity(level, user, itemStack);
             mjolnir.shootFromRotation(user, user.getXRot(), user.getYRot(), 0.0f, 2.0f, 0.0f);
             level.addFreshEntity(mjolnir);
         }

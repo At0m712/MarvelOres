@@ -24,8 +24,8 @@ public class MjolnirProjectileEntity extends AbstractArrow {
         super(entityType, level);
     }
 
-    public MjolnirProjectileEntity(Level level, LivingEntity player) {
-        super(ModEntities.MJOLNIR, player, level, new ItemStack(ModItems.URU_HAMMER), null);
+    public MjolnirProjectileEntity(Level level, LivingEntity player, ItemStack stack) {
+        super(ModEntities.MJOLNIR, player, level, stack.copyWithCount(1), null);
     }
 
     public ItemStack getItemStack() {
@@ -72,8 +72,10 @@ public class MjolnirProjectileEntity extends AbstractArrow {
 
     @Override
     protected void onHitEntity(EntityHitResult entityHitResult) {
-        super.onHitEntity(entityHitResult);
         Entity entity = entityHitResult.getEntity();
+        if (entity == this.getOwner() || this.isReturning) {
+            return;
+        }
         Level level = this.level();
         if (!level.isClientSide()) {
             if (level instanceof ServerLevel serverLevel) {

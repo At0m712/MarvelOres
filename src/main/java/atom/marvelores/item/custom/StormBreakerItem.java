@@ -44,7 +44,7 @@ public class StormBreakerItem extends Item {
                 0.5f, 0.4f / (level.getRandom().nextFloat() * 0.4f + 0.8f));
 
         if (!level.isClientSide()) {
-            StormBreakerProjectileEntity stormBreaker = new StormBreakerProjectileEntity(level, user);
+            StormBreakerProjectileEntity stormBreaker = new StormBreakerProjectileEntity(level, user, itemStack);
             stormBreaker.shootFromRotation(user, user.getXRot(), user.getYRot(), 0.0f, 2.0f, 0.0f);
             level.addFreshEntity(stormBreaker);
         }
