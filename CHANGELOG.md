@@ -1,10 +1,6 @@
 ## MARVELORES UPDATE !!
 
-+ Add 3d Mjolnir model
-+ Add StormBreaker class
-+ Add Titane Stuff
-+ Add Uru Stuff
-  update Ore Spawn
-  Update translation
++ Add Uru DoubleSword
++ Add Gungnir Spear
 
 _Add a lot more coming soon !_

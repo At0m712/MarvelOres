@@ -528,25 +528,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(ModItems.URU), has(ModItems.URU))
                         .save(output);
 
-               /* shaped(RecipeCategory.MISC, ModItems.URU_HELMET)
-                createShaped(RecipeCategory.MISC, ModItems.URU_DOUBLESWORD)
-                        .pattern("  S")
-                        .pattern(" # ")
-                        .pattern("S  ")
-                        .input('S', ModItems.URU_SWORD)
-                        .input('#', Items.STICK)
-                        .criterion(hasItem(ModItems.URU), conditionsFromItem(ModItems.URU))
-                        .offerTo(exporter);
-
-                createShaped(RecipeCategory.MISC, ModItems.URU_SPEAR)
-                        .pattern("  U")
-                        .pattern(" S ")
-                        .pattern("S  ")
-                        .input('U', ModItems.URU)
-                        .input('S', Items.STICK)
-                        .criterion(hasItem(ModItems.URU), conditionsFromItem(ModItems.URU))
-                        .offerTo(exporter);
-
                /* createShaped(RecipeCategory.MISC, ModItems.URU_HELMET)
                         .pattern("UUU")
                         .pattern("U U")
@@ -579,6 +560,24 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .define('U', ModItems.URU)
                         .unlockedBy(getHasName(ModItems.URU), has(ModItems.URU))
                         .save(output); */
+
+                shaped(RecipeCategory.MISC, ModItems.URU_DOUBLESWORD)
+                        .pattern("  S")
+                        .pattern(" # ")
+                        .pattern("S  ")
+                        .define('S', ModItems.URU_SWORD)
+                        .define('#', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.URU), has(ModItems.URU))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.URU_SPEAR)
+                        .pattern("  U")
+                        .pattern(" S ")
+                        .pattern("S  ")
+                        .define('U', ModItems.URU)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.URU), has(ModItems.URU))
+                        .save(output);
 
 
             }
