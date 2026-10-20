@@ -78,6 +78,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.URU_AXE);
                         output.accept(ModItems.URU_HOE);
                         output.accept(ModItems.URU_HAMMER);
+                        output.accept(ModItems.URU_DOUBLESWORD);
+                        output.accept(ModItems.URU_SPEAR);
 
 
                         /* output.accept(ModItems.URU_HELMET);
