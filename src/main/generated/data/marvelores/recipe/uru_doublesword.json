@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:stick",
+    "S": "marvelores:uru_sword"
+  },
+  "pattern": [
+    "  S",
+    " # ",
+    "S  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "marvelores:uru_doublesword"
+  }
+}

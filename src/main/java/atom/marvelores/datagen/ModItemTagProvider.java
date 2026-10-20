@@ -20,8 +20,11 @@ public class ModItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
     protected void addTags(HolderLookup.Provider registries) {
 
         valueLookupBuilder(ItemTags.SWORDS)
-                .add(ModItems.VIBRANIUM_SWORD).add(ModItems.ADAMANTIUM_SWORD).add(ModItems.TITANE_SWORD)
-                .add(ModItems.URU_SWORD);
+                .add(ModItems.VIBRANIUM_SWORD)
+                .add(ModItems.ADAMANTIUM_SWORD)
+                .add(ModItems.TITANE_SWORD)
+                .add(ModItems.URU_SWORD)
+                .add(ModItems.URU_DOUBLESWORD);
         valueLookupBuilder(ItemTags.PICKAXES)
                 .add(ModItems.VIBRANIUM_PICKAXE).add(ModItems.ADAMANTIUM_PICKAXE).add(ModItems.TITANE_PICKAXE)
                 .add(ModItems.URU_PICKAXE);
@@ -34,6 +37,8 @@ public class ModItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
         valueLookupBuilder(ItemTags.HOES)
                 .add(ModItems.VIBRANIUM_HOE).add(ModItems.ADAMANTIUM_HOE).add(ModItems.TITANE_HOE)
                 .add(ModItems.URU_HOE);
+        valueLookupBuilder(ItemTags.SPEARS)
+                .add(ModItems.URU_SPEAR);
 
         valueLookupBuilder(ItemTags.TRIMMABLE_ARMOR)
                 .add(ModItems.VIBRANIUM_HELMET)
