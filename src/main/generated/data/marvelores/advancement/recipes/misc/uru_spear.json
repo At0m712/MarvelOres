@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "marvelores:uru_spear"
+        "recipes": "marvelores:uru_spear"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

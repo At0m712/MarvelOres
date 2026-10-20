@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "marvelores:uru_doublesword"
+        "recipes": "marvelores:uru_doublesword"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
