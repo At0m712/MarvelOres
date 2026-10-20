@@ -20,7 +20,7 @@ public class ModItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
     protected void addTags(HolderLookup.Provider registries) {
 
         tag(ItemTags.SWORDS).add(ModItems.getRK(ModItems.VIBRANIUM_SWORD)).add(ModItems.getRK(ModItems.ADAMANTIUM_SWORD))
-                .add(ModItems.getRK(ModItems.TITANE_SWORD)).add(ModItems.getRK(ModItems.URU_SWORD));
+                .add(ModItems.getRK(ModItems.TITANE_SWORD)).add(ModItems.getRK(ModItems.URU_SWORD)).add(ModItems.getRK(ModItems.URU_DOUBLESWORD));
         tag(ItemTags.PICKAXES).add(ModItems.getRK(ModItems.VIBRANIUM_PICKAXE)).add(ModItems.getRK(ModItems.ADAMANTIUM_PICKAXE))
                 .add(ModItems.getRK(ModItems.TITANE_PICKAXE)).add(ModItems.getRK(ModItems.URU_PICKAXE));
         tag(ItemTags.SHOVELS).add(ModItems.getRK(ModItems.VIBRANIUM_SHOVEL)).add(ModItems.getRK(ModItems.ADAMANTIUM_SHOVEL))
@@ -29,6 +29,7 @@ public class ModItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
                 .add(ModItems.getRK(ModItems.TITANE_AXE)).add(ModItems.getRK(ModItems.URU_AXE));
         tag(ItemTags.HOES).add(ModItems.getRK(ModItems.VIBRANIUM_HOE)).add(ModItems.getRK(ModItems.ADAMANTIUM_HOE))
                 .add(ModItems.getRK(ModItems.TITANE_HOE)).add(ModItems.getRK(ModItems.URU_HOE));
+        tag(ItemTags.SPEARS).add(ModItems.getRK(ModItems.URU_SPEAR));
 
                 /* .add(ModItems.TITANE_HELMET)
                 .add(ModItems.TITANE_CHESTPLATE)
