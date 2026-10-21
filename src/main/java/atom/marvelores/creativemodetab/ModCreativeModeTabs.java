@@ -35,7 +35,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.VIBRANIUM_AXE);
                         output.accept(ModItems.VIBRANIUM_HOE);
                         output.accept(ModItems.VIBRANIUM_SHIELD);
+
                         output.accept(ModItems.HAWKEYE_BOW);
+                        output.accept(ModItems.EXPLOSIVE_ARROW);
 
                         output.accept(ModItems.ADAMANTIUM_SWORD);
                         output.accept(ModItems.ADAMANTIUM_PICKAXE);
