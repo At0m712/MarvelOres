@@ -260,6 +260,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModBlocks.MAPLE_LOG), conditionsFromItem(ModBlocks.MAPLE_LOG))
                         .offerTo(exporter);
 
+                createShaped(RecipeCategory.MISC, ModItems.EXPLOSIVE_ARROW)
+                        .pattern("  #")
+                        .pattern(" F ")
+                        .pattern("   ")
+                        .input('F', Items.ARROW)
+                        .input('#', Items.TNT)
+                        .criterion(hasItem(ModItems.VIBRANIUM), conditionsFromItem(ModItems.VIBRANIUM))
+                        .offerTo(exporter);
+
                 createShaped(RecipeCategory.MISC, ModBlocks.MAPLE_PLANKS, 4)
                         .pattern("   ")
                         .pattern(" # ")

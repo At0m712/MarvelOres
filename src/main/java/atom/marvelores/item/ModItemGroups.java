@@ -30,7 +30,9 @@ public class ModItemGroups {
                         entries.add(ModItems.VIBRANIUM_AXE);
                         entries.add(ModItems.VIBRANIUM_HOE);
                         entries.add(ModItems.VIBRANIUM_SHIELD);
+
                         entries.add(ModItems.HAWKEYE_BOW);
+                        entries.add(ModItems.EXPLOSIVE_ARROW);
 
                         entries.add(ModItems.VIBRANIUM_HELMET);
                         entries.add(ModItems.VIBRANIUM_CHESTPLATE);

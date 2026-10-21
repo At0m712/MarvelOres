@@ -1,5 +1,6 @@
 package atom.marvelores.item;
 
+import atom.marvelores.item.custom.ExplosiveArrowItem;
 import atom.marvelores.item.custom.HammerItem;
 import atom.marvelores.item.custom.ModArmorItem;
 import atom.marvelores.item.custom.StormBreakerItem;
@@ -161,7 +162,10 @@ public class ModItems {
 
 
     public static final Item HAWKEYE_BOW = registerItem("hawkeye_bow",
-            setting -> new BowItem(setting.maxDamage(500)));
+            setting -> new BowItem(setting.maxDamage(800).enchantable(12)));
+
+    public static final Item EXPLOSIVE_ARROW = registerItem("explosive_arrow",
+            settings -> new ExplosiveArrowItem(settings.maxCount(64)));
 
 
 

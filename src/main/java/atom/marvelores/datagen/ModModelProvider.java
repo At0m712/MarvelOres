@@ -65,6 +65,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.VIBRANIUM_STICK, Models.GENERATED);
         itemModelGenerator.register(ModItems.VIBRANIUM_CORE, Models.GENERATED);
 
+        itemModelGenerator.register(ModItems.EXPLOSIVE_ARROW, Models.GENERATED);
+
         itemModelGenerator.register(ModItems.MAPLE_STICK, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.ADAMANTIUM, Models.GENERATED);

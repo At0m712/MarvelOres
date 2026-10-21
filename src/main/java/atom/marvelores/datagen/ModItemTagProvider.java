@@ -48,6 +48,12 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         valueLookupBuilder(ItemTags.SPEARS)
                 .add(ModItems.URU_SPEAR);
 
+        valueLookupBuilder(ItemTags.BOW_ENCHANTABLE)
+                .add(ModItems.HAWKEYE_BOW);
+
+        valueLookupBuilder(ItemTags.ARROWS)
+                .add(ModItems.EXPLOSIVE_ARROW);
+
         valueLookupBuilder(ItemTags.TRIMMABLE_ARMOR)
                 .add(ModItems.VIBRANIUM_HELMET)
                 .add(ModItems.VIBRANIUM_CHESTPLATE)
