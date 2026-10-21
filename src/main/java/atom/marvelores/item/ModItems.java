@@ -161,9 +161,10 @@ public class ModItems {
             ));
 
     public static final Item HAWKEYE_BOW = registerItem("hawkeye_bow",
-            setting -> new BowItem(setting.durability(500)));
+            properties -> new BowItem(properties.durability(800).enchantable(12)));
 
-
+    public static final Item EXPLOSIVE_ARROW = registerItem("explosive_arrow",
+            properties -> new ExplosiveArrowItem(properties.stacksTo(64)));
 
     public static ResourceKey<Item> getRK(Item item) {
         return BuiltInRegistries.ITEM.getResourceKey(item).get();

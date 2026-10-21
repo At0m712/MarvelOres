@@ -305,6 +305,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(ModBlocks.MAPLE_LOG), has(ModBlocks.MAPLE_LOG))
                         .save(output);
 
+                shaped(RecipeCategory.MISC, ModItems.EXPLOSIVE_ARROW)
+                        .pattern("  #")
+                        .pattern(" F ")
+                        .pattern("   ")
+                        .define('F', Items.ARROW)
+                        .define('#', Items.TNT)
+                        .unlockedBy(getHasName(ModItems.VIBRANIUM), has(ModItems.VIBRANIUM))
+                        .save(output);
+
                 shaped(RecipeCategory.MISC, ModBlocks.MAPLE_PLANKS, 4)
                         .pattern("   ")
                         .pattern(" # ")
