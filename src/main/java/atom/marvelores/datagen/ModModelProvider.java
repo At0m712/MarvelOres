@@ -61,9 +61,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ModItems.VIBRANIUM_CORE, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.VIBRANIUM_STICK, ModelTemplates.FLAT_ITEM);
 
-        itemModelGenerator.register(ModItems.EXPLOSIVE_ARROW, Models.GENERATED);
+        itemModelGenerators.generateFlatItem(ModItems.EXPLOSIVE_ARROW, ModelTemplates.FLAT_ITEM);
 
-        itemModelGenerator.register(ModItems.MAPLE_STICK, Models.GENERATED);
         itemModelGenerators.generateFlatItem(ModItems.MAPLE_STICK, ModelTemplates.FLAT_ITEM);
 
         itemModelGenerators.generateFlatItem(ModItems.ADAMANTIUM, ModelTemplates.FLAT_ITEM);

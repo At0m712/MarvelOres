@@ -1,12 +1,8 @@
 package atom.marvelores.item;
 
-import atom.marvelores.item.custom.HammerItem;
-import atom.marvelores.item.custom.ModArmorItem;
-import atom.marvelores.item.custom.StormBreakerItem;
+import atom.marvelores.item.custom.*;
 import atom.marvelores.MarvelOres;
 
-import atom.marvelores.item.custom.ModArmorItem;
-import atom.marvelores.item.custom.ModShieldItem;
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.component.DataComponents;
@@ -21,6 +17,7 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.BlocksAttacks;
+import net.minecraft.world.item.component.ResolvableProfile;
 import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.equipment.ArmorType;
 import net.minecraft.world.item.equipment.Equippable;
@@ -171,7 +168,10 @@ public class ModItems {
             ));
 
     public static final Item HAWKEYE_BOW = registerItem("hawkeye_bow",
-            properties -> new BowItem(properties.durability(500)));
+            properties -> new BowItem(properties.durability(800).enchantable(12)));
+
+    public static final Item EXPLOSIVE_ARROW = registerItem("explosive_arrow",
+            properties -> new ExplosiveArrowItem(properties.stacksTo(64)));
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {
         return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(MarvelOres.MOD_ID, name),
