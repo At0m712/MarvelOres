@@ -2,11 +2,8 @@ package atom.marvelores.item;
 
 import atom.marvelores.MarvelOres;
 
-import atom.marvelores.item.custom.HammerItem;
-import atom.marvelores.item.custom.ModArmorItem;
+import atom.marvelores.item.custom.*;
 /* import atom.marvelores.item.custom.ModShieldItem; */
-import atom.marvelores.item.custom.ModShieldItem;
-import atom.marvelores.item.custom.StormBreakerItem;
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.component.DataComponents;
