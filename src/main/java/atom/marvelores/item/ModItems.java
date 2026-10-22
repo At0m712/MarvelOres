@@ -59,6 +59,10 @@ public class ModItems {
             properties -> new AxeItem(ModToolMaterials.VIBRANIUM, 6, -3.2f, properties));
     public static final Item VIBRANIUM_HOE = registerItem("vibranium_hoe",
             properties -> new HoeItem(ModToolMaterials.VIBRANIUM, 0, -3f, properties));
+    public static final Item VIBRANIUM_SPEAR = registerItem("vibranium_spear",
+            properties -> new Item(properties.spear(ModToolMaterials.VIBRANIUM, 0.95F, 0.95F, 0.6F,
+                    2.5F, 11.0F, 6.75F, 5.1F, 11.25F, 4.6F)));
+
 
     public static final Item ADAMANTIUM_SWORD = registerItem("adamantium_sword",
             properties -> new Item(properties.sword(ModToolMaterials.ADAMANTIUM, 3, -2.4f)));
@@ -96,7 +100,7 @@ public class ModItems {
     public static final Item URU_HAMMER = registerItem("uru_hammer",
             properties -> new HammerItem(ModToolMaterials.URU, 7, -3.4f, properties));
     public static final Item URU_DOUBLESWORD = registerItem("uru_doublesword",
-            properties -> new Item(properties.sword(ModToolMaterials.URU, 3, -2.4f)));
+            properties -> new Item(properties.sword(ModToolMaterials.URU, 6, -2.4f)));
     public static final Item URU_SPEAR = registerItem("uru_spear",
             properties -> new Item(properties.spear(ModToolMaterials.URU, 0.95F, 0.95F, 0.6F,
                     2.5F, 11.0F, 6.75F, 5.1F, 11.25F, 4.6F)));
