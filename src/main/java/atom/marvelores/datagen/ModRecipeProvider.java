@@ -124,6 +124,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .group("vibranium")
                         .save(output);
 
+                shaped(RecipeCategory.MISC, ModItems.VIBRANIUM_SPEAR)
+                        .pattern("  V")
+                        .pattern(" S ")
+                        .pattern("S  ")
+                        .define('V', ModItems.VIBRANIUM)
+                        .define('S', ModItems.VIBRANIUM_STICK)
+                        .unlockedBy(getHasName(ModItems.VIBRANIUM), has(ModItems.VIBRANIUM))
+                        .group("vibranium")
+                        .save(output);
+
                 shaped(RecipeCategory.MISC, ModItems.VIBRANIUM_HELMET)
                         .pattern("VPV")
                         .pattern("V V")

@@ -1,7 +1,9 @@
 // 26.2	-999999999-01-01T00:00:00	MarvelOres/Tags for minecraft:item
 dd18952d89b15dd08c986ade9137f9a723b01736 data/marvelores/tags/item/vibranium_repair.json
+839c50774ec3554ae5c040997a15b469d6d6f18b data/minecraft/tags/item/arrows.json
 0af9e1c4a039ad07cafdb24b31af2159a585fa65 data/minecraft/tags/item/axes.json
 b0ba6b055defddfb99dd4c9ca853a9190c120fa6 data/minecraft/tags/item/chest_armor.json
+c08f7f34dc784baa63fd00c85125d4ef842df7f3 data/minecraft/tags/item/enchantable/bow.json
 de6b36cd7c3b9c3e599deaef2f49a517974ba3f4 data/minecraft/tags/item/foot_armor.json
 f55a11d29c9313af705d91232f83124817a6fcdc data/minecraft/tags/item/head_armor.json
 752e2884882f91c3c973ceea5d1d667c040455d0 data/minecraft/tags/item/hoes.json
@@ -9,5 +11,5 @@ f55a11d29c9313af705d91232f83124817a6fcdc data/minecraft/tags/item/head_armor.jso
 18444f4fa9610a46a1a41c752cb5339243f568a4 data/minecraft/tags/item/pickaxes.json
 68accc4f4b5a8cebc4ab783976c70797882f92b6 data/minecraft/tags/item/planks.json
 fd5d90ef7ad71c72f465d7e5ce5ed87911c96e7b data/minecraft/tags/item/shovels.json
-0f8043ecd408d2efb7fd9939174f89bf7381d1b8 data/minecraft/tags/item/spears.json
+6090fd101f4d05549ad40769815d3a9244c993c2 data/minecraft/tags/item/spears.json
 5c9273a610f4ff111349626a1708ede38783a373 data/minecraft/tags/item/swords.json
