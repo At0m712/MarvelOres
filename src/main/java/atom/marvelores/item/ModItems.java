@@ -3,7 +3,6 @@ package atom.marvelores.item;
 import atom.marvelores.MarvelOres;
 
 import atom.marvelores.item.custom.*;
-/* import atom.marvelores.item.custom.ModShieldItem; */
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.component.DataComponents;
@@ -52,6 +51,10 @@ public class ModItems {
             properties -> new Item(properties.axe(ModToolMaterials.VIBRANIUM, 6f, -3.2f)));
     public static final Item VIBRANIUM_HOE = registerItem("vibranium_hoe",
             properties -> new Item(properties.hoe(ModToolMaterials.VIBRANIUM, 0f, -3.0f)));
+    public static final Item VIBRANIUM_SPEAR = registerItem("vibranium_spear",
+            properties -> new Item(properties.spear(ModToolMaterials.VIBRANIUM, 0.95F, 0.95F, 0.6F,
+                    2.5F, 11.0F, 6.75F, 5.1F, 11.25F, 4.6F)));
+
 
     public static final Item ADAMANTIUM_SWORD = registerItem("adamantium_sword",
             properties -> new Item(properties.sword(ModToolMaterials.ADAMANTIUM, 3, -2.4f)));
@@ -89,10 +92,11 @@ public class ModItems {
     public static final Item URU_HAMMER = registerItem("uru_hammer",
             properties -> new HammerItem(ModToolMaterials.URU, 7, -3.4f, properties));
     public static final Item URU_DOUBLESWORD = registerItem("uru_doublesword",
-            properties -> new Item(properties.sword(ModToolMaterials.URU, 3, -2.4f)));
+            properties -> new Item(properties.sword(ModToolMaterials.URU, 6, -2.4f)));
     public static final Item URU_SPEAR = registerItem("uru_spear",
             properties -> new Item(properties.spear(ModToolMaterials.URU, 0.95F, 0.95F, 0.6F,
                     2.5F, 11.0F, 6.75F, 5.1F, 11.25F, 4.6F)));
+
 
     public static final Item VIBRANIUM_HELMET = registerItem("vibranium_helmet",
             properties -> new ModArmorItem(properties.humanoidArmor(ModArmorMaterials.VIBRANIUM_ARMOR_MATERIAL, ArmorType.HELMET)));
@@ -103,6 +107,8 @@ public class ModItems {
     public static final Item VIBRANIUM_BOOTS = registerItem("vibranium_boots",
             properties -> new Item(properties.humanoidArmor(ModArmorMaterials.VIBRANIUM_ARMOR_MATERIAL, ArmorType.BOOTS)));
 
+
+
     public static final Item ADAMANTIUM_HELMET = registerItem("adamantium_helmet",
             properties -> new ModArmorItem(properties.humanoidArmor(ModArmorMaterials.ADAMANTIUM_ARMOR_MATERIAL, ArmorType.HELMET)));
     public static final Item ADAMANTIUM_CHESTPLATE = registerItem("adamantium_chestplate",
@@ -112,8 +118,7 @@ public class ModItems {
     public static final Item ADAMANTIUM_BOOTS = registerItem("adamantium_boots",
             properties -> new Item(properties.humanoidArmor(ModArmorMaterials.ADAMANTIUM_ARMOR_MATERIAL, ArmorType.BOOTS)));
 
-
-     /* public static final Item TITANE_HELMET = registerItem("titane_helmet",
+   /* public static final Item TITANE_HELMET = registerItem("titane_helmet",
             properties -> new ModArmorItem(properties.armor(ModArmorMaterials.TITANE_ARMOR_MATERIAL, EquipmentType.HELMET)));
     public static final Item TITANE_CHESTPLATE = registerItem("titane_chestplate",
             properties -> new Item(properties.armor(ModArmorMaterials.TITANE_ARMOR_MATERIAL, EquipmentType.CHESTPLATE)));

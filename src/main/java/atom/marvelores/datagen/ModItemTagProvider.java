@@ -29,7 +29,7 @@ public class ModItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
                 .add(ModItems.getRK(ModItems.TITANE_AXE)).add(ModItems.getRK(ModItems.URU_AXE));
         tag(ItemTags.HOES).add(ModItems.getRK(ModItems.VIBRANIUM_HOE)).add(ModItems.getRK(ModItems.ADAMANTIUM_HOE))
                 .add(ModItems.getRK(ModItems.TITANE_HOE)).add(ModItems.getRK(ModItems.URU_HOE));
-        tag(ItemTags.SPEARS).add(ModItems.getRK(ModItems.URU_SPEAR));
+        tag(ItemTags.SPEARS).add(ModItems.getRK(ModItems.VIBRANIUM_SPEAR)).add(ModItems.getRK(ModItems.URU_SPEAR));
 
         tag(ItemTags.BOW_ENCHANTABLE).add(ModItems.getRK(ModItems.HAWKEYE_BOW));
 

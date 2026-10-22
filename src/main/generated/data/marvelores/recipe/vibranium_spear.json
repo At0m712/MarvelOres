@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "vibranium",
+  "key": {
+    "S": "marvelores:vibranium_stick",
+    "V": "marvelores:vibranium"
+  },
+  "pattern": [
+    "  V",
+    " S ",
+    "S  "
+  ],
+  "result": {
+    "id": "marvelores:vibranium_spear"
+  }
+}
