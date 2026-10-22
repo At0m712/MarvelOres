@@ -46,6 +46,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.TITANE_HOE)
                 .add(ModItems.URU_HOE);
         valueLookupBuilder(ItemTags.SPEARS)
+                .add(ModItems.VIBRANIUM_SPEAR)
                 .add(ModItems.URU_SPEAR);
 
         valueLookupBuilder(ItemTags.BOW_ENCHANTABLE)

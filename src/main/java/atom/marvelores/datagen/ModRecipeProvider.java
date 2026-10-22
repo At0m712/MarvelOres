@@ -100,6 +100,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.VIBRANIUM), conditionsFromItem(ModItems.VIBRANIUM))
                         .offerTo(exporter);
 
+                createShaped(RecipeCategory.MISC, ModItems.VIBRANIUM_SPEAR)
+                        .pattern("  V")
+                        .pattern(" S ")
+                        .pattern("S  ")
+                        .input('V', ModItems.VIBRANIUM)
+                        .input('S', ModItems.VIBRANIUM_STICK)
+                        .criterion(hasItem(ModItems.VIBRANIUM), conditionsFromItem(ModItems.VIBRANIUM))
+                        .offerTo(exporter);
+
                 createShaped(RecipeCategory.MISC, ModItems.VIBRANIUM_HELMET)
                         .pattern("V#V")
                         .pattern("V V")
