@@ -1,0 +1,8 @@
+{
+  "type": "marvelores:crusher",
+  "ingredient": "minecraft:gold_ingot",
+  "result": {
+    "count": 1,
+    "id": "marvelores:gold_plate"
+  }
+}
