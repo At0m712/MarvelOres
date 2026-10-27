@@ -78,6 +78,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.URU, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_URU, Models.GENERATED);
 
+        itemModelGenerator.register(ModItems.GOLD_PLATE, Models.GENERATED);
+
         itemModelGenerator.register(ModItems.VIBRANIUM_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.VIBRANIUM_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.VIBRANIUM_SHOVEL, Models.HANDHELD);
@@ -115,12 +117,12 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.registerArmor(ModItems.ADAMANTIUM_LEGGINGS, ModArmorMaterials.ADAMANTIUM_KEY, ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
         itemModelGenerator.registerArmor(ModItems.ADAMANTIUM_BOOTS, ModArmorMaterials.ADAMANTIUM_KEY, ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
 
-       /* itemModelGenerator.registerArmor(ModItems.TITANE_HELMET, ModArmorMaterials.TITANE_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(ModItems.TITANE_HELMET, ModArmorMaterials.TITANE_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
         itemModelGenerator.registerArmor(ModItems.TITANE_CHESTPLATE, ModArmorMaterials.TITANE_KEY, ItemModelGenerator.CHESTPLATE_TRIM_ID_PREFIX, false);
         itemModelGenerator.registerArmor(ModItems.TITANE_LEGGINGS, ModArmorMaterials.TITANE_KEY, ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
         itemModelGenerator.registerArmor(ModItems.TITANE_BOOTS, ModArmorMaterials.TITANE_KEY, ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
 
-        itemModelGenerator.registerArmor(ModItems.URU_HELMET, ModArmorMaterials.URU_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
+        /* itemModelGenerator.registerArmor(ModItems.URU_HELMET, ModArmorMaterials.URU_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
         itemModelGenerator.registerArmor(ModItems.URU_CHESTPLATE, ModArmorMaterials.URU_KEY, ItemModelGenerator.CHESTPLATE_TRIM_ID_PREFIX, false);
         itemModelGenerator.registerArmor(ModItems.URU_LEGGINGS, ModArmorMaterials.URU_KEY, ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
         itemModelGenerator.registerArmor(ModItems.URU_BOOTS, ModArmorMaterials.URU_KEY, ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);*/

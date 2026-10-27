@@ -42,6 +42,8 @@ public class ModItems {
     public static final Item URU = registerItem("uru", Item::new);
     public static final Item RAW_URU = registerItem("raw_uru", Item::new);
 
+    public static final Item GOLD_PLATE = registerItem("gold_plate", Item::new);
+
     public static final Item VIBRANIUM_SWORD = registerItem("vibranium_sword",
             setting -> new Item(setting.sword(ModToolMaterials.VIBRANIUM, 3, -2.4f)));
 
@@ -121,7 +123,7 @@ public class ModItems {
     public static final Item ADAMANTIUM_BOOTS = registerItem("adamantium_boots",
             setting -> new Item(setting.armor(ModArmorMaterials.ADAMANTIUM_ARMOR_MATERIAL, EquipmentType.BOOTS)));
 
-   /* public static final Item TITANE_HELMET = registerItem("titane_helmet",
+    public static final Item TITANE_HELMET = registerItem("titane_helmet",
             setting -> new ModArmorItem(setting.armor(ModArmorMaterials.TITANE_ARMOR_MATERIAL, EquipmentType.HELMET)));
     public static final Item TITANE_CHESTPLATE = registerItem("titane_chestplate",
             setting -> new Item(setting.armor(ModArmorMaterials.TITANE_ARMOR_MATERIAL, EquipmentType.CHESTPLATE)));
@@ -130,7 +132,7 @@ public class ModItems {
     public static final Item TITANE_BOOTS = registerItem("titane_boots",
             setting -> new Item(setting.armor(ModArmorMaterials.TITANE_ARMOR_MATERIAL, EquipmentType.BOOTS)));
 
-    public static final Item URU_HELMET = registerItem("uru_helmet",
+    /* public static final Item URU_HELMET = registerItem("uru_helmet",
             setting -> new ModArmorItem(setting.armor(ModArmorMaterials.URU_ARMOR_MATERIAL, EquipmentType.HELMET)));
     public static final Item URU_CHESTPLATE = registerItem("uru_chestplate",
             setting -> new Item(setting.armor(ModArmorMaterials.URU_ARMOR_MATERIAL, EquipmentType.CHESTPLATE)));

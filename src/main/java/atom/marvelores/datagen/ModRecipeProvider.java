@@ -414,38 +414,41 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.TITANE), conditionsFromItem(ModItems.TITANE))
                         .offerTo(exporter);
 
-                /* createShaped(RecipeCategory.MISC, ModItems.TITANE_HELMET)
-                        .pattern("TTT")
-                        .pattern("T T")
+                 createShaped(RecipeCategory.MISC, ModItems.TITANE_HELMET)
+                        .pattern("TGT")
+                        .pattern("G G")
                         .pattern("   ")
                         .input('T', ModItems.TITANE)
+                        .input('G', ModItems.GOLD_PLATE)
                         .criterion(hasItem(ModItems.TITANE), conditionsFromItem(ModItems.TITANE))
                         .offerTo(exporter);
 
                 createShaped(RecipeCategory.MISC, ModItems.TITANE_CHESTPLATE)
                         .pattern("T T")
-                        .pattern("TNT")
-                        .pattern("TTT")
+                        .pattern("TGT")
+                        .pattern("GTG")
                         .input('T', ModItems.TITANE)
-                        .input('N', Items.NETHERITE_INGOT)
+                        .input('G', ModItems.GOLD_PLATE)
                         .criterion(hasItem(ModItems.TITANE), conditionsFromItem(ModItems.TITANE))
                         .offerTo(exporter);
 
                 createShaped(RecipeCategory.MISC, ModItems.TITANE_LEGGINGS)
-                        .pattern("TTT")
-                        .pattern("T T")
+                        .pattern("TGT")
+                        .pattern("G G")
                         .pattern("T T")
                         .input('T', ModItems.TITANE)
+                        .input('G', ModItems.GOLD_PLATE)
                         .criterion(hasItem(ModItems.TITANE), conditionsFromItem(ModItems.TITANE))
                         .offerTo(exporter);
 
                 createShaped(RecipeCategory.MISC, ModItems.TITANE_BOOTS)
                         .pattern("   ")
-                        .pattern("T T")
+                        .pattern("G G")
                         .pattern("T T")
                         .input('T', ModItems.TITANE)
+                        .input('G', ModItems.GOLD_PLATE)
                         .criterion(hasItem(ModItems.TITANE), conditionsFromItem(ModItems.TITANE))
-                        .offerTo(exporter); */
+                        .offerTo(exporter);
 
 
                 createShaped(RecipeCategory.MISC, ModItems.URU_SWORD)
