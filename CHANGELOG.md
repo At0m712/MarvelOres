@@ -1,6 +1,7 @@
 ## MARVELORES UPDATE !!
 
-+ Add Uru DoubleSword
-+ Add Gungnir Spear
++ Add Explosive Arrow
++ Add IronMan Armor
++ Add Vibranium Spear
 
-_Add a lot more coming soon !_
+_And a lot more coming soon !_

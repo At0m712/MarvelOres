@@ -41,6 +41,8 @@ public class ModItems {
     public static final Item RAW_URU = registerItem("raw_uru", Item::new);
 
 
+    public static final Item GOLD_PLATE = registerItem("gold_plate", Item::new);
+
     public static final Item VIBRANIUM_SWORD = registerItem("vibranium_sword",
             properties -> new Item(properties.sword(ModToolMaterials.VIBRANIUM, 3, -2.4f)));
     public static final Item VIBRANIUM_PICKAXE = registerItem("vibranium_pickaxe",
@@ -118,16 +120,16 @@ public class ModItems {
     public static final Item ADAMANTIUM_BOOTS = registerItem("adamantium_boots",
             properties -> new Item(properties.humanoidArmor(ModArmorMaterials.ADAMANTIUM_ARMOR_MATERIAL, ArmorType.BOOTS)));
 
-   /* public static final Item TITANE_HELMET = registerItem("titane_helmet",
-            properties -> new ModArmorItem(properties.armor(ModArmorMaterials.TITANE_ARMOR_MATERIAL, EquipmentType.HELMET)));
-    public static final Item TITANE_CHESTPLATE = registerItem("titane_chestplate",
-            properties -> new Item(properties.armor(ModArmorMaterials.TITANE_ARMOR_MATERIAL, EquipmentType.CHESTPLATE)));
-    public static final Item TITANE_LEGGINGS = registerItem("titane_leggings",
-            properties -> new Item(properties.armor(ModArmorMaterials.TITANE_ARMOR_MATERIAL, EquipmentType.LEGGINGS)));
-    public static final Item TITANE_BOOTS = registerItem("titane_boots",
-            properties -> new Item(properties.armor(ModArmorMaterials.TITANE_ARMOR_MATERIAL, EquipmentType.BOOTS)));
+       public static final Item TITANE_HELMET = registerItem("titane_helmet",
+                properties -> new ModArmorItem(properties.humanoidArmor(ModArmorMaterials.TITANE_ARMOR_MATERIAL, ArmorType.HELMET)));
+        public static final Item TITANE_CHESTPLATE = registerItem("titane_chestplate",
+                properties -> new Item(properties.humanoidArmor(ModArmorMaterials.TITANE_ARMOR_MATERIAL, ArmorType.CHESTPLATE)));
+        public static final Item TITANE_LEGGINGS = registerItem("titane_leggings",
+                properties -> new Item(properties.humanoidArmor(ModArmorMaterials.TITANE_ARMOR_MATERIAL, ArmorType.LEGGINGS)));
+        public static final Item TITANE_BOOTS = registerItem("titane_boots",
+                properties -> new Item(properties.humanoidArmor(ModArmorMaterials.TITANE_ARMOR_MATERIAL, ArmorType.BOOTS)));
 
-    public static final Item URU_HELMET = registerItem("uru_helmet",
+    /*public static final Item URU_HELMET = registerItem("uru_helmet",
             properties -> new ModArmorItem(properties.armor(ModArmorMaterials.URU_ARMOR_MATERIAL, EquipmentType.HELMET)));
     public static final Item URU_CHESTPLATE = registerItem("uru_chestplate",
             properties -> new Item(properties.armor(ModArmorMaterials.URU_ARMOR_MATERIAL, EquipmentType.CHESTPLATE)));

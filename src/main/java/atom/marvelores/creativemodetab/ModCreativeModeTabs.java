@@ -67,10 +67,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.TITANE_HOE);
 
 
-                        /* output.accept(ModItems.TITANE_HELMET);
+                        output.accept(ModItems.TITANE_HELMET);
                         output.accept(ModItems.TITANE_CHESTPLATE);
                         output.accept(ModItems.TITANE_LEGGINGS);
-                        output.accept(ModItems.TITANE_BOOTS); */
+                        output.accept(ModItems.TITANE_BOOTS);
 
 
                         output.accept(ModItems.URU);
@@ -90,6 +90,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.URU_CHESTPLATE);
                         output.accept(ModItems.URU_LEGGINGS);
                         output.accept(ModItems.URU_BOOTS); */
+
+                        output.accept(ModItems.GOLD_PLATE);
 
                     }).build());
 
