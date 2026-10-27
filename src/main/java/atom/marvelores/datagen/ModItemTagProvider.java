@@ -35,25 +35,24 @@ public class ModItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
 
         tag(ItemTags.ARROWS).add(ModItems.getRK(ModItems.EXPLOSIVE_ARROW));
 
-                /* .add(ModItems.TITANE_HELMET)
-                .add(ModItems.TITANE_CHESTPLATE)
-                .add(ModItems.TITANE_LEGGINGS)
-                .add(ModItems.TITANE_BOOTS)
-                .add(ModItems.URU_HELMET)
+                /*.add(ModItems.URU_HELMET)
                 .add(ModItems.URU_CHESTPLATE)
                 .add(ModItems.URU_LEGGINGS)
                 .add(ModItems.URU_BOOTS)*/
 
 
-        tag(ItemTags.HEAD_ARMOR).add(ModItems.getRK(ModItems.VIBRANIUM_HELMET)).add(ModItems.getRK(ModItems.ADAMANTIUM_HELMET));
-        tag(ItemTags.CHEST_ARMOR).add(ModItems.getRK(ModItems.VIBRANIUM_CHESTPLATE)).add(ModItems.getRK(ModItems.ADAMANTIUM_CHESTPLATE));
-        tag(ItemTags.LEG_ARMOR).add(ModItems.getRK(ModItems.VIBRANIUM_LEGGINGS)).add(ModItems.getRK(ModItems.ADAMANTIUM_LEGGINGS));
-        tag(ItemTags.FOOT_ARMOR).add(ModItems.getRK(ModItems.VIBRANIUM_BOOTS)).add(ModItems.getRK(ModItems.ADAMANTIUM_BOOTS));
+        tag(ItemTags.HEAD_ARMOR).add(ModItems.getRK(ModItems.VIBRANIUM_HELMET)).add(ModItems.getRK(ModItems.ADAMANTIUM_HELMET)).add(ModItems.getRK(ModItems.TITANE_HELMET));
+        tag(ItemTags.CHEST_ARMOR).add(ModItems.getRK(ModItems.VIBRANIUM_CHESTPLATE)).add(ModItems.getRK(ModItems.ADAMANTIUM_CHESTPLATE)).add(ModItems.getRK(ModItems.TITANE_CHESTPLATE));
+        tag(ItemTags.LEG_ARMOR).add(ModItems.getRK(ModItems.VIBRANIUM_LEGGINGS)).add(ModItems.getRK(ModItems.ADAMANTIUM_LEGGINGS)).add(ModItems.getRK(ModItems.TITANE_LEGGINGS));
+        tag(ItemTags.FOOT_ARMOR).add(ModItems.getRK(ModItems.VIBRANIUM_BOOTS)).add(ModItems.getRK(ModItems.ADAMANTIUM_BOOTS)).add(ModItems.getRK(ModItems.TITANE_BOOTS));
 
         tag((ModTags.Items.VIBRANIUM_REPAIR))
-                .add(ModItems.getRK(ModItems.VIBRANIUM))
-                .add(ModItems.getRK(ModItems.ADAMANTIUM))
-                .add(ModItems.getRK(ModItems.TITANE))
+                .add(ModItems.getRK(ModItems.VIBRANIUM));
+        tag((ModTags.Items.ADAMANTIUM_REPAIR))
+                .add(ModItems.getRK(ModItems.ADAMANTIUM));
+        tag((ModTags.Items.TITANE_REPAIR))
+                .add(ModItems.getRK(ModItems.TITANE));
+        tag((ModTags.Items.URU_REPAIR))
                 .add(ModItems.getRK(ModItems.URU));
 
         tag(ItemTags.PLANKS)

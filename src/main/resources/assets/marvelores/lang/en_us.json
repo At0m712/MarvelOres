@@ -85,10 +85,10 @@
   "item.marvelores.titane_hoe": "Titane Hoe",
 
 
-  /* "item.marvelores.titane_helmet": "Titane Helmet",
-  "item.marvelores.titane_chestplate": "Titane Chestplate",
-  "item.marvelores.titane_leggings": "Titane Leggings",
-  "item.marvelores.titane_boots": "Titane Boots", */
+  "item.marvelores.titane_helmet": "IronMan Helmet",
+  "item.marvelores.titane_chestplate": "IronMan Chestplate",
+  "item.marvelores.titane_leggings": "IronMan Leggings",
+  "item.marvelores.titane_boots": "IronMan Boots",
 
   "block.marvelores.titane_block": "Block of Titane",
 
@@ -116,5 +116,7 @@
   "block.marvelores.uru_block": "Block of Uru",
 
   "block.marvelores.uru_ore": "Uru Ore",
-  "block.marvelores.uru_deepslate_ore": "Deepslate Uru Ore"
+  "block.marvelores.uru_deepslate_ore": "Deepslate Uru Ore",
+
+  "item.marvelores.gold_plate": "Gold Plate"
 }

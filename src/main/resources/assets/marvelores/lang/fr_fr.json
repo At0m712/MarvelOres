@@ -50,7 +50,7 @@
   "item.marvelores.adamantium_boots": "Botte en Adamantium",
 
 
-  "block.marvelores.adamantium_block": "Bloc de Adamantium",
+  "block.marvelores.adamantium_block": "Bloc d'Adamantium",
 
   "block.marvelores.adamantium_ore": "Minerai d'Adamantium",
   "block.marvelores.adamantium_deepslate_ore": "Minerai d'Adamantium des Abîmes",
@@ -76,33 +76,33 @@
   "item.marvelores.maple_stick": "Bâton d'érable",
 
   "item.marvelores.titane": "Titane",
-  "item.marvelores.raw_titane": "Raw Titane",
+  "item.marvelores.raw_titane": "Titane Brut",
 
-  "item.marvelores.titane_sword": "Titane Sword",
-  "item.marvelores.titane_pickaxe": "Titane Pickaxe",
-  "item.marvelores.titane_shovel": "Titane Shovel",
-  "item.marvelores.titane_axe": "Titane Axe",
-  "item.marvelores.titane_hoe": "Titane Hoe",
+  "item.marvelores.titane_sword": "Epee en Titane",
+  "item.marvelores.titane_pickaxe": "Pioche en Titane",
+  "item.marvelores.titane_shovel": "Pelle en Titane",
+  "item.marvelores.titane_axe": "Hache en Titane",
+  "item.marvelores.titane_hoe": "Houe en Titane",
 
 
- /* "item.marvelores.titane_helmet": "Titane Helmet",
-  "item.marvelores.titane_chestplate": "Titane Chestplate",
-  "item.marvelores.titane_leggings": "Titane Leggings",
-  "item.marvelores.titane_boots": "Titane Boots", */
+  "item.marvelores.titane_helmet": "Casque d'IronMan",
+  "item.marvelores.titane_chestplate": "Plastron d'IronMan",
+  "item.marvelores.titane_leggings": "Jambière d'IronMan",
+  "item.marvelores.titane_boots": "Botte d'IronMan",
 
-  "block.marvelores.titane_block": "Block of Titane",
+  "block.marvelores.titane_block": "Bloc de Titane",
 
-  "block.marvelores.titane_ore": "Titane Ore",
-  "block.marvelores.titane_deepslate_ore": "Deepslate Titane Ore",
+  "block.marvelores.titane_ore": "Minerai de Titane",
+  "block.marvelores.titane_deepslate_ore": "Minerai de Titane des Abîmes",
 
   "item.marvelores.uru": "Uru",
-  "item.marvelores.raw_uru": "Raw Uru",
+  "item.marvelores.raw_uru": "Uru Brut",
 
-  "item.marvelores.uru_sword": "Epee Uru",
-  "item.marvelores.uru_pickaxe": "Uru Pickaxe",
-  "item.marvelores.uru_shovel": "Uru Shovel",
+  "item.marvelores.uru_sword": "Epee en Uru",
+  "item.marvelores.uru_pickaxe": "Pioche en Uru",
+  "item.marvelores.uru_shovel": "Pelle en Uru",
   "item.marvelores.uru_axe": "StormBreaker",
-  "item.marvelores.uru_hoe": "Uru Hoe",
+  "item.marvelores.uru_hoe": "Houe en Uru",
   "item.marvelores.uru_hammer": "Mjolnir",
   "item.marvelores.uru_doublesword": "Epee Double Uru ",
   "item.marvelores.uru_spear": "Lance de Gungnir",
@@ -113,8 +113,10 @@
   "item.marvelores.uru_leggings": "Uru Leggings",
   "item.marvelores.uru_boots": "Uru Boots", */
 
-  "block.marvelores.uru_block": "Block of Uru",
+  "block.marvelores.uru_block": "Bloc d'Uru",
 
-  "block.marvelores.uru_ore": "Uru Ore",
-  "block.marvelores.uru_deepslate_ore": "Deepslate Uru Ore"
+  "block.marvelores.uru_ore": "Minerai d'Uru",
+  "block.marvelores.uru_deepslate_ore": "Minerai d'Uru des Abîmes",
+
+  "item.marvelores.gold_plate": "Plaque d'Or"
 }

@@ -307,6 +307,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(ModItems.VIBRANIUM), has(ModItems.VIBRANIUM))
                         .save(output, "marvelores:vibranium_powder_from_crushing");
 
+                CrusherRecipeBuilder.crusherRecipe(RecipeCategory.MISC, Ingredient.of(Items.GOLD_INGOT), ModItems.GOLD_PLATE, 1)
+                        .unlockedBy(getHasName(ModItems.TITANE), has(ModItems.TITANE))
+                        .save(output, "marvelores:gold_plate_from_crushing");
+
 
                 shaped(RecipeCategory.MISC, ModItems.HAWKEYE_BOW)
                         .pattern(" #S")
@@ -462,39 +466,41 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(ModItems.TITANE), has(ModItems.TITANE))
                         .save(output);
 
-                /* shaped(RecipeCategory.MISC, ModItems.TITANE_HELMET)
-                        .pattern("TTT")
-                        .pattern("T T")
+                shaped(RecipeCategory.MISC, ModItems.TITANE_HELMET)
+                        .pattern("TGT")
+                        .pattern("G G")
                         .pattern("   ")
                         .define('T', ModItems.TITANE)
+                        .define('G', ModItems.GOLD_PLATE)
                         .unlockedBy(getHasName(ModItems.TITANE), has(ModItems.TITANE))
                         .save(output);
 
                 shaped(RecipeCategory.MISC, ModItems.TITANE_CHESTPLATE)
                         .pattern("T T")
-                        .pattern("TNT")
-                        .pattern("TTT")
+                        .pattern("TGT")
+                        .pattern("GTG")
                         .define('T', ModItems.TITANE)
-                        .define('N', Items.NETHERITE_INGOT)
+                        .define('G', ModItems.GOLD_PLATE)
                         .unlockedBy(getHasName(ModItems.TITANE), has(ModItems.TITANE))
                         .save(output);
 
                 shaped(RecipeCategory.MISC, ModItems.TITANE_LEGGINGS)
-                        .pattern("TTT")
-                        .pattern("T T")
+                        .pattern("TGT")
+                        .pattern("G G")
                         .pattern("T T")
                         .define('T', ModItems.TITANE)
+                        .define('G', ModItems.GOLD_PLATE)
                         .unlockedBy(getHasName(ModItems.TITANE), has(ModItems.TITANE))
                         .save(output);
 
                 shaped(RecipeCategory.MISC, ModItems.TITANE_BOOTS)
                         .pattern("   ")
-                        .pattern("T T")
+                        .pattern("G G")
                         .pattern("T T")
                         .define('T', ModItems.TITANE)
+                        .define('G', ModItems.GOLD_PLATE)
                         .unlockedBy(getHasName(ModItems.TITANE), has(ModItems.TITANE))
-                        .save(output); */
-
+                        .save(output);
 
                 shaped(RecipeCategory.MISC, ModItems.URU_SWORD)
                         .pattern(" U ")
@@ -550,7 +556,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(ModItems.URU), has(ModItems.URU))
                         .save(output);
 
-               /* createShaped(RecipeCategory.MISC, ModItems.URU_HELMET)
+               /* shaped(RecipeCategory.MISC, ModItems.URU_HELMET)
                         .pattern("UUU")
                         .pattern("U U")
                         .pattern("   ")
