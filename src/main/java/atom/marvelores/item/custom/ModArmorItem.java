@@ -29,13 +29,13 @@ public class ModArmorItem extends Item {
                                             400, 1, false, false),
                                     new MobEffectInstance(MobEffects.SPEED,
                                             400, 1, false, false)))
-                    /*.put(ModArmorMaterials.TITANE_ARMOR_MATERIAL,
-                            List.of(new StatusEffectInstance(StatusEffects.HASTE,
+                    .put(ModArmorMaterials.TITANE_ARMOR_MATERIAL,
+                            List.of(new MobEffectInstance(MobEffects.NIGHT_VISION,
                                             400, 1, false, false),
-                                    new StatusEffectInstance(StatusEffects.SPEED,
+                                    new MobEffectInstance(MobEffects.STRENGTH,
                                             400, 1, false, false)))
-                    .put(ModArmorMaterials.URU_ARMOR_MATERIAL,
-                            List.of(new StatusEffectInstance(StatusEffects.HASTE,
+                    /*.put(ModArmorMaterials.URU_ARMOR_MATERIAL,
+                            List.of(new MobEffectInstance(MobEffects.HASTE,
                                             400, 1, false, false),
                                     new MobEffectInstance(MobEffects.SPEED,
                                             400, 1, false, false)))*/.build();

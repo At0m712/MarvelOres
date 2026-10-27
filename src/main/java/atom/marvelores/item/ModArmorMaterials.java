@@ -16,6 +16,7 @@ public class ModArmorMaterials {
 
     public static final ResourceKey<EquipmentAsset> VIBRANIUM_KEY = ResourceKey.create(REGISTRY_KEY, Identifier.fromNamespaceAndPath(MarvelOres.MOD_ID, "vibranium"));
     public static final ResourceKey<EquipmentAsset> ADAMANTIUM_KEY = ResourceKey.create(REGISTRY_KEY, Identifier.fromNamespaceAndPath(MarvelOres.MOD_ID, "adamantium"));
+    public static final ResourceKey<EquipmentAsset> TITANE_KEY = ResourceKey.create(REGISTRY_KEY, Identifier.fromNamespaceAndPath(MarvelOres.MOD_ID, "titane"));
 
     public static final ArmorMaterial VIBRANIUM_ARMOR_MATERIAL = new ArmorMaterial(750,
             ArmorMaterials.makeDefense(4, 7, 9, 3, 12),
@@ -24,17 +25,11 @@ public class ModArmorMaterials {
             ArmorMaterials.makeDefense(4, 7, 9, 3, 12),
             23, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.4F, ModTags.Items.ADAMANTIUM_REPAIR, ADAMANTIUM_KEY);
 
-    /* public static final ArmorMaterial TITANE_ARMOR_MATERIAL = new ArmorMaterial(300, Util.make(new EnumMap<>(EquipmentType.class), map -> {
-        map.put(EquipmentType.BOOTS, 4);
-        map.put(EquipmentType.LEGGINGS, 7);
-        map.put(EquipmentType.CHESTPLATE, 9);
-        map.put(EquipmentType.HELMET, 3);
-        map.put(EquipmentType.BODY, 12);
-    }), 12, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE,1.0F,0.0F, ModTags.Items.TITANE_REPAIR, TITANE_KEY);
+     public static final ArmorMaterial TITANE_ARMOR_MATERIAL = new ArmorMaterial(300,
+             ArmorMaterials.makeDefense(4, 7, 9, 3, 12),
+18, SoundEvents.ARMOR_EQUIP_NETHERITE,1.0F,0.0F, ModTags.Items.TITANE_REPAIR, TITANE_KEY);
 
-
-
-    public static final ArmorMaterial URU_ARMOR_MATERIAL = new ArmorMaterial(700, Util.make(new EnumMap<>(EquipmentType.class), map -> {
+    /* public static final ArmorMaterial URU_ARMOR_MATERIAL = new ArmorMaterial(700, Util.make(new EnumMap<>(EquipmentType.class), map -> {
         map.put(EquipmentType.BOOTS, 4);
         map.put(EquipmentType.LEGGINGS, 7);
         map.put(EquipmentType.CHESTPLATE, 9);

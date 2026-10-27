@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": "marvelores:gold_plate",
+    "T": "marvelores:titane"
+  },
+  "pattern": [
+    "TGT",
+    "G G",
+    "   "
+  ],
+  "result": {
+    "id": "marvelores:titane_helmet"
+  }
+}
