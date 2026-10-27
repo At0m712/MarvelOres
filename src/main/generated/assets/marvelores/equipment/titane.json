@@ -1,0 +1,19 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "marvelores:titane"
+      }
+    ],
+    "humanoid_baby": [
+      {
+        "texture": "marvelores:titane"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "marvelores:titane"
+      }
+    ]
+  }
+}
