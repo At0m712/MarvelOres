@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "marvelores:iron_man"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "marvelores:iron_man"
+      }
+    ]
+  }
+}
