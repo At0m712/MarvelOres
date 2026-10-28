@@ -18,6 +18,7 @@ public class ModArmorMaterials {
     public static final RegistryKey<EquipmentAsset> VIBRANIUM_KEY = RegistryKey.of(REGISTRY_KEY, Identifier.of(MarvelOres.MOD_ID, "vibranium"));
     public static final RegistryKey<EquipmentAsset> ADAMANTIUM_KEY = RegistryKey.of(REGISTRY_KEY, Identifier.of(MarvelOres.MOD_ID, "adamantium"));
     public static final RegistryKey<EquipmentAsset> TITANE_KEY = RegistryKey.of(REGISTRY_KEY, Identifier.of(MarvelOres.MOD_ID, "titane"));
+    public static final RegistryKey<EquipmentAsset> IRON_MAN_KEY = RegistryKey.of(REGISTRY_KEY, Identifier.of(MarvelOres.MOD_ID, "iron_man"));
     public static final RegistryKey<EquipmentAsset> URU_KEY = RegistryKey.of(REGISTRY_KEY, Identifier.of(MarvelOres.MOD_ID, "uru"));
 
     public static final ArmorMaterial VIBRANIUM_ARMOR_MATERIAL = new ArmorMaterial(500, Util.make(new EnumMap<>(EquipmentType.class), map -> {

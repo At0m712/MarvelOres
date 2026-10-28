@@ -1,20 +1,18 @@
 package atom.marvelores;
 
 import atom.marvelores.block.ModBlocks;
-import atom.marvelores.entity.client.StormBreakerProjectileModel;
-import atom.marvelores.entity.client.StormBreakerProjectileRenderer;
+import atom.marvelores.entity.ModEntities;
+import atom.marvelores.entity.client.*;
+import atom.marvelores.item.ModItems;
 import atom.marvelores.screen.ModScreenHandlers;
 import atom.marvelores.screen.custom.CrusherScreen;
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.client.rendering.v1.ArmorRenderer;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockRenderLayerMap;
-import atom.marvelores.entity.ModEntities;
-import atom.marvelores.entity.client.MjolnirProjectileModel;
-import atom.marvelores.entity.client.MjolnirProjectileRenderer;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.BlockRenderLayer;
-import net.minecraft.client.render.RenderLayer;
 
 public class MarvelOresClient implements ClientModInitializer {
     @Override
@@ -31,5 +29,15 @@ public class MarvelOresClient implements ClientModInitializer {
 
         EntityRendererRegistry.register(ModEntities.STORMBREAKER, StormBreakerProjectileRenderer::new);
         EntityModelLayerRegistry.registerModelLayer(StormBreakerProjectileModel.STORMBREAKER, StormBreakerProjectileModel::getTexturedModelData);
+
+        EntityModelLayerRegistry.registerModelLayer(IronManArmorModel.IRON_MAN_ARMOR, IronManArmorModel::getTexturedModelData);
+
+        ArmorRenderer.register(
+                context -> new IronManArmorRenderer(new IronManArmorModel(context.getPart(IronManArmorModel.IRON_MAN_ARMOR))),
+                ModItems.TITANE_HELMET,
+                ModItems.TITANE_CHESTPLATE,
+                ModItems.TITANE_LEGGINGS,
+                ModItems.TITANE_BOOTS
+        );
     }
 }

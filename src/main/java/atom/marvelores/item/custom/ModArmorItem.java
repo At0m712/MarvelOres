@@ -76,12 +76,16 @@ public class ModArmorItem extends Item {
     }
 
     private void addStatusEffectForMaterial(PlayerEntity player, ArmorMaterial mapArmorMaterial, List<StatusEffectInstance> mapStatusEffect) {
-        boolean hasPlayerEffect = mapStatusEffect.stream().allMatch(statusEffectInstance -> player.hasStatusEffect(statusEffectInstance.getEffectType()));
-
-        if(!hasPlayerEffect) {
-            for (StatusEffectInstance instance : mapStatusEffect) {
-                player.addStatusEffect(new StatusEffectInstance(instance.getEffectType(),
-                        instance.getDuration(), instance.getAmplifier(), instance.isAmbient(), instance.shouldShowParticles()));
+        for (StatusEffectInstance instance : mapStatusEffect) {
+            StatusEffectInstance current = player.getStatusEffect(instance.getEffectType());
+            if (current == null || current.getDuration() <= 220) {
+                player.addStatusEffect(new StatusEffectInstance(
+                        instance.getEffectType(),
+                        instance.getDuration(),
+                        instance.getAmplifier(),
+                        instance.isAmbient(),
+                        instance.shouldShowParticles()
+                ));
             }
         }
     }

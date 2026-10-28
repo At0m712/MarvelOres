@@ -132,6 +132,13 @@ public class ModItems {
     public static final Item TITANE_BOOTS = registerItem("titane_boots",
             setting -> new Item(setting.armor(ModArmorMaterials.TITANE_ARMOR_MATERIAL, EquipmentType.BOOTS)));
 
+
+    public static final Item IRON_MAN_HELMET = TITANE_HELMET;
+    public static final Item IRON_MAN_CHESTPLATE = TITANE_CHESTPLATE;
+    public static final Item IRON_MAN_LEGGINGS = TITANE_LEGGINGS;
+    public static final Item IRON_MAN_BOOTS = TITANE_BOOTS;
+
+
     /* public static final Item URU_HELMET = registerItem("uru_helmet",
             setting -> new ModArmorItem(setting.armor(ModArmorMaterials.URU_ARMOR_MATERIAL, EquipmentType.HELMET)));
     public static final Item URU_CHESTPLATE = registerItem("uru_chestplate",
