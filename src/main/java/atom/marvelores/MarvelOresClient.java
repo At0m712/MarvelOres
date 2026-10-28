@@ -22,5 +22,16 @@ public class MarvelOresClient implements ClientModInitializer {
 
         ModelLayerRegistry.registerModelLayer(MjolnirProjectileModel.MJOLNIR, MjolnirProjectileModel::getTexturedModelData);
         ModelLayerRegistry.registerModelLayer(StormBreakerProjectileModel.STORMBREAKER, StormBreakerProjectileModel::getTexturedModelData);
+
+        EntityModelLayerRegistry.registerModelLayer(IronManArmorModel.IRON_MAN_ARMOR, IronManArmorModel::getTexturedModelData);
+
+        ArmorRenderer.register(
+                context -> new IronManArmorRenderer(new IronManArmorModel(context.getPart(IronManArmorModel.IRON_MAN_ARMOR))),
+                ModItems.TITANE_HELMET,
+                ModItems.TITANE_CHESTPLATE,
+                ModItems.TITANE_LEGGINGS,
+                ModItems.TITANE_BOOTS
+        );
     }
+
 }
