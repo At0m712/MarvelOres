@@ -1,15 +1,15 @@
 package atom.marvelores.entity.client;
 
+import com.mojang.blaze3d.vertex.PoseStack;
 import net.fabricmc.fabric.api.client.rendering.v1.ArmorRenderer;
-import net.minecraft.client.render.OverlayTexture;
-import net.minecraft.client.render.RenderLayers;
-import net.minecraft.client.render.command.OrderedRenderCommandQueue;
-import net.minecraft.client.render.entity.model.BipedEntityModel;
-import net.minecraft.client.render.entity.state.BipedEntityRenderState;
-import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.item.ItemStack;
+import net.minecraft.client.model.HumanoidModel;
+import net.minecraft.client.renderer.SubmitNodeCollector;
+import net.minecraft.client.renderer.entity.state.HumanoidRenderState;
+import net.minecraft.client.renderer.rendertype.RenderTypes;
+import net.minecraft.client.renderer.texture.OverlayTexture;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.ItemStack;
 
 public class IronManArmorRenderer implements ArmorRenderer {
     private final IronManArmorModel model;
@@ -20,42 +20,42 @@ public class IronManArmorRenderer implements ArmorRenderer {
 
     @Override
     public void render(
-            MatrixStack matrices,
-            OrderedRenderCommandQueue orderedRenderCommandQueue,
+            PoseStack poseStack,
+            SubmitNodeCollector submitNodeCollector,
             ItemStack stack,
-            BipedEntityRenderState bipedEntityRenderState,
+            HumanoidRenderState humanoidRenderState,
             EquipmentSlot slot,
             int light,
-            BipedEntityModel<BipedEntityRenderState> contextModel
+            HumanoidModel<HumanoidRenderState> contextModel
     ) {
         this.model.setupVisibility(slot);
         ArmorRenderer.submitTransformCopyingModel(
                 contextModel,
-                bipedEntityRenderState,
+                humanoidRenderState,
                 this.model,
-                bipedEntityRenderState,
+                humanoidRenderState,
                 false,
-                orderedRenderCommandQueue,
-                matrices,
-                RenderLayers.armorCutoutNoCull(IronManArmorModel.TEXTURE),
+                submitNodeCollector,
+                poseStack,
+                RenderTypes.armorCutoutNoCull(IronManArmorModel.TEXTURE),
                 light,
-                OverlayTexture.DEFAULT_UV,
+                OverlayTexture.NO_OVERLAY,
                 0,
                 null
         );
 
-        if (stack.hasGlint()) {
+        if (stack.hasFoil()) {
             ArmorRenderer.submitTransformCopyingModel(
                     contextModel,
-                    bipedEntityRenderState,
+                    humanoidRenderState,
                     this.model,
-                    bipedEntityRenderState,
+                    humanoidRenderState,
                     false,
-                    orderedRenderCommandQueue,
-                    matrices,
-                    RenderLayers.armorEntityGlint(),
+                    submitNodeCollector,
+                    poseStack,
+                    RenderTypes.armorEntityGlint(),
                     light,
-                    OverlayTexture.DEFAULT_UV,
+                    OverlayTexture.NO_OVERLAY,
                     0,
                     null
             );

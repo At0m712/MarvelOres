@@ -1,20 +1,25 @@
 package atom.marvelores.entity.client;
 
 import atom.marvelores.MarvelOres;
-import net.minecraft.client.model.*;
-import net.minecraft.client.render.entity.model.BipedEntityModel;
-import net.minecraft.client.render.entity.model.EntityModelLayer;
-import net.minecraft.client.render.entity.model.EntityModelPartNames;
-import net.minecraft.client.render.entity.state.BipedEntityRenderState;
-import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.util.Identifier;
+import net.minecraft.client.model.HumanoidModel;
+import net.minecraft.client.model.geom.ModelLayerLocation;
+import net.minecraft.client.model.geom.ModelPart;
+import net.minecraft.client.model.geom.PartPose;
+import net.minecraft.client.model.geom.builders.CubeDeformation;
+import net.minecraft.client.model.geom.builders.CubeListBuilder;
+import net.minecraft.client.model.geom.builders.LayerDefinition;
+import net.minecraft.client.model.geom.builders.MeshDefinition;
+import net.minecraft.client.model.geom.builders.PartDefinition;
+import net.minecraft.client.renderer.entity.state.HumanoidRenderState;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.entity.EquipmentSlot;
 
-public class IronManArmorModel extends BipedEntityModel<BipedEntityRenderState> {
-    public static final EntityModelLayer IRON_MAN_ARMOR = new EntityModelLayer(
-            Identifier.of(MarvelOres.MOD_ID, "iron_man_armor"), "main"
+public class IronManArmorModel extends HumanoidModel<HumanoidRenderState> {
+    public static final ModelLayerLocation IRON_MAN_ARMOR = new ModelLayerLocation(
+            Identifier.fromNamespaceAndPath(MarvelOres.MOD_ID, "iron_man_armor"), "main"
     );
 
-    public static final Identifier TEXTURE = Identifier.of(
+    public static final Identifier TEXTURE = Identifier.fromNamespaceAndPath(
             MarvelOres.MOD_ID, "textures/models/armor/iron_man_armor.png"
     );
 
@@ -45,157 +50,164 @@ public class IronManArmorModel extends BipedEntityModel<BipedEntityRenderState> 
         this.leftBoot = this.leftLeg.getChild("left_boot");
     }
 
-    public static TexturedModelData getTexturedModelData() {
-        ModelData modelData = new ModelData();
-        ModelPartData root = modelData.getRoot();
+    public static LayerDefinition getTexturedModelData() {
+        MeshDefinition meshDefinition = new MeshDefinition();
+        PartDefinition root = meshDefinition.getRoot();
 
         // 1. Casque
-        ModelPartData head = root.addChild(
-                EntityModelPartNames.HEAD,
-                ModelPartBuilder.create()
-                        .uv(0, 0)
-                        .cuboid(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, new Dilation(0.4F)),
-                ModelTransform.origin(0.0F, 0.0F, 0.0F)
+        PartDefinition head = root.addOrReplaceChild(
+                "head",
+                CubeListBuilder.create()
+                        .texOffs(0, 0)
+                        .addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, new CubeDeformation(0.4F)),
+                PartPose.offset(0.0F, 0.0F, 0.0F)
         );
 
-        head.addChild(
-                EntityModelPartNames.HAT,
-                ModelPartBuilder.create(),
-                ModelTransform.NONE
+        head.addOrReplaceChild(
+                "hat",
+                CubeListBuilder.create(),
+                PartPose.ZERO
         );
 
-        head.addChild(
+        head.addOrReplaceChild(
                 "helmet_crest",
-                ModelPartBuilder.create()
-                        .uv(32, 0)
-                        .cuboid(-2.0F, -8.5F, -4.0F, 4.0F, 1.0F, 7.0F, new Dilation(0.2F)),
-                ModelTransform.NONE
+                CubeListBuilder.create()
+                        .texOffs(32, 0)
+                        .addBox(-2.0F, -8.5F, -4.0F, 4.0F, 1.0F, 7.0F, new CubeDeformation(0.2F)),
+                PartPose.ZERO
         );
 
-        head.addChild(
+        head.addOrReplaceChild(
                 "helmet_ears",
-                ModelPartBuilder.create()
-                        .uv(32, 8)
-                        .cuboid(-4.0F, -6.0F, -2.0F, 8.0F, 3.0F, 3.0F, new Dilation(0.65F)),
-                ModelTransform.NONE
+                CubeListBuilder.create()
+                        .texOffs(32, 8)
+                        .addBox(-4.0F, -6.0F, -2.0F, 8.0F, 3.0F, 3.0F, new CubeDeformation(0.65F)),
+                PartPose.ZERO
         );
 
         // 2. Torse
-        ModelPartData body = root.addChild(
-                EntityModelPartNames.BODY,
-                ModelPartBuilder.create()
-                        .uv(16, 16)
-                        .cuboid(-4.0F, 0.0F, -2.0F, 8.0F, 12.0F, 4.0F, new Dilation(0.35F)),
-                ModelTransform.origin(0.0F, 0.0F, 0.0F)
+        PartDefinition body = root.addOrReplaceChild(
+                "body",
+                CubeListBuilder.create()
+                        .texOffs(16, 16)
+                        .addBox(-4.0F, 0.0F, -2.0F, 8.0F, 12.0F, 4.0F, new CubeDeformation(0.35F)),
+                PartPose.offset(0.0F, 0.0F, 0.0F)
         );
 
-        body.addChild(
+        body.addOrReplaceChild(
                 "chest_plate",
-                ModelPartBuilder.create()
-                        .uv(16, 32)
-                        .cuboid(-4.0F, 0.0F, -2.0F, 8.0F, 6.0F, 4.0F, new Dilation(0.55F)),
-                ModelTransform.NONE
+                CubeListBuilder.create()
+                        .texOffs(16, 32)
+                        .addBox(-4.0F, 0.0F, -2.0F, 8.0F, 6.0F, 4.0F, new CubeDeformation(0.55F)),
+                PartPose.ZERO
         );
 
         // 3. Bras Droit & Gauche
-        ModelPartData rightArm = root.addChild(
-                EntityModelPartNames.RIGHT_ARM,
-                ModelPartBuilder.create()
-                        .uv(40, 16)
-                        .cuboid(-3.0F, -2.0F, -2.0F, 4.0F, 12.0F, 4.0F, new Dilation(0.3F)),
-                ModelTransform.origin(-5.0F, 2.0F, 0.0F)
+        PartDefinition rightArm = root.addOrReplaceChild(
+                "right_arm",
+                CubeListBuilder.create()
+                        .texOffs(40, 16)
+                        .addBox(-3.0F, -2.0F, -2.0F, 4.0F, 12.0F, 4.0F, new CubeDeformation(0.3F)),
+                PartPose.offset(-5.0F, 2.0F, 0.0F)
         );
 
-        rightArm.addChild(
+        rightArm.addOrReplaceChild(
                 "right_shoulder",
-                ModelPartBuilder.create()
-                        .uv(40, 32)
-                        .cuboid(-3.0F, -2.0F, -2.0F, 4.0F, 4.0F, 4.0F, new Dilation(0.55F)),
-                ModelTransform.NONE
+                CubeListBuilder.create()
+                        .texOffs(40, 32)
+                        .addBox(-3.0F, -2.0F, -2.0F, 4.0F, 4.0F, 4.0F, new CubeDeformation(0.55F)),
+                PartPose.ZERO
         );
 
-        rightArm.addChild(
+        rightArm.addOrReplaceChild(
                 "right_gauntlet",
-                ModelPartBuilder.create()
-                        .uv(40, 40)
-                        .cuboid(-3.0F, 4.0F, -2.0F, 4.0F, 6.0F, 4.0F, new Dilation(0.48F)),
-                ModelTransform.NONE
+                CubeListBuilder.create()
+                        .texOffs(40, 40)
+                        .addBox(-3.0F, 4.0F, -2.0F, 4.0F, 6.0F, 4.0F, new CubeDeformation(0.48F)),
+                PartPose.ZERO
         );
 
-        ModelPartData leftArm = root.addChild(
-                EntityModelPartNames.LEFT_ARM,
-                ModelPartBuilder.create()
-                        .uv(40, 16).mirrored()
-                        .cuboid(-1.0F, -2.0F, -2.0F, 4.0F, 12.0F, 4.0F, new Dilation(0.3F)),
-                ModelTransform.origin(5.0F, 2.0F, 0.0F)
+        PartDefinition leftArm = root.addOrReplaceChild(
+                "left_arm",
+                CubeListBuilder.create()
+                        .texOffs(40, 16).mirror()
+                        .addBox(-1.0F, -2.0F, -2.0F, 4.0F, 12.0F, 4.0F, new CubeDeformation(0.3F)),
+                PartPose.offset(5.0F, 2.0F, 0.0F)
         );
 
-        leftArm.addChild(
+        leftArm.addOrReplaceChild(
                 "left_shoulder",
-                ModelPartBuilder.create()
-                        .uv(40, 32).mirrored()
-                        .cuboid(-1.0F, -2.0F, -2.0F, 4.0F, 4.0F, 4.0F, new Dilation(0.55F)),
-                ModelTransform.NONE
+                CubeListBuilder.create()
+                        .texOffs(40, 32).mirror()
+                        .addBox(-1.0F, -2.0F, -2.0F, 4.0F, 4.0F, 4.0F, new CubeDeformation(0.55F)),
+                PartPose.ZERO
         );
 
-        leftArm.addChild(
+        leftArm.addOrReplaceChild(
                 "left_gauntlet",
-                ModelPartBuilder.create()
-                        .uv(40, 40).mirrored()
-                        .cuboid(-1.0F, 4.0F, -2.0F, 4.0F, 6.0F, 4.0F, new Dilation(0.48F)),
-                ModelTransform.NONE
+                CubeListBuilder.create()
+                        .texOffs(40, 40).mirror()
+                        .addBox(-1.0F, 4.0F, -2.0F, 4.0F, 6.0F, 4.0F, new CubeDeformation(0.48F)),
+                PartPose.ZERO
         );
 
         // 4. Jambes
-        ModelPartData rightLeg = root.addChild(
-                EntityModelPartNames.RIGHT_LEG,
-                ModelPartBuilder.create(),
-                ModelTransform.origin(-1.9F, 12.0F, 0.0F)
+        PartDefinition rightLeg = root.addOrReplaceChild(
+                "right_leg",
+                CubeListBuilder.create(),
+                PartPose.offset(-1.9F, 12.0F, 0.0F)
         );
 
-        rightLeg.addChild(
+        rightLeg.addOrReplaceChild(
                 "right_thigh",
-                ModelPartBuilder.create()
-                        .uv(0, 32)
-                        .cuboid(-2.2F, 0.0F, -2.0F, 4.0F, 5.0F, 4.0F, new Dilation(0.42F)),
-                ModelTransform.NONE
+                CubeListBuilder.create()
+                        .texOffs(0, 32)
+                        .addBox(-2.2F, 0.0F, -2.0F, 4.0F, 5.0F, 4.0F, new CubeDeformation(0.42F)),
+                PartPose.ZERO
         );
 
-        rightLeg.addChild(
+        rightLeg.addOrReplaceChild(
                 "right_boot",
-                ModelPartBuilder.create()
-                        .uv(0, 42)
-                        .cuboid(-2.0F, 6.0F, -2.0F, 4.0F, 6.0F, 4.0F, new Dilation(0.48F)),
-                ModelTransform.NONE
+                CubeListBuilder.create()
+                        .texOffs(0, 42)
+                        .addBox(-2.0F, 6.0F, -2.0F, 4.0F, 6.0F, 4.0F, new CubeDeformation(0.48F)),
+                PartPose.ZERO
         );
 
-        ModelPartData leftLeg = root.addChild(
-                EntityModelPartNames.LEFT_LEG,
-                ModelPartBuilder.create(),
-                ModelTransform.origin(1.9F, 12.0F, 0.0F)
+        PartDefinition leftLeg = root.addOrReplaceChild(
+                "left_leg",
+                CubeListBuilder.create(),
+                PartPose.offset(1.9F, 12.0F, 0.0F)
         );
 
-        leftLeg.addChild(
+        leftLeg.addOrReplaceChild(
                 "left_thigh",
-                ModelPartBuilder.create()
-                        .uv(0, 32).mirrored()
-                        .cuboid(-1.8F, 0.0F, -2.0F, 4.0F, 5.0F, 4.0F, new Dilation(0.42F)),
-                ModelTransform.NONE
+                CubeListBuilder.create()
+                        .texOffs(0, 32).mirror()
+                        .addBox(-1.8F, 0.0F, -2.0F, 4.0F, 5.0F, 4.0F, new CubeDeformation(0.42F)),
+                PartPose.ZERO
         );
 
-        leftLeg.addChild(
+        leftLeg.addOrReplaceChild(
                 "left_boot",
-                ModelPartBuilder.create()
-                        .uv(0, 42).mirrored()
-                        .cuboid(-2.0F, 6.0F, -2.0F, 4.0F, 6.0F, 4.0F, new Dilation(0.48F)),
-                ModelTransform.NONE
+                CubeListBuilder.create()
+                        .texOffs(0, 42).mirror()
+                        .addBox(-2.0F, 6.0F, -2.0F, 4.0F, 6.0F, 4.0F, new CubeDeformation(0.48F)),
+                PartPose.ZERO
         );
 
-        return TexturedModelData.of(modelData, 64, 64);
+        return LayerDefinition.create(meshDefinition, 64, 64);
     }
 
     public void setupVisibility(EquipmentSlot slot) {
-        this.setVisible(false);
+        this.head.visible = false;
+        this.hat.visible = false;
+        this.body.visible = false;
+        this.rightArm.visible = false;
+        this.leftArm.visible = false;
+        this.rightLeg.visible = false;
+        this.leftLeg.visible = false;
+
         this.chestPlate.visible = false;
         this.rightShoulder.visible = false;
         this.rightGauntlet.visible = false;
