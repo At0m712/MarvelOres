@@ -5,7 +5,6 @@ import net.fabricmc.fabric.api.client.rendering.v1.ArmorRenderer;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.entity.state.HumanoidRenderState;
-import net.minecraft.client.renderer.rendertype.RenderTypes;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -37,11 +36,10 @@ public class IronManArmorRenderer implements ArmorRenderer {
                 false,
                 submitNodeCollector,
                 poseStack,
-                RenderTypes.armorCutoutNoCull(IronManArmorModel.TEXTURE),
+                net.minecraft.client.renderer.rendertype.RenderTypes.armorCutoutNoCull(IronManArmorModel.TEXTURE),
                 light,
                 OverlayTexture.NO_OVERLAY,
-                0,
-                null
+                0
         );
 
         if (stack.hasFoil()) {
@@ -53,11 +51,10 @@ public class IronManArmorRenderer implements ArmorRenderer {
                     false,
                     submitNodeCollector,
                     poseStack,
-                    RenderTypes.armorEntityGlint(),
+                    net.minecraft.client.renderer.rendertype.RenderTypes.armorCutoutNoCullGlint(IronManArmorModel.TEXTURE),
                     light,
                     OverlayTexture.NO_OVERLAY,
-                    0,
-                    null
+                    0
             );
         }
     }
