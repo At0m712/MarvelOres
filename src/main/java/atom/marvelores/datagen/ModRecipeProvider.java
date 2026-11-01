@@ -309,7 +309,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 CrusherRecipeBuilder.crusherRecipe(RecipeCategory.MISC, Ingredient.of(Items.GOLD_INGOT), ModItems.GOLD_PLATE, 1)
                         .unlockedBy(getHasName(ModItems.TITANE), has(ModItems.TITANE))
-                        .save(output, "marvelores:gold_plate    _from_crushing");
+                        .save(output, "marvelores:gold_plate_from_crushing");
 
 
                 shaped(RecipeCategory.MISC, ModItems.HAWKEYE_BOW)

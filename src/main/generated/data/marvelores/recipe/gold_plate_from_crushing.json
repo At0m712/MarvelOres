@@ -1,0 +1,7 @@
+{
+  "type": "marvelores:crushing",
+  "ingredient": "minecraft:gold_ingot",
+  "result": {
+    "id": "marvelores:gold_plate"
+  }
+}
