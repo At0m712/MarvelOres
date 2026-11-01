@@ -20,7 +20,7 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> VIBRANIUM_ORE_PLACED_KEY = registerKey("vibranium_ore_placed");
     public static final RegistryKey<PlacedFeature> ADAMANTIUM_ORE_PLACED_KEY = registerKey("adamantium_ore_placed");
     public static final RegistryKey<PlacedFeature> TITANE_ORE_PLACED_KEY = registerKey("titane_ore_placed");
-    public static final RegistryKey<PlacedFeature> URU_ORE_PLACED_KEY = registerKey("uru_ore_placed");
+    public static final RegistryKey<PlacedFeature> END_URU_ORE_PLACED_KEY = registerKey("end_uru_ore_placed");
 
     public static final RegistryKey<PlacedFeature> MAPLE_PLACED_KEY = registerKey("maple_placed");
 
@@ -39,9 +39,9 @@ public class ModPlacedFeatures {
                 ModOrePlacement.modifiersWithCount(8,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(40))));
 
-        register(context, URU_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.URU_ORE_KEY),
+        register(context, END_URU_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.END_URU_ORE_KEY),
                 ModOrePlacement.modifiersWithCount(2,
-                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-30), YOffset.fixed(20))));
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(80))));
 
         register(context, MAPLE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.MAPLE_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(

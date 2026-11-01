@@ -1,5 +1,5 @@
 {
-  "feature": "marvelores:uru_ore",
+  "feature": "marvelores:end_uru_ore",
   "placement": [
     {
       "type": "minecraft:count",
@@ -11,12 +11,12 @@
     {
       "type": "minecraft:height_range",
       "height": {
-        "type": "minecraft:trapezoid",
+        "type": "minecraft:uniform",
         "max_inclusive": {
-          "absolute": 20
+          "absolute": 80
         },
         "min_inclusive": {
-          "absolute": -30
+          "absolute": -80
         }
       }
     },

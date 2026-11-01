@@ -24,13 +24,14 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> VIBRANIUM_ORE_KEY = registerKey("vibranium_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> ADAMANTIUM_ORE_KEY = registerKey("adamantium_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> TITANE_ORE_KEY = registerKey("titane_ore");
-    public static final RegistryKey<ConfiguredFeature<?, ?>> URU_ORE_KEY = registerKey("uru_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> END_URU_ORE_KEY = registerKey("end_uru_ore");
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> MAPLE_KEY = registerKey("maple");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest deepslateReplaceables = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
+        RuleTest endReplaceables = new BlockMatchRuleTest(Blocks.END_STONE);
 
 
         List<OreFeatureConfig.Target> overworldVibraniumOres =
@@ -42,14 +43,14 @@ public class ModConfiguredFeatures {
         List<OreFeatureConfig.Target> overworldTitaneOres =
                 List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.TITANE_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.TITANE_DEEPSLATE_ORE.getDefaultState()));
-        List<OreFeatureConfig.Target> overworldUruOres =
-                List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.URU_ORE.getDefaultState()));
+        List<OreFeatureConfig.Target> endUruOres =
+                List.of(OreFeatureConfig.createTarget(endReplaceables, ModBlocks.URU_ORE.getDefaultState()));
 
 
         register(context, VIBRANIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldVibraniumOres, 5));
         register(context, ADAMANTIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldAdamantiumOres, 5));
         register(context, TITANE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldTitaneOres, 5));
-        register(context, URU_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldUruOres, 5));
+        register(context, END_URU_ORE_KEY, Feature.ORE, new OreFeatureConfig(endUruOres, 5));
 
         register(context, MAPLE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(ModBlocks.MAPLE_LOG),
