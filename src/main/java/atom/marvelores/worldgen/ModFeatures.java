@@ -18,6 +18,7 @@ import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSi
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
+import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 
@@ -27,12 +28,16 @@ import java.util.List;
 public class ModFeatures {
     public static final ResourceKey<Feature> OVERWORLD_VIBRANIUM_ORE_KEY = registerKey("overworld_vibranium_ore");
     public static final ResourceKey<Feature> OVERWORLD_ADAMANTIUM_ORE_KEY = registerKey("overworld_adamantium_ore");
+    public static final ResourceKey<Feature> OVERWORLD_TITANE_ORE_KEY = registerKey("overworld_titane_ore");
+    public static final ResourceKey<Feature> END_URU_ORE_KEY = registerKey("end_uru_ore");
+
     public static final ResourceKey<Feature> MAPLE_KEY = registerKey("maple");
 
 
     public static void bootstrap(BootstrapContext<Feature> context) {
         RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
+        RuleTest endReplaceables = new BlockMatchTest(Blocks.END_STONE);
 
 
         context.register(OVERWORLD_VIBRANIUM_ORE_KEY, new OreFeature(
@@ -43,6 +48,15 @@ public class ModFeatures {
         context.register(OVERWORLD_ADAMANTIUM_ORE_KEY,new OreFeature(
                 List.of(BlockReplacement.replace(stoneReplaceables, ModBlocks.ADAMANTIUM_ORE.defaultBlockState()),
                         BlockReplacement.replace(deepslateReplaceables, ModBlocks.ADAMANTIUM_DEEPSLATE_ORE.defaultBlockState())),
+                5));
+
+        context.register(OVERWORLD_TITANE_ORE_KEY,new OreFeature(
+                List.of(BlockReplacement.replace(stoneReplaceables, ModBlocks.TITANE_ORE.defaultBlockState()),
+                        BlockReplacement.replace(deepslateReplaceables, ModBlocks.TITANE_DEEPSLATE_ORE.defaultBlockState())),
+                5));
+
+        context.register(END_URU_ORE_KEY,new OreFeature(
+                List.of(BlockReplacement.replace(endReplaceables, ModBlocks.URU_ORE.defaultBlockState())),
                 5));
 
         context.register(MAPLE_KEY, new TreeFeature.Builder(

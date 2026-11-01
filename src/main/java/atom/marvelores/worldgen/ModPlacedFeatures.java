@@ -22,6 +22,9 @@ import java.util.List;
 public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> OVERWORLD_VIBRANIUM_ORE_PLACED_KEY = registerKey("overworld_vibranium_ore_placed");
     public static final ResourceKey<PlacedFeature> OVERWORLD_ADAMANTIUM_ORE_PLACED_KEY = registerKey("overworld_adamantium_ore_placed");
+    public static final ResourceKey<PlacedFeature> OVERWORLD_TITANE_ORE_PLACED_KEY = registerKey("overworld_titane_ore_placed");
+    public static final ResourceKey<PlacedFeature> END_URU_ORE_PLACED_KEY = registerKey("end_uru_ore_placed");
+
     public static final ResourceKey<PlacedFeature> MAPLE_PLACED_KEY = registerKey("maple_placed");
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
@@ -34,6 +37,14 @@ public class ModPlacedFeatures {
         register(context, OVERWORLD_ADAMANTIUM_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModFeatures.OVERWORLD_ADAMANTIUM_ORE_KEY),
                 OrePlacements.commonOrePlacement(2,
                         HeightRangePlacement.triangle(VerticalAnchor.absolute(-40), VerticalAnchor.absolute(20))));
+
+        register(context,OVERWORLD_TITANE_ORE_PLACED_KEY , configuredFeatures.getOrThrow(ModFeatures.OVERWORLD_TITANE_ORE_KEY),
+                OrePlacements.commonOrePlacement(8,
+                        HeightRangePlacement.triangle(VerticalAnchor.absolute(-80), VerticalAnchor.absolute(40))));
+
+        register(context,END_URU_ORE_PLACED_KEY , configuredFeatures.getOrThrow(ModFeatures.END_URU_ORE_KEY),
+                OrePlacements.commonOrePlacement(2,
+                        HeightRangePlacement.triangle(VerticalAnchor.absolute(-80), VerticalAnchor.absolute(80))));
 
         register(context, MAPLE_PLACED_KEY, configuredFeatures.getOrThrow(ModFeatures.MAPLE_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(0, 0.05f, 1),
