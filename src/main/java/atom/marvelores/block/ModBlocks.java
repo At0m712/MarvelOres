@@ -1,6 +1,8 @@
 package atom.marvelores.block;
 
+import atom.marvelores.block.custom.AdamantiumFurnaceBlock;
 import atom.marvelores.block.custom.CrusherBlock;
+import atom.marvelores.block.custom.VibraniumFurnaceBlock;
 import atom.marvelores.block.custom.ModSaplingBlock;
 import atom.marvelores.world.tree.ModSaplingGenerators;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -75,6 +77,12 @@ public static final Block VIBRANIUM_DEEPSLATE_ORE = registerBlock("vibranium_dee
 
 
     public static final Block CRUSHER = registerBlock("crusher", properties -> new CrusherBlock(properties.strength(3.0f).requiresTool()));
+
+    public static final Block VIBRANIUM_FURNACE = registerBlock("vibranium_furnace",
+            properties -> new VibraniumFurnaceBlock(properties.strength(4.0f).requiresTool().luminance(Blocks.createLightLevelFromLitBlockState(13))));
+
+    public static final Block ADAMANTIUM_FURNACE = registerBlock("adamantium_furnace",
+            properties -> new AdamantiumFurnaceBlock(properties.strength(5.0f).requiresTool().luminance(Blocks.createLightLevelFromLitBlockState(13))));
 
 
     public static final Block MAPLE_LOG = registerBlock("maple_log",

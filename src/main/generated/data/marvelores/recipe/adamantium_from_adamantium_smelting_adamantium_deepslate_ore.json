@@ -1,7 +1,7 @@
 {
-  "type": "minecraft:blasting",
+  "type": "marvelores:adamantium_smelting",
   "category": "misc",
-  "cookingtime": 100,
+  "cookingtime": 75,
   "experience": 0.25,
   "group": "adamantium",
   "ingredient": "marvelores:adamantium_deepslate_ore",

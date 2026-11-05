@@ -1,7 +1,7 @@
 {
-  "type": "minecraft:blasting",
+  "type": "marvelores:adamantium_smelting",
   "category": "misc",
-  "cookingtime": 300,
+  "cookingtime": 150,
   "experience": 0.75,
   "group": "uru",
   "ingredient": "marvelores:uru_ore",

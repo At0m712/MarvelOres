@@ -22,6 +22,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.VIBRANIUM_ORE)
                 .add(ModBlocks.VIBRANIUM_DEEPSLATE_ORE)
                 .add(ModBlocks.CRUSHER)
+                .add(ModBlocks.VIBRANIUM_FURNACE)
+                .add(ModBlocks.ADAMANTIUM_FURNACE)
 
                 .add(ModBlocks.ADAMANTIUM_BLOCK)
                 .add(ModBlocks.ADAMANTIUM_ORE)
@@ -51,6 +53,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.VIBRANIUM_ORE)
                 .add(ModBlocks.VIBRANIUM_DEEPSLATE_ORE)
                 .add(ModBlocks.CRUSHER)
+                .add(ModBlocks.VIBRANIUM_FURNACE)
+                .add(ModBlocks.ADAMANTIUM_FURNACE)
 
                 .add(ModBlocks.ADAMANTIUM_BLOCK)
                 .add(ModBlocks.ADAMANTIUM_ORE)

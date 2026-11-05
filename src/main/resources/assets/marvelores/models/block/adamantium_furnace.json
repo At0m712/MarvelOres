@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "top": "marvelores:block/adamantium_block",
+    "bottom": "marvelores:block/adamantium_block",
+    "side": "marvelores:block/adamantium_furnace_side",
+    "front": "marvelores:block/adamantium_furnace_front"
+  }
+}

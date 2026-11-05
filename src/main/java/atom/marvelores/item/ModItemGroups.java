@@ -106,11 +106,13 @@ public class ModItemGroups {
                         entries.add(ModBlocks.VIBRANIUM_ORE);
                         entries.add(ModBlocks.VIBRANIUM_DEEPSLATE_ORE);
                         entries.add(ModBlocks.CRUSHER);
+                        entries.add(ModBlocks.VIBRANIUM_FURNACE);
 
 
                         entries.add(ModBlocks.ADAMANTIUM_BLOCK);
                         entries.add(ModBlocks.ADAMANTIUM_ORE);
                         entries.add(ModBlocks.ADAMANTIUM_DEEPSLATE_ORE);
+                        entries.add(ModBlocks.ADAMANTIUM_FURNACE);
 
                         entries.add(ModBlocks.MAPLE_LOG);
                         entries.add(ModBlocks.MAPLE_WOOD);

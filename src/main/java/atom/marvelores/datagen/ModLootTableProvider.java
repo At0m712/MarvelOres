@@ -30,6 +30,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.VIBRANIUM_BLOCK);
         addDrop(ModBlocks.RAW_VIBRANIUM_BLOCK);
         addDrop(ModBlocks.CRUSHER);
+        addDrop(ModBlocks.VIBRANIUM_FURNACE);
+        addDrop(ModBlocks.ADAMANTIUM_FURNACE);
 
         addDrop(ModBlocks.ADAMANTIUM_BLOCK);
 

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": "marvelores:vibranium_block",
+    "F": "minecraft:furnace"
+  },
+  "pattern": [
+    "BBB",
+    "BFB",
+    "BBB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "marvelores:vibranium_furnace"
+  }
+}

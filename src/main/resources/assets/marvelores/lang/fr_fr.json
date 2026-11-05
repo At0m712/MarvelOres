@@ -30,6 +30,10 @@
   "block.marvelores.vibranium_deepslate_ore": "Minerai de Vibranium des Abîmes",
 
   "block.marvelores.crusher": "Broyeur",
+  "block.marvelores.vibranium_furnace": "Four en Vibranium",
+  "container.marvelores.vibranium_furnace": "Four en Vibranium",
+  "block.marvelores.adamantium_furnace": "Four en Adamantium",
+  "container.marvelores.adamantium_furnace": "Four en Adamantium",
 
   "itemgroup.marvelores.marvelores_items": "Marvelores Item",
   "itemgroup.marvelores.marvelores_block": "Marvelores Bloc",

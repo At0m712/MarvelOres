@@ -1,32 +1,32 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_raw_uru": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "marvelores:vibranium_furnace"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_vibranium_block": {
       "conditions": {
         "items": [
           {
-            "items": "marvelores:raw_uru"
+            "items": "marvelores:vibranium_block"
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
-    },
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "marvelores:uru_from_smelting_raw_uru"
-      },
-      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
       "has_the_recipe",
-      "has_raw_uru"
+      "has_vibranium_block"
     ]
   ],
   "rewards": {
     "recipes": [
-      "marvelores:uru_from_smelting_raw_uru"
+      "marvelores:vibranium_furnace"
     ]
   }
 }

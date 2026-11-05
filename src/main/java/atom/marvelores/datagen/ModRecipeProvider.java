@@ -6,6 +6,9 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 
 import atom.marvelores.block.ModBlocks;
 import atom.marvelores.item.ModItems;
+import atom.marvelores.recipe.AdamantiumSmeltingRecipe;
+import atom.marvelores.recipe.ModRecipes;
+import atom.marvelores.recipe.VibraniumSmeltingRecipe;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -38,15 +41,18 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerSmelting(VIBRANIUM_SMELTABLES, RecipeCategory.MISC, ModItems.VIBRANIUM, 0.25f, 200, "vibranium");
                 offerBlasting(VIBRANIUM_SMELTABLES, RecipeCategory.MISC, ModItems.VIBRANIUM, 0.25f, 100, "vibranium");
 
-
-                offerSmelting(ADAMANTIUM_SMELTABLES, RecipeCategory.MISC, ModItems.ADAMANTIUM, 0.25f, 200, "adamantium");
-                offerBlasting(ADAMANTIUM_SMELTABLES, RecipeCategory.MISC, ModItems.ADAMANTIUM, 0.25f, 100, "adamantium");
-
                 offerSmelting(TITANE_SMELTABLES, RecipeCategory.MISC, ModItems.TITANE, 0.25f, 200, "titane");
                 offerBlasting(TITANE_SMELTABLES, RecipeCategory.MISC, ModItems.TITANE, 0.25f, 100, "titane");
 
-                offerSmelting(URU_SMELTABLES, RecipeCategory.MISC, ModItems.URU, 0.75f, 400, "uru");
-                offerBlasting(URU_SMELTABLES, RecipeCategory.MISC, ModItems.URU, 0.75f, 300, "uru");
+                offerVibraniumSmelting(ADAMANTIUM_SMELTABLES, RecipeCategory.MISC, ModItems.ADAMANTIUM, 0.25f, 100, "adamantium");
+                offerVibraniumSmelting(VIBRANIUM_SMELTABLES, RecipeCategory.MISC, ModItems.VIBRANIUM, 0.25f, 100, "vibranium");
+                offerVibraniumSmelting(TITANE_SMELTABLES, RecipeCategory.MISC, ModItems.TITANE, 0.25f, 100, "titane");
+
+                offerAdamantiumSmelting(URU_SMELTABLES, RecipeCategory.MISC, ModItems.URU, 0.75f, 150, "uru");
+
+                offerAdamantiumSmelting(ADAMANTIUM_SMELTABLES, RecipeCategory.MISC, ModItems.ADAMANTIUM, 0.25f, 75, "adamantium");
+                offerAdamantiumSmelting(VIBRANIUM_SMELTABLES, RecipeCategory.MISC, ModItems.VIBRANIUM, 0.25f, 75, "vibranium");
+                offerAdamantiumSmelting(TITANE_SMELTABLES, RecipeCategory.MISC, ModItems.TITANE, 0.25f, 75, "titane");
 
                 offerSmelting(MAPLE_SMELTABLES, RecipeCategory.MISC, Items.CHARCOAL, 0.25f, 200, "charcoal");
 
@@ -555,6 +561,62 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .input('U', ModItems.URU)
                         .criterion(hasItem(ModItems.URU), conditionsFromItem(ModItems.URU))
                         .offerTo(exporter); */
+
+                createShaped(RecipeCategory.MISC, ModBlocks.VIBRANIUM_FURNACE)
+                        .pattern("BBB")
+                        .pattern("BFB")
+                        .pattern("BBB")
+                        .input('B', ModBlocks.VIBRANIUM_BLOCK)
+                        .input('F', Blocks.FURNACE)
+                        .criterion(hasItem(ModBlocks.VIBRANIUM_BLOCK), conditionsFromItem(ModBlocks.VIBRANIUM_BLOCK))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModBlocks.ADAMANTIUM_FURNACE)
+                        .pattern("AAA")
+                        .pattern("AVA")
+                        .pattern("AAA")
+                        .input('A', ModBlocks.ADAMANTIUM_BLOCK)
+                        .input('V', ModBlocks.VIBRANIUM_FURNACE)
+                        .criterion(hasItem(ModBlocks.ADAMANTIUM_BLOCK), conditionsFromItem(ModBlocks.ADAMANTIUM_BLOCK))
+                        .offerTo(exporter);
+            }
+
+            public void offerVibraniumSmelting(List<ItemConvertible> inputs, RecipeCategory category, ItemConvertible output, float experience, int cookingTime, String group) {
+                for (ItemConvertible input : inputs) {
+                    String recipeName = getItemPath(output) + "_from_vibranium_smelting_" + getItemPath(input);
+                    net.minecraft.registry.RegistryKey<net.minecraft.recipe.Recipe<?>> key = net.minecraft.registry.RegistryKey.of(
+                            net.minecraft.registry.RegistryKeys.RECIPE,
+                            net.minecraft.util.Identifier.of(atom.marvelores.MarvelOres.MOD_ID, recipeName)
+                    );
+                    VibraniumSmeltingRecipe recipe = new VibraniumSmeltingRecipe(
+                            group,
+                            net.minecraft.recipe.book.CookingRecipeCategory.MISC,
+                            net.minecraft.recipe.Ingredient.ofItems(input),
+                            new net.minecraft.item.ItemStack(output),
+                            experience,
+                            cookingTime
+                    );
+                    exporter.accept(key, recipe, null);
+                }
+            }
+
+            public void offerAdamantiumSmelting(List<ItemConvertible> inputs, RecipeCategory category, ItemConvertible output, float experience, int cookingTime, String group) {
+                for (ItemConvertible input : inputs) {
+                    String recipeName = getItemPath(output) + "_from_adamantium_smelting_" + getItemPath(input);
+                    net.minecraft.registry.RegistryKey<net.minecraft.recipe.Recipe<?>> key = net.minecraft.registry.RegistryKey.of(
+                            net.minecraft.registry.RegistryKeys.RECIPE,
+                            net.minecraft.util.Identifier.of(atom.marvelores.MarvelOres.MOD_ID, recipeName)
+                    );
+                    AdamantiumSmeltingRecipe recipe = new AdamantiumSmeltingRecipe(
+                            group,
+                            net.minecraft.recipe.book.CookingRecipeCategory.MISC,
+                            net.minecraft.recipe.Ingredient.ofItems(input),
+                            new net.minecraft.item.ItemStack(output),
+                            experience,
+                            cookingTime
+                    );
+                    exporter.accept(key, recipe, null);
+                }
             }
         };
     }
