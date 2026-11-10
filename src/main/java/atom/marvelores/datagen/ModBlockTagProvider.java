@@ -1,15 +1,12 @@
 package atom.marvelores.datagen;
 
 import atom.marvelores.block.ModBlocks;
-import atom.marvelores.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.BlockTags;
 
 import java.util.concurrent.CompletableFuture;
-
-import static net.minecraft.tags.TagEntry.tag;
 
 public class ModBlockTagProvider extends FabricTagsProvider.BlockTagsProvider {
     public ModBlockTagProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registryLookupFuture) {
@@ -24,6 +21,8 @@ public class ModBlockTagProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ModBlocks.getRK(ModBlocks.VIBRANIUM_ORE))
                 .add(ModBlocks.getRK(ModBlocks.VIBRANIUM_DEEPSLATE_ORE))
                 .add(ModBlocks.getRK(ModBlocks.CRUSHER))
+                .add(ModBlocks.getRK(ModBlocks.VIBRANIUM_FURNACE))
+                .add(ModBlocks.getRK(ModBlocks.ADAMANTIUM_FURNACE))
 
                 .add(ModBlocks.getRK(ModBlocks.ADAMANTIUM_BLOCK))
                 .add(ModBlocks.getRK(ModBlocks.ADAMANTIUM_ORE))
@@ -54,6 +53,8 @@ public class ModBlockTagProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ModBlocks.getRK(ModBlocks.VIBRANIUM_ORE))
                 .add(ModBlocks.getRK(ModBlocks.VIBRANIUM_DEEPSLATE_ORE))
                 .add(ModBlocks.getRK(ModBlocks.CRUSHER))
+                .add(ModBlocks.getRK(ModBlocks.VIBRANIUM_FURNACE))
+                .add(ModBlocks.getRK(ModBlocks.ADAMANTIUM_FURNACE))
 
                 .add(ModBlocks.getRK(ModBlocks.ADAMANTIUM_BLOCK))
                 .add(ModBlocks.getRK(ModBlocks.ADAMANTIUM_ORE))

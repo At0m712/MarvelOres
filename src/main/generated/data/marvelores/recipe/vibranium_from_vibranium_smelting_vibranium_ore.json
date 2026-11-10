@@ -1,0 +1,10 @@
+{
+  "type": "marvelores:vibranium_smelting",
+  "cookingtime": 100,
+  "experience": 0.25,
+  "group": "vibranium",
+  "ingredient": "marvelores:vibranium_ore",
+  "result": {
+    "id": "marvelores:vibranium"
+  }
+}

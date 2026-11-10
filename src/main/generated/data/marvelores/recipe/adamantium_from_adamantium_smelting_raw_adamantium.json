@@ -1,0 +1,10 @@
+{
+  "type": "marvelores:adamantium_smelting",
+  "cookingtime": 75,
+  "experience": 0.25,
+  "group": "adamantium",
+  "ingredient": "marvelores:raw_adamantium",
+  "result": {
+    "id": "marvelores:adamantium"
+  }
+}

@@ -30,6 +30,10 @@
   "block.marvelores.vibranium_deepslate_ore": "Deepslate Vibranium Ore",
 
   "block.marvelores.crusher": "Crusher",
+  "block.marvelores.vibranium_furnace": "Vibranium Furnace",
+  "container.marvelores.vibranium_furnace": "Vibranium Furnace",
+  "block.marvelores.adamantium_furnace": "Adamantium Furnace",
+  "container.marvelores.adamantium_furnace": "Adamantium Furnace",
 
   "creativemodetab.marvelores.vibranium_items": "Marvelores Items",
   "creativemodetab.marvelores.vibranium_blocks": "Marvelores Blocks",

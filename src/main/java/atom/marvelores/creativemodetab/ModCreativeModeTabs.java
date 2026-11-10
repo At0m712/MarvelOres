@@ -105,10 +105,12 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.VIBRANIUM_ORE);
                         output.accept(ModBlocks.VIBRANIUM_DEEPSLATE_ORE);
                         output.accept(ModBlocks.CRUSHER);
+                        output.accept(ModBlocks.VIBRANIUM_FURNACE);
 
                         output.accept(ModBlocks.ADAMANTIUM_BLOCK);
                         output.accept(ModBlocks.ADAMANTIUM_ORE);
                         output.accept(ModBlocks.ADAMANTIUM_DEEPSLATE_ORE);
+                        output.accept(ModBlocks.ADAMANTIUM_FURNACE);
 
                         output.accept(ModBlocks.MAPLE_STAIRS);
                         output.accept(ModBlocks.MAPLE_SLAB);

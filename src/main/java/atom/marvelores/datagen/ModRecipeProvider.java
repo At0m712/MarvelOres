@@ -17,6 +17,13 @@ import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.ItemLike;
+import atom.marvelores.MarvelOres;
+import atom.marvelores.recipe.AdamantiumSmeltingRecipe;
+import atom.marvelores.recipe.VibraniumSmeltingRecipe;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.Blocks;
 
 import java.util.List;
@@ -38,10 +45,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 oreBlasting(VIBRANIUM_SMELTABLES, RecipeCategory.MISC,CookingBookCategory.BLOCKS, ModItems.VIBRANIUM, 0.25f, 100, "vibranium");
 
                 List<ItemLike> ADAMANTIUM_SMELTABLES = List.of(ModItems.RAW_ADAMANTIUM, ModBlocks.ADAMANTIUM_ORE, ModBlocks.ADAMANTIUM_DEEPSLATE_ORE);
-
-                oreSmelting(ADAMANTIUM_SMELTABLES, RecipeCategory.MISC,CookingBookCategory.BLOCKS, ModItems.ADAMANTIUM, 0.25f, 200, "adamantium");
-                oreBlasting(ADAMANTIUM_SMELTABLES, RecipeCategory.MISC,CookingBookCategory.BLOCKS, ModItems.ADAMANTIUM, 0.25f, 100, "adamantium");
-
                 List<ItemLike> TITANE_SMELTABLES = List.of(ModItems.RAW_TITANE, ModBlocks.TITANE_ORE, ModBlocks.TITANE_DEEPSLATE_ORE);
 
                 oreSmelting(TITANE_SMELTABLES, RecipeCategory.MISC,CookingBookCategory.BLOCKS, ModItems.TITANE, 0.25f, 200, "titane");
@@ -49,8 +52,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 List<ItemLike> URU_SMELTABLES = List.of(ModItems.RAW_URU, ModBlocks.URU_ORE);
 
-                oreSmelting(URU_SMELTABLES, RecipeCategory.MISC,CookingBookCategory.BLOCKS, ModItems.URU, 0.75f, 400, "uru");
-                oreBlasting(URU_SMELTABLES, RecipeCategory.MISC,CookingBookCategory.BLOCKS, ModItems.URU, 0.75f, 300, "uru");
+                offerVibraniumSmelting(ADAMANTIUM_SMELTABLES, RecipeCategory.MISC, ModItems.ADAMANTIUM, 0.25f, 100, "adamantium");
+                offerVibraniumSmelting(VIBRANIUM_SMELTABLES, RecipeCategory.MISC, ModItems.VIBRANIUM, 0.25f, 100, "vibranium");
+                offerVibraniumSmelting(TITANE_SMELTABLES, RecipeCategory.MISC, ModItems.TITANE, 0.25f, 100, "titane");
+
+                offerAdamantiumSmelting(URU_SMELTABLES, RecipeCategory.MISC, ModItems.URU, 0.75f, 150, "uru");
+                offerAdamantiumSmelting(ADAMANTIUM_SMELTABLES, RecipeCategory.MISC, ModItems.ADAMANTIUM, 0.25f, 75, "adamantium");
+                offerAdamantiumSmelting(VIBRANIUM_SMELTABLES, RecipeCategory.MISC, ModItems.VIBRANIUM, 0.25f, 75, "vibranium");
+                offerAdamantiumSmelting(TITANE_SMELTABLES, RecipeCategory.MISC, ModItems.TITANE, 0.25f, 75, "titane");
 
                 nineBlockStorageRecipes(RecipeCategory.BUILDING_BLOCKS, ModItems.VIBRANIUM, RecipeCategory.DECORATIONS, ModBlocks.VIBRANIUM_BLOCK);
                 nineBlockStorageRecipes(RecipeCategory.BUILDING_BLOCKS, ModItems.ADAMANTIUM, RecipeCategory.DECORATIONS, ModBlocks.ADAMANTIUM_BLOCK);
@@ -604,6 +613,58 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(ModItems.URU), has(ModItems.URU))
                         .save(output);
 
+
+                shaped(RecipeCategory.MISC, ModBlocks.VIBRANIUM_FURNACE)
+                        .pattern("BBB")
+                        .pattern("BFB")
+                        .pattern("BBB")
+                        .define('B', ModBlocks.VIBRANIUM_BLOCK)
+                        .define('F', Blocks.FURNACE)
+                        .unlockedBy(getHasName(ModBlocks.VIBRANIUM_BLOCK), has(ModBlocks.VIBRANIUM_BLOCK))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModBlocks.ADAMANTIUM_FURNACE)
+                        .pattern("AAA")
+                        .pattern("AVA")
+                        .pattern("AAA")
+                        .define('A', ModBlocks.ADAMANTIUM_BLOCK)
+                        .define('V', ModBlocks.VIBRANIUM_FURNACE)
+                        .unlockedBy(getHasName(ModBlocks.ADAMANTIUM_BLOCK), has(ModBlocks.ADAMANTIUM_BLOCK))
+                        .save(output);
+            }
+
+            public void offerVibraniumSmelting(List<ItemLike> inputs, RecipeCategory category, ItemLike outputItem, float experience, int cookingTime, String group) {
+                for (ItemLike input : inputs) {
+                    SimpleCookingRecipeBuilder.generic(
+                            Ingredient.of(input),
+                            category,
+                            CookingBookCategory.MISC,
+                            outputItem,
+                            experience,
+                            cookingTime,
+                            VibraniumSmeltingRecipe::new
+                    )
+                    .group(group)
+                    .unlockedBy(getHasName(input), has(input))
+                    .save(output, ResourceKey.create(Registries.RECIPE, Identifier.fromNamespaceAndPath(MarvelOres.MOD_ID, getItemName(outputItem) + "_from_vibranium_smelting_" + getItemName(input))));
+                }
+            }
+
+            public void offerAdamantiumSmelting(List<ItemLike> inputs, RecipeCategory category, ItemLike outputItem, float experience, int cookingTime, String group) {
+                for (ItemLike input : inputs) {
+                    SimpleCookingRecipeBuilder.generic(
+                            Ingredient.of(input),
+                            category,
+                            CookingBookCategory.MISC,
+                            outputItem,
+                            experience,
+                            cookingTime,
+                            AdamantiumSmeltingRecipe::new
+                    )
+                    .group(group)
+                    .unlockedBy(getHasName(input), has(input))
+                    .save(output, ResourceKey.create(Registries.RECIPE, Identifier.fromNamespaceAndPath(MarvelOres.MOD_ID, getItemName(outputItem) + "_from_adamantium_smelting_" + getItemName(input))));
+                }
 
             }
         };

@@ -1,7 +1,9 @@
 package atom.marvelores.block;
 
 import atom.marvelores.MarvelOres;
+import atom.marvelores.block.custom.AdamantiumFurnaceBlock;
 import atom.marvelores.block.custom.CrusherBlock;
+import atom.marvelores.block.custom.VibraniumFurnaceBlock;
 import atom.marvelores.worldgen.tree.ModTreeGrowers;
 import net.minecraft.core.Registry;
 import net.minecraft.core.particles.ParticleTypes;
@@ -84,6 +86,11 @@ public static final Block VIBRANIUM_DEEPSLATE_ORE = registerBlock("vibranium_dee
 
     public static final Block CRUSHER = registerBlock("crusher",
             properties -> new CrusherBlock(properties.strength(3f).requiresCorrectToolForDrops()));
+    public static final Block VIBRANIUM_FURNACE = registerBlock("vibranium_furnace",
+            properties -> new VibraniumFurnaceBlock(properties.strength(4.0f).requiresCorrectToolForDrops().lightLevel(Blocks.litBlockEmission(13))));
+
+    public static final Block ADAMANTIUM_FURNACE = registerBlock("adamantium_furnace",
+            properties -> new AdamantiumFurnaceBlock(properties.strength(5.0f).requiresCorrectToolForDrops().lightLevel(Blocks.litBlockEmission(13))));
 
     public static final Block MAPLE_LOG = registerBlock("maple_log",
             properties -> new RotatedPillarBlock(properties.strength(2f).instrument(NoteBlockInstrument.BASS)
