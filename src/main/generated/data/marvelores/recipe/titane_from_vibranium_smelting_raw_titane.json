@@ -1,0 +1,11 @@
+{
+  "type": "marvelores:vibranium_smelting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.25,
+  "group": "titane",
+  "ingredient": "marvelores:raw_titane",
+  "result": {
+    "id": "marvelores:titane"
+  }
+}

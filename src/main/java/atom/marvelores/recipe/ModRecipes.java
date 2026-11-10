@@ -21,6 +21,32 @@ public class ModRecipes {
                 }
             });
 
+    public static final RecipeType<VibraniumSmeltingRecipe> VIBRANIUM_SMELTING_TYPE = Registry.register(
+            BuiltInRegistries.RECIPE_TYPE, Identifier.fromNamespaceAndPath(MarvelOres.MOD_ID, "vibranium_smelting"),
+            new RecipeType<VibraniumSmeltingRecipe>() {
+                @Override
+                public String toString() {
+                    return "vibranium_smelting";
+                }
+            });
+
+    public static final RecipeSerializer<VibraniumSmeltingRecipe> VIBRANIUM_SMELTING_SERIALIZER = Registry.register(
+            BuiltInRegistries.RECIPE_SERIALIZER, Identifier.fromNamespaceAndPath(MarvelOres.MOD_ID, "vibranium_smelting"),
+            new RecipeSerializer<>(VibraniumSmeltingRecipe.MAP_CODEC, VibraniumSmeltingRecipe.STREAM_CODEC));
+
+    public static final RecipeType<AdamantiumSmeltingRecipe> ADAMANTIUM_SMELTING_TYPE = Registry.register(
+            BuiltInRegistries.RECIPE_TYPE, Identifier.fromNamespaceAndPath(MarvelOres.MOD_ID, "adamantium_smelting"),
+            new RecipeType<AdamantiumSmeltingRecipe>() {
+                @Override
+                public String toString() {
+                    return "adamantium_smelting";
+                }
+            });
+
+    public static final RecipeSerializer<AdamantiumSmeltingRecipe> ADAMANTIUM_SMELTING_SERIALIZER = Registry.register(
+            BuiltInRegistries.RECIPE_SERIALIZER, Identifier.fromNamespaceAndPath(MarvelOres.MOD_ID, "adamantium_smelting"),
+            new RecipeSerializer<>(AdamantiumSmeltingRecipe.MAP_CODEC, AdamantiumSmeltingRecipe.STREAM_CODEC));
+
     public static void registerModRecipes() {
         MarvelOres.LOGGER.info("Registering Custom Recipes for " + MarvelOres.MOD_ID);
     }

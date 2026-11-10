@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "marvelores:adamantium_block",
+    "V": "marvelores:vibranium_furnace"
+  },
+  "pattern": [
+    "AAA",
+    "AVA",
+    "AAA"
+  ],
+  "result": {
+    "id": "marvelores:adamantium_furnace"
+  }
+}

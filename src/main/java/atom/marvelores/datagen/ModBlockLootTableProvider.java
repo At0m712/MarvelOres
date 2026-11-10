@@ -29,6 +29,8 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
         dropSelf(ModBlocks.VIBRANIUM_BLOCK);
         dropSelf(ModBlocks.RAW_VIBRANIUM_BLOCK);
         dropSelf(ModBlocks.CRUSHER);
+        dropSelf(ModBlocks.VIBRANIUM_FURNACE);
+        dropSelf(ModBlocks.ADAMANTIUM_FURNACE);
 
         dropSelf(ModBlocks.ADAMANTIUM_BLOCK);
 
