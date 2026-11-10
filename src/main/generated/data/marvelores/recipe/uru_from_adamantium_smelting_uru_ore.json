@@ -1,0 +1,10 @@
+{
+  "type": "marvelores:adamantium_smelting",
+  "cookingtime": 150,
+  "experience": 0.75,
+  "group": "uru",
+  "ingredient": "marvelores:uru_ore",
+  "result": {
+    "id": "marvelores:uru"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "marvelores:vibranium_smelting",
+  "experience": 0.25,
+  "group": "adamantium",
+  "ingredient": "marvelores:adamantium_deepslate_ore",
+  "result": {
+    "id": "marvelores:adamantium"
+  }
+}

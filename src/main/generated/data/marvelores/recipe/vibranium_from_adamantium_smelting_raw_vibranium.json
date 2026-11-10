@@ -1,0 +1,10 @@
+{
+  "type": "marvelores:adamantium_smelting",
+  "cookingtime": 75,
+  "experience": 0.25,
+  "group": "vibranium",
+  "ingredient": "marvelores:raw_vibranium",
+  "result": {
+    "id": "marvelores:vibranium"
+  }
+}

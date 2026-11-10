@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "top": "marvelores:block/vibranium_block",
+    "bottom": "marvelores:block/vibranium_block",
+    "side": "marvelores:block/vibranium_furnace_side",
+    "front": "marvelores:block/vibranium_furnace_front"
+  }
+}
